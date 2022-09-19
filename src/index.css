@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section{
+    @apply py-20;
+  }
+  h1, .h1 {
+    @apply font-headline text-4xl text-dark;
+  }
+  h2, .h2{
+    @apply font-sans text-4xl uppercase text-dark;
+  }
+  h3, .h3{
+    @apply font-sans text-xl uppercase text-dark tracking-widest font-bold;
+  }
+  p {
+    @apply font-sans text-dark text-lg;
+  }
+}
+
+@layer components{
+  .btn {
+    @apply uppercase font-bold;
+  }
+  .btn-arrow {
+    @apply text-gold tracking-wider text-base;
+  }
+  .text-ornament{
+    @apply relative;
+      &::before{
+      content: "";
+      @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+      @apply h-1.5 w-1.5 bg-gold -top-6 rotate-45;
+    }
+  }
+}
+@layer utilities {
+}
