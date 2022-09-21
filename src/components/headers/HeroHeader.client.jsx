@@ -1,9 +1,9 @@
-import icon from '../assets/bittercube-cocktail.jpg';
-import logomark from '../assets/logomark-reversed.svg'
+import icon from '../../assets/bittercube-cocktail.jpg';
+import logomark from '../../assets/logomark-reversed.svg'
 import {Image} from '@shopify/hydrogen';
 
 
-export default function Hero() {
+export default function HeroHeader() {
   return (
      <div className="relative">
       <div className="absolute inset-0">

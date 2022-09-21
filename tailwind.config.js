@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         headline: ['beaufort-pro', 'serif'],
+        decorative: ['Charmonman', 'cursive'],
         sans: ['trade-gothic-next-condensed', 'trade-gothic', 'sans-serif']
       }
     }

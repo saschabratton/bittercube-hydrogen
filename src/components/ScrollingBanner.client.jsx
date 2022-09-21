@@ -1,13 +1,11 @@
+import botanicals from '../assets/real-botanicals.svg'
+
+import { Image } from "@shopify/hydrogen";
+
 export default function ScrollingBanner() {
   return (
-      <div className="flex gap-6 overflow-hidden py-6">
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
-        <span className="text-3xl text-gold font-headline whitespace-nowrap">Made With Real Botanicals.</span>
+      <div className=" overflow-hidden py-12">
+        <Image src={ botanicals } width={1990} height={30} />
       </div>
       );
 }
