@@ -2,7 +2,7 @@ import { Link } from "@shopify/hydrogen"
 
 export default function SubNav({ navigation }){
   return(
-    <section className="flex justify-between">
+    <div className="container py-8 flex justify-between">
       <ul className="flex gap-8">
         {navigation.map(item => {
           const {label, link, i} = item
@@ -20,6 +20,6 @@ export default function SubNav({ navigation }){
           Search
         </span>
       </div>
-    </section>
+    </div>
   )
 }

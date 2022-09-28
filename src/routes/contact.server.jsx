@@ -1,0 +1,50 @@
+import image from '/src/assets/bittercube-cocktail.jpg';
+
+import { Layout } from "../components/Layout.server"
+import PatternHero from "../components/headers/PatternHero.server"
+import AlternatingTextImage from "../components/sections/AlternatingTextImage.client";
+
+import { Image, Link } from "@shopify/hydrogen";
+
+const HeaderText = ("Contact Us")
+
+
+export default function Contact() {
+  return (
+    <Layout>
+      <PatternHero content={HeaderText} />
+      <div className="container grid grid-cols-1 gap-6 text-center md:grid-cols-2">
+        <div>
+          <h2>Drop Us a line</h2>
+          <div className="my-16 text-ornament"></div>
+          <div className="flex flex-col gap-12">
+            <div className="grid gap-3">
+              <h3>GENERAL INQUIRIES OR QUESTIONS</h3>
+              <a href="mailto:INFO@BITTERCUBE.COM">INFO@BITTERCUBE.COM</a>
+            </div>
+            <div className="grid gap-3">
+              <h3>WHOLESALE INQUIRIES</h3>
+              <p>Email us to set up an account or order wholesale using the portal below.</p>
+              <a href="mailto:INFO@BITTERCUBE.COM">WHOLESALE@BITTERCUBE.COM</a>
+              <Link to="/" className="mx-auto my-0 w-60 btn btn-arrow">Wholesale Information</Link>
+            </div>
+            <div className="grid gap-3">
+              <h3>HEADQUARTERS</h3>
+              <p>4828 W Lisbon Ave<br />Milwaukee WI 53210</p>
+              <a href="mailto:INFO@BITTERCUBE.COM">414.207.6262</a>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-10 md:gap-20">
+          <Image src={image} className="object-cover mx-auto aspect-4/5" alt="A cocktail" width={360} height={455} />
+          <p className="max-w-xs mx-auto text-3xl font-decorative text-gold ">
+            Some little zippy closer  here
+          </p>
+        </div>
+
+      </div>
+
+
+    </Layout>
+  )
+}

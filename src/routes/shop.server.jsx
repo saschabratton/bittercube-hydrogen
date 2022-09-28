@@ -1,13 +1,13 @@
 import { Layout } from "../components/Layout.server";
-import PatternHeader from "../components/headers/PatternHeader.client";
+import PatternHero from "../components/headers/PatternHero.server";
 import SubNav from "../components/global/SubNav.server";
-import BuyCta from "../components/sections/BuyCta.client";
+import SplitBgVert from "../components/sections/SplitBgVert.client";
 import WholesaleBitters from "../components/sections/WholesaleBitters";
-
+import AlternatingTextImage from "../components/sections/AlternatingTextImage.client";
+import CardCarousel from "../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
 
 const HeaderText = ("Shop")
-
 
 const pageNav = [
   { label: 'Bitters', link: '/'},
@@ -17,39 +17,46 @@ const pageNav = [
   { label: 'Shop All', link: '/'}
 ]
 
+const alternatingContent = [
+  {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Bitters',  'ctaLink': '/',},
+  {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Kits',  'ctaLink': '/',},
+  {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/',},
+]
+
+const SplitBgContent = {
+  'topLabel': 'Feeling Spirited',
+  'topHeadline': 'Shop our local Milwaukee Bazaaz',
+  'topDescription': '',
+  'topCtaLabel': 'Shop for local pick-up',
+  'topCtaLink': '/',
+  'bottomLabel': 'Get more from Bittercube',
+  'bottomHeadline': 'Subscription Plans',
+  'bottomCtaLabel': 'See Plans',
+  'bottomCtaLink': '',
+  'featuredImage': '',
+  'background': 'dark',
+  'padding': '12'
+}
 
 export default function Home() {
   return (
     <Layout>
-      <PatternHeader content={HeaderText} />
-      <div className="container max-w-5xl">
-        <SubNav navigation={pageNav} />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-16">
+      <PatternHero content={HeaderText} />
+      <SubNav navigation={pageNav} />
+      <div className="container">
+        <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
           <div>
-            <h2 className="h1 text-5xl capitalize max-w-md">General shop headline goes here</h2>
-            <Link to="/">Shop All</Link>
+            <h2 className="max-w-md text-5xl capitalize h1">General shop headline goes here</h2>
+            <Link to="/" className="w-24 mx-0 btn btn-arrow">Shop All</Link>
           </div>
-          <div className="flex justify-center items-center text-center">
-            <span className="font-decorative text-gold text-4xl">Made With<br />Real Botanicals</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-16">
-          <div className="text-center flex flex-col gap-6 max-w-sm">
-            <h3 className="h2">artisnal bitters</h3>
-            <p className="text-ornament">Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>
+          <div className="flex items-center justify-center text-center">
+            <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-16">
-          <div className="text-center flex flex-col gap-6 max-w-sm order-last">
-            <h3 className="h2">artisnal bitters</h3>
-            <p className="text-ornament">Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>
-          </div>
-          <div></div>
-        </div>
+        <AlternatingTextImage content={alternatingContent} />
       </div>
-      <BuyCta />
+      <CardCarousel />
+      <SplitBgVert content={SplitBgContent} />
       <WholesaleBitters />
     </Layout>
   )

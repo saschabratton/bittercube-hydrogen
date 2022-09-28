@@ -39,3 +39,23 @@ To run a local preview of your Hydrogen app in an environment similar to Oxygen,
 yarn build
 yarn preview
 ```
+
+
+## TODO
+
+json file of collecitons to pull in for static content
+- name
+- image
+- price
+- page url
+- manufacturer
+- category
+- - bitters
+- - kits
+- - collaborations
+- - accesories
+- meta
+- - fancy image
+- - flavours
+
+
