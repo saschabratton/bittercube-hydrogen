@@ -22,12 +22,12 @@ export default function SplitBgVert({ content }){
                   <h3 className="text-3xl font-regular">{bottomHeadline}</h3>
                   {/* <Link to="/" className="btn btn-action">See Plans</Link> */}
                   {bottomCtaLink &&
-                    <a href={bottomCtaLink} className=" btn btn-action">{bottomCtaLabel}</a>
+                    <a href={bottomCtaLink} className="btn btn-action">{bottomCtaLabel}</a>
                   }
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">
-              <Image src={image} width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' />
+              <Image src={image} width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
             </div>
 
         </div>

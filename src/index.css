@@ -1,81 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Base Styles */
+@import "tailwindcss/base";
+@import "./styles/base/base.css";
+@import "./styles/base/layout.css";
+@import "./styles/base/typography.css";
+/* Component Styles */
+@import "tailwindcss/components";
+@import "./styles/components/buttons.css";
+/* Utility Syles */
+@import "tailwindcss/utilities";
+@import "./styles/utilities/backgrounds.css";
 
-@layer base {
-  section{
-    @apply py-20;
-  }
-  h1, .h1 {
-    @apply text-4xl font-headline text-dark;
-  }
-  h2, .h2{
-    @apply text-4xl capitalize font-headline text-dark;
-  }
-  h3, .h3{
-    @apply font-sans text-xl font-bold tracking-widest uppercase text-dark;
-  }
-  h6, .h6{
-    @apply font-sans text-base font-bold uppercase text-dark;
-  }
-  p {
-    @apply font-sans text-lg text-dark;
-  }
-}
 
 @layer components{
-  .btn {
-    @apply block font-bold uppercase;
-    @apply m-6;
-  }
-  .btn-arrow {
-    @apply relative w-full text-base tracking-wider text-left text-gold;
-    &::before{
-      content: "";
-      @apply absolute right-0 transform -translate-y-1/2 top-1/2;
-      @apply w-3 h-3 transition -rotate-45 border-b-2 border-r-2 border-dark;
-    }
-    &::after{
-      content: "";
-      @apply absolute right-0 transform -translate-y-1/2 top-1/2;
-      @apply  h-0.5 w-4 bg-dark transition;
-    }
-    &:hover{
-      &::before, &::after{
-        @apply duration-75 translate-x-3 opacity-80;
-      }
-      &::after{
-        @apply w-6;
-      }
-    }
-  }
-  .btn-arrow-full {
-    @apply relative w-full text-base tracking-wider text-left text-gold;
-    @apply m-0;
-    &::before{
-      content: "";
-      @apply absolute right-0 transform -translate-y-1/2 top-1/2;
-      @apply w-3 h-3 transition -rotate-45 border-b-2 border-r-2 border-gold;
-    }
-    &::after{
-      content: "";
-      @apply absolute right-0 transform -translate-y-1/2 top-1/2;
-      @apply  h-0.5 w-4 bg-gold transition;
-    }
-    &:hover{
-      &::before, &::after{
-        @apply duration-75 translate-x-3 opacity-80;
-      }
-      &::after{
-        @apply w-6;
-      }
-    }
-  }
-  .btn-action{
-    @apply px-6 py-3 mx-auto w-fit;
-    @apply tracking-widest transition duration-300 border-2 rounded-md border-gold text-dark;
-    @apply hover:rounded-none hover:bg-paper-action hover:text-dark;
-  }
   .text-ornament{
     @apply relative mt-16;
     &::before{
@@ -84,47 +20,10 @@
       @apply h-1.5 w-1.5 bg-gold -top-6 rotate-45;
     }
   }
-  .container{
-    @apply px-6 py-20 mx-auto;
-    @apply xl:max-w-6xl
-  }
-  .text-outline {
-       @apply font-extrabold tracking-wide text-white;
-      /* text-shadow: -2px -2px 0 #B48039, 2px -2px 0 #B48039, -2px 2px 0 #B48039, 2px 2px 0 #B48039; */
-      -webkit-text-fill-color: #fff;
-      -webkit-text-stroke: 2px;
-      -webkit-text-stroke-color: #B48039;
-    }
-    header{
-      .nav-link{
-        @apply text-sm font-bold tracking-widest uppercase;
-      }
-    }
-
 }
 @layer utilities {
-  .label{
-    @apply tracking-wider uppercase text-gold;
-  }
-  .bg-split {
-    background: rgb(239,237,228);
-    background: linear-gradient(0deg, rgba(239,237,228,1) 50%, rgba(11,55,77,1) 50%);
-  }
-  .bg-split-dark {
-    background: rgb(239,237,228);
-    background: linear-gradient(0deg, rgba(239,237,228,1) 50%, rgba(11,55,77,1) 50%);
-  }
-  .bg-split-forest {
-    background: rgb(239,237,228);
-    background: linear-gradient(0deg, rgba(239,237,228,1) 50%, rgba(25,39,25,1) 50%);
-  }
-  .bg-dark, .bg-forest {
-    h1,h2,h3,p, a{
-      @apply text-white;
-    }
-  }
-  .bg-pattern{
-    background-image: url("/src/assets/bg-pattern.png");
+  .center-absolute{
+    @apply absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
   }
   .alternating-text-image:nth-child(even){
     @apply relative;

@@ -28,7 +28,7 @@ export default function CardCarousel(){
           const {label, manufacturer, price, description, image } = item
           return(
             <Carousel.Item>
-              <Image src={ image } width={370} height={446} className="object-cover aspect-4/5"/>
+              <Image src={ image } width={370} height={446} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters"/>
               <div className="flex justify-between gap-2 py-2 border-b-2 border-gold">
                 <span className="tracking-wider text-gold">{manufacturer}</span>
                 <span className="text-dark">{price}</span>

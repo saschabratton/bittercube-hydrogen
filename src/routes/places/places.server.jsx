@@ -1,6 +1,6 @@
-import { Layout } from "../components/Layout.server"
-import ImageHero from "../components/headers/ImageHero.client"
-import AlternatingTextImage from "../components/sections/AlternatingTextImage.client";
+import { Layout } from "../../components/Layout.server"
+import ImageHero from "../../components/headers/ImageHero.client"
+import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 
 import { Link } from "@shopify/hydrogen";
 

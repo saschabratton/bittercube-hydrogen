@@ -1,0 +1,11 @@
+@layer base{
+  header{
+    .nav-link{
+      @apply text-sm font-bold tracking-widest uppercase;
+    }
+  }
+  .container{
+    @apply px-6 py-20 mx-auto;
+    @apply xl:max-w-6xl
+  }
+}

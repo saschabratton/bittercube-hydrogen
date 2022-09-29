@@ -5,11 +5,11 @@ export default function ImageHero({ content }){
   return(
     <div className="relative">
       <div className="absolute inset-0">
-        <Image src={image} width={1920} height={545} className="h-full w-full object-cover" />
+        <Image src={image} width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
-      <div className="relative container">
+      <div className="container relative">
         <div className="py-28">
-            <h1 className="capitalize py-4 text-white mx-auto text-6xl  max-w-2xl text-center">{ content }</h1>
+            <h1 className="max-w-2xl py-4 mx-auto text-6xl text-center text-white capitalize">{ content }</h1>
           </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export default function ThreeColumnFeature({ content, links }) {
 
 
           <div className="md:col-span-3 lg:col-span-3 lg:order-3">
-            <Image src={featured} width={460} height={555} className="object-cover aspect-4/5 rounded-jumbo" />
+            <Image src={featured} width={460} height={555} className="object-cover aspect-4/5 rounded-jumbo" alt="A cocktail made with Bittercube Bitters" />
           </div>
 
           <div className="py-16 md:col-span-6 lg:order-1 lg:col-span-2">

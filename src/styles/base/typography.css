@@ -1,0 +1,26 @@
+@layer base {
+   h1, .h1 {
+    @apply text-4xl font-headline text-dark;
+  }
+  h2, .h2{
+    @apply text-4xl capitalize font-headline text-dark;
+  }
+  h3, .h3{
+    @apply font-sans text-xl font-bold tracking-widest uppercase text-dark;
+  }
+  h6, .h6{
+    @apply font-sans text-base font-bold uppercase text-dark;
+  }
+  p {
+    @apply font-sans text-lg text-dark;
+  }
+   .text-outline {
+    @apply font-extrabold tracking-wide text-white;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #B48039;
+  }
+  .label{
+    @apply tracking-wider uppercase text-gold;
+  }
+}

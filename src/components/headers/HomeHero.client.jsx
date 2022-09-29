@@ -7,24 +7,24 @@ export default function HomeHero({ content }) {
   return (
      <div className="relative">
       <div className="absolute inset-0">
-        <Image src={image} width="1920" height="796" className="h-full w-full object-cover" />
+        <Image src={image} width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
-      <div className="relative container grid grid-cols-1 sm:grid-cols-7 text-center mx-auto uppercase">
-        <div className="sm:flex sm:items-center sm:justify-center hidden">
-          <span className="text-ornament font-sans text-gold font-bold tracking-widest leading-5">
+      <div className="container relative grid grid-cols-1 mx-auto text-center uppercase sm:grid-cols-7">
+        <div className="hidden sm:flex sm:items-center sm:justify-center">
+          <span className="font-sans font-bold leading-5 tracking-widest text-ornament text-gold">
             quiere<br />dondes<br />aqui
           </span>
 
         </div>
         <div className="sm:col-span-5">
-          <div className="py-60 relative">
-            <h1 className="capitalize text-7xl max-w-2xl mx-auto text-white">{ content }</h1>
-            <Image src={logomark} width="92" height="92" role="presentation" className="absolute left-1/2 -translate-x-1/2 bottom-20" />
+          <div className="relative py-60">
+            <h1 className="max-w-2xl mx-auto text-white capitalize text-7xl">{ content }</h1>
+            <Image src={logomark} width="92" height="92" role="presentation" className="absolute -translate-x-1/2 left-1/2 bottom-20" alt="A cocktail made with Bittercube Bitters" />
           </div>
 
         </div>
-        <div className="sm:flex sm:items-center sm:justify-center hidden">
-          <span className="text-ornament font-sans text-gold font-bold tracking-widest leading-5">
+        <div className="hidden sm:flex sm:items-center sm:justify-center">
+          <span className="font-sans font-bold leading-5 tracking-widest text-ornament text-gold">
             lorem<br />ipsum et<br />doler
           </span>
         </div>

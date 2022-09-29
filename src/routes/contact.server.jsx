@@ -36,15 +36,12 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex flex-col gap-10 md:gap-20">
-          <Image src={image} className="object-cover mx-auto aspect-4/5" alt="A cocktail" width={360} height={455} />
+          <Image src={image} className="object-cover mx-auto aspect-4/5" alt="A cocktail made with Bittercube Bitters" width={360} height={455} />
           <p className="max-w-xs mx-auto text-3xl font-decorative text-gold ">
             Some little zippy closer  here
           </p>
         </div>
-
       </div>
-
-
     </Layout>
   )
 }
