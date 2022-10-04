@@ -2,4 +2,10 @@
   section{
     @apply py-20;
   }
+  hr{
+    @apply border-t-2 border-gold;
+  }
+  ::placeholder, ::-ms-input-placeholder{
+    @apply uppercase opacity-100 text-dark;
+  }
 }

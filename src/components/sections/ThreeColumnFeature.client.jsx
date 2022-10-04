@@ -1,6 +1,7 @@
 import { Link } from "@shopify/hydrogen";
 import featured from '../../assets/bittercube-cocktail.jpg';
 import { Image } from '@shopify/hydrogen';
+import Arrow from '../animations/Arrow.client'
 
 
 export default function ThreeColumnFeature({ content, links }) {
@@ -29,7 +30,8 @@ export default function ThreeColumnFeature({ content, links }) {
                 <dd>
                   <span className="font-bold tracking-wide text-gold">01</span>
                   <hr className="my-2 border text-gold" />
-                  <a href={link.link} className="btn btn-arrow-full">{link.linkLabel}</a>
+                  <a href={link.link} className="flex btn ">{link.linkLabel} <Arrow /></a>
+
                 </dd>
               ))}
             </dl>

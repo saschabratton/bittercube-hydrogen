@@ -21,7 +21,7 @@ const arrowRight = () => (
 )
 
 
-export default function CardCarousel(){
+export default function RecipeCarousel(){
   return(
     <section>
       <Carousel cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} arrowRight={arrowRight}>

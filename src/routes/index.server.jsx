@@ -1,13 +1,15 @@
 import { propTypes } from "react";
 import { Layout } from "../components/Layout.server";
 import FeaturedCollections from "../components/FeaturedCollections.server";
-import HomeHero from "../components/headers/HomeHero.client";
+import HomeHero from "../components/headers/HomeHero.server";
 import ScrollingBanner from "../components/ScrollingBanner.client";
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
 import established from '../assets/established2009.svg'
 import { Link, Image } from "@shopify/hydrogen";
+import Navigation from "../components/global/Navigation.server";
+import wordmark from '../assets/wordmark-reversed.svg'
 
-import VerticalSeparator from "../components/animations.jsx/VerticalSeparator.client";
+import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 
 
 const HeaderText = ("A hearty intro headline goes right here")
@@ -45,12 +47,7 @@ export default function Home() {
     <Layout>
       <HomeHero content={HeaderText} />
       <ScrollingBanner />
-
-
         <div className="container relative mx-auto overflow-hidden border max-w-screen-2xl">
-
-
-
           <div className="container relative z-10 grid grid-cols-1 gap-6 py-0 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
             <p className="text-3xl uppercase">Slow-crafted<br />and artisnal bitters <span className="sr-only">Espablished 2009</span></p>
@@ -62,19 +59,13 @@ export default function Home() {
           </div>
           </div>
           <VerticalSeparator />
-
-
         </div>
-
-
-
         <div className="container max-w-md mx-auto text-center">
           <h2>Bittercube Collection goes right here</h2>
           <Link to="/" className="btn btn-action">Shop Bitters</Link>
         </div>
         <FeaturedCollections />
-
-      <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+        <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
 
     </Layout>
   );

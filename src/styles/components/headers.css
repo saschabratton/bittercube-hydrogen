@@ -1,0 +1,12 @@
+.header-dark{
+  header {
+    .nav-link{
+      @apply !text-white;
+    }
+  }
+}
+.header-light{
+  .nav-link{
+    @apply text-dark;
+  }
+}

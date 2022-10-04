@@ -1,0 +1,11 @@
+
+.react-tabs__tab-list{
+  @apply flex justify-between;
+  .react-tabs__tab{
+    @apply tracking-widest uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
+    @apply transition duration-300 hover:border-t-gold;
+    &.react-tabs__tab--selected{
+      @apply text-dark border-y-dark;
+    }
+    }
+}

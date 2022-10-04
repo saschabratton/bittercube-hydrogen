@@ -29,46 +29,7 @@ export function Layout({ children }) {
 
 
       <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
-        <div className="">
-          <a href="#mainContent" className="sr-only">
-            Skip to content
-          </a>
-        </div>
-        <header
-          role="banner"
-          className={`absolute flex items-center h-16 p-6 md:p-8 lg:p-12 z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition ${
-            isHome ? "bg-black/80 text-white" : "bg-white/0"
-          }`}
-        >
-          <div className="flex items-center justify-between w-full">
-            <Link to="/">
-              <span className="sr-only">
-                {shop.name}
-              </span>
-              <Image src={wordmark} width={170} height={36} alt="Bittercube" />
-            </Link>
-            <div className="flex gap-12">
-              <Link className="nav-link" to="/shop">
-                Shop
-              </Link>
-              <Link className="nav-link" to="/places">
-                Places
-              </Link>
-              <Link className="nav-link" to="/places">
-                Recipes
-              </Link>
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-              <Link className="nav-link" to="/places">
-                Find Us
-              </Link>
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </header>
+
 
         <main role="main" id="mainContent" className="flex-grow bg-paper">
           {children}

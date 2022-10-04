@@ -11,6 +11,7 @@ module.exports = {
       'paper': '#efede4',
       'forest': '#192719',
       'paper-action': '#DAD7C9',
+      'transparent': '#ffffff/0',
     },
     extend: {
       fontFamily: {

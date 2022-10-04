@@ -6,6 +6,8 @@
 /* Component Styles */
 @import "tailwindcss/components";
 @import "./styles/components/buttons.css";
+@import "./styles/components/headers.css";
+@import "./styles/components/tabs.css";
 /* Utility Syles */
 @import "tailwindcss/utilities";
 @import "./styles/utilities/backgrounds.css";
@@ -13,7 +15,7 @@
 
 @layer components{
   .text-ornament{
-    @apply relative mt-16;
+    @apply relative mt-12;
     &::before{
       content: "";
       @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
@@ -25,18 +27,22 @@
   .center-absolute{
     @apply absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
   }
+  .text-vertical{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
   .alternating-text-image:nth-child(even){
     @apply relative;
      .image-frame{
       @apply relative order-first;
-      img {
+      /* img {
         @apply !rounded-jumbo;
       }
       &::after{
         content: "";
         @apply absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
         @apply h-[555px] w-[460px] border-gold border-2  scale-[85%];
-      }
+      } */
     }
   }
 }

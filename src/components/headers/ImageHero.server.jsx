@@ -1,9 +1,11 @@
 import image from '../../assets/bittercube-cocktail.jpg';
 import { Image } from "@shopify/hydrogen"
+import Navigation from "../global/Navigation.server";
 
 export default function ImageHero({ content }){
   return(
-    <div className="relative">
+    <div className="relative header-dark h-[545px]">
+      <Navigation />
       <div className="absolute inset-0">
         <Image src={image} width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>

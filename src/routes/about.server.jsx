@@ -1,7 +1,9 @@
 import { Layout } from "../components/Layout.server"
-import ImageHero from "../components/headers/ImageHero.client"
+import ImageHero from "../components/headers/ImageHero.server"
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
 import SplitBgVert from "../components/sections/SplitBgVert.client"
+import Navigation from "../components/global/Navigation.server";
+
 
 import image from '../assets/bittercube-cocktail.jpg'
 import { Image } from "@shopify/hydrogen"
@@ -45,6 +47,8 @@ const ThreeColumnFeaturedLinks = [
 
 
 export default function about() {
+
+
    return (
     <Layout>
       <ImageHero content={HeaderText} />
@@ -67,7 +71,7 @@ export default function about() {
           <Image src={image} width={366} height={455} alt='alt' className="w-full h-auto" />
         </div>
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
-          <span className="uppercase text-gold">Founded in 2009</span>
+          <span className="label">Founded in 2009</span>
           <h2>two bartenders with a shared vision for what bold & balanced bitters could be.</h2>
           <p className="h3">relationships with farmers, botanical suppliers, bartenders, and foodies across the globe</p>
           <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines and services.</p>

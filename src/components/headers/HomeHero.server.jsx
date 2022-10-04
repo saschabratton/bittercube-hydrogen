@@ -1,11 +1,14 @@
 import image from '../../assets/bittercube-cocktail.jpg';
 import logomark from '../../assets/logomark-reversed.svg'
 import {Image} from '@shopify/hydrogen';
-
+import Navigation from "../global/Navigation.server";
 
 export default function HomeHero({ content }) {
   return (
-     <div className="relative">
+    <>
+
+     <div className="relative header-dark">
+      <Navigation />
       <div className="absolute inset-0">
         <Image src={image} width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
@@ -30,5 +33,6 @@ export default function HomeHero({ content }) {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,11 +1,14 @@
 @layer base {
    h1, .h1 {
-    @apply text-4xl font-headline text-dark;
+    @apply text-5xl font-headline text-dark;
   }
   h2, .h2{
-    @apply text-4xl capitalize font-headline text-dark;
+    @apply text-5xl capitalize font-headline text-dark;
   }
   h3, .h3{
+    @apply font-sans text-3xl font-bold tracking-widest uppercase text-dark;
+  }
+  h4, .h4{
     @apply font-sans text-xl font-bold tracking-widest uppercase text-dark;
   }
   h6, .h6{
@@ -21,6 +24,6 @@
     -webkit-text-stroke-color: #B48039;
   }
   .label{
-    @apply tracking-wider uppercase text-gold;
+    @apply font-bold tracking-wider uppercase text-gold;
   }
 }

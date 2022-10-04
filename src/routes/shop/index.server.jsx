@@ -10,7 +10,7 @@ import { Link, Image } from "@shopify/hydrogen";
 const HeaderText = ("Shop")
 
 const pageNav = [
-  { label: 'Bitters', link: '/'},
+  { label: 'Bitters', link: '/shop/bitters'},
   { label: 'Curated Kits', link: '/'},
   { label: 'Special Editions & Collaborations', link: '/'},
   { label: 'Accesories', link: '/'},
