@@ -13,7 +13,7 @@ export default function Product(){
     <Layout>
       <NavigationInterior />
       <div className="container pb-6 max-w-screen-2xl">
-        <Link className="label text-dark" to="/shop/bitters">Bitters</Link>
+        <Link className="transition label text-dark hover:text-gold" to="/shop">shop</Link>
         [ arrow ]
         <Link className="label" to="/shop/bitters">Bitters</Link>
       </div>

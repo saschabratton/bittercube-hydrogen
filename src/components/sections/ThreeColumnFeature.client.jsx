@@ -16,26 +16,20 @@ export default function ThreeColumnFeature({ content, links }) {
             <p>{description}</p>
             <Link to={ctaLink} className="mx-0 mb-0 btn btn-action">{ctaLabel}</Link>
           </div>
-
-
           <div className="md:col-span-3 lg:col-span-3 lg:order-3">
             <Image src={featured} width={460} height={555} className="object-cover aspect-4/5 rounded-jumbo" alt="A cocktail made with Bittercube Bitters" />
           </div>
-
           <div className="py-16 md:col-span-6 lg:order-1 lg:col-span-2">
-
             <dl className="grid gap-8">
               <dt className="h3 text-gold">{navHeadline}</dt>
               {links && links.map((link) => (
                 <dd>
                   <span className="font-bold tracking-wide text-gold">01</span>
                   <hr className="my-2 border text-gold" />
-                  <a href={link.link} className="flex btn ">{link.linkLabel} <Arrow /></a>
-
+                  <a href={link.link} className="flex justify-between w-full gap-2 mx-auto label group">{link.linkLabel} <div className="btn-arrow btn-arrow-gold"></div></a>
                 </dd>
               ))}
             </dl>
-
           </div>
         </div>
       </div>

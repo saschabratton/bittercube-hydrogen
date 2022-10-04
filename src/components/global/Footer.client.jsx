@@ -1,5 +1,9 @@
 import wordmark from '../../assets/wordmark.svg'
 import { Link, Image } from "@shopify/hydrogen"
+import SignUpForm from "./SignUpForm.client"
+import facebook from "../../assets/facebook.svg"
+import instagram from "../../assets/instagram.svg"
+
 
 const navItems = [
   {'link': '/shop', 'label': 'Shop'},
@@ -11,51 +15,58 @@ const navItems = [
   {'link': '/', 'label': 'Refund Policy'},
 ]
 
-const contactItems = [
-  {'label': 'Headquarters','description': '4828 W Lisbon Ave Milwaukee WI, 53210'},
-  {'label': 'APOTHECARY PHONE','description': '414.207.6262'},
-  {'label': 'GENERAL INQUIRIES','description': 'info@bittercube.com'},
-]
-
 
 export default function Footer(){
 
   return(
     <footer className="bg-paper">
-      <div className="container grid grid-cols-8 gap-6 max-w-screen-2xl">
-          <div className="flex flex-col justify-between col-span-3">
-            <Image src={wordmark} height={56} width={297} alt="Bittercube"/>
-            <h3 className="text-gold">Subscribe for Recipes, News & Events</h3>
+      <div className="container grid grid-cols-1 gap-10 lg:gap-6 lg:grid-cols-9 max-w-screen-2xl">
+          <div className="flex flex-col items-center justify-between lg:col-span-4 lg:items-start">
+            <Image src={wordmark} height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
+            <div className="flex-col hidden gap-4 lg:flex">
+              <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
+              <SignUpForm />
+            </div>
           </div>
-          <div className="col-span-2">
+          <div className="w-7/12 mx-auto md:w-full lg:col-span-2 lg:pr-12">
             <ul className="flex flex-col justify-center">
               {navItems.map(item => {
                 const {link, label, i} = item
                 return (
                   <li className="w-full py-3 border-b-2 border-dark last:border-0" key={i}>
-                    <Link to={ link } className="w-full uppercase text-gold btn-arrow">{ label }</Link>
+                    <Link to={ link } className="flex justify-between w-full gap-2 mx-auto label group">{ label }<div className="btn-arrow"></div></Link>
                   </li>
                 )
               })}
             </ul>
           </div>
-          <div className="flex flex-col justify-between col-span-2 text-center">
-            {contactItems.map(item => {
-              const {description, label, i} = item
-              return (
-                <div key={i}>
-                  <h6>{ label }</h6>
-                  <p>{ description }</p>
-                </div>
-              )
-            })}
+          <div className="flex flex-col justify-between order-4 gap-6 text-center lg:order-3 lg:col-span-2">
+              <div>
+                <h6>Headquarters</h6>
+                <p>4828 W Lisbon Ave<br />Milwaukee WI, 53210</p>
+              </div>
+              <div>
+                <h6>APOTHECARY PHONE</h6>
+                <p>414.207.6262</p>
+              </div>
+              <div>
+                <h6>GENERAL INQUIRIES</h6>
+                <p>info@bittercube.com</p>
+              </div>
+
           </div>
-          <div className="col-span-1 text-center">
+          <div className="order-2 col-span-1 text-center lg:order-last">
             <div>
               <h6>Follow us online</h6>
-              <p>facebook</p>
-              <p>instagram</p>
+              <div className="flex items-center justify-center gap-4 mt-4 lg:flex-col">
+                <Image src={instagram} width="40" height="40" alt="Instagram" />
+                <Image src={facebook} width="40" height="40" alt="facebook" />
+              </div>
             </div>
+          </div>
+           <div className="flex flex-col order-last gap-4 mx-auto text-center lg:hidden">
+            <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
+            <SignUpForm />
           </div>
         </div>
 
