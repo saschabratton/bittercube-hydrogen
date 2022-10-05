@@ -18,9 +18,9 @@
 }
 .ornament-arrow-left{
   @apply absolute left-0 transform -translate-y-1/2 top-1/2;
-  @apply w-0 h-0 border-l-8 border-y-8 border-y-paper border-l-gold;
+  @apply w-0 h-0 border-l-[6px] border-y-[6px] border-y-paper/0 border-l-gold;
 }
 .ornament-arrow-right{
   @apply absolute right-0 transform -translate-y-1/2 top-1/2;
-  @apply w-0 h-0 border-r-8 border-y-8 border-y-paper border-r-gold;
+  @apply w-0 h-0 border-r-[6px] border-y-[6px] border-y-paper/0 border-r-gold;
 }

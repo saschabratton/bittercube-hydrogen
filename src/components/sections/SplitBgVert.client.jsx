@@ -1,9 +1,9 @@
 import { Link, Image } from "@shopify/hydrogen"
-
+import parse from 'html-react-parser';
 import image from '../../assets/bittercube-cocktail.jpg';
 
 export default function SplitBgVert({ content }){
-  const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding} = content
+  const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding, bottomHtml} = content
   return(
     <section className={`pb-12 pt-${padding} bg-split-${background}`}>
       <div className="relative py-20 border-y-2 border-gold">
@@ -12,7 +12,7 @@ export default function SplitBgVert({ content }){
 
             <div className="flex flex-col justify-between flex-1 gap-8 text-center lg:px-20">
                 <div className="flex flex-col justify-center gap-2 h-44">
-                  <span className="label h3 text-gold">{topLabel}</span>
+                  <span className="label h4 text-gold">{topLabel}</span>
                   <h2 className="text-white">{topHeadline}</h2>
                   <p className="text-white">{topDescription}</p>
                   {topCtaLink &&
@@ -20,9 +20,10 @@ export default function SplitBgVert({ content }){
                   }
                 </div>
                 <div  className="flex flex-col justify-center gap-2 h-44">
-                  <span className="label h3 text-gold">{bottomLabel}</span>
+                  <span className="label h4 text-gold">{bottomLabel}</span>
                   <h3 className="text-3xl font-regular">{bottomHeadline}</h3>
                   {/* <Link to="/" className="btn btn-action">See Plans</Link> */}
+                  {parse(bottomHtml)}
                   {bottomCtaLink &&
                     <a href={bottomCtaLink} className="btn btn-action">{bottomCtaLabel}</a>
                   }

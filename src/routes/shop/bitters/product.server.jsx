@@ -38,7 +38,7 @@ const ThreeColumnFeaturedLinks = [
   },
 ]
 const SplitBgContent = {
-  'topLabel': 'Feeling Spirited',
+  'topLabel': 'FEELING SPIRITED?',
   'topHeadline': 'Shop our local Milwaukee Bazaaz',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',

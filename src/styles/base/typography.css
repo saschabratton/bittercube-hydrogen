@@ -6,15 +6,21 @@
     @apply mb-3 text-5xl capitalize font-headline text-dark;
   }
   h3, .h3{
-    @apply font-sans text-3xl font-bold tracking-widest uppercase text-dark;
+    @apply font-sans text-3xl font-normal uppercase text-dark;
   }
   h4, .h4{
-    @apply font-sans text-xl font-bold tracking-widest uppercase text-dark;
+    @apply font-sans text-xl font-normal tracking-widest uppercase text-dark;
   }
-  h6, .h6{
-    @apply mb-4 font-sans text-base font-bold uppercase text-dark;
+  h5, .h5 {
+    @apply font-sans text-lg font-bold tracking-wider uppercase text-gold;
   }
-  p, a {
+  h6, .h6, dt{
+    @apply mb-4 font-sans text-base font-bold tracking-widest uppercase text-dark;
+  }
+  p {
+    @apply mb-6;
+  }
+  p, a, dd {
     @apply font-sans text-lg text-dark;
   }
   a{

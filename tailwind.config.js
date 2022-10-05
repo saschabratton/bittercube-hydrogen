@@ -23,6 +23,7 @@ module.exports = {
         '4/5': '4 / 5',
       },
       borderRadius: {
+        'jumbo-sm': '5rem',
         'jumbo': '7.5rem'
       },
     }

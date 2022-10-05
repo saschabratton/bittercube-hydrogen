@@ -3,6 +3,7 @@ import image from '/src/assets/bittercube-cocktail.jpg';
 import { Layout } from "../components/Layout.server"
 import PatternHero from "../components/headers/PatternHero.server"
 import AlternatingTextImage from "../components/sections/AlternatingTextImage.client";
+import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 
 import { Image, Link } from "@shopify/hydrogen";
 
@@ -17,6 +18,9 @@ export default function Contact() {
         <div>
           <h2>Drop Us a line</h2>
           <div className="my-16 text-ornament"></div>
+          <div className="pt-4 my-8">
+            <HorizontalSeperator />
+          </div>
           <div className="flex flex-col gap-12">
             <div className="grid gap-3">
               <h3>GENERAL INQUIRIES OR QUESTIONS</h3>
@@ -25,8 +29,12 @@ export default function Contact() {
             <div className="grid gap-3">
               <h3>WHOLESALE INQUIRIES</h3>
               <p>Email us to set up an account or order wholesale using the portal below.</p>
-              <a href="mailto:INFO@BITTERCUBE.COM">WHOLESALE@BITTERCUBE.COM</a>
-              <Link to="/" className="mx-auto my-0 w-60 btn btn-arrow">Wholesale Information</Link>
+              <a href="mailto:INFO@BITTERCUBE.COM" className="font-bold">WHOLESALE@BITTERCUBE.COM</a>
+
+
+              <Link to="/shop/bitters" className="flex gap-2 mx-auto label group w-fit">Wholesale Information
+              <div className="btn-arrow"></div>
+            </Link>
             </div>
             <div className="grid gap-3">
               <h3>HEADQUARTERS</h3>
@@ -42,6 +50,7 @@ export default function Contact() {
           </p>
         </div>
       </div>
+      <hr />
     </Layout>
   )
 }

@@ -3,6 +3,8 @@ import PatternHero from "../../../components/headers/PatternHero.server";
 import SubNav from "../../../components/global/SubNav.server";
 import Card from "../../../components/global/Card.client";
 import { Link } from "@shopify/hydrogen";
+import SignUp from "../../../components/sections/SignUp.client";
+import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 
 
 const HeaderText = ("Cocktail Recipes")
@@ -13,6 +15,11 @@ const pageNav = [
   { label: 'in the kitchen', link: '/recipes/kitchen'},
 ]
 
+const SignUpContent = {
+  'contentHtml': '<h2>Quick Diddy Prefoooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
+  'ctaLabel': '',
+  'ctaLink': '',
+}
 
 export default function Kitchen(){
   return(
@@ -35,6 +42,11 @@ export default function Kitchen(){
         </Link>
 
       </div>
+      <div className="container max-w-screen-2xl">
+        <HorizontalSeperator />
+      </div>
+
+      <SignUp content={SignUpContent}/>
     </Layout>
   )
 }

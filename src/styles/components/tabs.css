@@ -1,6 +1,6 @@
 
 .react-tabs__tab-list{
-  @apply flex items-start gap-8;
+  @apply flex items-start gap-8 font-bold;
   .react-tabs__tab{
     @apply tracking-widest uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
     @apply transition duration-300 hover:border-t-gold;

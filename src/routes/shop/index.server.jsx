@@ -21,7 +21,7 @@ const alternatingContent = [
   {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/',},
 ]
 const SplitBgContent = {
-  'topLabel': 'Feeling Spirited',
+  'topLabel': 'FEELING SPIRITED?',
   'topHeadline': 'Shop our local Milwaukee Bazaaz',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
@@ -44,7 +44,9 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
           <div>
             <h2 className="max-w-md text-5xl capitalize h1">General shop headline goes here</h2>
-            <Link to="/" className="w-24 mx-0 btn btn-arrow">Shop All</Link>
+            <Link to="/shop/bitters" className="flex gap-2 label group w-fit">Shop All
+              <div className="btn-arrow"></div>
+            </Link>
           </div>
           <div className="flex items-center justify-center text-center">
             <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span>

@@ -11,6 +11,8 @@ import wordmark from '../assets/wordmark-reversed.svg'
 import BittersCarousel from "../components/sections/BittersCarousel.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import SignUp from "../components/sections/SignUp.client";
+import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
+
 
 const HeaderText = ("A hearty intro headline goes right here")
 const ThreeColumnFeaturedContent = {
@@ -66,9 +68,18 @@ export default function Home() {
             </Link>
           </div>
           </div>
-          {/* <VerticalSeparator /> */}
+          <VerticalSeparator />
         </div>
+
+        <div className="container relative pt-0 max-w-screen-2xl">
+           <HorizontalSeperator />
+          <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
+            Recipe Collection
+          </div>
+        </div>
+
         <div className="container pb-0 text-center max-w-screen-2xl">
+
           <h2 className="max-w-lg mx-auto">Bittercube Collection goes right here</h2>
           <Link to="/shop/bitters" className="btn btn-action">Shop Bitters</Link>
         </div>

@@ -7,20 +7,26 @@ import CardCarousel from "../../../components/sections/CardCarousel.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import Arrow from "../../../components/global/icons/Arrow.client"
 import SplitBgVert from "../../../components/sections/SplitBgVert.client";
+import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
+
 
 
 const TabContent = [
   {
     'label': 'ingredients',
-    'contentHtml': '<h6>Made With</h6><p>Wild cherry bark, Indonesian vanilla bean, fresh orange peel, burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+    'contentHtml': '<dl><dt>Mix</dt><dd>2 oz Rye Whiskey</dd><dd>1/2 oz Sweet Vermouth</dd><dd>1/2 oz Heirloom Alchermes</dd><dd>2 dashes Bittercube Root Beer Bitters</dd></dl>',
   },
   {
-    'label': 'ApplicatIdeas',
+    'label': 'Instructions',
     'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
-  }
+  },
+  {
+    'label': 'Get the supplies',
+    'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+  },
 ]
 const SplitBgContent = {
-  'topLabel': 'Feeling Spirited',
+  'topLabel': 'FEELING SPIRITED?',
   'topHeadline': 'Shop our local Milwaukee Bazaaz',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
@@ -39,9 +45,9 @@ export default function Recipe(){
     <Layout>
       <NavigationInterior />
       <div className="container flex items-center gap-2 pb-6 max-w-screen-2xl">
-        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/bitters">Recipes</Link>
+        <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes">Recipes</Link>
         <Arrow />
-        <Link className="label" to="/shop/bitters">Cocktails</Link>
+        <Link className="label" to="/recipes/cocktails">Cocktails</Link>
       </div>
 
       <div className="container grid grid-cols-2 gap-6 pt-0 max-w-screen-2xl">
@@ -59,16 +65,21 @@ export default function Recipe(){
             <div className="block text-vertical">How</div>
             <div className="pl-1">to</div>
             <div className="block text-vertical">craft</div>
+            <div className="-ml-0.5 rotate-90 bounce">
+              <Arrow />
+            </div>
           </div>
-          <hr className="my-6"/>
+          <div className="py-6">
+            <HorizontalSeperator />
+          </div>
           <h3>More Information</h3>
           <div>
             <TabSection content={TabContent} />
           </div>
         </div>
       </div>
-      <div className="container relative pt-0">
-        <hr />
+      <div className="relative w-11/12 pt-0 mx-auto">
+        <HorizontalSeperator />
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Recommended
         </div>

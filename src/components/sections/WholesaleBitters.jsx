@@ -9,8 +9,8 @@ export default function WholesaleBitters(){
       </div>
       <div className="container relative text-center">
         <h2>Wholesale Bittercube</h2>
-        <p className="label">For bartenders & Managers</p>
-        <Link to="/" className="btn btn-action bg-paper">Shop Wholesale</Link>
+        <p className="label h4">For bartenders & Managers</p>
+        <Link to="/" className="btn btn-action bg-paper ">Shop Wholesale</Link>
       </div>
     </section>
   )

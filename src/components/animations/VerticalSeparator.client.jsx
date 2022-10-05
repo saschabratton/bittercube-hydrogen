@@ -18,45 +18,11 @@ export default function VerticalSeparator() {
     // />
 
 <>
-    <figure className="z-0 w-full h-full center-absolute" ref={ref}>
-      <svg width="100%" height="100%" viewBox="0 0 20 800" fill="none" className="inline-block">
-        <motion.line
-          x1="1"
-          y1="0"
-          x2="1"
-          y2="1000"
-          strokeWidth={2}
-          stroke="#B48039"
-          style={{ pathLength: scrollY }}
-        />
-        {/* <motion.line
-          x1="1"
-          y1="1"
-          x2="800"
-          y2="1"
-          pathLength={1}
-          strokeWidth={2}
-          stroke="#B48039"
-          className="absolute"
-          style={{ pathLength: scrollYProgress }}
-        />
-        <motion.line
-          x1="-800"
-          y1="1"
-          x2="1"
-          y2="1"
-          pathLength={1}
-          strokeWidth={2}
-          stroke="#B48039"
-          className="absolute"
-          style={{ pathLength: scrollYProgress }}
-        /> */}
 
-      </svg>
-    </figure>
-    <div className="inline-block p-2 mx-auto font-bold tracking-widest text-white uppercase bg-gold h-fit">
-            some title text
-          </div>
+<div className="w-0.5 h-full center-absolute bg-gold">
+
+</div>
+
           </>
   )
 }

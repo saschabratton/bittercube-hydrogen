@@ -17,7 +17,7 @@ export default function TabSection({ content }){
       </TabList>
       {content && content.map((content) => (
         <TabPanel>
-          <div className="relative pt-6 h-[500px]">
+          <div className="relative pt-8 h-[500px]">
             <div className="relative z-10">
               {parse(content.contentHtml)}
             </div>

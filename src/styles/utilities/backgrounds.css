@@ -15,6 +15,14 @@
     h1,h2,h3,p, a{
       @apply text-white;
     }
+    form{
+      input{
+        @apply !bg-paper/0;
+      }
+      button {
+        @apply !text-white;
+      }
+    }
   }
   .bg-pattern{
     background-image: url("/src/assets/bg-pattern.png");
