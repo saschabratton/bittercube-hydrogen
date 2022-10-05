@@ -1,4 +1,4 @@
-# Bittercube
+# Bittercube site
 
 https://bittercube.vercel.app
 
