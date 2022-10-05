@@ -1,5 +1,5 @@
 import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
-import wordmark from '../../assets/wordmark-reversed.svg'
+import wordmark from '../../assets/wordmark.svg'
 
 
 export default function NavigationInterior(){

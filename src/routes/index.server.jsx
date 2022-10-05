@@ -10,7 +10,7 @@ import Navigation from "../components/global/Navigation.server";
 import wordmark from '../assets/wordmark-reversed.svg'
 import BittersCarousel from "../components/sections/BittersCarousel.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-
+import SignUp from "../components/sections/SignUp.client";
 
 const HeaderText = ("A hearty intro headline goes right here")
 const ThreeColumnFeaturedContent = {
@@ -39,6 +39,12 @@ const ThreeColumnFeaturedLinks = [
     'link': '/places',
   },
 ]
+
+const SignUpContent = {
+  'contentHtml': '<h2>Quick Diddy Prefoooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
+  'ctaLabel': '',
+  'ctaLink': '',
+}
 
 
 
@@ -73,6 +79,9 @@ export default function Home() {
         {/* <FeaturedCollections /> */}
         <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
 
+        <div className="container text-center">[ recipe stuff ]</div>
+
+        <SignUp content={SignUpContent}/>
     </Layout>
   );
 }

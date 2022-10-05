@@ -8,7 +8,6 @@ import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
 
 const HeaderText = ("Shop")
-
 const pageNav = [
   { label: 'Bitters', link: '/shop/bitters'},
   { label: 'Curated Kits', link: '/'},
@@ -16,13 +15,11 @@ const pageNav = [
   { label: 'Accesories', link: '/'},
   { label: 'Shop All', link: '/'}
 ]
-
 const alternatingContent = [
   {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Bitters',  'ctaLink': '/',},
   {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Kits',  'ctaLink': '/',},
   {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/',},
 ]
-
 const SplitBgContent = {
   'topLabel': 'Feeling Spirited',
   'topHeadline': 'Shop our local Milwaukee Bazaaz',

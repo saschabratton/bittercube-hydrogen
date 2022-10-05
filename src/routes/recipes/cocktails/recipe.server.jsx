@@ -5,18 +5,45 @@ import { Link, Image } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
+import Arrow from "../../../components/global/icons/Arrow.client"
+import SplitBgVert from "../../../components/sections/SplitBgVert.client";
 
 
+const TabContent = [
+  {
+    'label': 'ingredients',
+    'contentHtml': '<h6>Made With</h6><p>Wild cherry bark, Indonesian vanilla bean, fresh orange peel, burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+  },
+  {
+    'label': 'ApplicatIdeas',
+    'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+  }
+]
+const SplitBgContent = {
+  'topLabel': 'Feeling Spirited',
+  'topHeadline': 'Shop our local Milwaukee Bazaaz',
+  'topDescription': '',
+  'topCtaLabel': 'Shop for local pick-up',
+  'topCtaLink': '/',
+  'bottomLabel': 'Get more from Bittercube',
+  'bottomHeadline': 'Subscription Plans',
+  'bottomCtaLabel': 'See Plans',
+  'bottomCtaLink': '',
+  'featuredImage': '',
+  'background': 'dark',
+  'padding': '12'
+}
 
 export default function Recipe(){
   return(
     <Layout>
       <NavigationInterior />
-      <div className="container pb-6 max-w-screen-2xl">
-        <Link className="label text-dark" to="/shop/bitters">Recipes</Link>
-        [ arrow ]
+      <div className="container flex items-center gap-2 pb-6 max-w-screen-2xl">
+        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/bitters">Recipes</Link>
+        <Arrow />
         <Link className="label" to="/shop/bitters">Cocktails</Link>
       </div>
+
       <div className="container grid grid-cols-2 gap-6 pt-0 max-w-screen-2xl">
         <div className="grid gap-6">
           <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -28,8 +55,6 @@ export default function Recipe(){
           <h2>Oldest Pal</h2>
           <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque elementum sollicitudin neque. Duis libero quam, ultricies in elementum in.</p>
           <Link to="/shop/bitters/product" className="ml-0 btn btn-action">Get the bitters</Link>
-
-
           <div className="flex flex-col items-start justify-center gap-6 label">
             <div className="block text-vertical">How</div>
             <div className="pl-1">to</div>
@@ -38,7 +63,7 @@ export default function Recipe(){
           <hr className="my-6"/>
           <h3>More Information</h3>
           <div>
-            <TabSection />
+            <TabSection content={TabContent} />
           </div>
         </div>
       </div>
@@ -50,8 +75,7 @@ export default function Recipe(){
 
       </div>
       <CardCarousel />
-
-
+      <SplitBgVert content={SplitBgContent} />
       <WholesaleBitters />
     </Layout>
   )

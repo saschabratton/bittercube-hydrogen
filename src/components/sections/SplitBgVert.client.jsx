@@ -6,8 +6,10 @@ export default function SplitBgVert({ content }){
   const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding} = content
   return(
     <section className={`pb-12 pt-${padding} bg-split-${background}`}>
-      <div className="py-20 border-y-2 border-gold">
+      <div className="relative py-20 border-y-2 border-gold">
+        <div className="center-absolute  w-0.5 h-full bg-gold"></div>
         <div className="container grid grid-cols-2 gap-16">
+
             <div className="flex flex-col justify-between flex-1 gap-8 text-center lg:px-20">
                 <div className="flex flex-col justify-center gap-2 h-44">
                   <span className="label h3 text-gold">{topLabel}</span>

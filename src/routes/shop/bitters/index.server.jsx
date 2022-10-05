@@ -2,8 +2,6 @@ import { Layout } from "../../../components/Layout.server"
 import PatternHero from "../../../components/headers/PatternHero.server"
 import SubNav from "../../../components/global/SubNav.server"
 import Card from "../../../components/global/Card.client"
-
-import SplitBgVert from "../../../components/sections/SplitBgVert.client"
 import WholesaleBitters from "../../../components/sections/WholesaleBitters"
 
 
@@ -31,7 +29,6 @@ export default function Index(){
         <Card />
         <Card />
       </div>
-      {/* <SplitBgVert /> */}
       <WholesaleBitters />
 
     </Layout>

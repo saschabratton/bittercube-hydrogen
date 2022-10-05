@@ -1,35 +1,31 @@
+import parse from 'html-react-parser';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Illustraion from "../../assets/illustration.svg"
+import { Image } from "@shopify/hydrogen";
 // import 'react-tabs/style/react-tabs.css';
 
 
-export default function TabSection(){
+export default function TabSection({ content }){
+  const { label, contentHtml } = content
   return(
-    <Tabs className="grid grid-cols-2 py-20">
+    <Tabs>
       <div>
-        image
-      </div>
-      <div className="grid gap-12">
       <TabList>
-        <Tab>Dropper VS Dash</Tab>
-        <Tab>Shaking & Stirring</Tab>
-        <Tab>Experimentation</Tab>
+        {content && content.map((content) => (
+          <Tab>{content.label}</Tab>
+        ))}
       </TabList>
-
-      <TabPanel>
-        <p>In general, both a dash (from Bittercube 1.7 oz or 5 oz bottles) or dropper (from Bittercube 1 oz bottles) are equivalent to slightly less than one ml of bitters. However, follow the instructions below for an accurate measurement.
-
-        DISPENSING BITTERS FROM A 1 OZ BOTTLE
-        Squeeze the bulb of the dropper twice, filling it to about three-quarters of its capacity. The bitters should not enter the bulb. Release the bitters by squeezing the bulb repeatedly until the dropper is empty.
-
-        DISPENSING BITTERS FROM A 1.7 OZ OR 5 OZ BOTTLE
-        Holding the neck of the bottle and using one fluid movement, swing the bottle until upside down. With a downward thrust, expel a dash of bitters from the bottle.</p>
-      </TabPanel>
-      <TabPanel>
-        <h2>Any content 2</h2>
-      </TabPanel>
-      <TabPanel>Any content 3</TabPanel>
+      {content && content.map((content) => (
+        <TabPanel>
+          <div className="relative pt-6 h-[500px]">
+            <div className="relative z-10">
+              {parse(content.contentHtml)}
+            </div>
+            <Image src={Illustraion} width="390" height="399" role="presentation" className="absolute inset-0 h-full -translate-x-1/2 translate-y-40 bottom-20 left-1/2" alt="A cocktail made with Bittercube Bitters" />
+          </div>
+        </TabPanel>
+      ))}
       </div>
-
     </Tabs>
   )
 }

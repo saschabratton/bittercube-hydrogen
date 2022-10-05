@@ -6,7 +6,7 @@ import featured from '../../assets/bittercube-cocktail.jpg';
 import { Link, Image } from '@shopify/hydrogen';
 import SignUpForm from "../../components/global/SignUpForm.client";
 import TabSection from "../../components/sections/TabSection.client";
-
+import SignUp from "../../components/sections/SignUp.client";
 
 
 const HeaderText = ("Recipes headline goes here")
@@ -15,6 +15,21 @@ const pageNav = [
   { label: 'cocktails', link: '/recipes/cocktails'},
   { label: 'syrups', link: '/recipes/syrups'},
   { label: 'in the kitchen', link: '/recipes/kitchen'},
+]
+const SignUpContent = {
+  'contentHtml': '<h2>share your recipes with us on instagram</h2>',
+  'ctaLabel': 'Instagram',
+  'ctaLink': 'https://www.instagram.com/bittercube/',
+}
+const TabContent = [
+  {
+    'label': 'ingredients',
+    'contentHtml': '<h6>Made With</h6><p>Wild cherry bark, Indonesian vanilla bean, fresh orange peel, burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+  },
+  {
+    'label': 'ApplicatIdeas',
+    'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
+  }
 ]
 
 
@@ -34,7 +49,7 @@ export default function index() {
         <hr />
 
         <div className="container">
-            <TabSection />
+            <TabSection content={TabContent} />
         </div>
 
       </div>
@@ -58,37 +73,24 @@ export default function index() {
         </div>
       </section>
 
-      <section>
-        <div className="container grid gap-20">
-          <div className="grid grid-cols-2">
-            <div className="flex items-center justify-center">
-              <Image src={featured} width={460} height={555} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
-            </div>
-             <div className="flex flex-col items-center justify-center max-w-md mx-auto text-center">
-              <h3>Bittercube in the kitchen</h3>
-              <hr />
-                <p className="text-ornament">
-                  Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
-                </p>
-                <Link to="" className="btn btn-action">Start experimenting</Link>
-             </div>
+      <div className="container grid gap-20 pb-0">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="flex items-center justify-center">
+            <Image src={featured} width={460} height={555} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
-          <hr />
-          <div className="grid grid-cols-2">
-            <div className="max-w-md mx-auto text-center">
-              <h2 className="text-ornament">share your recipes with us on instagram</h2>
-              <a href="https://www.instagram.com/bittercube/" className="btn btn-action" target="_blank" rel="noopener">Instagram</a>
-            </div>
-            <div className="flex flex-col items-center justify-center max-w-lg gap-8 mx-auto mt-8">
-              <h4 className="max-w-md text-center">
-                Enjoy new recipes and the latest news and events
-              </h4>
-              <SignUpForm />
-            </div>
+          <div className="flex flex-col items-center justify-center max-w-md mx-auto text-center">
+            <h3>Bittercube in the kitchen</h3>
+            <hr />
+              <p className="text-ornament">
+                Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
+              </p>
+              <Link to="" className="btn btn-action">Start experimenting</Link>
           </div>
         </div>
-      </section>
-    <hr />
+        <hr />
+        </div>
+      <SignUp content={SignUpContent}/>
+
 
     </Layout>
   )

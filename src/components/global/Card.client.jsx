@@ -13,7 +13,11 @@ export default function Card(){
           <div className="text-dark">$15.99</div>
         </div>
         <hr />
-        <p className="font-bold tracking-widest uppercase">The starter's Trio</p>
+
+        <div className="flex justify-between w-full gap-2 mx-auto label group">
+          <p className="font-bold tracking-widest uppercase">The starter's Trio</p>
+          <div className="btn-arrow"></div>
+        </div>
         <span className="transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">Stainless steel, lorem ipsum</span>
       </div>
     </Link>
