@@ -1,5 +1,5 @@
 import { Image, Link } from "@shopify/hydrogen"
-import image from '../../../assets/bittercube-cocktail.jpg';
+import FeaturedImage from '../../../assets/bittercube-cocktail.jpg';
 import Carousel from 'better-react-carousel'
 import VerticalSeparator from "../../animations/VerticalSeparator.client";
 import TabSection from "../TabSection.client";
@@ -7,9 +7,9 @@ import Emblem from '../../../assets/emblems/botanicals-emblem.svg'
 
 const RecommendedProducts = [
   {'label': 'hierloom nitro espresso martini',
-  'image': 'src/assets/images/oldestpal.jpg'},
+  'FeaturedImage': 'src/assets/images/oldestpal.jpg'},
   {'label': 'hierloom nitro espresso martini',
-  'image': 'src/assets/bittercube-cocktail.jpg'},
+  'FeaturedImage': 'src/assets/bittercube-cocktail.jpg'},
 ]
 const TabContent = [
   {
@@ -50,12 +50,12 @@ export default function RecipeCarousel() {
       <div className="col-span-1 lg:col-span-7">
           <Carousel cols={1} rows={1} gap={16} loop arrowLeft={arrowLeft} arrowRight={arrowRight} >
             {RecommendedProducts.map(item => {
-              const {label, image } = item
+              const {label, FeaturedImage } = item
               return(
                 <Carousel.Item>
                   <div className="relative grid grid-cols-1 md:grid-cols-7">
                     <div className="flex items-center p-20 md:col-span-3">
-                      <Image src={image} width={460} height={555} className="object-cover shadow-md rotate-3 aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+                      <Image src={FeaturedImage} width={460} height={555} className="object-cover shadow-md rotate-3 aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
                     </div>
                     <div className="flex flex-col gap-6 md:col-span-4">
                       <div className="flex flex-col gap-6 px-8 pt-28">

@@ -1,6 +1,6 @@
 import { Link, Image } from "@shopify/hydrogen";
 import HorizontalSeperator from "../headers/HorizontalSeperator.client";
-import image from '../../assets/images/pour.jpg';
+import FeaturedImage from '../../assets/images/pour.jpg';
 import parse from 'html-react-parser';
 
 
@@ -24,7 +24,7 @@ export default function AlternatingTextImage({ content }){
               <Link to={ctaLink} className="btn btn-action">{cta}</Link>
             </div>
             <div className="overflow-hidden image-frame group-hover:!rounded-jumbo transition-all transform w-fit z-10 relative mx-auto duration-500 h-fit">
-              <Image src={image} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+              <Image src={FeaturedImage} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
             </div>
           </div>
         )

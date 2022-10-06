@@ -1,5 +1,5 @@
 import { Link, Image } from "@shopify/hydrogen"
-import image from '../../../assets/bittercube-cocktail.jpg'
+import FeaturedImage from '../../../assets/bittercube-cocktail.jpg'
 import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
 import Emblem from '../../../assets/emblems/bitters-flavors.svg'
 
@@ -20,7 +20,7 @@ export default function Flavors(){
               When a recipe calls for a flavor extract such as vanilla or almond extract, you can easily substitute bitters in a 1:1 ratio to provide more complexity and a robust flavor profile. Below are some examples of this technique.
             </p>
           </div>
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
+          <Image src={FeaturedImage} width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center justify-start gap-3 text-center">

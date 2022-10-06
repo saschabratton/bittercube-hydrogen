@@ -14,7 +14,7 @@ export default function ScrollingBanner() {
 
 
   return (
-    <div className="py-12">
+    <div className="py-12 overflow-x-hidden">
       <motion.div style={{ translateX: scrollX }} className="flex justify-center">
         <Image src={ botanicals } width={1990} height={30} alt="Made with real botanicals" />
         <Image src={ botanicals } width={1990} height={30} alt="Made with real botanicals" />
