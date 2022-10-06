@@ -1,5 +1,5 @@
 import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
-import wordmark from '../../assets/wordmark.svg'
+import Wordmark from '../../assets/wordmark.svg'
 
 
 export default function NavigationInterior(){
@@ -21,7 +21,7 @@ export default function NavigationInterior(){
             <span className="sr-only">
               Bittercube
             </span>
-            <Image src={wordmark} width={170} height={36} alt="Bittercube" />
+            <Image src={Wordmark} width={170} height={36} alt="Bittercube" />
           </Link>
           <div className="flex gap-12">
             <Link className="nav-link" to="/shop">

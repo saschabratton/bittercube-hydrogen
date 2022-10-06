@@ -1,4 +1,4 @@
-import wordmark from '../../assets/wordmark.svg'
+import Wordmark from '../../assets/wordmark.svg'
 import { Link, Image } from "@shopify/hydrogen"
 import SignUpForm from "./SignUpForm.client"
 import facebook from "../../assets/facebook.svg"
@@ -22,7 +22,7 @@ export default function Footer(){
     <footer className="bg-paper">
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-6 lg:grid-cols-9 max-w-screen-2xl">
           <div className="flex flex-col items-center justify-between md:col-span-1 lg:col-span-4 lg:items-start">
-            <Image src={wordmark} height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
+            <Image src={Wordmark} height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
             <div className="flex-col hidden gap-4 lg:flex">
               <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
               <SignUpForm />
