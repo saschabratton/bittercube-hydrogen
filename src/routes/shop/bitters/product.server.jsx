@@ -1,6 +1,5 @@
 import { Layout } from "../../../components/Layout.server"
 import NavigationInterior from "../../../components/global/NavigationInterior.server"
-import image from '../../../assets/images/product.jpg'
 import { Link, Image } from "@shopify/hydrogen"
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client"
 import CardCarousel from "../../../components/sections/CardCarousel.client"
@@ -64,9 +63,8 @@ export default function Product(){
       </div>
       <div className="container grid gap-6 pt-0 lg:grid-cols-2 max-w-screen-2xl">
         <div className="hidden lg:grid lg:gap-6">
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/product.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/product.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div className="h-[500px]">

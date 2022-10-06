@@ -1,8 +1,5 @@
-import Wordmark from '../../assets/wordmark.svg'
 import { Link, Image } from "@shopify/hydrogen"
 import SignUpForm from "./SignUpForm.client"
-import facebook from "../../assets/facebook.svg"
-import instagram from "../../assets/instagram.svg"
 
 
 const navItems = [
@@ -22,7 +19,7 @@ export default function Footer(){
     <footer className="bg-paper">
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-6 lg:grid-cols-9 max-w-screen-2xl">
           <div className="flex flex-col items-center justify-between md:col-span-1 lg:col-span-4 lg:items-start">
-            <Image src={Wordmark} height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
+            <Image src='/logos/wordmark.svg' height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
             <div className="flex-col hidden gap-4 lg:flex">
               <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
               <SignUpForm />
@@ -60,10 +57,10 @@ export default function Footer(){
               <h6>Follow us online</h6>
               <div className="flex items-center justify-center gap-4 mt-4 lg:flex-col">
                 <a href="https://www.instagram.com/bittercube/" target="_blank" rel="noopener" className="transition hover:opacity-80">
-                  <Image src={instagram} width="40" height="40" alt="Instagram" />
+                  <Image src='/logos/instagram.svg' width="40" height="40" alt="Instagram" />
                 </a>
                 <a href="https://www.facebook.com/bittercubebitters/" target="_blank" rel="noopener" className="transition hover:opacity-80">
-                  <Image src={facebook} width="40" height="40" alt="facebook" />
+                  <Image src='/logos/facebook.svg' width="40" height="40" alt="facebook" />
                 </a>
               </div>
             </div>

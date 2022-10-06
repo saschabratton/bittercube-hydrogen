@@ -1,6 +1,5 @@
 import { Layout } from "../../../components/Layout.server";
 import NavigationInterior from "../../../components/global/NavigationInterior.server";
-import FeaturedImage from '../../../assets/images/oldestpal.jpg'
 import { Link, Image } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
@@ -53,9 +52,8 @@ export default function Recipe(){
 
       <div className="container grid grid-cols-2 gap-6 pt-0 max-w-screen-2xl">
         <div className="grid gap-6">
-          <Image src={FeaturedImage} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={FeaturedImage} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={FeaturedImage} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/oldestpal.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/oldestpal.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <span className="label">Citrusy</span>

@@ -1,6 +1,5 @@
 import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
 
-import wordmark from '../assets/wordmark-reversed.svg'
 import Footer from "./global/Footer.client";
 
 export function Layout({ children }) {
@@ -25,12 +24,7 @@ export function Layout({ children }) {
         }}
       />
       <div className="hidden pt-0 pb-0 border-b-0 bg-forest bg-split-dark bg-split-forest"></div>
-
-
-
       <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
-
-
         <main role="main" id="mainContent" className="flex-grow bg-paper">
           {children}
         </main>

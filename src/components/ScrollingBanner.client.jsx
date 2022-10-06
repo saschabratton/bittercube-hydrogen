@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-
-import botanicals from '../assets/real-botanicals.svg'
-
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Image } from "@shopify/hydrogen";
 
@@ -16,9 +12,9 @@ export default function ScrollingBanner() {
   return (
     <div className="py-12 overflow-x-hidden">
       <motion.div style={{ translateX: scrollX }} className="flex justify-center">
-        <Image src={ botanicals } width={1990} height={30} alt="Made with real botanicals" />
-        <Image src={ botanicals } width={1990} height={30} alt="Made with real botanicals" />
-        <Image src={ botanicals } width={1990} height={30} alt="Made with real botanicals" />
+        <Image src='/emblems/real-botanicals.svg' width={1990} height={30} alt="Made with real botanicals" />
+        <Image src='/emblems/real-botanicals.svg' width={1990} height={30} alt="Made with real botanicals" />
+        <Image src='/emblems/real-botanicals.svg' width={1990} height={30} alt="Made with real botanicals" />
       </motion.div>
       </div>
       );

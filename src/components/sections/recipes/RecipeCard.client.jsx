@@ -1,12 +1,11 @@
 import { Link, Image } from "@shopify/hydrogen"
-import image from '../../../assets/images/oldestpal.jpg';
 
 export default function RecipeCard(){
   return(
     <Link to="/recipes/cocktails/recipe">
       <div className="grid gap-2 text-center group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
-          <Image src={image} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+          <Image src='/images/oldestpal.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
           <div className="mt-4 text-2xl font-decorative text-gold">Citrusy</div>
           <h3>Oldest Pal</h3>

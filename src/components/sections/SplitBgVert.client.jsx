@@ -1,6 +1,5 @@
 import { Link, Image } from "@shopify/hydrogen"
 import parse from 'html-react-parser';
-import FeaturedImage from '../../assets/images/heirloom.jpg';
 
 export default function SplitBgVert({ content }){
   const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding, bottomHtml} = content
@@ -30,7 +29,7 @@ export default function SplitBgVert({ content }){
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">
-              <Image src={FeaturedImage} width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
+              <Image src='images/heirloom.jpg' width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
             </div>
 
         </div>

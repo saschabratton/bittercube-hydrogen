@@ -1,5 +1,5 @@
 import { Image, Link } from "@shopify/hydrogen"
-import featured from '../../../assets/images/pour.jpg';
+
 import HorizontalSeperator from "../../headers/HorizontalSeperator.client";
 
 export default function InTheKitchen(){
@@ -7,7 +7,7 @@ export default function InTheKitchen(){
     <div className="container grid gap-20 pb-0">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="flex items-center justify-center">
-            <Image src={featured} width={460} height={555} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+            <Image src='/images/pour.jpg' width={460} height={555} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
           <div className="relative flex flex-col items-center justify-center max-w-md mx-auto text-center">
             <div className="absolute top-5 -right-16">

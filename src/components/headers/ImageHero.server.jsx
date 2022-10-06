@@ -1,4 +1,3 @@
-import FeaturedImage from '../../assets/images/image-header.jpg';
 import { Image } from "@shopify/hydrogen"
 import Navigation from "../global/Navigation.server";
 
@@ -7,7 +6,7 @@ export default function ImageHero({ content }){
     <div className="relative header-dark h-[545px]">
       <Navigation />
       <div className="absolute inset-0">
-        <Image src={FeaturedImage} width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
+        <Image src='/images/imageheader.jpg' width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
       <div className="absolute left-0 w-1/4 h-0.5 top-1/2 bg-gold">
         <div className="ornament-arrow-right"></div>

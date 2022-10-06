@@ -5,10 +5,8 @@ import SplitBgVert from "../components/sections/SplitBgVert.client"
 import Navigation from "../components/global/Navigation.server";
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-import image from '../assets/images/about.jpg'
 import { Image } from "@shopify/hydrogen"
-import Emblem from '../assets/emblems/innovative-thoughtful.svg'
-import Emblem2 from '../assets/emblems/botanicals-emblem.svg'
+
 
 const HeaderText = ("About Bittercube Headline goes Here make it good")
 const ThreeColumnFeaturedContent = {
@@ -30,8 +28,6 @@ const SplitBgContent = {
   'bottomCtaLink': '/',
   'bottomLabel': '',
   'bottomHeadline': '',
-  'bottomCtaLabel': '',
-  'bottomCtaLink': '',
   'featuredImage': '',
   'background': 'forest',
   'padding': '0',
@@ -54,7 +50,7 @@ export default function about() {
       <ImageHero content={HeaderText} />
       <div className="container relative mt-20">
         <div className="absolute top-0 right-0">
-          <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+          <Image src='/emblems/innovative-thoughtful.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
         <div className="grid grid-cols-1 gap-6 py-16 text-center md:grid-cols-2">
             <h2 className="max-w-lg">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
@@ -74,8 +70,8 @@ export default function about() {
 
       <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
         <div className="grid gap-6">
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div className="absolute top-0 right-0">
@@ -91,7 +87,7 @@ export default function about() {
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
       <div className="relative">
          <div className="absolute left-[77%] top-[20%] z-10">
-          <Image src={Emblem2} width={101} height={111} alt="" role="presentation" />
+          <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
         <SplitBgVert content={SplitBgContent} />
       </div>

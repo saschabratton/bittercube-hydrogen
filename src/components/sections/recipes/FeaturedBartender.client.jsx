@@ -1,5 +1,4 @@
 import { Link, Image } from "@shopify/hydrogen"
-import featured from '../../../assets/images/about.jpg';
 
 
 
@@ -21,7 +20,7 @@ export default function FeaturedBartenders(){
 
             </div>
             <div className="col-span-3">
-              <Image src={featured} width={460} height={555} className="object-cover aspect-4/5 rounded-jumbo" alt="A cocktail made with Bittercube Bitters" />
+              <Image src='/images/about.jpg' width={460} height={555} className="object-cover aspect-4/5 rounded-jumbo" alt="A cocktail made with Bittercube Bitters" />
             </div>
           </div>
 

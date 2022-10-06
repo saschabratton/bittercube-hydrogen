@@ -6,7 +6,6 @@ import SignUp from "../../components/sections/SignUp.client";
 import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";
 import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
-import Emblem from '../../assets/emblems/signatures-classics.svg'
 import { Image } from "@shopify/hydrogen";
 
 
@@ -33,7 +32,7 @@ export default function index() {
       <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">
         <div className="flex justify-center col-span-2">
           <div className="">
-            <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/signatures-classics.svg' width={101} height={111} alt="" role="presentation" />
           </div>
         </div>
         <h2 className="col-span-3 capitalize">Featured Recipes Headline Goes Here</h2>

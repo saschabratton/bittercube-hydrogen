@@ -1,14 +1,12 @@
 import { Link, Image } from "@shopify/hydrogen"
-import image from '../../../assets/bittercube-cocktail.jpg'
 import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
-import Emblem from '../../../assets/emblems/bitters-spices.svg'
 
 
 export default function Spices(){
   return(
       <div className="container relative grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
         <div className="top-[90%] center-absolute ">
-          <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+          <Image src='/emblems/bitters-spices.svg' width={101} height={111} alt="" role="presentation" />
         </div>
         <div className="flex flex-col justify-between gap-20">
           <div className="flex flex-col items-center mx-auto text-center">
@@ -20,7 +18,7 @@ export default function Spices(){
               When a recipe calls for a ground spice like cinnamon, cardamom, or cloves, you can easily substitute cocktail bitters in a 1:1 ratio. This method provides a more nuanced flavor, instead of a singularly focused intense flavor. Below are some bitters varieties and spices that work well in this context.
             </p>
           </div>
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
+          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center justify-start gap-3 text-center">

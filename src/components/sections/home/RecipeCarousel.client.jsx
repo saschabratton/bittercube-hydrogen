@@ -1,15 +1,13 @@
 import { Image, Link } from "@shopify/hydrogen"
-import FeaturedImage from '../../../assets/bittercube-cocktail.jpg';
 import Carousel from 'better-react-carousel'
 import VerticalSeparator from "../../animations/VerticalSeparator.client";
 import TabSection from "../TabSection.client";
-import Emblem from '../../../assets/emblems/botanicals-emblem.svg'
 
 const RecommendedProducts = [
   {'label': 'hierloom nitro espresso martini',
-  'FeaturedImage': 'src/assets/images/oldestpal.jpg'},
+  'FeaturedImage': '/images/oldestpal.jpg'},
   {'label': 'hierloom nitro espresso martini',
-  'FeaturedImage': 'src/assets/bittercube-cocktail.jpg'},
+  'FeaturedImage': '/bittercube-cocktail.jpg'},
 ]
 const TabContent = [
   {
@@ -41,7 +39,7 @@ export default function RecipeCarousel() {
     <div className="container relative flex py-0 mx-auto my-20 border-2 border-gold md:grid md:grid-cols-8 md:px-0">
       <VerticalSeparator />
       <div className="absolute -top-10 right-10">
-        <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+        <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="" role="presentation" />
       </div>
       <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">Recipe Collection</div>
       <div className="flex items-center justify-center col-span-1 text-center border-r-2 label border-gold">
@@ -55,7 +53,7 @@ export default function RecipeCarousel() {
                 <Carousel.Item>
                   <div className="relative grid grid-cols-1 md:grid-cols-7">
                     <div className="flex items-center p-20 md:col-span-3">
-                      <Image src={FeaturedImage} width={460} height={555} className="object-cover shadow-md rotate-3 aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+                      <Image src='images/bittercube-cocktail.jpg' width={460} height={555} className="object-cover shadow-md rotate-3 aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
                     </div>
                     <div className="flex flex-col gap-6 md:col-span-4">
                       <div className="flex flex-col gap-6 px-8 pt-28">

@@ -1,6 +1,5 @@
 import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
 import { Image } from "@shopify/hydrogen"
-import featured from '../../../assets/bittercube-cocktail.jpg';
 import VerticalSeparator from "../../animations/VerticalSeparator.client";
 import TabSection from "../TabSection.client";
 
@@ -31,7 +30,7 @@ export default function LearnToCraft() {
       <div className="container relative grid grid-cols-1 gap-6 md:grid-cols-2">
         <VerticalSeparator />
         <div className="p-8">
-          <Image src={featured} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="flex flex-col gap-6 p-8">
           <h3 className="tracking-normal">Cocktail Basics</h3>

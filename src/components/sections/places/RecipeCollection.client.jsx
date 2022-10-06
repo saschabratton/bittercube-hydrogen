@@ -1,6 +1,4 @@
 import { Image, Link } from "@shopify/hydrogen"
-import image from '../../../assets/images/heirloom.jpg';
-import Emblem from '../../../assets/emblems/bazaar.svg'
 
 
 export default function RecipeColleciton() {
@@ -16,12 +14,12 @@ export default function RecipeColleciton() {
           <li className="label text-ornament">crafted favorites and more</li>
         </ul>
         <div className="flex items-center justify-center col-span-3 p-10">
-          <Image src={image} width={460} height={555} className="object-cover rounded-jumbo-sm aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+          <Image src='/images/heirloom.jpg' width={460} height={555} className="object-cover rounded-jumbo-sm aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
         </div>
 
         <div className="relative flex flex-col items-center justify-center col-span-4 gap-6 py-32 text-center border-l-2 px-28 border-gold">
           <div className="absolute top-10 right-5">
-          <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+          <Image src='/emblems/bazaar.svg' width={101} height={111} alt="" role="presentation" />
         </div>
           <h2>shop the local milwaukee bazaar</h2>
           <p>

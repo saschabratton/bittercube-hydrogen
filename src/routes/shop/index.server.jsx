@@ -6,7 +6,6 @@ import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
-import Emblem from '../../assets/emblems/currated-cocktails.svg'
 
 const HeaderText = ("Shop")
 const pageNav = [
@@ -59,7 +58,7 @@ export default function Home() {
         </div>
         <div className="relative">
           <div className="center-absolute top-1/3">
-            <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/currated-cocktails.svg' width={101} height={111} alt="" role="presentation" />
           </div>
           <AlternatingTextImage content={alternatingContent} />
         </div>
