@@ -1,5 +1,5 @@
 import { Link, Image } from "@shopify/hydrogen"
-import featured from '../../../assets/bittercube-cocktail.jpg';
+import featured from '../../../assets/images/about.jpg';
 
 
 

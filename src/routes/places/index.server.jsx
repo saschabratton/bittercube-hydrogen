@@ -32,16 +32,14 @@ export default function Places() {
       <div className="container max-w-2xl text-center">
         <h2>a places headline that introduces all your spaces will go right here</h2>
       </div>
-      <div className="container">
+      <div className="container relative">
+        <div className="absolute left-0 top-5">
+          <span className="text-3xl font-decorative text-gold">Some little zippy<br />closer  here</span>
+        </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>
       <RecipeColleciton />
       <Events />
-
-
-
-
-
     </Layout>
   )
 }

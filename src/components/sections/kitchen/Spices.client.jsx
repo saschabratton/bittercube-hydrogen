@@ -1,10 +1,15 @@
 import { Link, Image } from "@shopify/hydrogen"
 import image from '../../../assets/bittercube-cocktail.jpg'
 import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
+import Emblem from '../../../assets/emblems/bitters-spices.svg'
+
 
 export default function Spices(){
   return(
-        <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
+      <div className="container relative grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
+        <div className="top-[90%] center-absolute ">
+          <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+        </div>
         <div className="flex flex-col justify-between gap-20">
           <div className="flex flex-col items-center mx-auto text-center">
             <h2 className="max-w-sm">Bitters & Ground Spices</h2>
@@ -75,7 +80,7 @@ export default function Spices(){
             </Link>
           </div>
           <div className="flex items-center justify-center col-span-2">
-            <Link to="/store/bitters" className="mx-auto btn btn-action">Shop Bitters</Link>
+            <Link to="/shop/bitters" className="mx-auto btn btn-action">Shop Bitters</Link>
           </div>
         </div>
       </div>

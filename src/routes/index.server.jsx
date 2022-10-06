@@ -12,6 +12,7 @@ import BittersCarousel from "../components/sections/BittersCarousel.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import SignUp from "../components/sections/SignUp.client";
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
+import RecipeCarousel from "../components/sections/home/RecipeCarousel.client";
 
 
 const HeaderText = ("A hearty intro headline goes right here")
@@ -71,7 +72,7 @@ export default function Home() {
           <VerticalSeparator />
         </div>
 
-        <div className="container relative pt-0 max-w-screen-2xl">
+        <div className="relative w-11/12 pt-0 mx-auto">
            <HorizontalSeperator />
           <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
             Recipe Collection
@@ -90,7 +91,7 @@ export default function Home() {
         {/* <FeaturedCollections /> */}
         <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
 
-        <div className="container text-center">[ recipe stuff ]</div>
+        <RecipeCarousel />
 
         <SignUp content={SignUpContent}/>
     </Layout>

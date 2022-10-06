@@ -1,7 +1,7 @@
 import Carousel from 'better-react-carousel'
 import { Image } from "@shopify/hydrogen"
-import Card from "../global/Card.client"
-import RecipeCard from "../global/RecipeCard.client"
+import Card from "../../global/Card.client"
+import RecipeCard from "./RecipeCard.client"
 
 const RecommendedProducts = [
   {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
@@ -25,19 +25,12 @@ const arrowRight = () => (
 export default function RecipeCarousel(){
   return(
     <section>
-      <Carousel cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} arrowRight={arrowRight}>
+      <Carousel cols={4} rows={1} gap={36} loop arrowLeft={arrowLeft} arrowRight={arrowRight}>
         {RecommendedProducts.map(item => {
           const {label, manufacturer, price, description, image } = item
           return(
             <Carousel.Item>
               <RecipeCard />
-
-              {/* <Image src={ image } width={370} height={446} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters"/>
-              <div className="flex justify-between gap-2 py-2 border-b-2 border-gold">
-                <span className="tracking-wider text-gold">{manufacturer}</span>
-                <span className="text-dark">{price}</span>
-              </div>
-              <p className="font-bold tracking-widest uppercase">{ label }</p> */}
              </Carousel.Item>
           )
           })}

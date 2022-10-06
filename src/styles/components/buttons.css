@@ -48,7 +48,7 @@
   }
   .btn-action{
     @apply px-6 py-3 mx-auto w-fit;
-    @apply tracking-widest transition duration-300 border-2 rounded-md border-gold text-dark;
+    @apply tracking-widest transition duration-500 border-2 rounded-md border-gold text-dark;
     @apply hover:rounded-none hover:bg-paper-action hover:text-dark;
   }
 }

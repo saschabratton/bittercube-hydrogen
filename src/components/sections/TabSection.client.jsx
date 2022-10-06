@@ -17,11 +17,11 @@ export default function TabSection({ content }){
       </TabList>
       {content && content.map((content) => (
         <TabPanel>
-          <div className="relative pt-8 h-[500px]">
+          <div className="relative pt-8 h-[400px]">
             <div className="relative z-10">
               {parse(content.contentHtml)}
             </div>
-            <Image src={Illustraion} width="390" height="399" role="presentation" className="absolute inset-0 h-full -translate-x-1/2 translate-y-40 bottom-20 left-1/2" alt="A cocktail made with Bittercube Bitters" />
+            {/* <Image src={Illustraion} width="390" height="399" role="presentation" className="absolute inset-0 h-full -translate-x-1/2 translate-y-40 bottom-20 left-1/2" alt="A cocktail made with Bittercube Bitters" /> */}
           </div>
         </TabPanel>
       ))}

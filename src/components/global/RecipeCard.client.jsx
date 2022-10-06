@@ -1,7 +1,7 @@
 import { Link, Image } from "@shopify/hydrogen"
-import image from '../../assets/images/product.jpg';
+import image from '../../assets/bittercube-cocktail.jpg';
 
-export default function Card(){
+export default function RecipeCard(){
   return(
     <Link to="/shop/bitters/product">
       <div className="grid gap-2 group">
@@ -9,16 +9,16 @@ export default function Card(){
           <Image src={image} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
         <div className="flex justify-between">
-          <div className="label">Bittercube</div>
-          <div className="text-dark">$15.99</div>
+          <div className="label">Bittercube Orange Bitters</div>
+          <div className="text-dark">Rye Whiskey</div>
         </div>
         <hr />
 
         <div className="flex justify-between w-full gap-2 mx-auto label group">
-          <p className="mb-0 font-bold tracking-widest uppercase">The starter's Trio</p>
+          <p className="mb-0 font-bold tracking-widest uppercase">"Oldest Pal"</p>
           <div className="btn-arrow"></div>
         </div>
-        <span className="transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">Stainless steel, lorem ipsum</span>
+        <span className="transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">Sweet and zippy, perfect for summer</span>
       </div>
     </Link>
   )

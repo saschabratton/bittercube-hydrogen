@@ -2,10 +2,25 @@
 .react-tabs__tab-list{
   @apply flex items-start gap-8 font-bold;
   .react-tabs__tab{
-    @apply tracking-widest uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
-    @apply transition duration-300 hover:border-t-gold;
+    @apply relative tracking-widest uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
+    @apply p-2 overflow-hidden cursor-pointer;
+
     &.react-tabs__tab--selected{
       @apply text-dark border-y-dark;
     }
+    &:not(.react-tabs__tab--selected){
+      &::before{
+        content: "";
+        @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-px -left-1/2;
+        @apply w-full h-0.5 bg-gold/0;
+        @apply transition duration-500;
+      }
+      &:hover{
+        &::before{
+          @apply translate-x-1/2 bg-gold/100;
+        }
+      }
     }
+
+  }
 }

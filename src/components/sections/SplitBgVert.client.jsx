@@ -1,6 +1,6 @@
 import { Link, Image } from "@shopify/hydrogen"
 import parse from 'html-react-parser';
-import image from '../../assets/bittercube-cocktail.jpg';
+import image from '../../assets/images/heirloom.jpg';
 
 export default function SplitBgVert({ content }){
   const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding, bottomHtml} = content

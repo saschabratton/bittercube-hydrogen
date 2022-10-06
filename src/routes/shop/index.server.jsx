@@ -6,23 +6,27 @@ import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
+import Emblem from '../../assets/emblems/currated-cocktails.svg'
 
 const HeaderText = ("Shop")
 const pageNav = [
   { label: 'Bitters', link: '/shop/bitters'},
-  { label: 'Curated Kits', link: '/'},
-  { label: 'Special Editions & Collaborations', link: '/'},
-  { label: 'Accesories', link: '/'},
-  { label: 'Shop All', link: '/'}
+  { label: 'Curated Kits', link: '/shop/bitters'},
+  { label: 'Special Editions & Collaborations', link: '/shop/bitters'},
+  { label: 'Accesories', link: '/shop/bitters'},
+  { label: 'Shop All', link: '/shop/bitters'}
 ]
 const alternatingContent = [
-  {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Bitters',  'ctaLink': '/',},
-  {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Kits',  'ctaLink': '/',},
-  {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/',},
+  {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Bitters',
+   'ctaLink': '/shop/bitters',
+   'contentHtml': '',
+  },
+  {'title': 'Curated cocktail kits', 'description': '', 'cta': 'Shop Kits',  'ctaLink': '/shop/bitters','contentHtml': '',},
+  {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/shop/bitters','contentHtml': '',},
 ]
 const SplitBgContent = {
   'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop our local Milwaukee Bazaaz',
+  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
   'topCtaLink': '/',
@@ -32,7 +36,8 @@ const SplitBgContent = {
   'bottomCtaLink': '',
   'featuredImage': '',
   'background': 'dark',
-  'padding': '12'
+  'padding': '12',
+  'bottomHtml': ''
 }
 
 export default function Home() {
@@ -52,7 +57,12 @@ export default function Home() {
             <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span>
           </div>
         </div>
-        <AlternatingTextImage content={alternatingContent} />
+        <div className="relative">
+          <div className="center-absolute top-1/3">
+            <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+          </div>
+          <AlternatingTextImage content={alternatingContent} />
+        </div>
       </div>
       <CardCarousel />
       <SplitBgVert content={SplitBgContent} />

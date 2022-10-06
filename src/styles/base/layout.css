@@ -1,7 +1,9 @@
 @layer base{
   header{
     .nav-link{
-      @apply text-sm font-bold tracking-widest uppercase;
+      @apply relative text-sm font-bold tracking-widest uppercase;
+      @apply px-4 py-2 border-2 border-gold/0;
+      @apply duration-500 hover:border-gold/100;
     }
   }
   .container{

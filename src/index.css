@@ -9,6 +9,7 @@
 @import "./styles/components/buttons.css";
 @import "./styles/components/headers.css";
 @import "./styles/components/tabs.css";
+@import "./styles/components/carousel.css";
 /* Utility Syles */
 @import "tailwindcss/utilities";
 @import "./styles/utilities/backgrounds.css";

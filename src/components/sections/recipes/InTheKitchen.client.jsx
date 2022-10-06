@@ -1,5 +1,6 @@
 import { Image, Link } from "@shopify/hydrogen"
-import featured from '../../../assets/bittercube-cocktail.jpg';
+import featured from '../../../assets/images/pour.jpg';
+import HorizontalSeperator from "../../headers/HorizontalSeperator.client";
 
 export default function InTheKitchen(){
   return(
@@ -8,9 +9,14 @@ export default function InTheKitchen(){
           <div className="flex items-center justify-center">
             <Image src={featured} width={460} height={555} className="object-cover aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
-          <div className="flex flex-col items-center justify-center max-w-md mx-auto text-center">
+          <div className="relative flex flex-col items-center justify-center max-w-md mx-auto text-center">
+            <div className="absolute top-5 -right-16">
+              <span className="text-2xl font-decorative text-gold">The Special Ingredient</span>
+            </div>
             <h3>Bittercube in the kitchen</h3>
-            <hr />
+            <div className="w-full mt-6">
+              <HorizontalSeperator />
+            </div>
               <p className="text-ornament">
                 Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
               </p>

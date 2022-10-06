@@ -5,9 +5,10 @@ import SplitBgVert from "../components/sections/SplitBgVert.client"
 import Navigation from "../components/global/Navigation.server";
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-
-import image from '../assets/bittercube-cocktail.jpg'
+import image from '../assets/images/about.jpg'
 import { Image } from "@shopify/hydrogen"
+import Emblem from '../assets/emblems/innovative-thoughtful.svg'
+import Emblem2 from '../assets/emblems/botanicals-emblem.svg'
 
 const HeaderText = ("About Bittercube Headline goes Here make it good")
 const ThreeColumnFeaturedContent = {
@@ -47,14 +48,14 @@ const ThreeColumnFeaturedLinks = [
   }
 ]
 
-
 export default function about() {
-
-
    return (
     <Layout>
       <ImageHero content={HeaderText} />
       <div className="container relative mt-20">
+        <div className="absolute top-0 right-0">
+          <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+        </div>
         <div className="grid grid-cols-1 gap-6 py-16 text-center md:grid-cols-2">
             <h2 className="max-w-lg">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
           <div className="flex items-center justify-center">
@@ -77,15 +78,24 @@ export default function about() {
           <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
+          <div className="absolute top-0 right-0">
+            <span className="block text-3xl text-center font-decorative text-gold">Inspire elevated <br />drinking experiences.</span>
+          </div>
           <span className="label">Founded in 2009</span>
           <h2>two bartenders with a shared vision for what bold & balanced bitters could be.</h2>
-          <p className="h3">relationships with farmers, botanical suppliers, bartenders, and foodies across the globe</p>
+          <p className="h4">relationships with farmers, botanical suppliers, bartenders, and foodies across the globe</p>
           <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines and services.</p>
           <p>Over the years, Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
         </div>
       </div>
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
-      <SplitBgVert content={SplitBgContent} />
+      <div className="relative">
+         <div className="absolute left-[77%] top-[20%] z-10">
+          <Image src={Emblem2} width={101} height={111} alt="" role="presentation" />
+        </div>
+        <SplitBgVert content={SplitBgContent} />
+      </div>
+
 
     </Layout>
    )

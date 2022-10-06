@@ -1,11 +1,14 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import SubNav from "../../components/global/SubNav.server"
-import RecipeCarousel from "../../components/sections/RecipeCarousel.client"
+import RecipeCarousel from "../../components/sections/recipes/RecipeCarousel.client"
 import SignUp from "../../components/sections/SignUp.client";
 import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";
 import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
+import Emblem from '../../assets/emblems/signatures-classics.svg'
+import { Image } from "@shopify/hydrogen";
+
 
 const HeaderText = ("Recipes headline goes here")
 const pageNav = [
@@ -27,8 +30,13 @@ export default function index() {
       <ImageHero content={HeaderText} />
       <SubNav navigation={pageNav} />
       <hr />
-      <div className="container max-w-lg pb-0 text-center">
-        <h2 className="capitalize h1">Featured Recipes Headline Goes Here</h2>
+      <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">
+        <div className="flex justify-center col-span-2">
+          <div className="">
+            <Image src={Emblem} width={101} height={111} alt="" role="presentation" />
+          </div>
+        </div>
+        <h2 className="col-span-3 capitalize">Featured Recipes Headline Goes Here</h2>
       </div>
       <RecipeCarousel />
       <LearnToCraft />

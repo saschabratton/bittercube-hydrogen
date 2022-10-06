@@ -1,6 +1,6 @@
 import { Layout } from "../../../components/Layout.server"
 import NavigationInterior from "../../../components/global/NavigationInterior.server"
-import image from '../../../assets/bittercube-cocktail.jpg'
+import image from '../../../assets/images/product.jpg'
 import { Link, Image } from "@shopify/hydrogen"
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client"
 import CardCarousel from "../../../components/sections/CardCarousel.client"
@@ -39,7 +39,7 @@ const ThreeColumnFeaturedLinks = [
 ]
 const SplitBgContent = {
   'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop our local Milwaukee Bazaaz',
+  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
   'topCtaLink': '/',
@@ -49,7 +49,8 @@ const SplitBgContent = {
   'bottomCtaLink': '',
   'featuredImage': '',
   'background': 'dark',
-  'padding': '12'
+  'padding': '12',
+  'bottomHtml': ''
 }
 
 export default function Product(){

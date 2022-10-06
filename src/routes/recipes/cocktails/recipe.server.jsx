@@ -1,6 +1,6 @@
 import { Layout } from "../../../components/Layout.server";
 import NavigationInterior from "../../../components/global/NavigationInterior.server";
-import image from '../../../assets/bittercube-cocktail.jpg'
+import image from '../../../assets/images/oldestpal.jpg'
 import { Link, Image } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
@@ -27,7 +27,7 @@ const TabContent = [
 ]
 const SplitBgContent = {
   'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop our local Milwaukee Bazaaz',
+  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
   'topCtaLink': '/',
@@ -37,7 +37,8 @@ const SplitBgContent = {
   'bottomCtaLink': '',
   'featuredImage': '',
   'background': 'dark',
-  'padding': '12'
+  'padding': '12',
+  'bottomHtml': ''
 }
 
 export default function Recipe(){
@@ -74,7 +75,7 @@ export default function Recipe(){
           </div>
           <h3>More Information</h3>
           <div>
-            <TabSection content={TabContent} />
+            <TabSection content={TabContent}/>
           </div>
         </div>
       </div>

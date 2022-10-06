@@ -1,6 +1,6 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
-import image from '../../assets/bittercube-cocktail.jpg'
+import image from '../../assets/images/pour.jpg'
 import { Image } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"
 import OtherVenues from "../../components/sections/places/OtherVenues.client"
