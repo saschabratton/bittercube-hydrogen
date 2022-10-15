@@ -6,6 +6,8 @@ import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
+import CollectionsNav from "../../components/headers/CollectionsNav.server";
+
 
 const HeaderText = ("Shop")
 const pageNav = [
@@ -43,9 +45,10 @@ export default function Home() {
   return (
     <Layout>
       <PatternHero content={HeaderText} />
-      <SubNav navigation={pageNav} />
+      {/* <SubNav navigation={pageNav} /> */}
+      <CollectionsNav />
       <div className="container">
-        <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">
           <div>
             <h2 className="max-w-md text-5xl capitalize h1">General shop headline goes here</h2>
             <Link to="/shop/bitters" className="flex gap-2 label group w-fit">Shop All

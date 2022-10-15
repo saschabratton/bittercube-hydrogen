@@ -1,6 +1,9 @@
+import { Suspense } from "react";
 import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
-
+import Navigation from "./global/Navigation.server";
 import Footer from "./global/Footer.client";
+import Nav from "./headers/Nav.client";
+
 
 export function Layout({ children }) {
   const { pathname } = useUrl();
@@ -16,6 +19,7 @@ export function Layout({ children }) {
 
   return (
     <>
+    <Suspense>
       <Seo
         type="defaultSeo"
         data={{
@@ -23,10 +27,17 @@ export function Layout({ children }) {
           description: shop.description,
         }}
       />
-      <div className="hidden pt-0 pb-0 border-b-0 bg-forest bg-split-dark bg-split-forest"></div>
+      </Suspense>
+
+      <div className="hidden pt-0 pb-0 border-b-0 bg-forest bg-split-dark bg-split-forest">
+        {/* TODO: This div is creating classes for tailwind that don't generate at build without */}
+      </div>
       <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
+        {/* <Nav shop={shop} /> */}
         <main role="main" id="mainContent" className="flex-grow bg-paper">
-          {children}
+          <Suspense>
+            {children}
+          </Suspense>
         </main>
         <Footer />
       </div>

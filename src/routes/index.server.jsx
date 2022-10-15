@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Layout } from "../components/Layout.server";
 import FeaturedCollections from "../components/FeaturedCollections.server";
 import HomeHero from "../components/headers/HomeHero.server";
@@ -23,7 +24,6 @@ const ThreeColumnFeaturedContent = {
   'padding': '12',
   'border': '2',
 }
-
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'The Bazaar',
@@ -38,7 +38,6 @@ const ThreeColumnFeaturedLinks = [
     'link': '/places',
   },
 ]
-
 const SignUpContent = {
   'contentHtml': '<h2>Quick Diddy Prefoooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
   'ctaLabel': '',
@@ -52,6 +51,9 @@ export default function Home() {
     <Layout>
       <HomeHero content={HeaderText} />
       <ScrollingBanner />
+        {/* <Suspense>
+          <FeaturedCollections />
+        </Suspense> */}
         <div className="container relative mx-auto overflow-hidden max-w-screen-2xl">
           <div className="container relative z-10 grid grid-cols-1 gap-6 py-0 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
@@ -60,14 +62,13 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center justify-center text-center md:p-16">
             <p className="md:max-w-lg">Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque elementum sollicitudin neque. Duis libero quam, ultricies in elementum in.</p>
-            <Link to="/about" className="flex gap-2 mx-auto btn label group w-fit">About Us
+            <Link to="/about" className="flex items-center gap-2 mx-auto btn label group w-fit">About Us
               <div className="btn-arrow"></div>
             </Link>
           </div>
           </div>
           <VerticalSeparator />
         </div>
-
         <div className="relative w-11/12 pt-0 mx-auto">
            <HorizontalSeperator />
           <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
@@ -75,25 +76,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container pb-0 text-center max-w-screen-2xl">
 
+        <div className="container pb-0 text-center max-w-screen-2xl">
           <h2 className="max-w-lg mx-auto">Bittercube Collection goes right here</h2>
           <Link to="/shop/bitters" className="btn btn-action">Shop Bitters</Link>
         </div>
-        <div className="pb-20">
+        <div className="pt-0 pb-20 mx-auto md:w-11/12">
           <BittersCarousel />
         </div>
 
-        {/* <FeaturedCollections /> */}
         <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
-
         <RecipeCarousel />
-
         <SignUp content={SignUpContent}/>
     </Layout>
   );
 }
-
-// ThreeColumnFeaturedLinks.propTypes = {
-//   label: propTypes.string
-// }

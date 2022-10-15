@@ -25,7 +25,7 @@ export default function ThreeColumnFeature({ content, links }) {
                 <dd>
                   <span className="font-bold tracking-wide text-gold">01</span>
                   <hr className="my-2 border text-gold" />
-                  <a href={link.link} className="flex justify-between w-full gap-2 mx-auto label group">{link.linkLabel} <div className="btn-arrow btn-arrow-gold"></div></a>
+                  <a href={link.link} className="flex items-center justify-between w-full gap-2 mx-auto label group">{link.linkLabel} <div className="btn-arrow btn-arrow-gold"></div></a>
                 </dd>
               ))}
             </dl>

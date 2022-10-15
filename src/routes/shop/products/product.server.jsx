@@ -55,7 +55,7 @@ const SplitBgContent = {
 export default function Product(){
   return(
     <Layout>
-      <NavigationInterior />
+      {/* <NavigationInterior /> */}
       <div className="container flex items-center gap-2 pb-6 max-w-screen-2xl">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop">shop</Link>
         <Arrow />

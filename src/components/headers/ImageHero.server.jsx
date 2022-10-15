@@ -1,10 +1,21 @@
-import { Image } from "@shopify/hydrogen"
+import { useShopQuery, CacheLong, gql, Image } from "@shopify/hydrogen";
 import Navigation from "../global/Navigation.server";
+import Nav from "./Nav.client";
+
 
 export default function ImageHero({ content }){
+
+const {
+    data: { shop },
+  } = useShopQuery({
+    query: SHOP_QUERY,
+    cache: CacheLong(),
+    preload: true,
+  });
+
   return(
     <div className="relative header-dark h-[545px]">
-      <Navigation />
+      <Nav shop={shop} />
       <div className="absolute inset-0">
         <Image src='/images/imageheader.jpg' width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
@@ -24,3 +35,12 @@ export default function ImageHero({ content }){
     </div>
   )
 }
+
+const SHOP_QUERY = gql`
+  query ShopInfo {
+    shop {
+      name
+      description
+    }
+  }
+`;

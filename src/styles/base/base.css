@@ -1,4 +1,7 @@
 @layer base {
+  html {
+    @apply selection:bg-paper-action/70 selection:text-gold;
+  }
   section{
     @apply py-20;
   }
@@ -7,5 +10,8 @@
   }
   ::placeholder, ::-ms-input-placeholder{
     @apply uppercase opacity-100 text-dark;
+  }
+  a, button{
+    @apply block focus:outline-2 focus:outline-gold;
   }
 }

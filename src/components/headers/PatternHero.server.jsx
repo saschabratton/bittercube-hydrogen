@@ -1,12 +1,22 @@
 
 // import logomark from '../assets/logomark-reversed.svg'
-import {Image} from '@shopify/hydrogen';
+import { useShopQuery, CacheLong, gql, Image } from "@shopify/hydrogen";
 import Navigation from "../global/Navigation.server";
+import Nav from "./Nav.client";
 
 export default function PatternHero({ content }) {
+
+  const {
+    data: { shop },
+  } = useShopQuery({
+    query: SHOP_QUERY,
+    cache: CacheLong(),
+    preload: true,
+  });
+
   return (
      <div className="relative bg-dark bg-pattern header-dark">
-      <Navigation />
+      <Nav shop={shop} />
       <div className="container relative text-center">
         <div className="py-28">
           <div className="h-0.5 w-20 mx-auto bg-gold"></div>
@@ -17,3 +27,12 @@ export default function PatternHero({ content }) {
     </div>
   );
 }
+
+const SHOP_QUERY = gql`
+  query ShopInfo {
+    shop {
+      name
+      description
+    }
+  }
+`;

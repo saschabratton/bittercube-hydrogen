@@ -13,7 +13,7 @@ export default function RecipeCard(){
         </div>
         <hr />
 
-        <div className="flex justify-between w-full gap-2 mx-auto label group">
+        <div className="flex items-center justify-between w-full gap-2 mx-auto label group">
           <p className="mb-0 font-bold tracking-widest uppercase">"Oldest Pal"</p>
           <div className="btn-arrow"></div>
         </div>

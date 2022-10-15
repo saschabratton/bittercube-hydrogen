@@ -54,7 +54,7 @@
 }
 
 .btn-arrow{
-  @apply relative inline-block float-right w-12 h-8 -mt-1;
+  @apply relative inline-block float-right w-12 h-6 -mt-1;
   @apply overflow-hidden;
   &::before{
     content:'';

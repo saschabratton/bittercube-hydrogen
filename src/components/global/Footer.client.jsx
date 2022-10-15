@@ -31,7 +31,7 @@ export default function Footer(){
                 const {link, label, i} = item
                 return (
                   <li className="w-full py-3 border-b-2 border-dark last:border-0" key={i}>
-                    <Link to={ link } className="flex justify-between w-full gap-2 mx-auto label group">{ label }<div className="btn-arrow"></div></Link>
+                    <Link to={ link } className="flex items-center justify-between w-full gap-2 mx-auto label group">{ label }<div className="btn-arrow"></div></Link>
                   </li>
                 )
               })}
