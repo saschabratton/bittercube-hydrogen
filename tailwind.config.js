@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     colors: {
       'white': '#FFF',
+      'black': '#000',
       'light': '#F5F5F5',
       'dark': '#0B374D',
       'gold': '#B48039',
@@ -25,6 +26,14 @@ module.exports = {
       borderRadius: {
         'jumbo-sm': '5rem',
         'jumbo': '7.5rem'
+      },
+      animation: {
+        'draw-v': 'vDraw 3.5s ease-out forwards',
+      },
+      keyframes: {
+        vDraw : {
+          'to': { transform: 'translateY(50%)'}
+        }
       },
     }
   },

@@ -54,7 +54,7 @@ export default function Home() {
         {/* <Suspense>
           <FeaturedCollections />
         </Suspense> */}
-        <div className="container relative mx-auto overflow-hidden max-w-screen-2xl">
+        <div className="relative w-11/12 mx-auto">
           <div className="container relative z-10 grid grid-cols-1 gap-6 py-0 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
             <p className="text-3xl uppercase">Slow-crafted<br />and artisnal bitters <span className="sr-only">Established 2009</span></p>
@@ -69,12 +69,12 @@ export default function Home() {
           </div>
           <VerticalSeparator />
         </div>
-        <div className="relative w-11/12 pt-0 mx-auto">
+        {/* <div className="relative w-11/12 pt-0 mx-auto">
            <HorizontalSeperator />
           <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
             Recipe Collection
           </div>
-        </div>
+        </div> */}
 
 
         <div className="container pb-0 text-center max-w-screen-2xl">

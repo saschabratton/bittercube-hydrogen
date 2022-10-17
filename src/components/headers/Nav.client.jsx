@@ -108,19 +108,19 @@ export default function Nav({ shop }) {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <Disclosure.Panel className="relative z-50 flex flex-col items-center justify-center w-11/12 gap-12 py-16 mx-auto rounded-sm shadow-md sm:hidden bg-paper-action">
-              {/* <Disclosure.Button
-                  as="div"
-                  className="fixed inset-0 bg-black/30"
-                >
-                </Disclosure.Button> */}
+            <Disclosure.Panel className="relative z-50 flex flex-col items-center justify-center w-11/12 gap-12 py-16 mx-auto rounded-sm shadow-lg md:hidden bg-paper-action">
 
 
-
+              {/* TODO: add key */}
                 {navItem && navItem.map((link) => (
-                <Link className="tracking-widest uppercase transition duration-300 nav-link text-dark hover:text-gold" to={link.path}>
-                  {link.label}
-                </Link>
+                <Disclosure.Button as="div">
+                  <Link className="tracking-widest uppercase transition duration-300 nav-link text-dark hover:text-gold" to={link.path}>
+                    {link.label}
+                  </Link>
+                </Disclosure.Button>
+
+
+
                 ))}
                 <div className="w-8/12">
                   <HorizontalSeperator />

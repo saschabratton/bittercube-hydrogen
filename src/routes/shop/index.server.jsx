@@ -66,7 +66,9 @@ export default function Home() {
           <AlternatingTextImage content={alternatingContent} />
         </div>
       </div>
+
       <CardCarousel />
+
       <SplitBgVert content={SplitBgContent} />
       <WholesaleBitters />
     </Layout>

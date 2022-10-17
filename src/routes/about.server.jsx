@@ -52,13 +52,15 @@ export default function about() {
         <div className="absolute top-0 right-0">
           <Image src='/emblems/innovative-thoughtful.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
-        <div className="grid grid-cols-1 gap-6 py-16 text-center md:grid-cols-2">
-            <h2 className="max-w-lg">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
+        <div className="grid grid-cols-1 gap-16 py-16 text-center md:grid-cols-2">
+            <h2 className="max-w-lg mx-auto">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
           <div className="flex items-center justify-center">
             <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
           </div>
         </div>
-        <VerticalSeparator />
+        <div className="hidden md:flex">
+          <VerticalSeparator />
+        </div>
       </div>
 
       <div className="relative w-11/12 pt-0 mx-auto">
@@ -68,11 +70,16 @@ export default function about() {
         </div>
       </div>
 
-      <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
-        <div className="grid gap-6">
+      <div className="container grid max-w-screen-sm grid-cols-1 gap-6 lg:grid-cols-2 lg:max-w-screen-2xl">
+
+
+        {/* TODO: images as a carousel on mobile  */}
+        <div className="hidden gap-6 lg:grid">
           <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
+
+
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div className="absolute top-0 right-0">
             <span className="block text-3xl text-center font-decorative text-gold">Inspire elevated <br />drinking experiences.</span>

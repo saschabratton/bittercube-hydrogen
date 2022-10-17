@@ -1,28 +1,68 @@
-import { useRef } from "react"
-import { motion, useScroll, useSpring } from "framer-motion"
+import { useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
+
+
 
 export default function VerticalSeparator() {
-  // const { scrollY } = useScroll()
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    // offset: ["start start", "end end"]
-    offset: ["50% 200%", "start start"]
-    // offset: ["1 1", "0 .15"]
-  });
-  const scrollY = useSpring(scrollYProgress, { stiffness: 500, damping: 50 })
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+// TODO: convert to timeline
+ScrollTrigger.create({
+  trigger: "#vertTrigger",
+  start: "top 85%",
+  once: true,
+  toggleClass: {targets: ".path", className: "active"}
+});
+ScrollTrigger.create({
+  trigger: "#vertTrigger",
+  start: "top 85%",
+  once: true,
+  toggleClass: {targets: ".h-path-left", className: "active"}
+});
+ScrollTrigger.create({
+  trigger: "#vertTrigger",
+  start: "top 85%",
+  once: true,
+  toggleClass: {targets: ".h-path-right", className: "active"}
+});
+ScrollTrigger.create({
+  trigger: "#vertTrigger",
+  start: "top 85%",
+  once: true,
+  toggleClass: {targets: ".bg-reveal", className: "active"}
+});
+ScrollTrigger.create({
+  trigger: "#vertTrigger",
+  start: "top 85%",
+  once: true,
+  toggleClass: {targets: ".ornament-arrow", className: "active"}
+});
+
+
 
   return (
-    // <motion.div style={{ translateY: scrollYProgress }}
-    //   className="w-0.5 h-full bg-gold center-absolute"
-    // />
-
-<>
-
-<div className="w-0.5 h-full center-absolute bg-gold">
-
-</div>
-
-          </>
+  <>
+    <div className="w-0.5 h-full center-absolute hidden md:flex overflow-hidden" id="vertTrigger" >
+      <div className="w-0.5 h-full 5 bg-gold path"></div>
+    </div>
+    <div className="relative grid w-full grid-cols-2">
+      <div className="z-10 flex justify-end overflow-hidden">
+        <div className="w-full h-0.5 bg-gold h-path-left"></div>
+        <div className="ornament-arrow ornament-arrow-left"></div>
+      </div>
+      <div className="z-10 flex justify-start overflow-hidden">
+        <div className="w-full h-0.5 bg-gold h-path-right"></div>
+        <div className="ornament-arrow ornament-arrow-right"></div>
+      </div>
+      <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold ">
+        Recipe Collection
+        <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal"></div>
+      </div>
+    </div>
+  </>
   )
 }

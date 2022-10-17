@@ -11,10 +11,10 @@ export default function AlternatingTextImage({ content }){
       {content.map(item => {
         const {title, cta, ctaLink, i, contentHtml} = item
         return (
-          <div className="grid gap-6 md:grid-cols-2 alternating-text-image group" key={i}>
+          <div className="grid gap-16 lg:gap-6 md:grid-cols-2 alternating-text-image group" key={i}>
             <div className="flex flex-col items-center justify-center py-16 mx-auto text-center">
               <h3 className="font-sans tracking-wide uppercase h2">{title}</h3>
-              <div className="py-6 w-[28rem]">
+              <div className="py-6 w-full lg:w-[28rem]">
                 <HorizontalSeperator />
               </div>
 

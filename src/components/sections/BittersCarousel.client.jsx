@@ -17,12 +17,12 @@ const RecommendedProducts = [
 ]
 
 const arrowLeft = () => (
-  <span type="prev" className="absolute z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none left-6 top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
+  <span type="prev" className="absolute left-0 z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
     <HiArrowLeft className="w-5 h-5 transform -rotate-45 text-paper" />
   </span>
 )
 const arrowRight = () => (
-  <span type="prev" className="absolute z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none right-6 top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
+  <span type="prev" className="absolute right-0 z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
   <HiArrowRight className="w-5 h-5 transform -rotate-45 text-paper" />
   </span>
 )
@@ -33,7 +33,16 @@ const breakPoints = [
     cols: 1,
     rows: 1,
     gap: 10,
-    loop: true
+    loop: true,
+    hideArrow: false
+  },
+  {
+    breakpoint: 868,
+    cols: 2,
+    rows: 1,
+    gap: 0,
+    loop: true,
+
   },
   {
     breakpoint: 1200,
@@ -41,22 +50,30 @@ const breakPoints = [
     rows: 1,
     gap: 10,
     loop: true
-  }
+  },
+  {
+    breakpoint: 1650,
+    cols: 4,
+    rows: 1,
+    gap: 10,
+    loop: true
+  },
 ]
 
+// TODO: update carousel so be swipable https://github.com/akiran/react-slick
 
 export default function BittersCarousel(){
   return(
       <Carousel
       responsiveLayout={breakPoints}
-       cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} arrowRight={arrowRight}
+       cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
        >
         {RecommendedProducts.map(item => {
           const {label, manufacturer, price, description, image } = item
           return(
             <Carousel.Item>
               <BittersCard />
-             </Carousel.Item>
+            </Carousel.Item>
           )
           })}
       </Carousel>
