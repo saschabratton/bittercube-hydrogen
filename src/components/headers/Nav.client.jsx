@@ -6,6 +6,7 @@ import { CartDetails } from "../CartDetails.client";
 import { RiCloseFill, RiMenu4Fill } from "react-icons/ri";
 import { BsFillCartFill } from "react-icons/bs";
 import HorizontalSeperator from "./HorizontalSeperator.client";
+// import { Link } from 'react-router-dom';
 
 
 const navItem = [
@@ -62,7 +63,6 @@ export default function Nav({ shop }) {
                 <span className="sr-only">{shop.name}</span>
                 {/* TODO: change fill of svg with the id below in headers.css to update on pages that don't have a header */}
                 <Image src='/logos/wordmark-reversed.svg' width={170} height={36} alt="Bittercube" id="navLogo"/>
-                {/* <Image src='/logos/wordmark.svg' width={170} height={36} alt="Bittercube" /> */}
               </Link>
 
 

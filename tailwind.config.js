@@ -24,8 +24,8 @@ module.exports = {
         '4/5': '4 / 5',
       },
       borderRadius: {
-        'jumbo-sm': '5rem',
-        'jumbo': '7.5rem'
+        'jumbo-sm': '4.5rem',
+        'jumbo': '7rem'
       },
       animation: {
         'draw-v': 'vDraw 3.5s ease-out forwards',

@@ -48,27 +48,27 @@ export default function about() {
    return (
     <Layout>
       <ImageHero content={HeaderText} />
-      <div className="container relative mt-20">
-        <div className="absolute top-0 right-0">
-          <Image src='/emblems/innovative-thoughtful.svg' width={101} height={111} alt="x" role="presentation" />
-        </div>
-        <div className="grid grid-cols-1 gap-16 py-16 text-center md:grid-cols-2">
-            <h2 className="max-w-lg mx-auto">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
-          <div className="flex items-center justify-center">
-            <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
+      <div className="relative w-11/12 mx-auto">
+        <div className="container relative mt-20">
+          <div className="absolute top-0 right-0">
+            <Image src='/emblems/innovative-thoughtful.svg' width={101} height={111} alt="x" role="presentation" />
+          </div>
+          <div className="grid grid-cols-1 gap-16 py-16 text-center md:grid-cols-2">
+              <h2 className="max-w-lg mx-auto">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
+            <div className="flex items-center justify-center">
+              <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
+            </div>
           </div>
         </div>
-        <div className="hidden md:flex">
-          <VerticalSeparator />
-        </div>
+        <VerticalSeparator />
       </div>
 
-      <div className="relative w-11/12 pt-0 mx-auto">
+      {/* <div className="relative w-11/12 pt-0 mx-auto">
         <HorizontalSeperator />
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-center text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit w-60">
           Our Story
         </div>
-      </div>
+      </div> */}
 
       <div className="container grid max-w-screen-sm grid-cols-1 gap-6 lg:grid-cols-2 lg:max-w-screen-2xl">
 

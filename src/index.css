@@ -7,6 +7,7 @@
 @import "tailwindcss/components";
 @import "./styles/components/icons.css";
 @import "./styles/components/buttons.css";
+@import "./styles/components/animations.css";
 @import "./styles/components/headers.css";
 @import "./styles/components/tabs.css";
 @import "./styles/components/carousel.css";

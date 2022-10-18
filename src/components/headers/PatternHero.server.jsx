@@ -19,9 +19,9 @@ export default function PatternHero({ content }) {
       <Nav shop={shop} />
       <div className="container relative text-center">
         <div className="py-28">
-          <div className="h-0.5 w-20 mx-auto bg-gold"></div>
+          <div className="h-0.5 w-20 mx-auto bg-gold grow-outward"></div>
           <h1 className="py-4 text-6xl capitalize text-outline">{ content }</h1>
-          <div className="h-0.5 w-20 mx-auto bg-gold"></div>
+          <div className="h-0.5 w-20 mx-auto bg-gold grow-outward"></div>
         </div>
       </div>
     </div>

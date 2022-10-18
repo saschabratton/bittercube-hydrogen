@@ -19,13 +19,15 @@ const {
       <div className="absolute inset-0">
         <Image src='/images/imageheader.jpg' width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>
-      <div className="absolute left-0 w-1/4 h-0.5 top-1/2 bg-gold">
-        <div className="ornament-arrow-right"></div>
+
+
+      <div className="absolute left-0 w-1/4 h-0.5 top-1/2 bg-gold hero-line-right">
+        <div className="ornament-arrow-right hero-line-ornament"></div>
       </div>
-      <div className="absolute right-0 w-1/4 h-0.5 top-1/2 bg-gold">
-        <div className="ornament-arrow-left"></div>
-        </div>
-      <hr />
+      <div className="absolute right-0 w-1/4 h-0.5 top-1/2 bg-gold hero-line-left">
+        <div className="ornament-arrow-left hero-line-ornament"></div>
+      </div>
+      {/* <hr /> */}
 
       <div className="container relative">
         <div className="py-28">

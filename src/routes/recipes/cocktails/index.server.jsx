@@ -16,7 +16,7 @@ const pageNav = [
 ]
 
 const SignUpContent = {
-  'contentHtml': '<h2>Quick Diddy Prefoooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
+  'contentHtml': '<h2>Quick Diddy Prefooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
   'ctaLabel': '',
   'ctaLink': '',
 }

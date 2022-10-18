@@ -35,9 +35,9 @@ export function Layout({ children }) {
       <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
         {/* <Nav shop={shop} /> */}
         <main role="main" id="mainContent" className="flex-grow bg-paper">
-          <Suspense>
+          {/* <Suspense> */}
             {children}
-          </Suspense>
+          {/* </Suspense> */}
         </main>
         <Footer />
       </div>

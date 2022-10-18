@@ -3,7 +3,7 @@ import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"
 import OtherVenues from "../../components/sections/places/OtherVenues.client"
-
+import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
 
 
 
@@ -29,8 +29,9 @@ export default function moslers(){
       <ImageHero content={HeaderText} />
       <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
         <div className="grid gap-6">
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
           <span className="label">Located on Milwaukee’s North-side</span>
@@ -49,7 +50,11 @@ export default function moslers(){
           <a href="https://moslers-vault.resos.com/booking" className="ml-0 btn btn-action">Book a table</a>
         </div>
       </div>
-      <hr className="border-t-2 border-gold" />
+      {/* <hr className="border-t-2 border-gold" /> */}
+      <div className="w-11/12 mx-auto">
+        <HorizontalSeperator />
+      </div>
+
       <div className="container grid grid-cols-2 ">
         <div className="flex">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 text-center">
