@@ -38,7 +38,7 @@ export default function CollectionsNav() {
 
 const QUERY = gql`
   query CollectionsNav {
-    collections(first: 5, query: "collection_type:smart", sortKey: UPDATED_AT) {
+    collections(first: 10, query: "collection_type:smart", sortKey: UPDATED_AT) {
       nodes {
         id
         title

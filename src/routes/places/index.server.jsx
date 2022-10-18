@@ -11,14 +11,14 @@ import Events from "../../components/sections/places/Events.client";
 const alternatingContent = [
   {
     'title': 'The bittercube bar',
-    'description': '',
+    'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.',
     'contentHtml': '<h5>Located at<br />1234 North ave<br />Milwaukee</h5><br /><h5>At the crossroads collective</h5>',
     'cta': 'go to the bar',
     'ctaLink': '/places/bar'
   },
   {
     'title': 'Mosler’s Vault',
-    'description': '',
+    'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
     'cta': 'Go to Moslers',
     'ctaLink': '/places/moslers'

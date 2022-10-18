@@ -12,10 +12,10 @@ import HorizontalSeperator from "../components/headers/HorizontalSeperator.clien
 import RecipeCarousel from "../components/sections/home/RecipeCarousel.client";
 
 
-const HeaderText = ("A hearty intro headline goes right here")
+const HeaderText = ("Bittercube slow crafts artisanal bitters in Milwaukee, Wisconsin. We create innovative, densely flavored bitters through thoughtful sourcing, and meticulous production. Bittercube Bitters are made by hand with real botanicals. Elevate your next cocktail with Bittercube.")
 const ThreeColumnFeaturedContent = {
-  'headline': 'General Places Headline Goes Right Here',
-  'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+  'headline': 'Interested in visiting a Bittercube Venue',
+  'description': 'Bittercube operates a unique liquor store, two bars, and a bitters manufacturing facility in Milwaukee, Wisconsin.',
   'ctaLabel': 'See our Places',
   'ctaLink': '/places',
   'background': 'dark',
@@ -57,11 +57,11 @@ export default function Home() {
         <div className="relative w-11/12 mx-auto">
           <div className="container relative z-10 grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
             <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
-              <p className="text-3xl uppercase">Slow-crafted<br />and artisnal bitters <span className="sr-only">Established 2009</span></p>
+              <p className="text-3xl uppercase">Slow-crafted - artisnal - unique<span className="sr-only">Established 2009</span></p>
               <Image src='/images/established2009.svg' width={225} height={50} alt="2009" role="presentation" />
             </div>
             <div className="flex flex-col items-center justify-center text-center md:p-16">
-              <p className="md:max-w-lg">Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque elementum sollicitudin neque. Duis libero quam, ultricies in elementum in.</p>
+              <p className="md:max-w-lg">We create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
               <Link to="/about" className="items-center hidden gap-2 mx-auto md:flex btn label group w-fit">About Us
                 <div className="btn-arrow"></div>
               </Link>
@@ -78,7 +78,7 @@ export default function Home() {
 
 
         <div className="container pb-0 text-center max-w-screen-2xl">
-          <h2 className="max-w-lg mx-auto">Bittercube Collection goes right here</h2>
+          <h2 className="max-w-4xl mx-auto">Visit the online shop to learn more about the unique lineup of Bittercube Bitters, browse cocktail kits, and check out brand collaborations.</h2>
           <Link to="/shop/bitters-1" className="btn btn-action">Shop Bitters</Link>
         </div>
         <div className="pt-0 pb-20 mx-auto md:w-11/12">

@@ -9,7 +9,7 @@ export default function AlternatingTextImage({ content }){
   return(
     <div className="grid gap-6">
       {content.map(item => {
-        const {title, cta, ctaLink, i, contentHtml} = item
+        const {title, cta, ctaLink, i, contentHtml, description} = item
         return (
           <div className="grid gap-16 lg:gap-6 md:grid-cols-2 alternating-text-image group" key={i}>
             <div className="flex flex-col items-center justify-center py-16 mx-auto text-center">
@@ -18,7 +18,7 @@ export default function AlternatingTextImage({ content }){
                 <HorizontalSeperator />
               </div>
 
-              <p className="max-w-sm text-ornament">Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>
+              <p className="max-w-sm text-ornament">{description}</p>
               {/* {parse(contentHtml)} */}
               <Link to={ctaLink} className="btn btn-action">{cta}</Link>
             </div>

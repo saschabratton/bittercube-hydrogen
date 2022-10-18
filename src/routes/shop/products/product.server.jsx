@@ -23,7 +23,7 @@ const ThreeColumnFeaturedContent = {
   'headline': 'use to craft unique cocktails',
   'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
   'ctaLabel': 'See all recipes',
-  'ctaLink': '/recipes',
+  'ctaLink': '#',
   'background': 'forest',
   'image': '',
   'navHeadline': 'Craft a cocktail',
@@ -33,7 +33,7 @@ const ThreeColumnFeaturedContent = {
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'special tonic 12',
-    'link': '/recipes/cocktails/recipe',
+    'link': '#',
   },
 ]
 const SplitBgContent = {

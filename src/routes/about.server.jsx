@@ -31,7 +31,7 @@ const SplitBgContent = {
   'featuredImage': '',
   'background': 'forest',
   'padding': '0',
-  'bottomHtml': '<h5>Tours</h5><h5>Tastings and sampling</h5><h5>Corporate events</h5><h5>Classes</h5>',
+  'bottomHtml': '<h5>Tours</h5><h5>Tastings</h5><h5>Private events</h5><h5>Cocktail Classes</h5>',
 }
 const ThreeColumnFeaturedLinks = [
   {

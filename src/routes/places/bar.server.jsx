@@ -7,7 +7,7 @@ import HorizontalSeperator from "../../components/headers/HorizontalSeperator.cl
 
 
 
-const HeaderText = ("Bittercube Bar Headline goes Here make it good")
+const HeaderText = ("Bittercube Bar")
 const TabContent = [
   {
     'label': 'Signature',

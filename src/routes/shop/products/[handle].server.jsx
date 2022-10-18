@@ -13,7 +13,45 @@ import { Layout } from "../../../components/Layout.server";
 import Arrow from "../../../components/global/icons/Arrow.client";
 import Nav from "../../../components/headers/Nav.client";
 import ProductDetails from "../../../components/ProductDetails.client";
+import WholesaleBitters from "../../../components/sections/WholesaleBitters";
+import CardCarousel from "../../../components/sections/CardCarousel.client";
+import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client";
+import SplitBgVert from "../../../components/sections/SplitBgVert.client";
 
+
+
+const ThreeColumnFeaturedContent = {
+  'headline': 'use to craft unique cocktails',
+  'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+  'ctaLabel': 'See all recipes',
+  'ctaLink': '#',
+  'background': 'forest',
+  'image': '',
+  'navHeadline': 'Craft a cocktail',
+  'padding': '12',
+  'border': '2',
+}
+const ThreeColumnFeaturedLinks = [
+  {
+    'linkLabel': 'special tonic 12',
+    'link': '#',
+  },
+]
+const SplitBgContent = {
+  'topLabel': 'FEELING SPIRITED?',
+  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
+  'topDescription': '',
+  'topCtaLabel': 'Shop for local pick-up',
+  'topCtaLink': '#',
+  'bottomLabel': 'Get more from Bittercube',
+  'bottomHeadline': 'Subscription Plans',
+  'bottomCtaLabel': 'See Plans',
+  'bottomCtaLink': '',
+  'featuredImage': '',
+  'background': 'dark',
+  'padding': '12',
+  'bottomHtml': ''
+}
 
 
 export default function Product({ params }) {
@@ -56,6 +94,10 @@ export default function Product({ params }) {
         <Link className="label" to="/shop/bitters">Bitters</Link>
       </div>
       <ProductDetails product={product} />
+      <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+      <CardCarousel />
+      <SplitBgVert content={SplitBgContent} />
+      <WholesaleBitters />
     </Layout>
   );
 }
