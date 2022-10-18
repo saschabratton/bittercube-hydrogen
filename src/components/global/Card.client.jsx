@@ -2,7 +2,7 @@ import { Link, Image } from "@shopify/hydrogen"
 
 export default function Card(){
   return(
-    <Link to="/shop/bitters/product">
+    <Link to="/shop/products/cherry-bark-vanilla">
       <div className="grid gap-2 group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
           <Image src='/images/product.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />

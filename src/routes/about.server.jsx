@@ -25,7 +25,7 @@ const SplitBgContent = {
   'topHeadline': 'The Apothecary',
   'topDescription': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
   'bottomCtaLabel': 'Shop for local pick-up',
-  'bottomCtaLink': '/',
+  'bottomCtaLink': '#',
   'bottomLabel': '',
   'bottomHeadline': '',
   'featuredImage': '',
@@ -36,11 +36,11 @@ const SplitBgContent = {
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'Heirloom',
-    'link': '/places',
+    'link': 'https://heirloomliqueurs.com/',
   },
   {
     'linkLabel': 'Discocube',
-    'link': '/places',
+    'link': 'https://www.discocubes.com/',
   }
 ]
 

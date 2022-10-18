@@ -18,10 +18,10 @@ const navItem = [
     'label':'Places',
     'path':'/places',
   },
-  {
-    'label':'Recipes',
-    'path':'/Recipes',
-  },
+  // {
+  //   'label':'Recipes',
+  //   'path':'/Recipes',
+  // },
   {
     'label':'About',
     'path':'/About',

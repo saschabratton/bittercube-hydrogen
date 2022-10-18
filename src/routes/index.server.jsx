@@ -27,15 +27,15 @@ const ThreeColumnFeaturedContent = {
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'The Bazaar',
-    'link': '/places',
+    'link': '#',
   },
   {
     'linkLabel': 'Bittercube Bar at North Ave',
-    'link': '/places',
+    'link': '/places/bar',
   },
   {
     'linkLabel': 'The Apothecary',
-    'link': '/places',
+    'link': '#',
   },
 ]
 const SignUpContent = {
@@ -79,7 +79,7 @@ export default function Home() {
 
         <div className="container pb-0 text-center max-w-screen-2xl">
           <h2 className="max-w-lg mx-auto">Bittercube Collection goes right here</h2>
-          <Link to="/shop/bitters" className="btn btn-action">Shop Bitters</Link>
+          <Link to="/shop/bitters-1" className="btn btn-action">Shop Bitters</Link>
         </div>
         <div className="pt-0 pb-20 mx-auto md:w-11/12">
           <BittersCarousel />

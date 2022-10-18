@@ -23,8 +23,8 @@ export default function ProductDetails({ product }) {
             {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}
           </div>
 
-          <HorizontalSeperator />
-          <h3>More Information</h3>
+          {/* <HorizontalSeperator />
+          <h3>More Information</h3> */}
           {/* <TabSection content={TabContent} /> */}
         </div>
       </div>

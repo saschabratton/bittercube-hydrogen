@@ -13,7 +13,7 @@ const SplitBgContent = {
   'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '/',
+  'topCtaLink': '#',
   'bottomLabel': 'Get more from Bittercube',
   'bottomHeadline': 'Subscription Plans',
   'bottomCtaLabel': 'See Plans',

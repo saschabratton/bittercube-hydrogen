@@ -7,7 +7,7 @@ import HorizontalSeperator from "../../components/headers/HorizontalSeperator.cl
 
 
 
-const HeaderText = ("Mosler's Vault Headline goes Here make it good")
+const HeaderText = ("Bittercube Bar Headline goes Here make it good")
 const TabContent = [
   {
     'label': 'Signature',
@@ -29,8 +29,8 @@ export default function moslers(){
       <ImageHero content={HeaderText} />
       <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
         <div className="grid gap-6">
-<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
@@ -42,12 +42,11 @@ export default function moslers(){
           <div className="text-ornament w-fit"></div>
           <p className="label ">
             <a href="tel:4142076262" target="_blank" className="text-gold hover:text-dark">414.123.4567</a><br />
-            <a href="mailto:info@bittercube.com" target="_blank" className="text-gold hover:text-dark">info@mostlersvault.com</a>
+            <a href="mailto:info@bittercube.com" target="_blank" className="text-gold hover:text-dark">info@bittercube.com</a>
           </p>
-          <p className="label">Follow us online<br />@moslersvault</p>
+          <p className="label">Follow us online<br />@bittercube</p>
           <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines and services.</p>
           <p>Over the years, Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
-          <a href="https://moslers-vault.resos.com/booking" className="ml-0 btn btn-action">Book a table</a>
         </div>
       </div>
       {/* <hr className="border-t-2 border-gold" /> */}

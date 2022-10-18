@@ -41,7 +41,7 @@ const SplitBgContent = {
   'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '/',
+  'topCtaLink': '#',
   'bottomLabel': 'Get more from Bittercube',
   'bottomHeadline': 'Subscription Plans',
   'bottomCtaLabel': 'See Plans',
@@ -74,9 +74,9 @@ export default function Product(){
             <button href="#" className="btn btn-action" disabled>Add to cart</button>
           </div>
 
-          <HorizontalSeperator />
+          {/* <HorizontalSeperator />
           <h3>More Information</h3>
-          <TabSection content={TabContent} />
+          <TabSection content={TabContent} /> */}
         </div>
       </div>
       <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />

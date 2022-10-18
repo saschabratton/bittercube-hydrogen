@@ -18,7 +18,8 @@ export default function ProductCard({ product }) {
           )}
           <Image
             className="object-cover mx-auto rounded-none aspect-4/5"
-            data={product.variants.nodes[0].image}
+            // data={product.variants.nodes[0].image}
+            src='/images/product.jpg' width={460} height={555}
             alt="Alt Tag"
           />
         </div>

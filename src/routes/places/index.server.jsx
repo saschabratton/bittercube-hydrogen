@@ -14,7 +14,7 @@ const alternatingContent = [
     'description': '',
     'contentHtml': '<h5>Located at<br />1234 North ave<br />Milwaukee</h5><br /><h5>At the crossroads collective</h5>',
     'cta': 'go to the bar',
-    'ctaLink': '/places/moslers'
+    'ctaLink': '/places/bar'
   },
   {
     'title': 'Mosler’s Vault',

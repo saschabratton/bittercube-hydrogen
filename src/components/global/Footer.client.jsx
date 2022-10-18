@@ -5,9 +5,8 @@ import SignUpForm from "./SignUpForm.client"
 const navItems = [
   {'link': '/shop', 'label': 'Shop'},
   {'link': '/places', 'label': 'Places'},
-  {'link': '/', 'label': 'Recipes'},
+  // {'link': '/', 'label': 'Recipes'},
   {'link': '/', 'label': 'About'},
-  {'link': '/', 'label': 'Find Us'},
   {'link': '/', 'label': 'Wholesale'},
   {'link': '/', 'label': 'Refund Policy'},
 ]

@@ -11,7 +11,7 @@ export default function OtherVenues() {
               <h2>Check out our other venues or join us for events</h2>
               <div className="flex">
                 <Link to="/places/moslers" className="btn btn-action">Bittercube Bar</Link>
-                <Link to="/places/moslers" className="btn btn-action">Events portal</Link>
+                <a href="https://www.crowdcast.io/bittercube"  className="btn btn-action">Events portal</a>
               </div>
             </div>
             <div className="flex flex-col max-w-md gap-6 text-center">

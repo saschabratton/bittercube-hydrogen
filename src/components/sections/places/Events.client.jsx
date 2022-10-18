@@ -11,7 +11,7 @@ export default function Events() {
               <span className="block mb-4 label">Cheers with company</span>
               <h2>Events with Bittercube</h2>
               <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-              <a to="/" className="flex justify-between pt-4 mx-auto mt-10 border-t-2 w-fit lg:w-60 label group border-gold">Private Event Inquiry<div className="btn-arrow btn-arrow-gold"></div></a>
+              <a to="https://www.crowdcast.io/bittercube" className="flex justify-between pt-4 mx-auto mt-10 border-t-2 w-fit lg:w-60 label group border-gold">Private Event Inquiry<div className="btn-arrow btn-arrow-gold"></div></a>
             </div>
             <div className="max-w-md mx-auto text-center">
               <dl>

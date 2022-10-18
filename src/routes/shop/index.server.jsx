@@ -19,18 +19,18 @@ const pageNav = [
 ]
 const alternatingContent = [
   {'title': 'artisnal bitters', 'description': '', 'cta': 'Shop Bitters',
-   'ctaLink': '/shop/bitters',
+   'ctaLink': 'shop/bitters-1',
    'contentHtml': '',
   },
-  {'title': 'Curated cocktail kits', 'description': '', 'cta': 'Shop Kits',  'ctaLink': '/shop/bitters','contentHtml': '',},
-  {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/shop/bitters','contentHtml': '',},
+  {'title': 'Curated cocktail kits', 'description': '', 'cta': 'Shop Kits',  'ctaLink': 'shop/curated-kits','contentHtml': '',},
+  {'title': 'Special Editions & Collaborations', 'description': '', 'cta': 'Special Editions',  'ctaLink': '/shop/special-editions-collaborations','contentHtml': '',},
 ]
 const SplitBgContent = {
   'topLabel': 'FEELING SPIRITED?',
   'topHeadline': 'Shop Our Local Milwaukee Bazaar',
   'topDescription': '',
   'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '/',
+  'topCtaLink': '#',
   'bottomLabel': 'Get more from Bittercube',
   'bottomHeadline': 'Subscription Plans',
   'bottomCtaLabel': 'See Plans',

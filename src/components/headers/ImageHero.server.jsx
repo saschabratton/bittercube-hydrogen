@@ -16,8 +16,9 @@ const {
   return(
     <div className="relative header-dark h-[545px]">
       <Nav shop={shop} />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-dark">
         <Image src='/images/imageheader.jpg' width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
+        <div className="absolute inset-0 opacity-40 bg-dark mix-blend-multiply" aria-hidden="true" />
       </div>
 
 
