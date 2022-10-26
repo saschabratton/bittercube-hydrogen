@@ -21,10 +21,12 @@ export default function ThreeColumnFeature({ content, links }) {
           <div className="py-16 md:col-span-6 lg:order-1 lg:col-span-2">
             <dl className="grid gap-8">
               <dt className="h3 text-gold">{navHeadline}</dt>
-              {links && links.map((link) => (
+              {links && links.map((link, i) => (
                 <dd>
-                  <span className="font-bold tracking-wide text-gold">01</span>
+                  <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
                   <hr className="my-2 border text-gold" />
+                  {/* TODO: use anchor tag or Link component based on internal link or not */}
+                  {/* TODO: open in new tab if anchor link */}
                   <a href={link.link} className="flex items-center justify-between w-full gap-2 mx-auto label group">{link.linkLabel} <div className="btn-arrow btn-arrow-gold"></div></a>
                 </dd>
               ))}

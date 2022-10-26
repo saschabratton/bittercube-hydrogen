@@ -28,11 +28,18 @@ export default function Kitchen(){
       <SubNav navigation={pageNav} />
       <hr />
       <Flavors />
-      <div className="bg-dark">
+      <div className="relative bg-dark">
+        <div className="absolute left-0 w-1/4 h-0.5 top-28 bg-gold hero-line-right">
+          <div className="ornament-arrow-right hero-line-ornament"></div>
+        </div>
+        <div className="absolute right-0 w-1/4 h-0.5 top-28 bg-gold hero-line-left">
+          <div className="ornament-arrow-left hero-line-ornament"></div>
+        </div>
         <div className="container max-w-3xl pb-0 text-center">
           <h2 className="mb-6">bitters as added flavor</h2>
           <p>When a recipe calls for a flavor extract such as vanilla or almond extract, you can easily substitute bitters in a 1:1 ratio to provide more complexity and a robust flavor profile. Below are some examples of this technique.</p>
         </div>
+        {/* TODO: baking recipe carousel  */}
         <CardCarousel />
       </div>
       <Spices />

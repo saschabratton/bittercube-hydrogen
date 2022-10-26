@@ -18,7 +18,7 @@ export default function InTheKitchen(){
               <HorizontalSeperator />
             </div>
               <p className="text-ornament">
-                Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
+                Bitters are liquid spice. While most commonly used by bartenders in cocktails, they are a great addition to any baker's spice arsenal. There are three main ways to use bitters when baking.
               </p>
               <Link to="/recipes/kitchen" className="btn btn-action">Start experimenting</Link>
           </div>

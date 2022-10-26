@@ -17,7 +17,7 @@ export default function Flavors(){
               When a recipe calls for a flavor extract such as vanilla or almond extract, you can easily substitute bitters in a 1:1 ratio to provide more complexity and a robust flavor profile. Below are some examples of this technique.
             </p>
           </div>
-          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
+          <Image src='/images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center justify-start gap-3 text-center">

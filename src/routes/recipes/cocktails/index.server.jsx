@@ -31,7 +31,6 @@ export default function Cocktails(){
   const recipes = fetchSync(recipesApi,{
     preload: false,
   }).json()
-  // console.log('recipes:', recipes )
 
   return(
     <Layout>

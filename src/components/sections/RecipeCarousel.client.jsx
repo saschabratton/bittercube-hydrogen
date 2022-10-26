@@ -39,24 +39,18 @@ export default function RecipeCarousel(){
     preload: false,
   }).json()
 
+  const featuredRecipes = recipes.filter(recipe => recipe.featured == true)
+
   return(
     <section>
       <Carousel cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} arrowRight={arrowRight}>
-        {RecommendedProducts.map(item => {
-          const {label, manufacturer, price, description, image } = item
-          return(
-            <Carousel.Item>
-
-              {recipes?.length > 0 && recipes.map((recipe) => {
-                return (
-                  <FeaturedRecipeCard key={recipe.slug} recipe={recipe} />
-                )
-              })}
-
-             </Carousel.Item>
-          )
-          })}
+        {featuredRecipes?.length > 0 && featuredRecipes.map((recipe) => {
+          return (
+          <Carousel.Item>
+            <FeaturedRecipeCard key={recipe.slug} recipe={recipe} />
+          </Carousel.Item>
+        )})}
       </Carousel>
-      </section>
+    </section>
   )
 }

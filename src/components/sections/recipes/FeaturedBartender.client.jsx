@@ -14,7 +14,7 @@ export default function FeaturedBartenders(){
               <h4 className="mt-6 label">SIGNATURE RECIPE</h4>
               <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 
-              <Link to="/recipes/cocktails/recipe" className="flex justify-between pt-4 border-t-2 w-fit lg:w-60 label group border-gold">Go to recipe
+              <Link to="#" className="flex justify-between pt-4 border-t-2 w-fit lg:w-60 label group border-gold">Go to recipe
                 <div className="btn-arrow btn-arrow-gold"></div>
               </Link>
 

@@ -1,17 +1,22 @@
 import { Link, Image } from "@shopify/hydrogen"
 
-export default function FeaturedRecipeCard(){
+export default function FeaturedRecipeCard({ recipe }){
+  const { slug, name, image, descripiton, flavors } = recipe
   return(
-    <Link to="/recipes/cocktails/recipe">
+    <Link to={`/recipes/cocktails/${slug}`}>
       <div className="grid gap-2 text-center group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
-          {/* <Image src={`https://lavish-turnip.cloudvent.net/${ recipe.recipe.image }`} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" /> */}
+          <Image src={`https://lavish-turnip.cloudvent.net/${ image }`} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
           </div>
-          <div className="mt-4 text-2xl font-decorative text-gold">Citrusy</div>
-          <h3>some name</h3>
-          <p className="text-ornament">
-            By swapping Rose Water for Root Beer Bitters, this New Orleans classic is transformed into a frothy, winter sipper.
-          </p>
+          <div className="mt-4 text-2xl capitalize font-decorative text-gold">
+              { flavors[0] }
+          </div>
+          <h3>{name}</h3>
+          {descripiton &&
+            <p className="text-ornament">
+              {descripiton}
+            </p>
+          }
 
         <div className="flex gap-2 mx-auto w-fit label group">
           <p className="mb-0 font-bold tracking-widest uppercase text-gold">View Recipe</p>

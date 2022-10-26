@@ -19,10 +19,10 @@ export default function Events() {
                 <div className="my-10 w-96">
                   <HorizontalSeperator />
                 </div>
-                <dd className="label">cocktail classes</dd>
-                <dd className="label">Facitily Tours</dd>
+                <dd className="label">Tours</dd>
+                <dd className="label">Tastings</dd>
                 <dd className="label">Private Events</dd>
-                <dd className="label">And More!</dd>
+                <dd className="label">Cocktail classes</dd>
               </dl>
               <a href="https://www.crowdcast.io/bittercube" target="_blank" rel="noopener" className="mt-10 btn btn-action">Events Portal</a>
             </div>

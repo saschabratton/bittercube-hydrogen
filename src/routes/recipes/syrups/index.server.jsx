@@ -28,7 +28,7 @@ export default function Cocktails(){
 
         </div>
         <div className="flex flex-col items-center justify-center text-center md:p-16">
-          <p className="md:max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non dictum ante. Nam in feugiat risus. Nam ultrices malesuada lorem, eu venenatis eros. Vestibulum consequat sem eget bibendum ultrices. Donec consectetur odio non hendrerit consectetur. Aliquam placerat scelerisque consequat. Vivamus eget mollis est, nec tristique libero. </p>
+          <p className="md:max-w-lg">Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further. </p>
         </div>
         <div>
           <Image src='/images/heirloom.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters"  />
@@ -62,7 +62,7 @@ export default function Cocktails(){
             <div className="flex items-center justify-center w-16 h-16 border-2 label border-gold">A</div>
           </div>
           <div className="text-center">
-            <h4 className="tracking-normal h2">Syrup Name</h4>
+            <h4 className="tracking-normal h2">Agave Nectar Syrup</h4>
             <HorizontalSeperator />
             <div className="flex flex-col gap-6 text-left text-ornament">
             <dl>

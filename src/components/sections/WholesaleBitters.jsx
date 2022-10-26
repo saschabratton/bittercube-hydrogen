@@ -8,8 +8,8 @@ export default function WholesaleBitters(){
       </div>
       <div className="container relative text-center">
         <h2>Wholesale Bittercube</h2>
-        <p className="label h4">For bartenders & Managers</p>
-        <a href="https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt" className="btn btn-action bg-paper ">Shop Wholesale</a>
+        <p className="label h4">FOR BAR MANAGERS & BUYERS</p>
+        <a href="https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt" className="btn btn-action bg-paper">Order Wholesale</a>
       </div>
     </section>
   )

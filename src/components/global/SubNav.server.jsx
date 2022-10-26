@@ -15,11 +15,11 @@ export default function SubNav({ navigation }){
           )
         })}
       </ul>
-      <div>
+      {/* <div>
         <span className="text-sm font-bold tracking-widest uppercase text-gold">
           Search
         </span>
-      </div>
+      </div> */}
     </div>
   )
 }

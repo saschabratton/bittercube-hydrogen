@@ -87,7 +87,7 @@ export default function Product({ params }) {
         <Seo type="product" data={product} />
       </Suspense>
       <Nav shop={shop} />
-      {/* TODO: Link up breadcrumbs */}
+      {/* TODO: Link up breadcrumbs for non bitters products */}
       <div className="container flex items-center gap-2 pb-6 mt-8 max-w-screen-2xl">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop">shop</Link>
         <Arrow />

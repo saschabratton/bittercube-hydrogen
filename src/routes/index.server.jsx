@@ -12,7 +12,7 @@ import HorizontalSeperator from "../components/headers/HorizontalSeperator.clien
 import RecipeCarousel from "../components/sections/home/RecipeCarousel.client";
 
 
-const HeaderText = ("Bittercube slow crafts artisanal bitters in Milwaukee, Wisconsin. We create innovative, densely flavored bitters through thoughtful sourcing, and meticulous production. Bittercube Bitters are made by hand with real botanicals. Elevate your next cocktail with Bittercube.")
+const HeaderText = ("Making drinks come true since 2009")
 const ThreeColumnFeaturedContent = {
   'headline': 'Interested in visiting a Bittercube Venue',
   'description': 'Bittercube operates a unique liquor store, two bars, and a bitters manufacturing facility in Milwaukee, Wisconsin.',
@@ -27,16 +27,16 @@ const ThreeColumnFeaturedContent = {
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'The Bazaar',
-    'link': '#',
+    'link': 'https://www.bittercubebazaar.com/',
   },
   {
     'linkLabel': 'Bittercube Bar at North Ave',
     'link': '/places/bar',
   },
-  {
-    'linkLabel': 'The Apothecary',
-    'link': '#',
-  },
+  // {
+  //   'linkLabel': 'The Apothecary',
+  //   'link': '#',
+  // },
 ]
 const SignUpContent = {
   'contentHtml': '<h2>Quick Diddy Prefooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
