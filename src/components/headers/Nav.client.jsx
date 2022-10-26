@@ -7,6 +7,7 @@ import { RiCloseFill, RiMenu4Fill } from "react-icons/ri";
 import { BsFillCartFill } from "react-icons/bs";
 import HorizontalSeperator from "./HorizontalSeperator.client";
 // import { Link } from 'react-router-dom';
+import { makeKey } from '../../utilities/helpers'
 
 
 const navItem = [
@@ -18,10 +19,10 @@ const navItem = [
     'label':'Places',
     'path':'/places',
   },
-  // {
-  //   'label':'Recipes',
-  //   'path':'/Recipes',
-  // },
+  {
+    'label':'Recipes',
+    'path':'/Recipes',
+  },
   {
     'label':'About',
     'path':'/About',
@@ -74,7 +75,7 @@ export default function Nav({ shop }) {
                 </span>
               </a>
               {navItem && navItem.map((link) => (
-              <Link className="nav-link" activeClassName="active" to={link.path}>
+              <Link className="nav-link" to={link.path} key={makeKey(link.label)}>
                 {link.label}
               </Link>
               ))}
@@ -111,9 +112,8 @@ export default function Nav({ shop }) {
             <Disclosure.Panel className="relative z-50 flex flex-col items-center justify-center w-11/12 gap-12 py-16 mx-auto rounded-sm shadow-lg md:hidden bg-paper-action">
 
 
-              {/* TODO: add key */}
                 {navItem && navItem.map((link) => (
-                <Disclosure.Button as="div">
+                <Disclosure.Button as="div" key={makeKey(link.label)}>
                   <Link className="tracking-widest uppercase transition duration-300 nav-link text-dark hover:text-gold" to={link.path}>
                     {link.label}
                   </Link>

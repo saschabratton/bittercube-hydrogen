@@ -9,7 +9,7 @@ export default function WholesaleBitters(){
       <div className="container relative text-center">
         <h2>Wholesale Bittercube</h2>
         <p className="label h4">For bartenders & Managers</p>
-        <Link to="/" className="btn btn-action bg-paper ">Shop Wholesale</Link>
+        <a href="https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt" className="btn btn-action bg-paper ">Shop Wholesale</a>
       </div>
     </section>
   )

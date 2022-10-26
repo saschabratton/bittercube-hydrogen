@@ -63,10 +63,10 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center text-center md:p-16">
               <p className="md:max-w-lg">We create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
               <Link to="/about" className="items-center hidden gap-2 mx-auto md:flex btn label group w-fit">About Us
-                <div className="btn-arrow"></div>
+              <div className="btn-arrow"></div>
               </Link>
             </div>
-            </div>
+          </div>
           <VerticalSeparator />
         </div>
         {/* <div className="relative w-11/12 pt-0 mx-auto">

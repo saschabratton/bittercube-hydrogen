@@ -1,14 +1,14 @@
 import { Link, Image } from "@shopify/hydrogen"
 import SignUpForm from "./SignUpForm.client"
-
+import { makeKey } from '../../utilities/helpers'
 
 const navItems = [
   {'link': '/shop', 'label': 'Shop'},
   {'link': '/places', 'label': 'Places'},
-  // {'link': '/', 'label': 'Recipes'},
-  {'link': '/', 'label': 'About'},
-  {'link': '/', 'label': 'Wholesale'},
-  {'link': '/', 'label': 'Refund Policy'},
+  {'link': '/recipes', 'label': 'Recipes'},
+  {'link': '/about', 'label': 'About'},
+  {'link': '#', 'label': 'Wholesale'},
+  {'link': '#', 'label': 'Refund Policy'},
 ]
 
 
@@ -27,9 +27,9 @@ export default function Footer(){
           <div className="w-7/12 mx-auto md:w-full md:col-span-3 lg:col-span-2 lg:pr-12">
             <ul className="flex flex-col justify-center">
               {navItems.map(item => {
-                const {link, label, i} = item
+                const {link, label} = item
                 return (
-                  <li className="w-full py-3 border-b-2 border-dark last:border-0" key={i}>
+                  <li className="w-full py-3 border-b-2 border-dark last:border-0" key={makeKey(label)}>
                     <Link to={ link } className="flex items-center justify-between w-full gap-2 mx-auto label group">{ label }<div className="btn-arrow"></div></Link>
                   </li>
                 )
@@ -73,7 +73,7 @@ export default function Footer(){
       <div className="py-3 bg-dark">
         <div className="container py-0  max-w-[1800px] flex gap-6 tracking-wider uppercase text-white text-sm font-bold">
           <span>Bittercube • Copyright 2022 <span id="year"></span></span>
-          <Link to="/" className="text-sm">Privacy Policy</Link>
+          <Link to="/privacy-policy" className="text-sm">Privacy Policy</Link>
         </div>
       </div>
     </footer>

@@ -1,13 +1,13 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import SubNav from "../../components/global/SubNav.server"
-import RecipeCarousel from "../../components/sections/recipes/RecipeCarousel.client"
+// import RecipeCarousel from "../../components/sections/recipes/RecipeCarousel.client"
+import RecipeCarousel from "../../components/sections/RecipeCarousel.client"
 import SignUp from "../../components/sections/SignUp.client";
 import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";
 import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
 import { Image } from "@shopify/hydrogen";
-
 
 const HeaderText = ("Recipes headline goes here")
 const pageNav = [
@@ -38,7 +38,7 @@ export default function index() {
         <h2 className="col-span-3 capitalize">Featured Recipes Headline Goes Here</h2>
       </div>
       <RecipeCarousel />
-      <LearnToCraft />
+      {/* <LearnToCraft /> */}
       <FeaturedBartenders />
       <InTheKitchen />
       <SignUp content={SignUpContent}/>

@@ -1,22 +1,39 @@
 import { Link, Image } from "@shopify/hydrogen"
 
-export default function RecipeCard(){
+export default function RecipeCard(recipe){
+  const { slug, name, image, description, spirit } = recipe
+  {console.log(recipe.recipe.slug)}
   return(
     <Link to="/recipes/cocktails/recipe">
-      <div className="grid gap-2 text-center group">
+      <div className="grid gap-2 group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
-          <Image src='/images/oldestpal.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
-          </div>
-          <div className="mt-4 text-2xl font-decorative text-gold">Citrusy</div>
-          <h3>Oldest Pal</h3>
-          <p className="text-ornament">
-            By swapping Rose Water for Root Beer Bitters, this New Orleans classic is transformed into a frothy, winter sipper.
-          </p>
+          <Image src={`https://lavish-turnip.cloudvent.net/${ recipe.recipe.image }`} width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+        </div>
 
-        <div className="flex gap-2 mx-auto w-fit label group">
-          <p className="mb-0 font-bold tracking-widest uppercase text-gold">View Recipe</p>
+
+        <div className="flex justify-between">
+
+          <div className="capitalize label">
+            {/* TODO: bittercube bitters product */}
+            Bittercube product
+          </div>
+          <div className="text-dark">
+             { recipe.recipe.spirit }
+          </div>
+        </div>
+        <hr />
+        <div className="flex items-center justify-between w-full gap-2 mx-auto label group">
+          <p className="mb-0 font-bold tracking-widest uppercase">{ recipe.recipe.name }</p>
           <div className="btn-arrow"></div>
         </div>
+        { recipe.recipe.description &&
+        // TODO: line clamp
+          <div className="overflow-x-hidden transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">
+            { recipe.recipe.description }
+          </div>
+        }
+
+
       </div>
     </Link>
   )

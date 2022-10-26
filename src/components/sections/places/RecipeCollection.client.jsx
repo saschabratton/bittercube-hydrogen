@@ -1,5 +1,5 @@
 import { Image, Link } from "@shopify/hydrogen"
-
+import LocalPickup from '../../global/LocalPickup.client'
 
 export default function RecipeColleciton() {
   return(
@@ -26,6 +26,7 @@ export default function RecipeColleciton() {
             Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
           </p>
           <Link to="/" className="btn btn-action">Shop for local Pick-up</Link>
+          <LocalPickup />
         </div>
       </div>
   )
