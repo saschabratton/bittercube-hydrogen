@@ -24,56 +24,56 @@ export default function Spices(){
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>

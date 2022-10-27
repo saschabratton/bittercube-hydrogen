@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
+import { useState, Fragment } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
 
-export default function Footer(){
+export default function LocalPickup(){
   let [isOpen, setIsOpen] = useState(false)
 
  function closeModal() {
@@ -21,7 +21,18 @@ export default function Footer(){
         >
           Shop for local Pick-up
       </button>
-      <Dialog
+      {/* TODO: modal transition */}
+       {/* <Transition
+          show={isOpen}
+          enter="transition duration-100 ease-out"
+          enterFrom="transform scale-95 opacity-0"
+          enterTo="transform scale-100 opacity-100"
+          leave="transition duration-75 ease-out"
+          leaveFrom="transform scale-100 opacity-100"
+          leaveTo="transform scale-95 opacity-0"
+          as={Fragment}
+        > */}
+        <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
         className="relative z-50"
@@ -45,7 +56,8 @@ export default function Footer(){
           </div>
         </Dialog.Panel>
       </div>
-    </Dialog>
+        </Dialog>
+      {/* </Transition> */}
     </>
 
 

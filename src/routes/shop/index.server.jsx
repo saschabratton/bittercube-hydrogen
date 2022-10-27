@@ -2,6 +2,7 @@ import { Layout } from "../../components/Layout.server";
 import PatternHero from "../../components/headers/PatternHero.server";
 import SubNav from "../../components/global/SubNav.server";
 import SplitBgVert from "../../components/sections/SplitBgVert.client";
+import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import CardCarousel from "../../components/sections/CardCarousel.client";
@@ -10,19 +11,14 @@ import CollectionsNav from "../../components/headers/CollectionsNav.server";
 
 
 const HeaderText = ("The most distinct lineup of bitters in the world.")
-const pageNav = [
-  { label: 'Bitters', link: '/shop/bitters'},
-  { label: 'Curated Kits', link: '/shop/bitters'},
-  { label: 'Special Editions & Collaborations', link: '/shop/bitters'},
-  { label: 'Accesories', link: '/shop/bitters'},
-  { label: 'Shop All', link: '/shop/bitters'}
-]
+
+
 const alternatingContent = [
   {
     'title': 'slow-crafted bitters',
     'description': 'Bold, balanced, densely flavored bitters made by hand. Shop the most distinctive lineup of aromatic, spicy, and citrus bitters.',
     'cta': 'Shop Bitters',
-    'ctaLink': 'shop/bitters-1',
+    'ctaLink': 'shop/bitters',
     'contentHtml': '',
   },
   {
@@ -36,25 +32,10 @@ const alternatingContent = [
     'title': 'Special Editions & Collaborations',
     'description': 'Unique collection of special edition bitters, as well as collaborations with restaurant groups, bars, and other brands. ',
     'cta': 'Special Editions',
-    'ctaLink': '/shop/special-editions-collaborations',
+    'ctaLink': '/shop/special-editions-and-collaborations',
     'contentHtml': ''
   },
 ]
-const SplitBgContent = {
-  'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
-  'topDescription': '',
-  'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '#',
-  'bottomLabel': 'Get more from Bittercube',
-  'bottomHeadline': 'Subscription Plans',
-  'bottomCtaLabel': 'See Plans',
-  'bottomCtaLink': '',
-  'featuredImage': '',
-  'background': 'dark',
-  'padding': '12',
-  'bottomHtml': ''
-}
 
 export default function Home() {
   return (
@@ -84,7 +65,7 @@ export default function Home() {
 
       <CardCarousel />
 
-      <SplitBgVert content={SplitBgContent} />
+      <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>
   )

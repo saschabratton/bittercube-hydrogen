@@ -4,10 +4,9 @@ import TabSection from "../../../components/sections/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import Arrow from "../../../components/global/icons/Arrow.client"
-import SplitBgVert from "../../../components/sections/SplitBgVert.client";
+import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import Nav from "../../../components/headers/Nav.client";
-
 
 const TabContent = [
   {
@@ -23,22 +22,6 @@ const TabContent = [
     'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
   },
 ]
-const SplitBgContent = {
-  'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
-  'topDescription': '',
-  'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '#',
-  'bottomLabel': 'Get more from Bittercube',
-  'bottomHeadline': 'Subscription Plans',
-  'bottomCtaLabel': 'See Plans',
-  'bottomCtaLink': '',
-  'featuredImage': '',
-  'background': 'dark',
-  'padding': '12',
-  'bottomHtml': ''
-}
-
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
@@ -110,7 +93,7 @@ export default function Recipe(){
 
       </div>
       <CardCarousel />
-      <SplitBgVert content={SplitBgContent} />
+      <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>
   )

@@ -7,8 +7,8 @@ const navItems = [
   {'link': '/places', 'label': 'Places'},
   {'link': '/recipes', 'label': 'Recipes'},
   {'link': '/about', 'label': 'About'},
-  {'link': '#', 'label': 'Wholesale'},
-  {'link': '#', 'label': 'Refund Policy'},
+  {'link': '#', 'label': 'Wholesale'}, //TODO: link to wholesale
+  {'link': '/refund-policy', 'label': 'Refund Policy'},
 ]
 
 

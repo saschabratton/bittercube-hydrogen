@@ -5,24 +5,8 @@ import { Layout } from "../../components/Layout.server";
 import ProductCard from "../../components/ProductCard.server";
 import CollectionsNav from "../../components/headers/CollectionsNav.server";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
-import SplitBgVert from "../../components/sections/SplitBgVert.client";
+import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 
-
-const SplitBgContent = {
-  'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
-  'topDescription': '',
-  'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '#',
-  'bottomLabel': 'Get more from Bittercube',
-  'bottomHeadline': 'Subscription Plans',
-  'bottomCtaLabel': 'See Plans',
-  'bottomCtaLink': '',
-  'featuredImage': '',
-  'background': 'dark',
-  'padding': '12',
-  'bottomHtml': ''
-}
 
 export default function Collections() {
   const { handle } = useRouteParams();
@@ -56,7 +40,7 @@ export default function Collections() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      <SplitBgVert content={SplitBgContent} />
+      <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>
   )

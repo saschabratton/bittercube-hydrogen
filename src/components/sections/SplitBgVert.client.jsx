@@ -1,5 +1,6 @@
 import { Link, Image } from "@shopify/hydrogen"
 import parse from 'html-react-parser';
+import LocalPickup from "../global/LocalPickup.client";
 
 export default function SplitBgVert({ content }){
   const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding, bottomHtml} = content
@@ -23,9 +24,7 @@ export default function SplitBgVert({ content }){
                   <h3 className="text-3xl font-regular">{bottomHeadline}</h3>
                   {/* <Link to="/" className="btn btn-action">See Plans</Link> */}
                   {parse(bottomHtml)}
-                  {bottomCtaLink &&
-                    <a href={bottomCtaLink} className="btn btn-action">{bottomCtaLabel}</a>
-                  }
+                 <LocalPickup />
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">

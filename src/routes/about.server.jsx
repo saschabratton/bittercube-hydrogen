@@ -2,8 +2,6 @@ import { Layout } from "../components/Layout.server"
 import ImageHero from "../components/headers/ImageHero.server"
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
 import SplitBgVert from "../components/sections/SplitBgVert.client"
-import Navigation from "../components/global/Navigation.server";
-import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import { Image } from "@shopify/hydrogen"
 

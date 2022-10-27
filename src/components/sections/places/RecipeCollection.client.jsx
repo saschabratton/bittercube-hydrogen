@@ -1,6 +1,8 @@
 import { Image, Link } from "@shopify/hydrogen"
 import LocalPickup from '../../global/LocalPickup.client'
 
+
+
 export default function RecipeColleciton() {
   return(
     <div className="container relative grid grid-cols-1 px-0 py-0 mx-auto my-20 border-2 border-gold md:grid-cols-8">
@@ -25,7 +27,6 @@ export default function RecipeColleciton() {
           <p>
             Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.
           </p>
-          <Link to="/" className="btn btn-action">Shop for local Pick-up</Link>
           <LocalPickup />
         </div>
       </div>

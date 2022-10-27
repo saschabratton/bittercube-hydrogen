@@ -16,15 +16,15 @@ import ProductDetails from "../../../components/ProductDetails.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client";
-import SplitBgVert from "../../../components/sections/SplitBgVert.client";
-
+import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
+import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 
 
 const ThreeColumnFeaturedContent = {
   'headline': 'use to craft unique cocktails',
   'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
   'ctaLabel': 'See all recipes',
-  'ctaLink': '#',
+  'ctaLink': '/recipes/cocktails',
   'background': 'forest',
   'image': '',
   'navHeadline': 'Craft a cocktail',
@@ -37,21 +37,6 @@ const ThreeColumnFeaturedLinks = [
     'link': '#',
   },
 ]
-const SplitBgContent = {
-  'topLabel': 'FEELING SPIRITED?',
-  'topHeadline': 'Shop Our Local Milwaukee Bazaar',
-  'topDescription': '',
-  'topCtaLabel': 'Shop for local pick-up',
-  'topCtaLink': '#',
-  'bottomLabel': 'Get more from Bittercube',
-  'bottomHeadline': 'Subscription Plans',
-  'bottomCtaLabel': 'See Plans',
-  'bottomCtaLink': '',
-  'featuredImage': '',
-  'background': 'dark',
-  'padding': '12',
-  'bottomHtml': ''
-}
 
 
 export default function Product({ params }) {
@@ -95,8 +80,17 @@ export default function Product({ params }) {
       </div>
       <ProductDetails product={product} />
       <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+
+      <div className="relative w-11/12 mx-auto mt-12">
+        <HorizontalSeperator />
+        <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold ">
+          RECOMMENDED
+          <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
+        </div>
+      </div>
+
       <CardCarousel />
-      <SplitBgVert content={SplitBgContent} />
+      <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>
   );

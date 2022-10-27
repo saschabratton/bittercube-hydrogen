@@ -5,7 +5,7 @@ import SignUp from "../../../components/sections/SignUp.client";
 import Flavors from "../../../components/sections/kitchen/Flavors.client";
 import Spices from "../../../components/sections/kitchen/Spices.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
-
+import BakingCarousel from "../../../components/sections/kitchen/BakingCarousel.client";
 
 const HeaderText = ("Bitters in the kitchen")
 const pageNav = [
@@ -41,6 +41,7 @@ export default function Kitchen(){
         </div>
         {/* TODO: baking recipe carousel  */}
         <CardCarousel />
+        {/* <BakingCarousel /> */}
       </div>
       <Spices />
       <hr className="w-11/12 mx-auto"/>

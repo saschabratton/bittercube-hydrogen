@@ -5,7 +5,7 @@ export default function Flavors(){
   return(
     <div className="container relative grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
         <div className="top-[90%] center-absolute ">
-          <Image src='/emblems/bitters-flavors.svg' width={101} height={111} alt="" role="presentation" />
+          <Image src='/emblems/products-flavors.svg' width={101} height={111} alt="" role="presentation" />
         </div>
         <div className="flex flex-col justify-between gap-20">
           <div className="flex flex-col items-center mx-auto text-center">
@@ -23,56 +23,56 @@ export default function Flavors(){
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex flex-col items-center justify-start gap-3 text-center">
             <h3>Vanilla Extract</h3>
             <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/bitters/product" className="flex gap-2 mx-auto label group w-fit">Shop Product
+            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
               <div className="btn-arrow"></div>
             </Link>
           </div>

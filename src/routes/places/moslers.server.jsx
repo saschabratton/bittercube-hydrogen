@@ -2,9 +2,9 @@ import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"
-import OtherVenues from "../../components/sections/places/OtherVenues.client"
+import { Link } from "@shopify/hydrogen"
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
-
+import SignUpForm from "../../components/global/SignUpForm.client"
 
 
 const HeaderText = ("Mosler's Vault Headline goes Here make it good")
@@ -58,13 +58,30 @@ export default function moslers(){
       <div className="container grid grid-cols-2 ">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
             <h2>take a look at our craft cocktail menu</h2>
-            <a href="https://moslers-vault.resos.com/booking" className="btn btn-action">Book a table</a>
+            <a href="https://moslers-vault.resos.com/booking" target="_blank" className="btn btn-action">Book a table</a>
           </div>
         <TabSection content={TabContent} />
       </div>
 
-     <OtherVenues />
-
+     <div className="py-12 section bg-dark">
+        <div className="border-y-2 border-gold">
+          <div className="container grid grid-cols-2 gap-6 max-screen-xl">
+            <div className="max-w-md mx-auto text-center">
+              <span className="label">Explore More</span>
+              <h2>Check out our other venues or join us for events</h2>
+              <div className="flex">
+                <Link to="/places/bar" className="btn btn-action">Bittercube Bar</Link>
+                <a href="https://www.crowdcast.io/bittercube" target='_blank' className="btn btn-action">Events portal</a>
+              </div>
+            </div>
+            <div className="flex flex-col max-w-md gap-6 text-center">
+              <h4 className="tracking-wide text-white">Enjoy new recipes and the latest<br />news and events</h4>
+              <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+              <SignUpForm />
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
