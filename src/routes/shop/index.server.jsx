@@ -51,7 +51,7 @@ export default function Home() {
               <div className="btn-arrow"></div>
             </Link>
           </div>
-          <div className="flex items-center justify-center text-center">
+          <div className="flex justify-end text-center">
             <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span>
           </div>
         </div>

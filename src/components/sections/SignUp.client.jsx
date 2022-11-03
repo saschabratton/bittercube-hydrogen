@@ -7,7 +7,7 @@ export default function SignUp({ content }){
   const { contentHtml, ctaLabel, ctaLink } = content
   return(
     <>
-    <div className="container grid grid-cols-1 gap-10 py-20 md:grid-cols-2">
+    <div className="container grid max-w-6xl grid-cols-1 gap-10 py-20 md:grid-cols-2">
       <div className="max-w-md mx-auto text-center">
         <div className="text-ornament"></div>
         {/* {parse(contentHtml)} */}

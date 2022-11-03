@@ -50,6 +50,17 @@ export default function moslers(){
           <p>OAlso housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits. <a href="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" target="blank">Order online now</a>.</p>
         </div>
       </div>
+ <div className="w-11/12 mx-auto">
+        <HorizontalSeperator />
+      </div>
+
+      <div className="container grid grid-cols-2 ">
+          <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
+            <h2>take a look at our craft cocktail menu</h2>
+            <a href="https://moslers-vault.resos.com/booking" target="_blank" className="btn btn-action">Book a table</a>
+          </div>
+        <TabSection content={TabContent} />
+      </div>
 
 
      <div className="py-12 section bg-dark">

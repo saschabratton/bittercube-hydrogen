@@ -26,17 +26,13 @@ const ThreeColumnFeaturedContent = {
 }
 const ThreeColumnFeaturedLinks = [
   {
-    'linkLabel': 'The Bazaar',
-    'link': 'https://www.bittercubebazaar.com/',
-  },
-  {
     'linkLabel': 'Bittercube Bar at North Ave',
     'link': '/places/bar',
   },
-  // {
-  //   'linkLabel': 'The Apothecary',
-  //   'link': '#',
-  // },
+  {
+    'linkLabel': "Mosler's Vault",
+    'link': '/places/moslers',
+  },
 ]
 const SignUpContent = {
   'contentHtml': '<h2>Quick Diddy Prefooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
