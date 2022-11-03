@@ -8,10 +8,11 @@ export default function Events() {
         <div className="border-y-2 border-gold">
           <div className="container grid grid-cols-1 gap-48 md:gap-16 md:grid-cols-2 max-screen-xl">
             <div className="max-w-md mx-auto text-center">
-              <span className="block mb-4 label">Cheers with company</span>
-              <h2>Events with Bittercube</h2>
-              <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-              <a target='_blank' href="https://www.crowdcast.io/bittercube" className="flex justify-between pt-4 mx-auto mt-10 border-t-2 w-fit lg:w-60 label group border-gold">Private Event Inquiry<div className="btn-arrow btn-arrow-gold"></div></a>
+              <span className="block mb-4 label">Online Cocktail Classes</span>
+              <h2>Entertaining Education</h2>
+              <p>Over the last feww years, Bittercube has hosted online classes covering topics such as seasonal cocktails, coffee cocktails, and many others. The entire catalog of classes are available online.</p>
+              <a target='_blank' href="https://www.crowdcast.io/bittercube" className="flex justify-between pt-4 mx-auto mt-10 border-t-2 w-fit lg:w-60 label group border-gold">Online Class Inquiry<div className="btn-arrow btn-arrow-gold"></div></a>
+              <a target='_blank' href="https://www.crowdcast.io/bittercube" className="flex justify-between pt-4 mx-auto mt-10 border-t-2 w-fit lg:w-60 label group border-gold">Online Class Library<div className="btn-arrow btn-arrow-gold"></div></a>
             </div>
             <div className="max-w-md mx-auto text-center">
               <dl>

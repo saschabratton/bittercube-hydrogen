@@ -10,18 +10,25 @@ import Events from "../../components/sections/places/Events.client";
 
 const alternatingContent = [
   {
-    'title': 'The bittercube bar',
-    'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.',
+    'title': 'The Bittercube Bar & Bazaar',
+    'description': 'The Bittercube Bar features a seasonal cocktail menu that showcases the unique lineup of Bittercube Bitters. The Bazaar retails Bittercube Bitters, Heirloom liqueurs, and other unique ingredients.',
     'contentHtml': '<h5>Located at<br />1234 North ave<br />Milwaukee</h5><br /><h5>At the crossroads collective</h5>',
     'cta': 'go to the bar',
     'ctaLink': '/places/bar'
   },
   {
     'title': 'Mosler’s Vault',
-    'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.',
+    'description': 'Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault. The elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
     'cta': 'Go to Moslers',
     'ctaLink': '/places/moslers'
+  },
+  {
+    'title': 'Bittercube Apothecary',
+    'description': 'Small shop featuring Bittercube Bitters, cocktail books, tools, and N/A ingredients. The apothecary also houses our manufactursing facility, and can be booked for private events and tours.',
+    'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
+    'cta': '',
+    'ctaLink': ''
   },
 ]
 
@@ -38,7 +45,7 @@ export default function Places() {
         </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>
-      <RecipeColleciton />
+      {/* <RecipeColleciton /> */}
       <Events />
     </Layout>
   )

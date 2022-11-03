@@ -6,10 +6,10 @@ import VerticalSeparator from "../components/animations/VerticalSeparator.client
 import { Image } from "@shopify/hydrogen"
 
 
-const HeaderText = ("About Bittercube Headline goes Here make it good")
+const HeaderText = ("Creating exceptional bitters since 2009")
 const ThreeColumnFeaturedContent = {
-  'headline': 'our partnerships and Collaborations',
-  'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+  'headline': 'partnerships and Collaborations',
+  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.',
   'ctaLabel': 'Let\'s Collaborate',
   'ctaLink': '/contact',
   'background': 'forest',
@@ -19,17 +19,17 @@ const ThreeColumnFeaturedContent = {
   'border': '0'
 }
 const SplitBgContent = {
-  'topLabel': 'Where it all started',
+  'topLabel': 'WHERE THE BITTERS ARE MADE',
   'topHeadline': 'The Apothecary',
-  'topDescription': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
-  'bottomCtaLabel': 'Shop for local pick-up',
+  'topDescription': 'Our homebase is a bustling 9,000 square foot building in Milwaukee where Bittercube Bitters are produced. The apothecary also houses the company offsices, and a storefront for bitters, tools, and non-alcoholic cocktail ingredients.',
+  // 'bottomCtaLabel': 'Shop for local pick-up',
   'bottomCtaLink': '#',
   'bottomLabel': '',
   'bottomHeadline': '',
   'featuredImage': '',
   'background': 'forest',
   'padding': '0',
-  'bottomHtml': '<h5>Tours</h5><h5>Tastings</h5><h5>Private events</h5><h5>Cocktail Classes</h5>',
+  'bottomHtml': '<h5>Offices</h5><h5>MANUFACTURING</h5><h5>BITTERS STOREFRONT</h5><h5>RESEARCH & DEVELOPMENT</h5>',
 }
 const ThreeColumnFeaturedLinks = [
   {
@@ -39,7 +39,27 @@ const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'Discocube',
     'link': 'https://www.discocubes.com/',
-  }
+  },
+  {
+    'linkLabel': 'SANTA TERESA RUM',
+    'link': '#',
+  },
+  {
+    'linkLabel': 'BURLAP & BARREL',
+    'link': '#',
+  },
+  {
+    'linkLabel': 'LIVEWIRE',
+    'link': '#',
+  },
+  {
+    'linkLabel': 'TAPPED MAPLE SYRUP',
+    'link': '#',
+  },
+  {
+    'linkLabel': 'BITTERS BLENDS',
+    'link': '#',
+  },
 ]
 
 export default function about() {
@@ -54,7 +74,7 @@ export default function about() {
           <div className="grid grid-cols-1 gap-16 py-16 text-center md:grid-cols-2">
               <h2 className="max-w-lg mx-auto">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
             <div className="flex items-center justify-center">
-              <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research.</p>
+              <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research - and to inspire elevated drinking experiences.</p>
             </div>
           </div>
         </div>
@@ -80,13 +100,14 @@ export default function about() {
 
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div className="absolute top-0 right-0">
-            <span className="block text-3xl text-center font-decorative text-gold">Inspire elevated <br />drinking experiences.</span>
+            <span className="block text-3xl text-center font-decorative text-gold">Bold & Balanced<br />Bitters</span>
           </div>
           <span className="label">Founded in 2009</span>
-          <h2>two bartenders with a shared vision for what bold & balanced bitters could be.</h2>
-          <p className="h4">relationships with farmers, botanical suppliers, bartenders, and foodies across the globe</p>
-          <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines and services.</p>
-          <p>Over the years, Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
+          <h2>Two bartenders with a shared vision set out to produce the most distinctive lineup of bitters in the world.</h2>
+          <p className="h4">BITTERCUBE IS FEATURED ON COCKTAILS MENUS FROM COAST TO COAST</p>
+          <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines, and services.</p>
+          <p>Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
+          <p>As a company, Bittercube offers employees competitive health and dental insurance and pays for 50% of coverage, provides PTO, paid holidays, quarterly revenue share, a 401K package with match, paid parental leave, and operates on a four day work week.</p>
         </div>
       </div>
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />

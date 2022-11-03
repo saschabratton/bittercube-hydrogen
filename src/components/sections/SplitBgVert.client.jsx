@@ -24,7 +24,7 @@ export default function SplitBgVert({ content }){
                   <h3 className="text-3xl font-regular">{bottomHeadline}</h3>
                   {/* <Link to="/" className="btn btn-action">See Plans</Link> */}
                   {parse(bottomHtml)}
-                 <LocalPickup />
+                 {/* <LocalPickup />s */}
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">

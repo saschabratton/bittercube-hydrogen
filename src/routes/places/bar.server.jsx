@@ -34,19 +34,20 @@ export default function moslers(){
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
-          <span className="label">Located on Milwaukee’s North-side</span>
-          <h2>a place to gather and enjoy good spirits, in glass and company</h2>
+          <span className="label">Located on Milwaukee’s West-side</span>
+          <h2>Some headline for the bittercube bar</h2>
           <p className="label">
-            Located at<br />1234 north ave<br />milwaukee wi<br /><span className="inline-block mt-6">at the crossroads collective</span>
+            Located at<br />5900 W north ave<br />milwaukee wi<br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKETs</span>
           </p>
           <div className="text-ornament w-fit"></div>
           <p className="label ">
-            <a href="tel:4142076262" target="_blank" className="text-gold hover:text-dark">414.123.4567</a><br />
-            <a href="mailto:info@bittercube.com" target="_blank" className="text-gold hover:text-dark">info@bittercube.com</a>
+            <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />
+            <a href="mailto:ANTHONY@BITTERCUBE.COM" target="_blank" className="text-gold hover:text-dark">ANTHONY@BITTERCUBE.COM</a>
+
           </p>
-          <p className="label">Follow us online<br />@bittercube</p>
-          <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines and services.</p>
-          <p>Over the years, Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
+          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
+          <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
+          <p>OAlso housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits. <a href="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" target="blank">Order online now</a>.</p>
         </div>
       </div>
 

@@ -14,7 +14,7 @@ const {
   });
 
   return(
-    <div className="relative header-dark h-[545px]">
+    <div className="relative header-dark">
       <Nav shop={shop} />
       <div className="absolute inset-0 bg-dark">
         <Image src='/images/imageheader.jpg' width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
@@ -32,7 +32,7 @@ const {
 
       <div className="container relative">
         <div className="py-28">
-            <h1 className="max-w-2xl py-4 mx-auto text-6xl text-center text-white capitalize">{ content }</h1>
+            <h1 className="max-w-sm py-4 mx-auto text-6xl text-center text-white capitalize md:max-w-xl">{ content }</h1>
           </div>
       </div>
     </div>

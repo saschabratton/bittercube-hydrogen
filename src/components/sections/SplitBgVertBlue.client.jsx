@@ -11,8 +11,7 @@ export default function SplitBgVertBlue({ content }){
             <div className="flex flex-col justify-between flex-1 gap-8 text-center lg:px-20">
                 <div className="flex flex-col justify-center gap-2 h-44">
                   <span className="label h4 text-gold">Feeling Spirited</span>
-                  <h2 className="text-white">Shop our local milwaukee bazaar</h2>
-                  {/* TODO: local pickup modal */}
+                  <h2 className="text-white">Get Bittercube at home</h2>
                 </div>
                 <div  className="flex flex-col justify-center gap-2 h-44">
                   <span className="label h4 text-gold">Subscribe for Bittercube at home</span>

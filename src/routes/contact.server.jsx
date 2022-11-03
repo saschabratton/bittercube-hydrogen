@@ -26,9 +26,9 @@ export default function Contact() {
             </div>
             <div className="grid gap-3">
               <h3>WHOLESALE INQUIRIES</h3>
-              <p className="mb-1">Email us to set up an account or order wholesale using the portal below.</p>
-              <a href="mailto:INFO@BITTERCUBE.COM" className="font-bold">WHOLESALE@BITTERCUBE.COM</a>
-              <a href="https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt" className="flex gap-2 mx-auto label group w-fit">
+              <p className="mb-1"><a href="mailto:WHOLESALE@BITTERCUBE.COM" className="inline-block">Email us</a> to set up an account and order direct or order wholesale using the portal below.</p>
+              {/* <a href="mailto:INFO@BITTERCUBE.COM" className="font-bold">WHOLESALE@BITTERCUBE.COM</a> */}
+              <a href="https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt" className="flex gap-2 mx-auto label group w-fit" target='_blank'>
                 Wholesale Information
                 <div className="btn-arrow"></div>
               </a>
@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="flex flex-col gap-10 md:gap-20">
           <Image src='images/bittercube-cocktail.jpg' className="object-cover mx-auto aspect-4/5" alt="A cocktail made with Bittercube Bitters" width={360} height={455} />
           <p className="max-w-xs mx-auto text-3xl font-decorative text-gold ">
-            Some little zippy closer  here
+           We answer every email<br />we receive!
           </p>
         </div>
       </div>

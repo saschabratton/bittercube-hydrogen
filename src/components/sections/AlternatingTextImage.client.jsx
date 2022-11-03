@@ -20,7 +20,9 @@ export default function AlternatingTextImage({ content }){
 
               <p className="max-w-sm text-ornament">{description}</p>
               {/* {parse(contentHtml)} */}
+              {ctaLink &&
               <Link to={ctaLink} className="btn btn-action">{cta}</Link>
+              }
             </div>
             <div className="overflow-hidden image-frame group-hover:!rounded-jumbo transition-all transform w-fit z-10 relative mx-auto duration-500 h-fit">
               <Image src='/images/pour.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />

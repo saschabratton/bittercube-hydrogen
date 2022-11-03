@@ -9,7 +9,7 @@ import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client"
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
 import { Image } from "@shopify/hydrogen";
 
-const HeaderText = ("Every recipe on this site was meticulously vetted. From updated classics, to seasonal libations, as well as submissions from a number of featured bartenders, there are cocktails of all styles featured in this recipe library.")
+const HeaderText = ("The Recipe Library")
 const pageNav = [
   { label: 'seasonal', link: '/recipes'},
   { label: 'cocktails', link: '/recipes/cocktails'},
