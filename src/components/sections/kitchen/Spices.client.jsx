@@ -21,62 +21,64 @@ export default function Spices(){
           <Image src='/images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
         <div className="grid grid-cols-2 gap-10">
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Cinnamon</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/blackstrap" className="label">Blackstrap Bitters
+            </Link>
+            <Link to="/shop/products/bolivar" className="label">Bolivar Bitters
+            </Link>
+             <Link to="/shop/products/cherry-bark-vanilla" className="label">Cherry Bark Vanilla Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Nutmeg</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/blackstrap" className="label">Blackstrap Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Allspice</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/jamaican-1" className="label">Jamaican No. 1 Bitters
+            </Link>
+            <Link to="/shop/products/jamaican-2" className="label">Jamaican No. 2 Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Cardamom</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/blackstrap" className="label">Blackstrap Bitters
+            </Link>
+            <Link to="/shop/products/orange" className="label">Orange Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Star Anise</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/jamaican-1" className="label">Jamaican No. 1 Bitters
+            </Link>
+             <Link to="/shop/products/cherry-bark-vanilla" className="label">Cherry Bark Vanilla Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Dried Ginger</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/jamaican-1" className="label">Jamaican No. 1 Bitters
+            </Link>
+            <Link to="/shop/products/jamaican-2" className="label">Jamaican No. 2 Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
+          <div className="flex flex-col items-center justify-start gap-1 text-center">
+            <h3>Cinnamon</h3>
+            <span className="text-ornament"></span>
+            <Link to="/shop/products/jamaican-1" className="label">Jamaican No. 1 Bitters
+            </Link>
+            <Link to="/shop/products/jamaican-2" className="label">Jamaican No. 2 Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-3 text-center">
-            <h3>Vanilla Extract</h3>
-            <p>Use Cherry Bark Vanilla</p>
-            <Link to="/shop/products/cherry-bark-vanilla" className="flex gap-2 mx-auto label group w-fit">Shop Product
-              <div className="btn-arrow"></div>
-            </Link>
-          </div>
+
+
           <div className="flex items-center justify-center col-span-2">
             <Link to="/shop/bitters" className="mx-auto btn btn-action">Shop Bitters</Link>
           </div>
