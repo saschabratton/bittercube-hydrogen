@@ -2,7 +2,7 @@ import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"
-import { Link } from "@shopify/hydrogen"
+import { Link, Head } from "@shopify/hydrogen"
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
 import SignUpForm from "../../components/global/SignUpForm.client"
 
@@ -24,13 +24,14 @@ const TabContent = [
 ]
 
 export default function moslers(){
+
   return(
     <Layout>
       <ImageHero content={HeaderText} />
       <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
         <div className="grid gap-6">
-<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-<Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
@@ -50,7 +51,6 @@ export default function moslers(){
           <a href="https://moslers-vault.resos.com/booking" className="ml-0 btn btn-action">Book a table</a>
         </div>
       </div>
-      {/* <hr className="border-t-2 border-gold" /> */}
       <div className="w-11/12 mx-auto">
         <HorizontalSeperator />
       </div>
@@ -58,7 +58,28 @@ export default function moslers(){
       <div className="container grid grid-cols-2 ">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
             <h2>take a look at our craft cocktail menu</h2>
+
             <a href="https://moslers-vault.resos.com/booking" target="_blank" className="btn btn-action">Book a table</a>
+
+
+
+            <a id="booking-widget-2" href="https://moslers-vault.resos.com/booking" data-lang="en" data-restaurant-id="GXZgycWvMCudCHBd4" data-domain="moslers-vault.resos.com">Book a table</a>
+
+            <div id="booking-script-2">
+              <a target="_blank" href="https://resos.com">Restaurant table mangement</a>
+            </div>
+
+            <Head>
+              <script type="text/javascript"
+                src='https://moslers-vault.resos.com/embed/booking/widget.js?ts="+new Date().getTime()'
+              />
+            </Head>
+
+
+
+
+
+
           </div>
         <TabSection content={TabContent} />
       </div>

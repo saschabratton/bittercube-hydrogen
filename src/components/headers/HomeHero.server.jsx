@@ -25,20 +25,20 @@ export default function HomeHero({ content }) {
       <div className="container relative grid grid-cols-1 mx-auto text-center uppercase sm:grid-cols-7">
         <div className="hidden sm:flex sm:items-center sm:justify-center">
           <span className="font-sans font-bold leading-5 tracking-widest text-ornament text-gold">
-            quiere<br />dondes<br />aqui
+            EXCEPTIONAL<br />BITTERS
           </span>
 
         </div>
         <div className="sm:col-span-5">
           <div className="relative py-60">
-            <h1 className="max-w-lg mx-auto text-white capitalize">{ content }</h1>
+            <h1 className="max-w-xl mx-auto text-white capitalize md:text-6xl">{ content }</h1>
             <Image src='/logos/logomark-reversed.svg' width="92" height="92" role="presentation" className="absolute -translate-x-1/2 left-1/2 bottom-20" alt="A cocktail made with Bittercube Bitters" />
           </div>
 
         </div>
         <div className="hidden sm:flex sm:items-center sm:justify-center">
           <span className="font-sans font-bold leading-5 tracking-widest text-ornament text-gold">
-            lorem<br />ipsum et<br />doler
+            CAREFULLY<br />CRAFTED
           </span>
         </div>
       </div>

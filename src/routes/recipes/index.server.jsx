@@ -8,14 +8,10 @@ import FeaturedBartenders from "../../components/sections/recipes/FeaturedBarten
 import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
 import { Image } from "@shopify/hydrogen";
+import RecipesNav from "../../components/headers/RecipesNav.server";
 
 const HeaderText = ("The Recipe Library")
-const pageNav = [
-  { label: 'seasonal', link: '/recipes'},
-  { label: 'cocktails', link: '/recipes/cocktails'},
-  { label: 'syrups', link: '/recipes/syrups'},
-  { label: 'in the kitchen', link: '/recipes/kitchen'},
-]
+
 const SignUpContent = {
   'contentHtml': '<h2>share your recipes with us on instagram</h2>',
   'ctaLabel': 'Instagram',
@@ -27,7 +23,7 @@ export default function index() {
   return (
     <Layout>
       <ImageHero content={HeaderText} />
-      <SubNav navigation={pageNav} />
+      <RecipesNav />
       <hr />
       <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">
         <div className="flex justify-center col-span-2">

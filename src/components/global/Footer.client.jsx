@@ -39,7 +39,7 @@ export default function Footer(){
           <div className="flex flex-col justify-between order-4 gap-6 text-center lg:order-3 md:col-span-4 lg:col-span-2">
               <div>
                 <h6>Headquarters</h6>
-                <p>4828 W Lisbon Ave<br />Milwaukee WI, 53210</p>
+                <p>4828 W Lisbon Ave<br />Milwaukee, WI 53210</p>
               </div>
               <div>
                 <h6>APOTHECARY PHONE</h6>

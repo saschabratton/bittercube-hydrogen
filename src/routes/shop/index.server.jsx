@@ -41,7 +41,6 @@ export default function Home() {
   return (
     <Layout>
       <PatternHero content={HeaderText} />
-      {/* <SubNav navigation={pageNav} /> */}
       <CollectionsNav />
       <div className="container">
         <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">

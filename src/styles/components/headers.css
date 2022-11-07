@@ -13,11 +13,23 @@
 .subnav-item{
   @apply relative flex py-2 overflow-hidden;
   &::before{
-  content: "";
-  @apply absolute overflow-x-hidden transform -translate-x-1/2 -translate-y-1/2 bottom-px -left-1/2;
-  @apply w-full h-0.5 bg-gold/0;
-  @apply transition duration-500;
-}
+    content: "";
+    @apply absolute overflow-x-hidden transform -translate-x-1/2 -translate-y-1/2 bottom-px -left-1/2;
+    @apply w-full h-0.5 bg-gold/0;
+    @apply transition duration-500;
+  }
+    &.active{
+     &::before{
+      content: "";
+      @apply absolute left-0 translate-x-0 bottom-px;
+      @apply w-full h-0.5 bg-gold;
+    }
+    &:hover{
+      &::before{
+        @apply translate-x-0;
+      }
+    }
+  }
 &:hover{
   &::before{
     @apply translate-x-1/2 bg-gold/100;

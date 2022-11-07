@@ -6,6 +6,7 @@ import Flavors from "../../../components/sections/kitchen/Flavors.client";
 import Spices from "../../../components/sections/kitchen/Spices.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import BakingCarousel from "../../../components/sections/kitchen/BakingCarousel.client";
+import RecipesNav from "../../../components/headers/RecipesNav.server";
 
 const HeaderText = ("Bitters in the kitchen")
 const pageNav = [
@@ -25,7 +26,7 @@ export default function Kitchen(){
   return(
     <Layout>
       <PatternHero content={HeaderText} />
-      <SubNav navigation={pageNav} />
+      <RecipesNav />
       <hr />
       <Flavors />
       <div className="relative bg-dark">

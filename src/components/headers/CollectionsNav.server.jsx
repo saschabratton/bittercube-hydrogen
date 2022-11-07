@@ -1,6 +1,8 @@
-import { Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
+import { useUrl, Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
 
 export default function CollectionsNav() {
+  const { pathname } = useUrl();
+
   const {
     data: { collections },
   } = useShopQuery({
@@ -14,18 +16,8 @@ export default function CollectionsNav() {
         {collections.nodes.map((collection) => {
           return (
             <li key={collection.id}>
-              <Link to={`/shop/${collection.handle}`} className="text-sm font-bold tracking-widest uppercase text-dark subnav-item">
-                {/* <div className="grid gap-4">
-                  {collection?.image && (
-                    <Image
-                      className="rounded shadow-border overflow-clip inline-block aspect-[5/4] md:aspect-[3/2] object-cover"
-                      width={"100%"}
-                      height={336}
-                      alt={`Image of ${collection.title}`}
-                      data={collection.image}
-                    />
-                  )}
-                </div> */}
+              <Link to={`/shop/${collection.handle}`}
+              className={`text-sm font-bold tracking-widest uppercase text-dark subnav-item ${pathname.includes(collection.handle) ? 'active' : ''}`}>
                 {collection.title}
               </Link>
             </li>

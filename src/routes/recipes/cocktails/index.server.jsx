@@ -8,14 +8,10 @@ import HorizontalSeperator from "../../../components/headers/HorizontalSeperator
 import {fetchSync, CacheLong} from '@shopify/hydrogen';
 import { NoIndexPageSeo } from "@shopify/hydrogen/components/Seo/NoIndexSeo.client";
 import RecipeCard from "../../../components/sections/recipes/RecipeCard.client";
+import RecipesNav from "../../../components/headers/RecipesNav.server";
+
 
 const HeaderText = ("Cocktail Recipes")
-const pageNav = [
-  { label: 'seasonal', link: '/recipes'},
-  { label: 'cocktails', link: '/recipes/cocktails'},
-  { label: 'syrups', link: '/recipes/syrups'},
-  { label: 'in the kitchen', link: '/recipes/kitchen'},
-]
 
 const SignUpContent = {
   'contentHtml': '<h2>Quick Diddy Prefooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
@@ -35,7 +31,7 @@ export default function Cocktails(){
   return(
     <Layout>
       <PatternHero content={HeaderText} />
-      <SubNav navigation={pageNav} />
+      <RecipesNav />
       <hr />
       <div className="container grid grid-cols-3 gap-6">
 

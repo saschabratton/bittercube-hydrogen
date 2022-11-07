@@ -21,15 +21,15 @@ const navItem = [
   },
   {
     'label':'Recipes',
-    'path':'/Recipes',
+    'path':'/recipes',
   },
   {
     'label':'About',
-    'path':'/About',
+    'path':'/about',
   },
   {
     'label':'Contact',
-    'path':'/Contact',
+    'path':'/contact',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function Nav({ shop }) {
                 </span>
               </a>
               {navItem && navItem.map((link) => (
-              <Link className="nav-link" to={link.path} key={makeKey(link.label)}>
+              <Link className={`nav-link ${pathname.includes(link.path) ? 'active' : ''}`} to={link.path} key={makeKey(link.label)}>
                 {link.label}
               </Link>
               ))}

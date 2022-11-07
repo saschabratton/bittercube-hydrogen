@@ -35,7 +35,7 @@ export default function Contact() {
             </div>
             <div className="grid gap-3">
               <h3>HEADQUARTERS</h3>
-              <p className="mb-1">4828 W Lisbon Ave<br />Milwaukee WI 53210</p>
+              <p className="mb-1">4828 W Lisbon Ave<br />Milwaukee, WI 53210</p>
               <a href="mailto:INFO@BITTERCUBE.COM" className="font-bold">414.207.6262</a>
             </div>
           </div>
