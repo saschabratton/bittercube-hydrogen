@@ -4,7 +4,9 @@ import AlternatingTextImage from "../../components/sections/AlternatingTextImage
 import ImageHero from "../../components/headers/ImageHero.server";
 import { Link, Image } from "@shopify/hydrogen";
 import RecipeColleciton from "../../components/sections/places/RecipeCollection.client";
-const HeaderText = ("places headline goes here, okay!")
+
+
+const HeaderText = ("Made in Milwaukee. Imbibed globally.")
 import Events from "../../components/sections/places/Events.client";
 
 
@@ -20,12 +22,12 @@ const alternatingContent = [
     'title': 'Mosler’s Vault',
     'description': 'Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault. The elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
-    'cta': 'Go to Moslers',
+    'cta': "Go to Mosler's",
     'ctaLink': '/places/moslers'
   },
   {
     'title': 'Bittercube Apothecary',
-    'description': 'Small shop featuring Bittercube Bitters, cocktail books, tools, and N/A ingredients. The apothecary also houses our manufactursing facility, and can be booked for private events and tours.',
+    'description': 'Small shop featuring Bittercube Bitters, cocktail books, tools, and N/A ingredients. The apothecary also houses our  manufacturing facility, and can be booked for private events and tours.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
     'cta': '',
     'ctaLink': ''
@@ -37,7 +39,7 @@ export default function Places() {
     <Layout>
        <ImageHero content={HeaderText} />
       <div className="container max-w-2xl text-center">
-        <h2>a places headline that introduces all your spaces will go right here</h2>
+        <h2>Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.</h2>
       </div>
       <div className="container relative">
         <div className="absolute left-0 top-5">

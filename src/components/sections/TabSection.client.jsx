@@ -7,7 +7,7 @@ export default function TabSection({ content }){
   const { label, contentHtml } = content
   return(
     <Tabs>
-      <div>
+      <div className="h-fit">
       <TabList>
         {content && content.map((content) => (
           <Tab>{content.label}</Tab>
@@ -15,7 +15,7 @@ export default function TabSection({ content }){
       </TabList>
       {content && content.map((content) => (
         <TabPanel>
-          <div className="relative pt-8 h-[400px]">
+          <div className="relative pt-8">
             <div className="relative z-10">
               {parse(content.contentHtml)}
             </div>

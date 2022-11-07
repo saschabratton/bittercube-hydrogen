@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-export default function VerticalSeparator() {
+export default function VerticalSeparator({content}) {
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -55,7 +55,7 @@ ScrollTrigger.create({
       </div>
       <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold ">
         {/* TODO: accept prop to update the text */}
-        Lorem Ipsum
+        {content}
         <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal"></div>
       </div>
     </div>

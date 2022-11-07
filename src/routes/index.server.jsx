@@ -39,7 +39,7 @@ const SignUpContent = {
   'ctaLabel': '',
   'ctaLink': '',
 }
-
+const OrnamentText = "Shop"
 
 
 export default function Home() {
@@ -63,14 +63,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <VerticalSeparator />
+          <VerticalSeparator content={OrnamentText} />
         </div>
-        {/* <div className="relative w-11/12 pt-0 mx-auto">
-           <HorizontalSeperator />
-          <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
-            Recipe Collection
-          </div>
-        </div> */}
 
 
         <div className="container pb-0 text-center max-w-screen-2xl">

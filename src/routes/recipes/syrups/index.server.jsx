@@ -39,9 +39,9 @@ const syrupGroups = groupIt(recipes)
 
 // console.log(syrupGroups)
 
-{syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-  console.log(`${key}: ${value}`);
-})}
+// {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
+//   console.log(`${key}: ${value}`);
+// })}
 
 
 // for (const [key, value] of Object.entries(syrupGroups)) {
@@ -53,9 +53,9 @@ const syrupGroups = groupIt(recipes)
       <PatternHero content={HeaderText} />
       <RecipesNav />
       <hr />
-      <div className="container relative z-10 grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
+      <div className="container relative z-10 grid max-w-6xl grid-cols-1 gap-6 py-16 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
-          <span className="label">LOREM IPSUM DOLER</span>
+          <span className="label">FOR SWEETNESS AND BALANCE</span>
           <h2 className="h1">Making Syrup</h2>
         </div>
         <div className="flex flex-col items-center justify-center text-center md:p-16">
@@ -65,7 +65,7 @@ const syrupGroups = groupIt(recipes)
           <Image src='/images/heirloom.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters"  />
         </div>
         <div className="flex flex-col max-w-md gap-2 mx-auto text-center">
-          <span className="text-2xl font-decorative text-gold">Some little zippy<br />closer here</span>
+          <span className="text-2xl font-decorative text-gold">Use this recipe<br />with any type of sugar</span>
           <h3 className="h2">Simple Syrup</h3>
           <HorizontalSeperator />
           <div className="flex flex-col gap-6 text-left text-ornament">
@@ -117,10 +117,20 @@ const syrupGroups = groupIt(recipes)
               </div>
             )
             })}
-
-
-
-
+        <div className="wrappe">
+            {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
+              // console.log(`${key}: ${value}`);
+              // {recipes?.length > 0 && recipes.map ((recipe) => {
+              // {value.map ((key) => {
+              //   return(
+              //     <h1>hello</h1>
+              //   )
+              // })}
+              {key}
+              console.log({key})
+            })
+            }
+            </div>
         </div>
       </div>
     </Layout>

@@ -14,7 +14,7 @@ const ThreeColumnFeaturedContent = {
   'ctaLink': '/contact',
   'background': 'forest',
   'image': '',
-  'navHeadline': 'our partners',
+  'navHeadline': 'RECENT PARTNERS',
   'padding': '0',
   'border': '0'
 }
@@ -61,6 +61,8 @@ const ThreeColumnFeaturedLinks = [
     'link': '#',
   },
 ]
+const OrnamentText = "ABOUT BITTERCUBE"
+
 
 export default function about() {
    return (
@@ -78,7 +80,7 @@ export default function about() {
             </div>
           </div>
         </div>
-        <VerticalSeparator />
+        <VerticalSeparator content={OrnamentText} />
       </div>
 
       {/* <div className="relative w-11/12 pt-0 mx-auto">
@@ -108,6 +110,11 @@ export default function about() {
           <p>Over the last decade, the company has built relationships with farmers, botanical suppliers, bartenders, and foodies across the globe, and continues to innovate with new flavors, collaborations, business lines, and services.</p>
           <p>Bittercube has been featured in the New York Times, Martha Stewart’s Everyday Food, Playboy, Imbibe Magazine, Timeout, Bon Appétit, Chicago Tribune, Bloomberg BusinessWeek, GO – AirTran Inflight Magazine, Southwest Magazine, NPR, and Daily Candy, among many other publications.</p>
           <p>As a company, Bittercube offers employees competitive health and dental insurance and pays for 50% of coverage, provides PTO, paid holidays, quarterly revenue share, a 401K package with match, paid parental leave, and operates on a four day work week.</p>
+          <span className="label">SOCIAL IMPACT</span>
+          <p>As a company, Bittercube believes all employees deserve a livable wage. We also offer competitive health and dental insurance and pay for 50% of coverage, provide PTO, paid holidays, quarterly revenue share, a 401K package with match, paid parental leave, and operate on a four day work week.</p>
+          <p>We buy organic botanicals whenever possible, and source ingredients as close to origin as we can.  We also work with botanical suppliers that focus on sustainability and equity. After each batch of bitters is produced we give away as much of the botanical infusion as is wanted to companies for various products like candles, soap, infused syrups, etc. The remaining organic materials are composted. In 2021, we helped our compost partner divert more than 2 million lbs of organic material.</p>
+          <p>We invested in a shredder that upcycles all cardboard shipped to us into sustainable packaging material. In addition, we use a 100% recycled and reusable paper cushioning, and together these products are what keep bitters safe during shipment to home consumers, bars and restaurants, and distributors. We ship bitters in cardboard boxes rather than plastic bags to mitigate plastic consumption. Beyond these initiatives, at our facility, we recycle as much as possible.</p>
+          <p>Our eyedropper and dasher bottles are glass, and can be easily recycled. They also can be reused for bitters blends, sauces, vinaigrettes, you name it! As a way to mitigate waste, we also produce 32 oz refill bottles that are sold to bars and restaurants, and these bottles can be reused for syrups, and infusions.</p>
         </div>
       </div>
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />

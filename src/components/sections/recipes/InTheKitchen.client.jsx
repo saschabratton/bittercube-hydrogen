@@ -23,7 +23,6 @@ export default function InTheKitchen(){
               <Link to="/recipes/kitchen" className="btn btn-action">Start experimenting</Link>
           </div>
         </div>
-        <hr />
       </div>
   )
 }

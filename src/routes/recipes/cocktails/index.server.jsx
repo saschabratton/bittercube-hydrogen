@@ -44,7 +44,7 @@ export default function Cocktails(){
 
 
       </div>
-      <div className="container max-w-screen-2xl">
+      <div className="w-11/12 pt-12 mx-auto">
         <HorizontalSeperator />
       </div>
       <SignUp content={SignUpContent}/>

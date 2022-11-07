@@ -9,8 +9,8 @@ export default function FeaturedBartenders(){
           <div className="container grid grid-cols-7 gap-6 lg:gap-28">
             <div className="flex flex-col justify-center col-span-4 gap-4">
               <span className="label">Featured Bartender</span>
-              <h3 className="max-w-sm tracking-normal text-gold">Julian moreno-johns from lost whale</h3>
-              <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+              <h3 className="max-w-sm tracking-normal text-gold">HAYDEN HARPOLE from Misfit Coffee, Minneapolis</h3>
+              <p>Hayden has been bartending 8 years, and is also the roaster at Misfit Coffee Company.</p>
               <h4 className="mt-6 label">SIGNATURE RECIPE</h4>
               <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 

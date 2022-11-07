@@ -14,4 +14,7 @@
   a, button{
     @apply block focus:outline-2 focus:outline-gold;
   }
+  dl{
+    @apply mb-6
+  }
 }

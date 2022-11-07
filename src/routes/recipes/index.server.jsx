@@ -9,6 +9,8 @@ import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client"
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
 import { Image } from "@shopify/hydrogen";
 import RecipesNav from "../../components/headers/RecipesNav.server";
+import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
+
 
 const HeaderText = ("The Recipe Library")
 
@@ -31,12 +33,18 @@ export default function index() {
             <Image src='/emblems/signatures-classics.svg' width={101} height={111} alt="" role="presentation" />
           </div>
         </div>
-        <h2 className="col-span-3 capitalize">Featured Recipes Headline Goes Here</h2>
+        <h2 className="col-span-3 capitalize">Selected Bittercube Original Cocktails</h2>
+      </div>
+      <div className="w-11/12 mx-auto">
+
       </div>
       <RecipeCarousel />
       {/* <LearnToCraft /> */}
       <FeaturedBartenders />
       <InTheKitchen />
+      <div className="w-11/12 pt-12 mx-auto">
+        <HorizontalSeperator />
+      </div>
       <SignUp content={SignUpContent}/>
     </Layout>
   )
