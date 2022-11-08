@@ -25,9 +25,9 @@ export default function moslers(){
       <ImageHero content={HeaderText} />
       <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
         <div className="grid gap-6">
-        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
+        <Image src='/images/bc-bar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/bc-bar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
           <span className="label">Located on Milwaukee’s West-side</span>

@@ -16,21 +16,24 @@ const alternatingContent = [
     'description': 'The Bittercube Bar features a seasonal cocktail menu that showcases the unique lineup of Bittercube Bitters. The Bazaar retails Bittercube Bitters, Heirloom liqueurs, and other unique ingredients.',
     'contentHtml': '<h5>Located at<br />1234 North ave<br />Milwaukee</h5><br /><h5>At the crossroads collective</h5>',
     'cta': 'go to the bar',
-    'ctaLink': '/places/bar'
+    'ctaLink': '/places/bar',
+    'image': '/images/places-bc-bar.jpg'
   },
   {
     'title': 'Mosler’s Vault',
     'description': 'Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault. The elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
     'cta': "Go to Mosler's",
-    'ctaLink': '/places/moslers'
+    'ctaLink': '/places/moslers',
+    'image': '/images/places-moslersvault.jpg'
   },
   {
     'title': 'Bittercube Apothecary',
     'description': 'Small shop featuring Bittercube Bitters, cocktail books, tools, and N/A ingredients. The apothecary also houses our  manufacturing facility, and can be booked for private events and tours.',
     'contentHtml': '<h5>Located at<br />1234 something street<br />Milwaukee</h5>',
-    'cta': '',
-    'ctaLink': ''
+    'cta': 'Go to the apothecary',
+    'ctaLink': '/places/apothecary',
+    'image': '/images/places-apothecary.jpg'
   },
 ]
 

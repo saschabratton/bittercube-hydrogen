@@ -23,6 +23,8 @@ const ThreeColumnFeaturedContent = {
   'navHeadline': 'Visit our places',
   'padding': '12',
   'border': '2',
+  'image': '/images/places-moslersvault.jpg',
+  'imageAlt': "Mosler's Vault"
 }
 const ThreeColumnFeaturedLinks = [
   {
@@ -32,6 +34,10 @@ const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': "Mosler's Vault",
     'link': '/places/moslers',
+  },
+  {
+    'linkLabel': "The Apothecary",
+    'link': '/places/apothecary',
   },
 ]
 const SignUpContent = {

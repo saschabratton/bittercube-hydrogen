@@ -1,14 +1,13 @@
 import { Layout } from "../../../components/Layout.server";
 import PatternHero from "../../../components/headers/PatternHero.server";
-import SubNav from "../../../components/global/SubNav.server";
-import Card from "../../../components/global/Card.client";
-import { Link } from "@shopify/hydrogen";
 import SignUp from "../../../components/sections/SignUp.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import {fetchSync, CacheLong} from '@shopify/hydrogen';
 import { NoIndexPageSeo } from "@shopify/hydrogen/components/Seo/NoIndexSeo.client";
 import RecipeCard from "../../../components/sections/recipes/RecipeCard.client";
 import RecipesNav from "../../../components/headers/RecipesNav.server";
+import { HiSearch } from "react-icons/hi";
+
 
 
 const HeaderText = ("Cocktail Recipes")
@@ -32,6 +31,28 @@ export default function Cocktails(){
     <Layout>
       <PatternHero content={HeaderText} />
       <RecipesNav />
+
+      <div className="container flex justify-between pt-0 pb-8">
+        <div className="flex items-center gap-3">
+          <span className="label">Sort By:</span>
+          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
+            Spirit
+          </div>
+          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
+            Cocktail Style
+          </div>
+          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
+            Bitters
+          </div>
+          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
+            Season
+          </div>
+        </div>
+        <div className="text-left label">
+          Search
+          {/* <HiSearch /> */}
+        </div>
+      </div>
       <hr />
       <div className="container grid grid-cols-3 gap-6">
 

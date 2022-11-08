@@ -13,7 +13,7 @@ const ThreeColumnFeaturedContent = {
   'ctaLabel': 'Let\'s Collaborate',
   'ctaLink': '/contact',
   'background': 'forest',
-  'image': '',
+  'image': '/images/about-collaborations.jpg',
   'navHeadline': 'RECENT PARTNERS',
   'padding': '0',
   'border': '0'
@@ -22,8 +22,8 @@ const SplitBgContent = {
   'topLabel': 'WHERE THE BITTERS ARE MADE',
   'topHeadline': 'The Apothecary',
   'topDescription': 'Our homebase is a bustling 9,000 square foot building in Milwaukee where Bittercube Bitters are produced. The apothecary also houses the company offsices, and a storefront for bitters, tools, and non-alcoholic cocktail ingredients.',
-  // 'bottomCtaLabel': 'Shop for local pick-up',
-  'bottomCtaLink': '#',
+  'bottomCtaLabel': 'The Apothecary',
+  'bottomCtaLink': '/places/apothecary',
   'bottomLabel': '',
   'bottomHeadline': '',
   'featuredImage': '',
@@ -95,8 +95,9 @@ export default function about() {
 
         {/* TODO: images as a carousel on mobile  */}
         <div className="hidden gap-6 lg:grid">
-          <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
 
 

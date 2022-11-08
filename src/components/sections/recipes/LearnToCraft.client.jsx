@@ -3,6 +3,7 @@ import { Image } from "@shopify/hydrogen"
 import VerticalSeparator from "../../animations/VerticalSeparator.client";
 import TabSection from "../TabSection.client";
 
+
 const TabContent = [
   {
     'label': 'Dropper VS Dash',
@@ -28,7 +29,7 @@ export default function LearnToCraft() {
         </div>
       </div>
       <div className="container relative grid grid-cols-1 gap-6 md:grid-cols-2">
-        <VerticalSeparator />
+        {/* <VerticalSeparator /> */}
         <div className="p-8">
           <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>

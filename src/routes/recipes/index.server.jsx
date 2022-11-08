@@ -39,7 +39,7 @@ export default function index() {
 
       </div>
       <RecipeCarousel />
-      {/* <LearnToCraft /> */}
+      <LearnToCraft />
       <FeaturedBartenders />
       <InTheKitchen />
       <div className="w-11/12 pt-12 mx-auto">

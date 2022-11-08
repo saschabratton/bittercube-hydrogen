@@ -39,9 +39,11 @@ const syrupGroups = groupIt(recipes)
 
 // console.log(syrupGroups)
 
-// {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-//   console.log(`${key}: ${value}`);
-// })}
+{syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
+  // console.log(`${key}: ${value}`);
+  console.log(key)
+})}
+
 
 
 // for (const [key, value] of Object.entries(syrupGroups)) {
@@ -117,6 +119,8 @@ const syrupGroups = groupIt(recipes)
               </div>
             )
             })}
+
+
         <div className="wrappe">
             {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
               // console.log(`${key}: ${value}`);
@@ -126,8 +130,10 @@ const syrupGroups = groupIt(recipes)
               //     <h1>hello</h1>
               //   )
               // })}
-              {key}
-              console.log({key})
+
+
+
+              // console.log({key})
             })
             }
             </div>
