@@ -14,7 +14,7 @@
   h5, .h5 {
     @apply font-sans text-lg font-bold tracking-wider uppercase text-gold;
   }
-  h6, .h6, dt{
+  h6, .h6 {
     @apply mb-4 font-sans text-base font-bold tracking-widest uppercase text-dark;
   }
   p {

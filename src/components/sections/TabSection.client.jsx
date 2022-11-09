@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Image } from "@shopify/hydrogen";
-
+import { makeKey } from "../../utilities/helpers";
 
 export default function TabSection({ content }){
   const { label, contentHtml } = content
@@ -10,11 +10,13 @@ export default function TabSection({ content }){
       <div className="h-fit">
       <TabList>
         {content && content.map((content) => (
-          <Tab>{content.label}</Tab>
+          <Tab key={makeKey(content.label + '-tab')}>
+            {content.label}
+          </Tab>
         ))}
       </TabList>
       {content && content.map((content) => (
-        <TabPanel>
+        <TabPanel key={makeKey(content.label)}>
           <div className="relative pt-8">
             <div className="relative z-10">
               {parse(content.contentHtml)}

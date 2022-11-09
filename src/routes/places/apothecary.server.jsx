@@ -1,23 +1,30 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
-import TabSection from "../../components/sections/TabSection.client"
-import { Link, Head } from "@shopify/hydrogen"
-import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
+import { Link } from "@shopify/hydrogen"
 import SignUpForm from "../../components/global/SignUpForm.client"
 
 
-const HeaderText = ("The Apothecary")
+
+const HeaderContent ={
+  'text': 'The Apothecary',
+  'image': '/images/apothecary-hero.jpg',
+}
+
 
 export default function moslers(){
 
   return(
     <Layout>
-      <ImageHero content={HeaderText} />
+      <ImageHero content={HeaderContent} />
       <div className="container grid grid-cols-2 gap-6 ">
         <div className="grid gap-6">
-        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-        <Image src='/images/about.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        <Image src='/images/apothecary-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/apothecary-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/apothecary-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/apothecary-bazaar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/apothecary-bazaar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/apothecary-bazaar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
@@ -46,7 +53,7 @@ export default function moslers(){
               <h2>Check out our other venues or join us for events</h2>
               <div className="flex">
                 <Link to="/places/bar" className="btn btn-action">Bittercube Bar</Link>
-                <a href="https://www.crowdcast.io/bittercube" target='_blank' className="btn btn-action">Events portal</a>
+                <Link to="/places/moslers"  className="btn btn-action">Mosler's Vault</Link>
               </div>
             </div>
             <div className="flex flex-col max-w-md gap-6 text-center">

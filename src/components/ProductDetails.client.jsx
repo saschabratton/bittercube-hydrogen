@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 export default function ProductDetails({ product }) {
   return (
     <ProductOptionsProvider data={product}>
-      <div className="container grid gap-6 pt-0 lg:grid-cols-2 max-w-screen-2xl">
+      <div className="container grid w-11/12 gap-6 pt-0 lg:grid-cols-2">
         <div className="hidden lg:grid lg:gap-6">
           <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <ProductGallery media={product.media.nodes} />
@@ -14,7 +14,7 @@ export default function ProductDetails({ product }) {
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div>
             <span className="label">{product.vendor}</span>
-            <h2>{product.title}</h2>
+            <h1>{product.title}</h1>
             <div className="pt-6 prose text-black border-t border-gray-200 text-md">
               {parse(product.descriptionHtml)}
             </div>

@@ -6,7 +6,11 @@ import VerticalSeparator from "../components/animations/VerticalSeparator.client
 import { Image } from "@shopify/hydrogen"
 
 
-const HeaderText = ("Creating exceptional bitters since 2009")
+const HeaderContent ={
+  'text': 'Creating exceptional bitters since 2009',
+  'image': '/images/recipes-hero.jpg',
+}
+
 const ThreeColumnFeaturedContent = {
   'headline': 'partnerships and Collaborations',
   'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.',
@@ -67,7 +71,7 @@ const OrnamentText = "ABOUT BITTERCUBE"
 export default function about() {
    return (
     <Layout>
-      <ImageHero content={HeaderText} />
+      <ImageHero content={HeaderContent} />
       <div className="relative w-11/12 mx-auto">
         <div className="container relative mt-20">
           <div className="absolute top-0 right-0">
@@ -90,13 +94,13 @@ export default function about() {
         </div>
       </div> */}
 
-      <div className="container grid max-w-screen-sm grid-cols-1 gap-6 lg:grid-cols-2 lg:max-w-screen-2xl">
+      <div className="container grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
 
 
         {/* TODO: images as a carousel on mobile  */}
         <div className="hidden gap-6 lg:grid">
-          <Image src='/images/about-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-          <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
 

@@ -41,7 +41,7 @@ const syrupGroups = groupIt(recipes)
 
 {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
   // console.log(`${key}: ${value}`);
-  console.log(key)
+  // console.log(value)
 })}
 
 
@@ -61,7 +61,7 @@ const syrupGroups = groupIt(recipes)
           <h2 className="h1">Making Syrup</h2>
         </div>
         <div className="flex flex-col items-center justify-center text-center md:p-16">
-          <p className="md:max-w-lg">Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further. </p>
+          <p className="md:max-w-lg">Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.</p>
         </div>
         <div>
           <Image src='/images/heirloom.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters"  />
@@ -99,7 +99,7 @@ const syrupGroups = groupIt(recipes)
           } */}
 
 
-          {recipes?.length > 0 && recipes.map ((recipe) => {
+          {/* {recipes?.length > 0 && recipes.map ((recipe) => {
             return(
               <div className="text-center">
                 <h4 className="tracking-normal h2">{recipe.name}</h4>
@@ -118,25 +118,25 @@ const syrupGroups = groupIt(recipes)
               </div>
               </div>
             )
-            })}
+            })} */}
 
 
-        <div className="wrappe">
+          <div className="wrappe">
             {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-              // console.log(`${key}: ${value}`);
-              // {recipes?.length > 0 && recipes.map ((recipe) => {
-              // {value.map ((key) => {
-              //   return(
-              //     <h1>hello</h1>
-              //   )
-              // })}
-
-
-
-              // console.log({key})
-            })
-            }
-            </div>
+                return(
+                  <>
+                    <h1>{key}</h1>
+                    {value?.length > 0 && value.map((recipe) => {
+                      return(
+                        <>
+                        <h2>{recipe.name}</h2>
+                        </>
+                      )
+                    })}
+                  </>
+                )
+            })}
+          </div>
         </div>
       </div>
     </Layout>

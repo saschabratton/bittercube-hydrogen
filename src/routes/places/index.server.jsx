@@ -4,10 +4,36 @@ import AlternatingTextImage from "../../components/sections/AlternatingTextImage
 import ImageHero from "../../components/headers/ImageHero.server";
 import { Link, Image } from "@shopify/hydrogen";
 import RecipeColleciton from "../../components/sections/places/RecipeCollection.client";
+import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.client";
 
 
-const HeaderText = ("Made in Milwaukee. Imbibed globally.")
-import Events from "../../components/sections/places/Events.client";
+const HeaderContent ={
+  'text': 'Made in Milwaukee. Imbibed globally',
+  'image': '',
+}
+const ThreeColumnFeaturedContent = {
+  'headline': 'Entertaining Education',
+  'description': 'Over the last feww years, Bittercube has hosted online classes covering topics such as seasonal cocktails, coffee cocktails, and many others. The entire catalog of classes are available online.',
+  'ctaLabel': '',
+  'ctaLink': '',
+  'background': 'dark',
+  'image': '',
+  'navHeadline': 'Visit our places',
+  'padding': '12',
+  'border': '2',
+  'image': '',
+  'imageAlt': ""
+}
+const ThreeColumnFeaturedLinks = [
+  {
+    'linkLabel': 'ONLINE CLASS INQUIRY',
+    'link': 'mailto:info@bittercube.com',
+  },
+  {
+    'linkLabel': 'ONLINE CLASS LIBRARY',
+    'link': 'https://www.crowdcast.io/bittercube',
+  },
+]
 
 
 const alternatingContent = [
@@ -40,7 +66,7 @@ const alternatingContent = [
 export default function Places() {
   return (
     <Layout>
-       <ImageHero content={HeaderText} />
+       <ImageHero content={HeaderContent} />
       <div className="container max-w-2xl text-center">
         <h2>Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.</h2>
       </div>
@@ -51,7 +77,7 @@ export default function Places() {
         <AlternatingTextImage content={alternatingContent} />
       </div>
       {/* <RecipeColleciton /> */}
-      <Events />
+      <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
     </Layout>
   )
 }

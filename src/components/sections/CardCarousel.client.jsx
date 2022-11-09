@@ -3,6 +3,8 @@ import { Image } from "@shopify/hydrogen"
 import Card from "../global/Card.client"
 import Arrow from "../global/icons/Arrow.client"
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import { makeKey } from "../../utilities/helpers";
+
 
 const RecommendedProducts = [
   {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
@@ -70,7 +72,7 @@ export default function CardCarousel(){
         {RecommendedProducts.map(item => {
           const {label, manufacturer, price, description, image } = item
           return(
-            <Carousel.Item>
+            <Carousel.Item key={makeKey(label)}>
               <Card />
              </Carousel.Item>
           )

@@ -12,7 +12,11 @@ import RecipesNav from "../../components/headers/RecipesNav.server";
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
 
 
-const HeaderText = ("The Recipe Library")
+
+const HeaderContent ={
+  'text': 'The Recipe Library',
+  'image': '/images/recipes-hero.jpg',
+}
 
 const SignUpContent = {
   'contentHtml': '<h2>share your recipes with us on instagram</h2>',
@@ -24,7 +28,7 @@ const SignUpContent = {
 export default function index() {
   return (
     <Layout>
-      <ImageHero content={HeaderText} />
+      <ImageHero content={HeaderContent} />
       <RecipesNav />
       <hr />
       <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">

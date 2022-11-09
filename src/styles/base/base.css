@@ -14,7 +14,10 @@
   a, button{
     @apply block focus:outline-2 focus:outline-gold;
   }
+  dt {
+    @apply mb-1 font-sans text-base font-bold tracking-widest uppercase text-dark;
+  }
   dl{
-    @apply mb-6
+    @apply mb-6;
   }
 }

@@ -73,7 +73,7 @@ export default function Product({ params }) {
       </Suspense>
       <Nav shop={shop} />
       {/* TODO: Link up breadcrumbs for non bitters products */}
-      <div className="container flex items-center gap-2 pb-6 mt-8 max-w-screen-2xl">
+      <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop">shop</Link>
         <Arrow />
         <Link className="label" to="/shop/bitters">Bitters</Link>

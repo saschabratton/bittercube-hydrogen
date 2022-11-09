@@ -7,7 +7,7 @@ import { NoIndexPageSeo } from "@shopify/hydrogen/components/Seo/NoIndexSeo.clie
 import RecipeCard from "../../../components/sections/recipes/RecipeCard.client";
 import RecipesNav from "../../../components/headers/RecipesNav.server";
 import { HiSearch } from "react-icons/hi";
-
+import CocktailsList from "../../../components/sections/recipes/CocktailsList.client";
 
 
 const HeaderText = ("Cocktail Recipes")
@@ -27,44 +27,15 @@ export default function Cocktails(){
     preload: false,
   }).json()
 
+
   return(
     <Layout>
       <PatternHero content={HeaderText} />
       <RecipesNav />
 
-      <div className="container flex justify-between pt-0 pb-8">
-        <div className="flex items-center gap-3">
-          <span className="label">Sort By:</span>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Spirit
-          </div>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Cocktail Style
-          </div>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Bitters
-          </div>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Season
-          </div>
-        </div>
-        <div className="text-left label">
-          Search
-          {/* <HiSearch /> */}
-        </div>
-      </div>
-      <hr />
-      <div className="container grid grid-cols-3 gap-6">
-
-        {recipes?.length > 0 && recipes.map((recipe) => {
-          return (
-            <RecipeCard key={recipe.slug} recipe={recipe} />
-          )
-        })}
+      <CocktailsList />
 
 
-
-      </div>
       <div className="w-11/12 pt-12 mx-auto">
         <HorizontalSeperator />
       </div>

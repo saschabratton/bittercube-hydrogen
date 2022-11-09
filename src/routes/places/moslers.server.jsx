@@ -7,7 +7,10 @@ import HorizontalSeperator from "../../components/headers/HorizontalSeperator.cl
 import SignUpForm from "../../components/global/SignUpForm.client"
 
 
-const HeaderText = ("Mosler's Vault")
+const HeaderContent ={
+  'text': "Mosler's Vault",
+  'image': '/images/moslersvault-01.jpg',
+}
 const TabContent = [
   {
     'label': 'Signature',
@@ -19,12 +22,12 @@ export default function moslers(){
 
   return(
     <Layout>
-      <ImageHero content={HeaderText} />
-      <div className="container grid grid-cols-2 gap-6 max-w-screen-2xl">
+      <ImageHero content={HeaderContent} />
+      <div className="container grid w-11/12 grid-cols-2 gap-6">
         <div className="grid gap-6">
-        <Image src='/images/moslersvault-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-        <Image src='/images/moslersvault-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-        <Image src='/images/moslersvault-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        {/* <Image src='/images/moslersvault-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" /> */}
+        <Image src='/images/moslersvault-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        <Image src='/images/moslersvault-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
@@ -59,8 +62,7 @@ export default function moslers(){
 
       <div className="container grid grid-cols-2 ">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
-            <h2>take a look at our craft cocktail menu</h2>
-            <a href="https://moslers-vault.resos.com/booking" target="_blank" className="btn btn-action">Book a table</a>
+            <h2>take a look at our craft cocktail menu</h2>s
           </div>
         <TabSection content={TabContent} />
       </div>
@@ -73,7 +75,7 @@ export default function moslers(){
               <h2>Check out our other venues or join us for events</h2>
               <div className="flex">
                 <Link to="/places/bar" className="btn btn-action">Bittercube Bar</Link>
-                <a href="https://www.crowdcast.io/bittercube" target='_blank' className="btn btn-action">Events portal</a>
+                <Link to="/places/apothecary"  className="btn btn-action">The Apothecary</Link>
               </div>
             </div>
             <div className="flex flex-col max-w-md gap-6 text-center">
