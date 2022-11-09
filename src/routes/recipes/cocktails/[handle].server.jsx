@@ -1,12 +1,18 @@
 import { Layout } from "../../../components/Layout.server";
 import {  gql, useShopQuery, Link, Image, CacheLong, useRouteParams, fetchSync } from "@shopify/hydrogen"
-import TabSection from "../../../components/sections/TabSection.client";
+import TabSection from "../../../components/sections/recipes/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import Arrow from "../../../components/global/icons/Arrow.client"
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import Nav from "../../../components/headers/Nav.client";
+
+
+
+// instruciton - html
+// supplies - html
+// ingredients - array
 
 const TabContent = [
   {
@@ -55,7 +61,7 @@ export default function Recipe(){
 
       <div className="container grid w-11/12 grid-cols-2 gap-6 pt-0">
         <div className="flex flex-col gap-6">
-          <Image src={`https://lavish-turnip.cloudvent.net/${activeRecipe.image}`} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src={activeRecipe.images[0].url} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           {/* TODO: random dropper image  */}
           <Image src='/images/pour.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
@@ -67,37 +73,14 @@ export default function Recipe(){
             <p>{activeRecipe.description}</p>
           }
 
-
-          {/* {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
+          {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
               const {url, name, } = bitters
-              console.log('acitive recipe is:' + name)
               return (
-                <Link to="/shop/bitters/product" className="ml-0 btn btn-action">Get the bitters<br />
+                <Link to={`/shop${ url }`} className="ml-0 btn btn-action">Get the bitters<br />
                 </Link>
               )
             })
-          } */}
-{/*
-          {activeRecipe.bitters.length > 0 &&
-            <Link to="/shop/bitters/product" className="ml-0 btn btn-action">Get the bitters<br />
-            {console.log('acitive recipe is:' + activeRecipe.bitters.url)}
-            </Link>
-          } */}
-
-          {activeRecipe.bitters.length > 0 && Object.entries(activeRecipe.bitters).forEach(([url]) => {
-            <p>{url} hwat</p>
-          })}
-
-          {/* {navItems.map(item => {
-              const {link, label} = item
-              return (
-                <li className="w-full py-3 border-b-2 border-dark last:border-0" key={makeKey(label)}>
-                  <Link to={ link } className="flex items-center justify-between w-full gap-2 mx-auto label group">{ label }<div className="btn-arrow"></div></Link>
-                </li>
-              )
-            })} */}
-
-
+          }
 
           <div className="flex flex-col items-start justify-center gap-6 label">
             <div className="block text-vertical">How</div>
@@ -112,7 +95,7 @@ export default function Recipe(){
           </div>
           <h3>More Information</h3>
           <div>
-            <TabSection content={TabContent}/>
+            <TabSection activeRecipe={activeRecipe}/>
           </div>
         </div>
       </div>

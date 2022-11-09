@@ -51,7 +51,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex justify-end text-center">
-            <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span>
+            {/* <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span> */}
+            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt="" width={250} height={111}  role="presentation" />
           </div>
         </div>
         <div className="relative">

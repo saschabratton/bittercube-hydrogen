@@ -3,8 +3,8 @@ import ImageHero from "../components/headers/ImageHero.server"
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
 import SplitBgVert from "../components/sections/SplitBgVert.client"
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-import { Image } from "@shopify/hydrogen"
-
+import { Link, Image } from "@shopify/hydrogen"
+import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
@@ -98,7 +98,7 @@ export default function about() {
 
 
         {/* TODO: images as a carousel on mobile  */}
-        <div className="hidden gap-6 lg:grid">
+        <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -107,7 +107,7 @@ export default function about() {
 
         <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
           <div className="absolute top-0 right-0">
-            <span className="block text-3xl text-center font-decorative text-gold">Bold & Balanced<br />Bitters</span>
+            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={250} height={111}  role="presentation" />
           </div>
           <span className="label">Founded in 2009</span>
           <h2>Two bartenders with a shared vision set out to produce the most distinctive lineup of bitters in the world.</h2>
@@ -122,7 +122,103 @@ export default function about() {
           <p>Our eyedropper and dasher bottles are glass, and can be easily recycled. They also can be reused for bitters blends, sauces, vinaigrettes, you name it! As a way to mitigate waste, we also produce 32 oz refill bottles that are sold to bars and restaurants, and these bottles can be reused for syrups, and infusions.</p>
         </div>
       </div>
-      <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+
+
+      <section className="bg-forest">
+        <hr />
+        <div className="container relative grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
+          <div className="flex flex-col justify-between gap-20">
+            <div className="flex flex-col items-center mx-auto text-center">
+              <h2 className="max-w-sm">Partnerships and Collaborations</h2>
+              <div className="py-6 w-[28rem]">
+                  <HorizontalSeperator />
+                </div>
+              <p className="max-w-sm text-ornament">
+                We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.
+              </p>
+            </div>
+            <Image src='/images/about-collaborations.jpg' width={366} height={455} alt='A bottle of bitters and baking ingredients' className="object-cover w-full max-w-md mx-auto aspect-4/5 rounded-jumbo-sm" />
+          </div>
+          <div className="grid grid-cols-2 gap-10">
+
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>Heirloom</h3>
+              <p className="my-2">Bittercube offshoot producing liqueurs</p>
+              <a href="https://heirloomliqueurs.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>Discocubes</h3>
+              <p className="my-2">Spicy cocktail enhancer collaboration</p>
+              <a href="https://www.discocubes.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>SANTA TERESA RUM</h3>
+              <p className="my-2">Bespoke bitters blend for bars & restaurants</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>WOLLERSHEIM WINERY & DISTILLERY</h3>
+              <p className="my-2">Old Fashioned syrup featuring a custom blend of bitters</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>BURLAP & BARREL</h3>
+              <p className="my-2">Collaborative single origin spice extracts</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>LIVEWIRE</h3>
+              <p className="my-2">Canned cocktail brand that features Bittercube in a number of cocktails</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>TAPPED MAPLE SYRUP</h3>
+              <p className="my-2">Collaborative maple syrup featuring CBV botanicals</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-1 text-center">
+              <h3>BITTERS BLENDS</h3>
+              <p className="my-2">Custom blends with restaurant groups, and bars</p>
+              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+                <div className="btn-arrow btn-arrow-gold"></div>
+              </a>
+            </div>
+
+
+
+            <div className="col-span-2 pt-8">
+              <HorizontalSeperator />
+              <div className="grid grid-cols-2 py-8">
+                <div className="flex items-center text-lg label">
+                  Collaborate with us
+                </div>
+                <Link to="/contact" className="btn btn-action">Let's Collaborate!</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+{/*
+      <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
       <div className="relative">
          <div className="absolute left-[77%] top-[20%] z-10">
           <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="x" role="presentation" />

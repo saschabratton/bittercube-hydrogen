@@ -28,7 +28,7 @@ export default function moslers(){
     <Layout>
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 gap-6 md:grid-cols-2">
-        <div className="hidden gap-6 lg:grid">
+        <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src='/images/bc-bar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           {/* <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" /> */}

@@ -77,6 +77,6 @@ export default function Flavors(){
 
           <div className="col-span-2"></div>
         </div>
-      </div>
+    </div>
   )
 }

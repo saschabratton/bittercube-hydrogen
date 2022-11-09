@@ -11,7 +11,7 @@ export default function InTheKitchen(){
           </div>
           <div className="relative flex flex-col items-center justify-center max-w-md mx-auto text-center">
             <div className="absolute top-5 -right-16">
-              <span className="text-2xl font-decorative text-gold">Beyond the Bar</span>
+              <Image src="/images/handwritten/recipes-beyondthebar.svg" alt="" width={250} height={111}  role="presentation" />
             </div>
             <h3>Bittercube in the kitchen</h3>
             <div className="w-full mt-6">
