@@ -38,9 +38,9 @@ export default function LearnToCraft() {
           <TabSection content={TabContent} />
         </div>
       </div>
-      <div className="relative w-11/12 mx-auto mb-20">
+      {/* <div className="relative w-11/12 mx-auto mb-20">
         <HorizontalSeperator />
-      </div>
+      </div> */}
     </>
   )
 }

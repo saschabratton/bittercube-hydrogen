@@ -54,7 +54,7 @@ export default function Recipe(){
       </div>
 
       <div className="container grid w-11/12 grid-cols-2 gap-6 pt-0">
-        <div className="grid gap-6">
+        <div className="flex flex-col gap-6">
           <Image src={`https://lavish-turnip.cloudvent.net/${activeRecipe.image}`} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           {/* TODO: random dropper image  */}
           <Image src='/images/pour.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -77,12 +77,16 @@ export default function Recipe(){
               )
             })
           } */}
-
+{/*
           {activeRecipe.bitters.length > 0 &&
             <Link to="/shop/bitters/product" className="ml-0 btn btn-action">Get the bitters<br />
             {console.log('acitive recipe is:' + activeRecipe.bitters.url)}
             </Link>
-          }
+          } */}
+
+          {activeRecipe.bitters.length > 0 && Object.entries(activeRecipe.bitters).forEach(([url]) => {
+            <p>{url} hwat</p>
+          })}
 
           {/* {navItems.map(item => {
               const {link, label} = item

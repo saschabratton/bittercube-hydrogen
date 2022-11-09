@@ -20,4 +20,8 @@
   dl{
     @apply mb-6;
   }
+  ::placeholder {
+    @apply opacity-100 !text-gold;
+  }
+
 }

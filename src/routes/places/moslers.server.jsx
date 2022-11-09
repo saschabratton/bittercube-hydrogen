@@ -24,7 +24,7 @@ export default function moslers(){
     <Layout>
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 grid-cols-2 gap-6">
-        <div className="grid gap-6">
+        <div className="flex flex-col gap-6">
         {/* <Image src='/images/moslersvault-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" /> */}
         <Image src='/images/moslersvault-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         <Image src='/images/moslersvault-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
@@ -46,6 +46,7 @@ export default function moslers(){
           <p>Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault, built in 1949. With cream city brick walls, and a moss ceiling, the space is both intimate and warm. Named after the vault door manufacturer, the elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.</p>
           <p>Space is limited, and reservations are recommended. Walk-ins are welcome when space is available. </p>
           {/* <a href="https://moslers-vault.resos.com/booking" className="ml-0 btn btn-action">Book a table</a> */}
+          <h3>BOOK A RESERVATION NOW</h3>
           <a id="booking-widget-2" href="https://moslers-vault.resos.com/booking" data-lang="en" data-restaurant-id="GXZgycWvMCudCHBd4" data-domain="moslers-vault.resos.com">Book a table</a>
             <div id="booking-script-2">
             </div>
@@ -62,7 +63,7 @@ export default function moslers(){
 
       <div className="container grid grid-cols-2 ">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
-            <h2>take a look at our craft cocktail menu</h2>s
+            <h2>Take a look at our craft cocktail menu</h2>
           </div>
         <TabSection content={TabContent} />
       </div>

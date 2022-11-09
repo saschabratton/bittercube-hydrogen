@@ -72,7 +72,7 @@ export default function Places() {
       </div>
       <div className="container relative">
         <div className="absolute left-0 top-5">
-          <span className="text-3xl font-decorative text-gold">Some little zippy<br />closer  here</span>
+          <span className="text-3xl font-decorative text-gold">Making Drinks<br />Come True</span>
         </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>

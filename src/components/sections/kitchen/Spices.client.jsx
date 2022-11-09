@@ -18,7 +18,7 @@ export default function Spices(){
               When a recipe calls for a ground spice like cinnamon, cardamom, or cloves, you can easily substitute cocktail bitters in a 1:1 ratio. This method provides a more nuanced flavor, instead of a singularly focused intense flavor. Below are some bitters varieties and spices that work well in this context.
             </p>
           </div>
-          <Image src='/images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
+          <Image src='/images/recipes-kitchen-spices.jpg' width={366} height={455} alt='Three bitters bottles on a pile of spices' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
         <div className="grid grid-cols-2 gap-10">
           <div className="flex flex-col items-center justify-start gap-1 text-center">

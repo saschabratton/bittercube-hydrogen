@@ -78,7 +78,7 @@ export default function about() {
             <Image src='/emblems/innovative-thoughtful.svg' width={101} height={111} alt="x" role="presentation" />
           </div>
           <div className="grid grid-cols-1 gap-16 py-16 text-center md:grid-cols-2">
-              <h2 className="max-w-lg mx-auto">created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
+              <h2 className="max-w-lg mx-auto">Created in Milwaukee, Wisconsin, by hand with real ingredients.</h2>
             <div className="flex items-center justify-center">
               <p className="max-w-md h3">Our mission is to create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research - and to inspire elevated drinking experiences.</p>
             </div>

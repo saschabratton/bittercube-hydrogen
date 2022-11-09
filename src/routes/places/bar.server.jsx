@@ -57,7 +57,7 @@ export default function moslers(){
 
       <div className="container grid grid-cols-2 ">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
-            <h2>Take a look at the vault cocktail menu</h2>
+            <h2>Check out the seasonal cocktail menus</h2>
           </div>
         <TabSection content={TabContent} />
       </div>

@@ -18,7 +18,7 @@ export default function moslers(){
     <Layout>
       <ImageHero content={HeaderContent} />
       <div className="container grid grid-cols-2 gap-6 ">
-        <div className="grid gap-6">
+        <div className="flex flex-col gap-6">
         <Image src='/images/apothecary-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         <Image src='/images/apothecary-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         <Image src='/images/apothecary-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
@@ -28,10 +28,12 @@ export default function moslers(){
           {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
-          <span className="label">Apothecary subhead</span>
-          <h2>Apothecary headline</h2>
-          <p>The Bittercube Apothecary is a bustling, 9,000 square foot building in Milwaukee, and is the lifeblood of our operation. The bulk of the space is dedicated to the manufacturing of our slow-crafted bitters.</p>
-          <p>The apothecary also houses the company offices, and a storefront for bitters, tools, cocktail books, and other non-alcoholic cocktail ingredients.</p>
+          <span className="label">BITTERCUBE HEADQUARTERS</span>
+          <h2>Made in Milwaukee</h2>
+          <p>The Bittercube Apothecary is a bustling, 9,000 square foot building in Milwaukee, and is the lifeblood of our operation. The majority of the building is dedicated to the manufacturing of our slow-crafted bitters.</p>
+          <p>We produce around 1,000 gallons of bitters a month, which is the equivalent of roughly 2.9 million cocktails worth of bitters! The production crew processes hundreds of lbs of botanicals a month into our slow-crafted bitters, and the bottling line crew is constantly bottling. Beyond the production, we also fulfill distributor, wholesale, and e-commerce orders on a daily basis, all from the fulfillment center at the Bittercube Apothecary.</p>
+          <p>The apothecary also houses the company offices, and an R&D lab. In the lab, we test every batch of Bittercube Bitters, analyzing for consistency. We also develop and tinker with new product ideas, test new collaborative products, and develop signature cocktails. Interested in collaborating with us, <Link className="inline-block" to="/contact">drop us a line. </Link></p>
+          <p>The Apothecary also has a storefront with bitters, swag like t-shirts and hats, tools, cocktail books, syrups, and other non-alcoholic cocktail ingredients. Beyond the standard lineup, collaborative bitters blends and other limited edition bitters are available at the bittercube storefront at the Bittercube Apothecary. </p>
           <p>The apothecary can be booked for private events and tours.</p>
         </div>
       </div>

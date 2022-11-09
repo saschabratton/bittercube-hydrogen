@@ -1,9 +1,9 @@
 @layer base {
    h1, .h1 {
-    @apply mb-3 text-5xl font-headline text-dark;
+    @apply mb-3 text-5xl normal-case font-headline text-dark;
   }
   h2, .h2{
-    @apply mb-3 text-5xl capitalize font-headline text-dark;
+    @apply mb-3 text-5xl normal-case font-headline text-dark;
   }
   h3, .h3{
     @apply font-sans text-3xl font-normal uppercase text-dark;
