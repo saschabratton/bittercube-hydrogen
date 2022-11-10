@@ -19,21 +19,21 @@ const alternatingContent = [
     'description': 'Bold, balanced, densely flavored bitters made by hand. Shop the most distinctive lineup of aromatic, spicy, and citrus bitters.',
     'cta': 'Shop Bitters',
     'ctaLink': 'shop/bitters',
-    'contentHtml': '',
+    'image': '/images/shop-bitters.jpg',
   },
   {
     'title': 'Curated cocktail kits',
     'description': 'Curated cocktail kits contain the necessary ingredients to create a number of unique cocktails, including syrups, bitters, recipes, and instructions.',
     'cta': 'Shop Kits',
     'ctaLink': 'shop/curated-kits',
-    'contentHtml': '',
+    'image': '/images/shop-collab.jpg',
   },
   {
     'title': 'Special Editions & Collaborations',
     'description': 'Unique collection of special edition bitters, as well as collaborations with restaurant groups, bars, and other brands. ',
     'cta': 'Special Editions',
     'ctaLink': '/shop/special-editions-and-collaborations',
-    'contentHtml': ''
+    'image': ''
   },
 ]
 
