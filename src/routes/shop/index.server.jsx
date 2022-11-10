@@ -8,7 +8,7 @@ import AlternatingTextImage from "../../components/sections/AlternatingTextImage
 import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
 import CollectionsNav from "../../components/headers/CollectionsNav.server";
-
+import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
 
 const HeaderText = ("The most distinct lineup of bitters in the world")
 
@@ -26,14 +26,14 @@ const alternatingContent = [
     'description': 'Curated cocktail kits contain the necessary ingredients to create a number of unique cocktails, including syrups, bitters, recipes, and instructions.',
     'cta': 'Shop Kits',
     'ctaLink': 'shop/curated-kits',
-    'image': '/images/shop-collab.jpg',
+    'image': '/images/kit-hotchocolate.png',
   },
   {
     'title': 'Special Editions & Collaborations',
     'description': 'Unique collection of special edition bitters, as well as collaborations with restaurant groups, bars, and other brands. ',
     'cta': 'Special Editions',
     'ctaLink': '/shop/special-editions-and-collaborations',
-    'image': ''
+    'image': '/images/shop-collab.jpg'
   },
 ]
 
@@ -63,6 +63,13 @@ export default function Home() {
         </div>
       </div>
 
+<div className="relative w-11/12 pt-0 mx-auto">
+        <HorizontalSeperator />
+        <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
+          Bitters Bundles
+        </div>
+
+      </div>
       <CardCarousel />
 
       <SplitBgVertBlue />

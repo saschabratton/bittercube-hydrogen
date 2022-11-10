@@ -13,7 +13,7 @@ const HeaderContent ={
 }
 const ThreeColumnFeaturedContent = {
   'headline': 'Entertaining Education',
-  'description': 'Over the last feww years, Bittercube has hosted online classes covering topics such as seasonal cocktails, coffee cocktails, and many others. The entire catalog of classes are available online.',
+  'description': 'Over the last few years, Bittercube has hosted online classes covering topics such as seasonal cocktails, coffee cocktails, and many others. The entire catalog of classes are available online.',
   'ctaLabel': '',
   'ctaLink': '',
   'background': 'dark',

@@ -9,7 +9,7 @@ import SignUpForm from "../../components/global/SignUpForm.client"
 
 const HeaderContent ={
   'text': 'Bittercube Bar',
-  'image': '/images/bc-bar-03.jpg',
+  'image': '/images/bc-bar-hero.jpg',
 }
 
 const TabContent = [
@@ -31,7 +31,7 @@ export default function moslers(){
         <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src='/images/bc-bar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-          {/* <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" /> */}
+          <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
           <span className="label">Located on Milwaukee’s West-side</span>

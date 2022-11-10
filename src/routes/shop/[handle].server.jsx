@@ -63,7 +63,7 @@ const QUERY = gql`
         height
         altText
       }
-      products(first: 8) {
+      products(first: 20) {
         nodes {
           id
           title

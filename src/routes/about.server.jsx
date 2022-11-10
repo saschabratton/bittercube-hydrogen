@@ -8,7 +8,7 @@ import HorizontalSeperator from "../components/headers/HorizontalSeperator.clien
 
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
-  'image': '/images/recipes-hero.jpg',
+  'image': '/images/about-hero.jpg',
 }
 
 const ThreeColumnFeaturedContent = {
@@ -35,6 +35,9 @@ const SplitBgContent = {
   'padding': '0',
   'bottomHtml': '<h5>Offices</h5><h5>MANUFACTURING</h5><h5>BITTERS STOREFRONT</h5><h5>RESEARCH & DEVELOPMENT</h5>',
 }
+
+
+// TODO: left align these
 const ThreeColumnFeaturedLinks = [
   {
     'linkLabel': 'Heirloom',
@@ -223,7 +226,33 @@ export default function about() {
          <div className="absolute left-[77%] top-[20%] z-10">
           <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
-        <SplitBgVert content={SplitBgContent} />
+        {/* <SplitBgVert content={SplitBgContent} /> */}
+
+
+
+      <section className="py-12 bg-paper">
+      <div className="relative border-y-2 border-gold">
+        <div className="center-absolute  w-0.5 h-full bg-gold hidden md:flex"></div>
+        <div className="container grid grid-cols-1 gap-16 md:grid-cols-2 ">
+
+            <div className="flex flex-col justify-center flex-1 gap-8 text-center lg:px-20">
+                <div className="flex flex-col justify-center gap-2">
+                  <span className="label h4 text-gold">WHERE THE BITTERS ARE MADE</span>
+                  <h2>The Apothecary</h2>
+                  <p>Our homebase is a bustling 9,000 square foot building in Milwaukee where Bittercube Bitters are produced. The apothecary also houses the company offsices, and a storefront for bitters, tools, and non-alcoholic cocktail ingredients.</p>
+                  <Link to="/places/apothecary" className="btn btn-action">The Apothecary</Link>
+                </div>
+            </div>
+            <div className="flex items-center justify-center py-12">
+              <Image src='/images/heirloom.jpg' width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
       </div>
 
 
