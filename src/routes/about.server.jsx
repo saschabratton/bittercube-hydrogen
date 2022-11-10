@@ -105,6 +105,8 @@ export default function about() {
           <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='/images/about-05.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
         </div>
 
 
@@ -244,7 +246,7 @@ export default function about() {
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">
-              <Image src='/images/heirloom.jpg' width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
+              <Image src='/images/about-apothecary.jpg' width={370} height={450} className='object-cover h-[30rem] w-96 rounded-2xl ' alt="A cocktail made with Bittercube Bitters" />
             </div>
 
         </div>

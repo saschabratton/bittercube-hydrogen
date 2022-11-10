@@ -23,7 +23,7 @@ const ThreeColumnFeaturedContent = {
   'navHeadline': 'Visit our places',
   'padding': '12',
   'border': '2',
-  'image': '/images/places-moslersvault.jpg',
+  'image': '/images/home-places.jpg',
   'imageAlt': "Mosler's Vault"
 }
 const ThreeColumnFeaturedLinks = [

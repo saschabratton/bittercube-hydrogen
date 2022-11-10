@@ -42,9 +42,7 @@ export default function Contact() {
         </div>
         <div className="flex flex-col gap-10 md:gap-20">
           <Image src='images/contact.jpg' className="object-cover mx-auto aspect-4/5" alt="A cocktail made with Bittercube Bitters" width={360} height={455} />
-          <p className="max-w-xs mx-auto text-3xl font-decorative text-gold ">
-           We answer every email<br />we receive!
-          </p>
+          <Image src="/images/handwritten/contact-weanswer.svg" alt="" className="mx-auto" width={300} height={96}  role="presentation" />
         </div>
       </div>
       <hr />

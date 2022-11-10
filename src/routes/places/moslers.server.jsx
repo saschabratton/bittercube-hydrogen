@@ -28,7 +28,7 @@ export default function moslers(){
         {/* <Image src='/images/moslersvault-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" /> */}
         <Image src='/images/moslersvault-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         <Image src='/images/moslersvault-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-          {/* <Image src={image} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" /> */}
+        <Image src='/images/moslersvault-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
         <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
           <span className="label">LOCATED ON MILWAUKEE’S WEST-SIDE</span>

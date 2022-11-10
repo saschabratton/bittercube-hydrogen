@@ -21,7 +21,7 @@ const ThreeColumnFeaturedContent = {
   'navHeadline': 'Visit our places',
   'padding': '12',
   'border': '2',
-  'image': '',
+  'image': '/images/places-entertain-educate.jpg',
   'imageAlt': ""
 }
 const ThreeColumnFeaturedLinks = [
@@ -72,7 +72,7 @@ export default function Places() {
       </div>
       <div className="container relative">
         <div className="absolute left-0 top-5">
-          <span className="text-3xl font-decorative text-gold">Making Drinks<br />Come True</span>
+          <Image src="/images/handwritten/places-makingdrinks.svg" alt="" className="mx-auto" width={300} height={96}  role="presentation" />
         </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>
