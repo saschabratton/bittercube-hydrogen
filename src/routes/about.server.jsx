@@ -204,7 +204,7 @@ export default function about() {
               <HorizontalSeperator />
               <div className="grid grid-cols-2 py-8">
                 <div className="flex items-center text-lg label">
-                  Collaborate with us
+                  WANT TO WORK WITH US?
                 </div>
                 <Link to="/contact" className="btn btn-action">Let's Collaborate!</Link>
               </div>

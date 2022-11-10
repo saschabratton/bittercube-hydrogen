@@ -81,7 +81,7 @@ export default function moslers(){
             </div>
             <div className="flex flex-col max-w-md gap-6 text-center">
               <h4 className="tracking-wide text-white">Enjoy new recipes and the latest<br />news and events</h4>
-              <p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+              <p>Subscribers receive first access to limited products, and curated playlists for your next cocktail party.</p>
               <SignUpForm />
             </div>
           </div>

@@ -10,7 +10,7 @@ import { Link, Image } from "@shopify/hydrogen";
 import CollectionsNav from "../../components/headers/CollectionsNav.server";
 
 
-const HeaderText = ("The most distinct lineup of bitters in the world.")
+const HeaderText = ("The most distinct lineup of bitters in the world")
 
 
 const alternatingContent = [

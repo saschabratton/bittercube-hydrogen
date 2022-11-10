@@ -1,5 +1,6 @@
 import { Link, Image, Money } from "@shopify/hydrogen";
 
+const srcSet = [300, 500, 850]
 
 export default function ProductCard({ product }) {
   const { priceV2: price, compareAtPriceV2: compareAtPrice } =
@@ -19,8 +20,8 @@ export default function ProductCard({ product }) {
           <Image
             className="object-cover mx-auto rounded-none aspect-4/5"
             data={product.variants.nodes[0].image}
-            // src='/images/product.jpg'
             width={460} height={555}
+            widths={srcSet}
             alt="Alt Tag"
           />
         </div>

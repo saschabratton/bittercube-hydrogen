@@ -22,7 +22,7 @@ import HorizontalSeperator from "../../../components/headers/HorizontalSeperator
 
 const ThreeColumnFeaturedContent = {
   'headline': 'use to craft unique cocktails',
-  'description': 'Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
+  'description': 'Every recipe on this site was meticulously vetted. From updated classics, to seasonal libations, there are cocktails of all styles featured in the recipe library.',
   'ctaLabel': 'See all recipes',
   'ctaLink': '/recipes/cocktails',
   'background': 'forest',
@@ -68,9 +68,9 @@ export default function Product({ params }) {
   // you're overriding the `defaultSeo` type in the Layout component.
   return (
     <Layout>
-      <Suspense>
+      {/* <Suspense> */}
         <Seo type="product" data={product} />
-      </Suspense>
+      {/* </Suspense> */}
       <Nav shop={shop} />
       {/* TODO: Link up breadcrumbs for non bitters products */}
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">

@@ -2,7 +2,7 @@ import { Link, Image } from "@shopify/hydrogen"
 
 export default function RecipeCard({ recipe }){
   const { slug, name, description, spirit, images } = recipe
-  // {console.log(recipe.recipe.slug)}
+
   return(
     <Link to={`/recipes/cocktails/${slug}`}>
       <div className="grid gap-2 group">
