@@ -21,7 +21,6 @@ export default function LocalPickup(){
         >
           Shop for local Pick-up
       </button>
-      {/* TODO: modal transition */}
        {/* <Transition
           show={isOpen}
           enter="transition duration-100 ease-out"

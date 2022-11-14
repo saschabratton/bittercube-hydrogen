@@ -1,8 +1,9 @@
 import Carousel from 'better-react-carousel'
-import { Image, fetchSync } from "@shopify/hydrogen"
-import Card from "../global/Card.client"
+import { fetchSync } from "@shopify/hydrogen"
 import FeaturedRecipeCard from "./recipes/FeaturedRecipeCard.client"
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import { makeKey } from "../../utilities/helpers";
+
 
 const RecommendedProducts = [
   {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
@@ -79,7 +80,7 @@ export default function RecipeCarousel(){
        cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
         {featuredRecipes?.length > 0 && featuredRecipes.map((recipe) => {
           return (
-          <Carousel.Item>
+          <Carousel.Item key={makeKey(recipe.name)}>
               <FeaturedRecipeCard key={recipe.slug} recipe={recipe} />
           </Carousel.Item>
         )})}

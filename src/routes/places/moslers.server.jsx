@@ -61,7 +61,7 @@ export default function moslers(){
         <HorizontalSeperator />
       </div>
 
-      <div className="container grid grid-cols-2 ">
+      <div className="container grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
             <h2>Take a look at our craft cocktail menu</h2>
           </div>
@@ -70,16 +70,16 @@ export default function moslers(){
 
      <div className="py-12 section bg-dark">
         <div className="border-y-2 border-gold">
-          <div className="container grid grid-cols-2 gap-6 max-screen-xl">
+          <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2 max-screen-xl">
             <div className="max-w-md mx-auto text-center">
               <span className="label">Explore More</span>
               <h2>Check out our other venues or join us for events</h2>
-              <div className="flex">
+              <div className="flex gap-2">
                 <Link to="/places/bar" className="btn btn-action">Bittercube Bar</Link>
                 <Link to="/places/apothecary"  className="btn btn-action">The Apothecary</Link>
               </div>
             </div>
-            <div className="flex flex-col max-w-md gap-6 text-center">
+            <div className="flex flex-col justify-center max-w-md gap-4 mx-auto text-center">
               <h4 className="tracking-wide text-white">Enjoy new recipes and the latest<br />news and events</h4>
               <p>Subscribers receive first access to limited products, and curated playlists for your next cocktail party.</p>
               <SignUpForm />

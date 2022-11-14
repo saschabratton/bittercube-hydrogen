@@ -15,7 +15,7 @@ const HeaderContent ={
 const TabContent = [
   {
     'label': 'Brunch',
-    'contentHtml': '<dl><dt>MARKET BLOODY - $11</dt><dd>Modest vodka, garden variety bloody mary mix, snit of solid gold lager make it a red snapper with gin or n/a with zero proof gin spice it up with disco inferno reverse it with a full beer and a snit of bloody mary!</dd></dl><dl><dt>CREME DE FLORA MIMOSA - $10</dt><dd>Heirloom creme de flora, sparkling wine, orange or grapefruit juice, bitters</dd></dl><dl><dt>BEERMOSA- $9</dt><dd>Fulton lonely blonde, orange or grapefruit juice, bitters</dd></dl><dl><dt>SEASONAL SPRITZ - $12</dt><dd>Seasonal aperitivo blend, seltzer, sparkling wine, skewered olive</dd></dl><dl><dt>NEON PANDA - $12</dt><dd>Ten to one aged rum, creme de cacao, cinnamon, coconut water, cold brew, blackstrap bitters</dd></dl><dl><dt>BEE STING - $12</dt><dd>Gin, lemon, honey syrup, disco inferno</dd><dd>non-alcoholic variation with amass zero proof gin</dd></dl><dl><dt>MARKET FRESH PALOMA - $12</dt><dd>Tequila, grapefruit, seltzer, jamaican no 2 bitters</dd><dd>non-alcoholic variation with ritual zero proof tequila</dd></dl><dl><dt>BARREL AGED LONG ISLAND ICED TEA - $12</dt><dd>Barrel aged spirits, lemon, orange liqueur, house kola</dd></dl><dl><dt>MARKET OLD FASHIONED - $12</dt><dd>House american whiskey blend, tapped maple syrup, trinity bitters, grapefruit oil non-alcoholic variation with monday zero alcohol whiskey</dd></dl>',
+    'contentHtml': '<dl><dt>MARKET BLOODY</dt><dd>Modest vodka, garden variety bloody mary mix, snit of solid gold lager make it a red snapper with gin or n/a with zero proof gin spice it up with disco inferno reverse it with a full beer and a snit of bloody mary!</dd></dl><dl><dt>CREME DE FLORA MIMOSA</dt><dd>Heirloom creme de flora, sparkling wine, orange or grapefruit juice, bitters</dd></dl><dl><dt>BEERMOSA- $9</dt><dd>Fulton lonely blonde, orange or grapefruit juice, bitters</dd></dl><dl><dt>SEASONAL SPRITZ</dt><dd>Seasonal aperitivo blend, seltzer, sparkling wine, skewered olive</dd></dl><dl><dt>NEON PANDA</dt><dd>Ten to one aged rum, creme de cacao, cinnamon, coconut water, cold brew, blackstrap bitters</dd></dl><dl><dt>BEE STING</dt><dd>Gin, lemon, honey syrup, disco inferno</dd><dd>non-alcoholic variation with amass zero proof gin</dd></dl><dl><dt>MARKET FRESH PALOMA</dt><dd>Tequila, grapefruit, seltzer, jamaican no 2 bitters</dd><dd>non-alcoholic variation with ritual zero proof tequila</dd></dl><dl><dt>BARREL AGED LONG ISLAND ICED TEA</dt><dd>Barrel aged spirits, lemon, orange liqueur, house kola</dd></dl><dl><dt>MARKET OLD FASHIONED</dt><dd>House american whiskey blend, tapped maple syrup, trinity bitters, grapefruit oil non-alcoholic variation with monday zero alcohol whiskey</dd></dl>',
   },
   {
     'label': 'Dinner',
@@ -56,7 +56,7 @@ export default function moslers(){
         <HorizontalSeperator />
       </div>
 
-      <div className="container grid grid-cols-2 ">
+      <div className="container grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
             <h2>Check out the seasonal cocktail menus</h2>
           </div>
@@ -66,16 +66,16 @@ export default function moslers(){
 
      <div className="py-12 section bg-dark">
         <div className="border-y-2 border-gold">
-          <div className="container grid grid-cols-2 gap-6 max-screen-xl">
+          <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2 max-screen-xl">
             <div className="max-w-md mx-auto text-center">
               <span className="label">Explore More</span>
               <h2>Check out our other venues or join us for events</h2>
-              <div className="flex">
+              <div className="flex gap-2">
                 <Link to="/places/moslers" className="btn btn-action">Mosler's Vault</Link>
                 <Link to="/places/apothecary"  className="btn btn-action">The Apothecary</Link>
               </div>
             </div>
-            <div className="flex flex-col max-w-md gap-6 text-center">
+            <div className="flex flex-col justify-center max-w-md gap-4 mx-auto text-center">
               <h4 className="tracking-wide text-white">Enjoy new recipes and the latest<br />news and events</h4>
               <p>Subscribers receive first access to limited products, and curated playlists for your next cocktail party.</p>
               <SignUpForm />

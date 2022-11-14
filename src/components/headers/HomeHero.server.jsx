@@ -18,7 +18,7 @@ export default function HomeHero({ content }) {
     <>
 
      <div className="relative header-dark">
-      <Nav shop={shop} />
+      <Nav shop={shop} dark={true}/>
       <div className="absolute inset-0">
         <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
       </div>

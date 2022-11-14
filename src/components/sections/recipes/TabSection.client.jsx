@@ -11,8 +11,9 @@ export default function TabSection({ activeRecipe }){
       <TabList>
           <Tab>Ingredients</Tab>
           <Tab>Instructions</Tab>
+          {supplies &&
           <Tab>Supplies</Tab>
-
+          }
       </TabList>
 <TabPanel>
         <div className="relative pt-8">

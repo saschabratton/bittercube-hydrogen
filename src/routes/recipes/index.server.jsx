@@ -1,7 +1,6 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
 import SubNav from "../../components/global/SubNav.server"
-// import RecipeCarousel from "../../components/sections/recipes/RecipeCarousel.client"
 import RecipeCarousel from "../../components/sections/RecipeCarousel.client"
 import SignUp from "../../components/sections/SignUp.client";
 import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";

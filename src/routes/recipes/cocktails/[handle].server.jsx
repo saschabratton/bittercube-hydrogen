@@ -10,25 +10,6 @@ import Nav from "../../../components/headers/Nav.client";
 
 
 
-// instruciton - html
-// supplies - html
-// ingredients - array
-
-const TabContent = [
-  {
-    'label': 'ingredients',
-    'contentHtml': '<dl><dt>Mix</dt><dd>2 oz Rye Whiskey</dd><dd>1/2 oz Sweet Vermouth</dd><dd>1/2 oz Heirloom Alchermes</dd><dd>2 dashes Bittercube Root Beer Bitters</dd></dl>',
-  },
-  {
-    'label': 'Instructions',
-    'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
-  },
-  {
-    'label': 'Get the supplies',
-    'contentHtml': '<h6>Something else</h6><p>Burnt sugar, cinnamon, dried fruit, chamomile and jasmine</p>',
-  },
-]
-
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
 export default function Recipe(){
@@ -50,9 +31,11 @@ export default function Recipe(){
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
 
+
+
   return(
     <Layout>
-      <Nav shop={shop}/>
+      <Nav shop={shop} dark={false}/>
       <div className="container flex items-center w-11/12 gap-2 pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes">Recipes</Link>
         <Arrow />
@@ -74,7 +57,7 @@ export default function Recipe(){
           }
 
           {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
-              const {url, name, } = bitters
+              const { url } = bitters
               return (
                 <Link to={`/shop${ url }`} className="ml-0 btn btn-action">Get the bitters<br />
                 </Link>
@@ -83,10 +66,11 @@ export default function Recipe(){
           }
 
           <div className="flex flex-col items-start justify-center gap-6 label">
-            <div className="block text-vertical">How</div>
+            How to craft
+            {/* <div className="block text-vertical">How</div>
             <div className="pl-1">to</div>
-            <div className="block text-vertical">craft</div>
-            <div className="-ml-0.5 rotate-90 bounce">
+            <div className="block text-vertical">craft</div> */}
+            <div className="ml-8 rotate-90">
               <Arrow />
             </div>
           </div>
@@ -104,7 +88,6 @@ export default function Recipe(){
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Recommended
         </div>
-
       </div>
       <CardCarousel />
       <SplitBgVertBlue />

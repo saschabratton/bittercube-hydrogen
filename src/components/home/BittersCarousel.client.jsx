@@ -3,6 +3,8 @@ import { Image } from "@shopify/hydrogen"
 import Card from "../global/Card.client"
 import BittersCard from "../BittersCard.client"
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import { makeKey } from "../../utilities/helpers";
+
 
 const featuredBitters = [
   {
@@ -123,10 +125,8 @@ export default function BittersCarousel(){
        cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
        >
         {featuredBitters.map(bitters => {
-          // const {label, manufacturer, price, description, image } = bitters
-
           return(
-            <Carousel.Item>
+            <Carousel.Item key={makeKey(bitters.name)}>
               <BittersCard bitters={bitters}/>
             </Carousel.Item>
           )

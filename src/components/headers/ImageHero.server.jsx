@@ -17,7 +17,7 @@ const {
 
   return(
     <div className="relative header-dark">
-      <Nav shop={shop} />
+      <Nav shop={shop} dark={true} />
       <div className="absolute inset-0 bg-dark">
         {image &&
           <Image src={image} width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />

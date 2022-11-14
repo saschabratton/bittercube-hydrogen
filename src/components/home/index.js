@@ -1,0 +1,1 @@
+export { default as BittersCarousel } from './BittersCarousel.client'

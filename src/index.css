@@ -44,15 +44,7 @@
   .alternating-text-image:nth-child(even){
     @apply relative;
      .image-frame{
-      @apply relative order-first;
-      /* img {
-        @apply !rounded-jumbo;
-      }
-      &::after{
-        content: "";
-        @apply absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
-        @apply h-[555px] w-[460px] border-gold border-2  scale-[85%];
-      } */
+      @apply relative md:order-first;
     }
   }
 }

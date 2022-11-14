@@ -99,7 +99,7 @@ const syrupGroups = groupIt(recipes)
           } */}
 
 
-          {/* {recipes?.length > 0 && recipes.map ((recipe) => {
+          {recipes?.length > 0 && recipes.map ((recipe) => {
             return(
               <div className="text-center">
                 <h4 className="tracking-normal h2">{recipe.name}</h4>
@@ -118,7 +118,7 @@ const syrupGroups = groupIt(recipes)
               </div>
               </div>
             )
-            })} */}
+            })}
 
 
           <div className="wrappe">

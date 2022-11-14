@@ -1,12 +1,10 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition, Popover } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { useUrl, Link, useCart, Image } from "@shopify/hydrogen";
 import { Drawer, useDrawer } from "../Drawer.client";
 import { CartDetails } from "../CartDetails.client";
 import { RiCloseFill, RiMenu4Fill } from "react-icons/ri";
 import { BsFillCartFill } from "react-icons/bs";
 import HorizontalSeperator from "./HorizontalSeperator.client";
-// import { Link } from 'react-router-dom';
 import { makeKey } from '../../utilities/helpers'
 
 const navItem = [
@@ -32,10 +30,9 @@ const navItem = [
   },
 ]
 
-export default function Nav({ shop }) {
+export default function Nav({ shop, dark }) {
   const { pathname } = useUrl();
   const { isOpen, openDrawer, closeDrawer } = useDrawer();
-
   const isHome = pathname === "/"
 
   return (
@@ -58,10 +55,12 @@ export default function Nav({ shop }) {
 
               <Link className="pl-8 mx-auto font-bold md:contents md:pl-0 md:mx-0" to="/">
                 <span className="sr-only">{shop.name}</span>
-                {/* TODO: change fill of svg with the id below in headers.css to update on pages that don't have a header */}
-                <Image src='/logos/wordmark-reversed.svg' width={170} height={36} alt="Bittercube" id="navLogo"/>
+                { dark ?
+                  (<Image src='/logos/wordmark-reversed.svg' width={170} height={36} alt="Bittercube" id="navLogo"/>)
+                    :
+                  (<Image src='/logos/wordmark.svg' width={170} height={36} alt="Bittercube" id="navLogo"/>)
+                }
               </Link>
-
 
 
             <div className="hidden md:gap-4 lg:gap-12 md:flex">
@@ -140,14 +139,18 @@ export default function Nav({ shop }) {
   );
 }
 
-function IconBag() {
+function IconBag({ dark }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="#fff"
       // TODO: change fill color  be dependant on header
-      // fill="currentColor"
+      // { dark ?
+      //   (fill="#fff")
+      //     :
+      //   (fill="#000")
+      // }
       className="w-5 h-5"
     >
       <title>Bag</title>

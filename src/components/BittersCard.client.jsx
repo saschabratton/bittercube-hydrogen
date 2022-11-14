@@ -3,7 +3,7 @@ import { Link, Image } from "@shopify/hydrogen"
 export default function BittersCard({ bitters }){
   const { name, image, flavor, description, link} = bitters
 
-  console.log(bitters)
+  // console.log(bitters)
   return(
     <div className="flex flex-1 h-full p-6 transition duration-700 border-2 lg:p-12 hover:border-gold border-gold/0 rounded-jumbo-sm">
       <div className="flex flex-col justify-between gap-2 text-center">

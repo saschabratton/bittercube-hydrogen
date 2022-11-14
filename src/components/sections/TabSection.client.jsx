@@ -11,7 +11,9 @@ export default function TabSection({ content }){
       <TabList>
         {content && content.map((content) => (
           <Tab key={makeKey(content.label + '-tab')}>
-            {content.label}
+            <span className="whitespace-nowrap">
+              {content.label}
+            </span>
           </Tab>
         ))}
       </TabList>

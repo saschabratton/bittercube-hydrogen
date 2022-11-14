@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default function HorizontalSeperator() {
   gsap.registerPlugin(ScrollTrigger);
 
-// TODO: stagger trigger if multiple seportors on a page
 ScrollTrigger.create({
   trigger: "#scrollTrigger",
   start: "top 90%",

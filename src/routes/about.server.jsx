@@ -144,7 +144,7 @@ export default function about() {
             </div>
             <Image src='/images/about-collaborations.jpg' width={366} height={455} alt='A bottle of bitters and baking ingredients' className="object-cover w-full max-w-md mx-auto aspect-4/5 rounded-jumbo-sm" />
           </div>
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 gap-16 md:gap-10 md:grid-cols-2">
 
             <div className="flex flex-col items-center justify-start gap-1 text-center">
               <h3>Heirloom</h3>
@@ -205,10 +205,10 @@ export default function about() {
 
 
 
-            <div className="col-span-2 pt-8">
+            <div className="pt-8 md:col-span-2">
               <HorizontalSeperator />
-              <div className="grid grid-cols-2 py-8">
-                <div className="flex items-center text-lg label">
+              <div className="grid grid-cols-1 py-8 md:grid-cols-2">
+                <div className="flex items-center mx-auto text-lg label">
                   WANT TO WORK WITH US?
                 </div>
                 <Link to="/contact" className="btn btn-action">Let's Collaborate!</Link>
@@ -225,7 +225,7 @@ export default function about() {
 {/*
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
       <div className="relative">
-         <div className="absolute left-[77%] top-[20%] z-10">
+         <div className="absolute lg:left-[77%] lg:top-[20%] z-10 bottom-28 right-16">
           <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
         {/* <SplitBgVert content={SplitBgContent} /> */}

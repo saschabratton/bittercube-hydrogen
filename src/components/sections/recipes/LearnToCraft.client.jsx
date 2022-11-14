@@ -28,19 +28,16 @@ export default function LearnToCraft() {
           Learn how to craft
         </div>
       </div>
-      <div className="container relative grid w-11/12 grid-cols-1 gap-6 md:grid-cols-2">
-        {/* <VerticalSeparator /> */}
-        <div className="p-8">
-          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
-        </div>
+      <div className="container relative grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
+
         <div className="flex flex-col gap-6 py-8">
           <h3 className="tracking-normal">Cocktail Basics</h3>
           <TabSection content={TabContent} />
         </div>
+        <div className="p-8 lg:order-first">
+          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        </div>
       </div>
-      {/* <div className="relative w-11/12 mx-auto mb-20">
-        <HorizontalSeperator />
-      </div> */}
     </>
   )
 }

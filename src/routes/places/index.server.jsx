@@ -71,8 +71,8 @@ export default function Places() {
         <h2>Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.</h2>
       </div>
       <div className="container relative">
-        <div className="absolute left-0 top-5">
-          <Image src="/images/handwritten/places-makingdrinks.svg" alt="" className="mx-auto" width={300} height={96}  role="presentation" />
+        <div className="absolute left-0 md:top-5 -top-8">
+          <Image src="/images/handwritten/places-makingdrinks.svg" alt="" className="mx-auto" width={200} height={96}  role="presentation" />
         </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>

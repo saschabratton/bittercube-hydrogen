@@ -22,6 +22,7 @@
     "@lottiefiles/lottie-interactivity": "^1.6.1",
     "@lottiefiles/react-lottie-player": "^3.4.7",
     "@shopify/hydrogen": "^1.4.1",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.11",
     "better-react-carousel": "^1.1.1",

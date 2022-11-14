@@ -1,7 +1,7 @@
 import { Image, Link } from "@shopify/hydrogen"
 import Carousel from 'better-react-carousel'
-import VerticalSeparator from "../../animations/VerticalSeparator.client";
-import TabSection from "../TabSection.client";
+import VerticalSeparator from "../animations/VerticalSeparator.client";
+import TabSection from "../sections/TabSection.client";
 
 const RecommendedProducts = [
   {'label': 'hierloom nitro espresso martini',

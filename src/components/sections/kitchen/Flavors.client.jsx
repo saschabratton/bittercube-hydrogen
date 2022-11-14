@@ -4,7 +4,7 @@ import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
 export default function Flavors(){
   return(
     <div className="container relative grid grid-cols-1 gap-6 lg:grid-cols-2 md:gap-20">
-        <div className="top-[90%] center-absolute ">
+        <div className="top-[100%] md:top-[90%] center-absolute">
           <Image src='/emblems/bitters-flavors.svg' width={101} height={111} alt="" role="presentation" />
         </div>
         <div className="flex flex-col justify-between gap-20">
@@ -19,7 +19,7 @@ export default function Flavors(){
           </div>
           <Image src='/images/recipes-kitchen-flavorextracts.jpg' width={366} height={455} alt='A bottle of bitters and baking ingredients' className="object-cover w-full max-w-md mx-auto aspect-4/5" />
         </div>
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-16 md:gap-10 md:grid-cols-2">
           <div className="flex flex-col items-center justify-start gap-1 text-center">
             <h3>Vanilla Extract</h3>
             <span className="text-ornament"></span>
@@ -75,7 +75,7 @@ export default function Flavors(){
 
 
 
-          <div className="col-span-2"></div>
+          <div className="col-span-1 md:col-span-2"></div>
         </div>
     </div>
   )

@@ -1,15 +1,12 @@
 import { Suspense } from "react";
 import { Layout } from "../components/Layout.server";
-import FeaturedCollections from "../components/FeaturedCollections.server";
+import { Link, Image } from "@shopify/hydrogen";
 import HomeHero from "../components/headers/HomeHero.server";
 import ScrollingBanner from "../components/ScrollingBanner.client";
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
-import { Link, Image } from "@shopify/hydrogen";
-import BittersCarousel from "../components/sections/BittersCarousel.client";
+import BittersCarousel from "../components/home/BittersCarousel.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import SignUp from "../components/sections/SignUp.client";
-import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
-import RecipeCarousel from "../components/sections/home/RecipeCarousel.client";
 
 
 const HeaderText = ("Making drinks come true since 2009")
@@ -82,7 +79,6 @@ export default function Home() {
         </div>
 
         <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
-        {/* <RecipeCarousel /> */}
         <SignUp content={SignUpContent}/>
     </Layout>
   );

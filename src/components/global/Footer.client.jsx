@@ -7,7 +7,7 @@ const navItems = [
   {'link': '/places', 'label': 'Places'},
   {'link': '/recipes', 'label': 'Recipes'},
   {'link': '/about', 'label': 'About'},
-  {'link': '#', 'label': 'Wholesale'}, //TODO: link to wholesale
+  {'link': 'https://bittercube.faire.com/welcome/r/personal?signUp=widget&widgetToken=bw_9p9jssa6xt', 'label': 'Wholesale'},
   {'link': '/refund-policy', 'label': 'Refund Policy'},
 ]
 

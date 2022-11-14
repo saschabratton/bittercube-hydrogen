@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 
 export default function SplitBgVertBlue({ content }){
   return(
-    <section className={`pb-12 pt-12 bg-split-dark`}>
+    <section className={`pb-12 pt-12 bg-dark md:bg-split-dark`}>
       <div className="relative py-20 border-y-2 border-gold">
         <div className="center-absolute  w-0.5 h-full bg-gold hidden md:flex"></div>
         <div className="container grid grid-cols-1 gap-16 md:grid-cols-2 ">
@@ -15,8 +15,8 @@ export default function SplitBgVertBlue({ content }){
                 </div>
                 <div  className="flex flex-col justify-center gap-2 h-44">
                   <span className="label h4 text-gold">Boxes include one-of-a-kind items</span>
-                  <h3 className="text-3xl font-regular">Curated bitters, syrups, recipes, and more</h3>
-                  <a href="https://app.table22.com/product/v1/the-bittercube-old-fashioned-club" target="_blank" className="btn btn-action">Subscriptions</a>
+                  <h3 className="text-3xl text-white font-regular md:text-dark">Curated bitters, syrups, recipes, and more</h3>
+                  <a href="https://app.table22.com/product/v1/the-bittercube-old-fashioned-club" target="_blank" className="text-white btn btn-action md:text-dark">Subscriptions</a>
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">

@@ -38,7 +38,7 @@ export default function Kitchen(){
           <div className="ornament-arrow-left hero-line-ornament"></div>
         </div>
         <div className="container max-w-3xl pb-0 text-center">
-          <h2 className="mb-6">bitters as added flavor</h2>
+          <h2 className="mb-6">Bitters as Added Flavor</h2>
           <p>Another way to use cocktail bitters in baking is to riff on classics like a bartender might do when mixing cocktails. Simply add bitters to a tried and true recipe to accentuate, enhance, or contrast existing flavors. When using 1-2 tsp of bitters, you should not have to adjust the recipe in any way. Below are some ideas for adding bitters to your favorite baked goods.</p>
         </div>
         {/* TODO: baking recipe carousel  */}
