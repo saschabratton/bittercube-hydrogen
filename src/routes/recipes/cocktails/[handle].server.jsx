@@ -7,6 +7,9 @@ import Arrow from "../../../components/global/icons/Arrow.client"
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import Nav from "../../../components/headers/Nav.client";
+import ImageCarousel from "../../../components/sections/ImageCarousel.client";
+
+
 
 
 
@@ -42,8 +45,13 @@ export default function Recipe(){
         <Link className="label" to="/recipes/cocktails">Cocktails</Link>
       </div>
 
-      <div className="container grid w-11/12 grid-cols-2 gap-6 pt-0">
-        <div className="flex flex-col gap-6">
+      <div className="container grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
+
+        <div className="lg:hidden">
+          <ImageCarousel activeRecipe={activeRecipe} />
+        </div>
+
+        <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src={activeRecipe.images[0].url} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           {/* TODO: random dropper image  */}
           <Image src='/images/pour.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
