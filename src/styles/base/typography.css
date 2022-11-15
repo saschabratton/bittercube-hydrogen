@@ -24,7 +24,7 @@
       @apply hover:text-gold/50;
     }
   }
-  p, a, dd {
+  p, a, dd, td {
     @apply font-sans text-lg text-dark;
   }
   a{

@@ -35,7 +35,7 @@ export default function LearnToCraft() {
           <TabSection content={TabContent} />
         </div>
         <div className="p-8 lg:order-first">
-          <Image src='images/bittercube-cocktail.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+          <Image src='images/recipes-cocktailbasics.jpg' width={366} height={455} alt='Ice being poured into a cocktail next to two bitters bottles' className="object-cover w-full" />
         </div>
       </div>
     </>

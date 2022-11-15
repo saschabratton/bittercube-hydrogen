@@ -20,6 +20,9 @@
   dl{
     @apply mb-6;
   }
+  td {
+    @apply pr-4;
+  }
   ::placeholder {
     @apply opacity-100 !text-gold;
   }

@@ -8,11 +8,14 @@ export default function RecipeIngredients({activeRecipe}) {
     <div>
       <dl>
         <dt>Mix</dt>
+        <table>
         {ingredients.length > 0 && ingredients.map(({ name, quantity }) =>
-          <dd>
-            {quantity}{' '}{name}
-          </dd>
+          <tr>
+            <td><dd>{quantity}</dd></td>
+            <td><dd>{name}</dd></td>
+          </tr>
         )}
+        </table>
         </dl>
         <dl>
         <dt>Glass</dt>

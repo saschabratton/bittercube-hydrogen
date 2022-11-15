@@ -3,7 +3,7 @@ import { useUrl, Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydr
 
 const pageNav = [
   { label: 'featured', link: '/recipes', active: 'featured'},
-  { label: 'cocktails', link: '/recipes/cocktails', active: 'cocktails'},
+  { label: 'all recipes', link: '/recipes/cocktails', active: 'cocktails'},
   { label: 'syrups', link: '/recipes/syrups', active: 'syrup'},
   { label: 'in the kitchen', link: '/recipes/kitchen', active: 'kitchen'},
 ]

@@ -1,28 +1,36 @@
+import React, { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import { Link, Image } from "@shopify/hydrogen"
 
 export default function RecipeCard({ recipe }){
   const { slug, name, description, spirit, images, bitters } = recipe
 
+  const { ref: viewRef, inView } = useInView({
+    threshold: 0
+  })
+
   return(
     <Link to={`/recipes/cocktails/${slug}`}>
       <div className="grid gap-2 group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
+          {/* <Image src={ images[0].url } width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" /> */}
+          <div ref={viewRef}>
+            {inView ?
+                <Image src={ images[0].url } width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
+            :
+              <><div className="w-full bg-dark h-96"></div></>
 
 
-
-          <Image src={ images[0].url } width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
-
-
-
-
+            }
+          </div>
         </div>
         <div className="flex justify-between">
           <div className="capitalize label">
 
           {bitters.length > 0 && bitters.map(bitters => {
-              const { name, i } = bitters
+              const { name, index } = bitters
               return (
-                <span>{ (i ? ', ' : '') + name } Bitters</span>
+                <span>{ (index ? ', ' : '') + name } Bitters</span>
               )
             })
           }

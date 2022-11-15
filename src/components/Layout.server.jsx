@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
+import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Head, Image } from "@shopify/hydrogen";
 import Navigation from "./global/Navigation.server";
 import Footer from "./global/Footer.client";
 import Nav from "./headers/Nav.client";
@@ -17,6 +17,11 @@ export function Layout({ children }) {
     preload: true,
   });
 
+
+  const customSeo = {
+    description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
+  }
+
   return (
     <>
     <Suspense>
@@ -24,16 +29,15 @@ export function Layout({ children }) {
         type="defaultSeo"
         data={{
           title: shop.name,
-          description: shop.description,
+          titleTemplate: `%s · ${shop.name}`,
         }}
       />
-      </Suspense>
+      <Head>
+        <meta name="description" content={customSeo.description} />
+      </Head>
+    </Suspense>
 
-      <div className="hidden pt-0 pb-0 border-b-0 bg-forest bg-split-dark bg-split-forest">
-        {/* TODO: This div is creating classes for tailwind that don't generate at build without */}
-      </div>
-      <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
-        {/* <Nav shop={shop} /> */}
+    <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
         <main role="main" id="mainContent" className="flex-grow bg-paper">
           {/* <Suspense> */}
             {children}

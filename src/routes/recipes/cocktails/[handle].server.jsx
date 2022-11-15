@@ -64,28 +64,25 @@ export default function Recipe(){
             <p>{activeRecipe.description}</p>
           }
 
-          {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
+          {/* {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
               const { url } = bitters
               return (
                 <Link to={`/shop${ url }`} className="ml-0 btn btn-action">Get the bitters<br />
                 </Link>
               )
             })
-          }
+          } */}
 
-          <div className="flex flex-col items-start justify-center gap-6 label">
+          {/* <div className="flex flex-col items-start justify-center gap-6 label">
             How to craft
-            {/* <div className="block text-vertical">How</div>
-            <div className="pl-1">to</div>
-            <div className="block text-vertical">craft</div> */}
             <div className="ml-8 rotate-90">
               <Arrow />
             </div>
-          </div>
+          </div> */}
           <div className="py-6">
             <HorizontalSeperator />
           </div>
-          <h3>More Information</h3>
+          <h3>Make the cocktail</h3>
           <div>
             <TabSection activeRecipe={activeRecipe}/>
           </div>

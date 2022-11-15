@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Layout } from "../components/Layout.server";
+import { Layout, Seo } from "../components/Layout.server";
 import { Link, Image } from "@shopify/hydrogen";
 import HomeHero from "../components/headers/HomeHero.server";
 import ScrollingBanner from "../components/ScrollingBanner.client";
@@ -48,6 +48,7 @@ const OrnamentText = "Shop"
 export default function Home() {
   return (
     <Layout>
+      {/* <Seo type="homepage" data={{title: 'Making drinks come true since 2009'}} /> */}
       <HomeHero content={HeaderText} />
       <ScrollingBanner />
         {/* <Suspense>
