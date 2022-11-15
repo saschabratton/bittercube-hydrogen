@@ -1,4 +1,4 @@
-import { React, useState } from "react"
+import { React, useState, useId, useRef } from "react"
 import Select from 'react-select'
 import { fetchSync } from '@shopify/hydrogen';
 import RecipeCard from "./RecipeCard.client";
@@ -32,18 +32,36 @@ const spiritOptions = [
 
 
 export default function CocktailsList(){
+  const filterRef = useRef()
   const [recipes, setRecipes] = useState([])
-  const [activeFilter, setActiveFilter] = useState([])
-
+  const [activeFilter, setActiveFilter] = useState(null)
   const allRecipes = fetchSync(recipesApi,{
     preload: false,
   }).json()
+
   useEffect(() => {
     if (!allRecipes) return
     setRecipes(allRecipes)
   },[])
+
   const [searchValue, setSearchValue] = useState("")
 
+  const filterRecipes = (string) => {
+    const input = string.toLowerCase()
+    if (input === '') {
+      setRecipes(allRecipes)
+      return
+    }
+    const filtered = allRecipes.filter(({ name }) => {
+      const match = name.toLowerCase().includes(input)
+      return match
+    })
+    setRecipes(filtered)
+  }
+
+  const clearFilters = () => {
+    setRecipes(allRecipes)
+  }
 
   const filterRecipesByProduct = (selected) => {
     if (!selected){
@@ -57,8 +75,13 @@ export default function CocktailsList(){
     })
     setRecipes(fiteredRecipes)
   }
-  // BY tag, BY string ~ dggt
-  const filterRecipesBySeason = ({ label }) => {
+
+  const filterRecipesByTag = (selected) => {
+    if (!selected) {
+      setRecipes(allRecipes)
+      return
+    }
+    const { label } = selected
     const fiteredRecipes = allRecipes.filter(({ flavors }) => flavors.includes(label))
     setRecipes(fiteredRecipes)
   }
@@ -78,6 +101,8 @@ export default function CocktailsList(){
           <span className="label">Filter By:</span>
 
           <Select
+            ref={filterRef}
+            instanceId={useId()}
             options={bittersOptions}
             placeholder={'Bitters'}
             classNamePrefix="select"
@@ -85,17 +110,20 @@ export default function CocktailsList(){
             onChange={(selected => filterRecipesByProduct(selected))}
           />
           <Select
+            instanceId={useId()}
             options={seasonsOptions}
             placeholder={'Season'}
             classNamePrefix="select"
             isClearable={true}
-            onChange={(selected => filterRecipesBySeason(selected))}
+            onChange={(selected => filterRecipesByTag(selected))}
           />
           <Select
+            instanceId={useId()}
             options={spiritOptions}
             placeholder={'Spirit'}
             classNamePrefix="select"
-            onChange={(selected => filterRecipes(selected))}
+            isClearable={true}
+            onChange={(selected => filterRecipesByTag(selected))}
           />
 
         </div>
@@ -105,8 +133,7 @@ export default function CocktailsList(){
             name="search"
             placeholder="search"
             className="p-2 font-semibold tracking-widest text-right uppercase text-gold bg-paper"
-            value={searchValue}
-            onChange={e => setSearchValue(e.target.value)}
+            onChange={(e) => filterRecipes(e.target.value)}
            />
           <HiSearch className="w-5 h-5 text-dark" />
         </div>
@@ -115,11 +142,9 @@ export default function CocktailsList(){
       <div className="container grid grid-cols-3 gap-6">
 
         {recipes &&
-          // .filter(recipe => recipe.name.match(new RegExp(searchValue, "i")))
-
-          recipes.map(recipe => {
+          recipes.map((recipe, i) => {
             return (
-               <RecipeCard key={recipe.slug} recipe={recipe} />
+               <RecipeCard key={`${recipe.slug}_${i}`} recipe={recipe} />
             )
           })
         }
