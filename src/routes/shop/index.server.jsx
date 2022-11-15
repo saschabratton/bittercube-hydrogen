@@ -1,4 +1,5 @@
 import { Layout } from "../../components/Layout.server";
+import { Suspense } from "react";
 import PatternHero from "../../components/headers/PatternHero.server";
 import SubNav from "../../components/global/SubNav.server";
 import SplitBgVert from "../../components/sections/SplitBgVert.client";
