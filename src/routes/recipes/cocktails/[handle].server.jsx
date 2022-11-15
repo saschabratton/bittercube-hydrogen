@@ -2,21 +2,15 @@ import { Layout } from "../../../components/Layout.server";
 import {  gql, useShopQuery, Link, Image, CacheLong, useRouteParams, fetchSync } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/recipes/TabSection.client";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
-import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import Arrow from "../../../components/global/icons/Arrow.client"
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import Nav from "../../../components/headers/Nav.client";
 import ImageCarousel from "../../../components/sections/ImageCarousel.client";
 
-
-
-
-
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
 export default function Recipe(){
-
   const {
     data: { shop },
     } = useShopQuery({
@@ -33,8 +27,6 @@ export default function Recipe(){
   }).json()
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
-
-
 
   return(
     <Layout>
@@ -96,7 +88,6 @@ export default function Recipe(){
       </div>
       <CardCarousel />
       <SplitBgVertBlue />
-      <WholesaleBitters />
     </Layout>
   )
 }

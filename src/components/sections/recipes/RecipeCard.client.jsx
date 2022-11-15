@@ -24,22 +24,22 @@ export default function RecipeCard({ recipe }){
             }
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="capitalize label">
 
-          {bitters.length > 0 && bitters.map(bitters => {
-              const { name, index } = bitters
-              return (
-                <span>{ (index ? ', ' : '') + name } Bitters</span>
-              )
-            })
-          }
-
+          <div className="overflow-x-scroll capitalize label">
+            <p className="mb-0 whitespace-nowrap text-gold">
+              {bitters.length > 0 && bitters.map(bitters => {
+                  const { name, index } = bitters
+                  return (
+                    <span>{ (index ? ', ' : '') + name } Bitters</span>
+                  )
+                })
+              }
+            </p>
           </div>
-          <div className="text-dark">
+          {/* <div className="text-dark">
              { spirit }
-          </div>
-        </div>
+          </div> */}
+
         <hr />
         <div className="flex items-center justify-between w-full gap-2 mx-auto label group">
           <p className="mb-0 font-bold tracking-widest uppercase">{ name }</p>

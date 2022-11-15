@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
-const options = [
+const bittersOptions = [
   { value: 'cherry-bark-vanilla', label: 'Cherry Bark Vanilla' },
   { value: 'orange', label: 'Orange' },
   { value: 'bolivar', label: 'Bolivar' },
@@ -19,10 +19,22 @@ const options = [
   { value: 'jamaican-2', label: 'Jamaican No. 2' },
   { value: 'chipotlecacao', label: 'Chipotle Cacao' },
 ]
+const seasonsOptions = [
+  { value: 'winter', label: 'Winter' },
+  { value: 'fall', label: 'Fall' },
+  { value: 'spring', label: 'Spring' },
+  { value: 'summer', label: 'Summer' },
+]
+const spiritOptions = [
+  { value: 'tequilla', label: 'Tequilla' },
+  { value: 'whiskey', label: 'Whiskey' },
+]
 
 
 export default function CocktailsList(){
   const [recipes, setRecipes] = useState([])
+  const [activeFilter, setActiveFilter] = useState([])
+
   const allRecipes = fetchSync(recipesApi,{
     preload: false,
   }).json()
@@ -32,36 +44,32 @@ export default function CocktailsList(){
   },[])
   const [searchValue, setSearchValue] = useState("")
 
-// filterRecipesByProduct
-  const filterRecipes = ({ label }) => {
+
+  const filterRecipesByProduct = (selected) => {
+    if (!selected){
+      setRecipes(allRecipes)
+      return
+    }
+    const { label } = selected
+
     const fiteredRecipes = allRecipes.filter(({ bitters }) => {
       return bitters.filter(({ name }) => label === name).length
     })
     setRecipes(fiteredRecipes)
   }
-
-
-const customStyles = {
-  menu: (provided, state) => ({
-    width: state.selectProps.width,
-    borderBottom: '1px dotted pink',
-    color: state.selectProps.menuColor,
-    padding: 20,
-    background: '#fff',
-    postion: 'absolute',
-  }),
-
-  control: (_, { selectProps: { width }}) => ({
-    width: width
-  }),
-
-  singleValue: (provided, state) => {
-    const opacity = state.isDisabled ? 0.5 : 1;
-    const transition = 'opacity 300ms';
-
-    return { ...provided, opacity, transition };
+  // BY tag, BY string ~ dggt
+  const filterRecipesBySeason = ({ label }) => {
+    const fiteredRecipes = allRecipes.filter(({ flavors }) => flavors.includes(label))
+    setRecipes(fiteredRecipes)
   }
-}
+
+// TODO:
+// - filter seasons
+// - filter spirits
+// - search filter
+// - clear values
+// - empty state
+// - skelton for card images
 
   return(
     <>
@@ -70,27 +78,26 @@ const customStyles = {
           <span className="label">Filter By:</span>
 
           <Select
-            options={options}
-            // width="250px"
-            // styles={customStyles}
+            options={bittersOptions}
             placeholder={'Bitters'}
+            classNamePrefix="select"
+            isClearable={true}
+            onChange={(selected => filterRecipesByProduct(selected))}
+          />
+          <Select
+            options={seasonsOptions}
+            placeholder={'Season'}
+            classNamePrefix="select"
+            isClearable={true}
+            onChange={(selected => filterRecipesBySeason(selected))}
+          />
+          <Select
+            options={spiritOptions}
+            placeholder={'Spirit'}
             classNamePrefix="select"
             onChange={(selected => filterRecipes(selected))}
           />
 
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Spirit
-          </div>
-          {/* <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Cocktail Style
-          </div>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Bitters
-          </div>
-          <div className="p-2 text-sm font-semibold tracking-widest uppercase border-2 rounded-md border-gold">
-            Season
-          </div> */}
-          {/* <Select options={options} /> */}
         </div>
         <div className="flex items-center gap-2">
           <input

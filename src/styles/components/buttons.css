@@ -95,9 +95,7 @@
           @apply p-0 m-0;
         }
       }
-      .select__indicators {
-        @apply hidden;
-      }
+
     }
 
     /* .select__input {

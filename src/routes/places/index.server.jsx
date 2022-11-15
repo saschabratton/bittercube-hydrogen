@@ -18,7 +18,7 @@ const ThreeColumnFeaturedContent = {
   'ctaLink': '',
   'background': 'dark',
   'image': '',
-  'navHeadline': 'Visit our places',
+  'navHeadline': 'Online Cocktail classes',
   'padding': '12',
   'border': '2',
   'image': '/images/places-entertain-educate.jpg',
@@ -77,7 +77,9 @@ export default function Places() {
         <AlternatingTextImage content={alternatingContent} />
       </div>
       {/* <RecipeColleciton /> */}
+      <div id="classes">
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+      </div>
     </Layout>
   )
 }

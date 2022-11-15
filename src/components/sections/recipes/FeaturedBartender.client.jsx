@@ -4,7 +4,7 @@ import { Link, Image } from "@shopify/hydrogen"
 
 export default function FeaturedBartenders(){
   return(
-     <section className="py-12 bg-dark">
+     <section className="py-12 bg-dark" id="featured-bartender">
         <div className="border-y-2 border-gold">
           <div className="container grid col-span-1 gap-6 lg:grid-cols-7 lg:gap-28">
             <div className="flex flex-col justify-center col-span-1 gap-4 lg:col-span-4">

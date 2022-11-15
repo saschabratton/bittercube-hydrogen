@@ -48,7 +48,7 @@ export default function moslers(){
                 <Link to="/places/moslers"  className="btn btn-action">Mosler's Vault</Link>
               </div>
             </div>
-            <div className="flex flex-col justify-center max-w-md gap-4 mx-auto text-center">s
+            <div className="flex flex-col justify-center max-w-md gap-4 mx-auto text-center">
               <h4 className="tracking-wide text-white">Enjoy new recipes and the latest<br />news and events</h4>
               <p>Subscribers receive first access to limited products, and curated playlists for your next cocktail party.</p>
               <SignUpForm />
