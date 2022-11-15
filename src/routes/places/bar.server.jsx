@@ -8,14 +8,14 @@ import SignUpForm from "../../components/global/SignUpForm.client"
 
 
 const HeaderContent ={
-  'text': 'Bittercube Bar',
+  'text': 'Bittercube Bar & Bazaar',
   'image': '/images/bc-bar-hero.jpg',
 }
 
 const TabContent = [
   {
     'label': 'Brunch',
-    'contentHtml': '<dl><dt>MARKET BLOODY</dt><dd>Modest vodka, garden variety bloody mary mix, snit of solid gold lager make it a red snapper with gin or n/a with zero proof gin spice it up with disco inferno reverse it with a full beer and a snit of bloody mary!</dd></dl><dl><dt>CREME DE FLORA MIMOSA</dt><dd>Heirloom creme de flora, sparkling wine, orange or grapefruit juice, bitters</dd></dl><dl><dt>BEERMOSA- $9</dt><dd>Fulton lonely blonde, orange or grapefruit juice, bitters</dd></dl><dl><dt>SEASONAL SPRITZ</dt><dd>Seasonal aperitivo blend, seltzer, sparkling wine, skewered olive</dd></dl><dl><dt>NEON PANDA</dt><dd>Ten to one aged rum, creme de cacao, cinnamon, coconut water, cold brew, blackstrap bitters</dd></dl><dl><dt>BEE STING</dt><dd>Gin, lemon, honey syrup, disco inferno</dd><dd>non-alcoholic variation with amass zero proof gin</dd></dl><dl><dt>MARKET FRESH PALOMA</dt><dd>Tequila, grapefruit, seltzer, jamaican no 2 bitters</dd><dd>non-alcoholic variation with ritual zero proof tequila</dd></dl><dl><dt>BARREL AGED LONG ISLAND ICED TEA</dt><dd>Barrel aged spirits, lemon, orange liqueur, house kola</dd></dl><dl><dt>MARKET OLD FASHIONED</dt><dd>House american whiskey blend, tapped maple syrup, trinity bitters, grapefruit oil non-alcoholic variation with monday zero alcohol whiskey</dd></dl>',
+    'contentHtml': '<dl><dt>MARKET BLOODY</dt><dd>Modest vodka, garden variety bloody mary mix, snit of solid gold lager make it a red snapper with gin or n/a with zero proof gin spice it up with disco inferno reverse it with a full beer and a snit of bloody mary!</dd></dl><dl><dt>CREME DE FLORA MIMOSA</dt><dd>Heirloom creme de flora, sparkling wine, orange or grapefruit juice, bitters</dd></dl><dl><dt>BEERMOSA</dt><dd>Fulton lonely blonde, orange or grapefruit juice, bitters</dd></dl><dl><dt>SEASONAL SPRITZ</dt><dd>Seasonal aperitivo blend, seltzer, sparkling wine, skewered olive</dd></dl><dl><dt>NEON PANDA</dt><dd>Ten to one aged rum, creme de cacao, cinnamon, coconut water, cold brew, blackstrap bitters</dd></dl><dl><dt>BEE STING</dt><dd>Gin, lemon, honey syrup, disco inferno</dd><dd>non-alcoholic variation with amass zero proof gin</dd></dl><dl><dt>MARKET FRESH PALOMA</dt><dd>Tequila, grapefruit, seltzer, jamaican no 2 bitters</dd><dd>non-alcoholic variation with ritual zero proof tequila</dd></dl><dl><dt>BARREL AGED LONG ISLAND ICED TEA</dt><dd>Barrel aged spirits, lemon, orange liqueur, house kola</dd></dl><dl><dt>MARKET OLD FASHIONED</dt><dd>House american whiskey blend, tapped maple syrup, trinity bitters, grapefruit oil non-alcoholic variation with monday zero alcohol whiskey</dd></dl>',
   },
   {
     'label': 'Dinner',

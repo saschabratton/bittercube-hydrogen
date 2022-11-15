@@ -47,7 +47,7 @@ export default function Collections() {
 }
 
 const QUERY = gql`
-  query ColecitonDetails($handle: String!) {
+  query CollecitonDetails($handle: String!) {
     collection(handle: $handle) {
       id
       title
