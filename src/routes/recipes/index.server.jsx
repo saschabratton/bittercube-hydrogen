@@ -38,9 +38,7 @@ export default function index() {
         </div>
         <h2 className="col-span-3 mt-5 mb-0 capitalize">Featured Cocktails</h2>
       </div>
-      <div className="w-11/12 mx-auto">
 
-      </div>
       <RecipeCarousel />
       <LearnToCraft />
       <FeaturedBartenders />
