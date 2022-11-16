@@ -2,6 +2,8 @@ import { Link, Image } from "@shopify/hydrogen"
 
 
 
+// TODO: pull in data from bartender api
+
 export default function FeaturedBartenders(){
   return(
      <section className="py-12 bg-dark" id="featured-bartender">

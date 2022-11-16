@@ -26,8 +26,28 @@ const seasonsOptions = [
   { value: 'summer', label: 'Summer' },
 ]
 const spiritOptions = [
-  { value: 'tequilla', label: 'Tequilla' },
-  { value: 'whiskey', label: 'Whiskey' },
+  { value: 'vodka', label: 'Vodka' },
+  { value: 'gin', label: 'Gin' },
+  { value: 'aquavit', label: 'Aquavit' },
+  { value: 'brandy', label: 'Brandy' },
+  { value: 'rum', label: 'Rum' },
+  { value: 'agave', label: 'Agave' },
+  { value: 'whiskey', label: 'Whisk(e)y' },
+]
+const syleOptions = [
+  { value: 'citrusy', label: 'Citrusy' },
+  { value: 'effervescent', label: 'Effervescent' },
+  { value: 'spicy', label: 'Spicy' },
+  { value: 'spirit-forward', label: 'Spirit Forward' },
+  { value: 'bitter', label: 'Bitter' },
+  { value: 'herbaceous', label: 'Herbaceous' },
+  { value: 'tropical', label: 'Tropical' },
+  { value: 'creamy', label: 'Creamy' },
+  { value: 'aromatic', label: 'Aromatic' },
+  { value: 'low-abv', label: 'Low ABV option' },
+  { value: 'non-alcoholic', label: 'Non-Alcoholic' },
+  { value: 'hot', label: 'Hot' },
+  { value: 'kitchen', label: 'Kitchen' },
 ]
 
 
@@ -125,6 +145,14 @@ export default function CocktailsList(){
             isClearable={true}
             onChange={(selected => filterRecipesByTag(selected))}
           />
+          {/* <Select
+            instanceId={useId()}
+            options={styleOptions}
+            placeholder={'Spirit'}
+            classNamePrefix="select"
+            isClearable={true}
+            onChange={(selected => filterRecipesByTag(selected))}
+          /> */}
 
         </div>
         <div className="flex items-center gap-2">
