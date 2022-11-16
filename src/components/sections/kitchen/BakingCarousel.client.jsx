@@ -2,68 +2,69 @@ import Carousel from 'better-react-carousel'
 import BittersCard from "../../BittersCard.client";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import BakingCard from "../recipes/BakingCard.client";
+import { makeKey } from "../../../utilities/helpers";
 
 // TODO: combine with bitterscarousel for 1 data point
 const recipes = [
   {
     'name': 'Cherry Bark Vanilla',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-cbv.jpg',
     'flavor': 'Woodsy',
     'description': 'Use in Biscotti, Gingerbread, Buttercream Frosting, Baklava, Tsoureki',
     'link': '/shop/products/cherry-bark-vanilla',
   },
   {
     'name': 'Orange',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-orange.jpg',
     'flavor': 'Bright',
     'description': "Use in Orange Crinkle Cookies, Pound Cake, Choco Orange Brownies, Orange Cranberry Bread Pudding, Poppy Seed Muffin",
     'link': '/shop/products/orange',
   },
   {
     'name': 'Bolivar',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-bolivar.jpg',
     'flavor': 'Aromatic',
     'description': 'Mixed Berry Scones, Oatmeal Raisin Cookies, Banana Bread, Blueberry Muffins, Coffee Cake',
     'link': '/shop/products/bolivar',
   },
   {
     'name': 'Trinity',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-trinity.jpg',
     'flavor': 'All Purpose',
     'description': 'Fruitcake, Bourbon Soaked Cake, Candied Nuts, Bourbon Banana Bread, Cheesecake',
     'link': '/shop/products/trinity',
   },
   {
     'name': 'Jamaican No.2',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-j1.jpg',
     'flavor': 'Zesty',
     'description': 'Lemon Bars, Chai Flavored Cakes, Grapefruit Olive Oil Cake, Bruleed Grapefruit Rhubarb Pie, Blueberry Pie',
     'link': '/shop/products/jamaican-2',
   },
   {
     'name': 'Root Beer',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-rootbeer.jpg',
     'flavor': 'Earthy',
     'description': 'Panna Cotta, Mint Chocolate Chip Cookies, Almond Croissants, Pizzelles, Angel Food Cake',
     'link': '/shop/products/root-beer',
   },
   {
     'name': 'Blackstrap',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-blackstrap.jpg',
     'flavor': 'Smoky',
     'description': 'Snickerdoodles, Gingerbread, Old Fashioned Molasses Cake, Cookie Cream Pies, Carrot Cake',
     'link': '/shop/products/blackstrap',
   },
   {
     'name': 'Jamaican No.1',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-j2.jpg',
     'flavor': 'Robust',
     'description': 'Spiced Apple Muffins, Black Pepper Pound Cake, Apple Crisp, Spiced Strawberry Shortcake, Bundt Cake',
     'link': '#',
   },
   {
     'name': 'Chipotle Cacao',
-    'image': '/images/product.jpg',
+    'image': '/images/baking/kitchen-flavor-chipotlecacao.jpg',
     'flavor': 'Spicy',
     'description': 'Chocolate Mousse, Chocolate Covered Pretzels, Pineapple Upside Down Cake, Chocolate Covered Strawberries, Chocolate Cookie',
     'link': '#',
@@ -131,7 +132,7 @@ export default function BakingCarousel(){
        >
         {recipes.map(bitters => {
           return(
-            <Carousel.Item>
+            <Carousel.Item key={makeKey(bitters.name)}>
               <BakingCard bitters={bitters}/>
             </Carousel.Item>
           )

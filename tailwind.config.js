@@ -24,7 +24,7 @@ module.exports = {
         '4/5': '4 / 5',
       },
       borderRadius: {
-        'jumbo-sm': '4.5rem',
+        'jumbo-sm': '3.75rem',
         'jumbo': '7rem'
       },
       animation: {

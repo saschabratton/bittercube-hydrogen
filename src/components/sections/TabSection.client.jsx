@@ -22,6 +22,11 @@ export default function TabSection({ content }){
           <div className="relative pt-8">
             <div className="relative z-10">
               {parse(content.contentHtml)}
+
+
+              {/* TODO: disclosure example https://headlessui.com/react/disclosure#transitions */}
+
+
             </div>
           </div>
         </TabPanel>

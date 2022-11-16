@@ -25,7 +25,7 @@ const ThreeColumnFeaturedContent = {
 }
 const ThreeColumnFeaturedLinks = [
   {
-    'linkLabel': 'Bittercube Bar at North Ave',
+    'linkLabel': 'BITTERCUBE BAR & BAZAAR',
     'link': '/places/bar',
   },
   {

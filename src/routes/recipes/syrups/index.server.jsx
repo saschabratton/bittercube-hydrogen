@@ -64,7 +64,7 @@ const syrupGroups = groupIt(recipes)
           <p className="md:max-w-lg">Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.</p>
         </div>
         <div>
-          <Image src='/images/heirloom.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters"  />
+          <Image src='/images/recipes-syrups.jpg' width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters"  />
         </div>
         <div className="flex flex-col max-w-md gap-2 mx-auto text-center">
           <span className="text-2xl font-decorative text-gold">Use this recipe<br />with any type of sugar</span>

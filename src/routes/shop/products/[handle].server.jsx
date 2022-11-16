@@ -27,7 +27,7 @@ const ThreeColumnFeaturedContent = {
   'ctaLink': '/recipes/cocktails',
   'background': 'forest',
   'image': '/images/shop-product-cocktails.jpg',
-  'navHeadline': 'Craft a cocktail',
+  'navHeadline': 'Featured Recipes',
   'padding': '12',
   'border': '2',
 }

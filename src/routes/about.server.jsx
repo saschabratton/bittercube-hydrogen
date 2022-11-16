@@ -154,16 +154,16 @@ export default function about() {
               </a>
             </div>
             <div className="flex flex-col items-center justify-start gap-1 text-center">
-              <h3>Discocubes</h3>
+              <h3>DISCO INFERNO</h3>
               <p className="my-2">Spicy cocktail enhancer collaboration</p>
-              <a href="https://www.discocubes.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+              <a href="https://disco-inferno.co/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
             <div className="flex flex-col items-center justify-start gap-1 text-center">
               <h3>SANTA TERESA RUM</h3>
               <p className="my-2">Bespoke bitters blend for bars & restaurants</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+              <a href="https://bevvy.co/articles/taste-test-santa-teresa-1796-cantinero-coffee-bitters/18851" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
@@ -184,7 +184,7 @@ export default function about() {
             <div className="flex flex-col items-center justify-start gap-1 text-center">
               <h3>LIVEWIRE</h3>
               <p className="my-2">Canned cocktail brand that features Bittercube in a number of cocktails</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+              <a href="https://drinklivewire.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
@@ -198,9 +198,9 @@ export default function about() {
             <div className="flex flex-col items-center justify-start gap-1 text-center">
               <h3>BITTERS BLENDS</h3>
               <p className="my-2">Custom blends with restaurant groups, and bars</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
+              <Link to="/shop/special-editions-and-collaborations" className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">View Collab
                 <div className="btn-arrow btn-arrow-gold"></div>
-              </a>
+              </Link>
             </div>
 
 
