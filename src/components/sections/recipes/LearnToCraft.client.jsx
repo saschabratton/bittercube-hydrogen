@@ -2,7 +2,7 @@ import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
 import { Image } from "@shopify/hydrogen"
 import VerticalSeparator from "../../animations/VerticalSeparator.client";
 import TabSection from "../TabSection.client";
-
+import CocktailBasics from "./CocktailBasics.client";
 
 
 
@@ -34,7 +34,8 @@ export default function LearnToCraft() {
 
         <div className="flex flex-col gap-6 py-8">
           <h3 className="tracking-normal">Cocktail Basics</h3>
-          <TabSection content={TabContent} />
+          {/* <TabSection content={TabContent} /> */}
+          <CocktailBasics />
         </div>
         <div className="p-8 lg:order-first">
           <Image src='images/recipes-cocktailbasics.jpg' width={366} height={455} alt='Ice being poured into a cocktail next to two bitters bottles' className="object-cover w-full" />
