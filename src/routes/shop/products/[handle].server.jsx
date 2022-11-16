@@ -68,9 +68,9 @@ export default function Product({ params }) {
   // you're overriding the `defaultSeo` type in the Layout component.
   return (
     <Layout>
-      {/* <Suspense> */}
+      <Suspense>
         <Seo type="product" data={product} />
-      {/* </Suspense> */}
+      </Suspense>
       <Nav shop={shop} dark={false} />
       {/* TODO: Link up breadcrumbs for non bitters products */}
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">

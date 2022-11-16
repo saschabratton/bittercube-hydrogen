@@ -26,15 +26,18 @@ const breakPoints = [
 ]
 
 
-export default function ImageCarousel({ activeRecipe }){
+export default function ImageCarousel({ content }){
 
 
   return(
       <Carousel responsiveLayout={breakPoints}
        cols={1} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
-          <Carousel.Item>
-            <Image src={activeRecipe.images[0].url} width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
+        {content.images?.map((image) => (
+          <Carousel.Item key={makeKey(content.name)}>
+            <Image src={image.url} width={366} height={455} alt={content.name} className="object-cover w-full aspect-4/5" />
           </Carousel.Item>
+        ))}
+
       </Carousel>
   )
 }
