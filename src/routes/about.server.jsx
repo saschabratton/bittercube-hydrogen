@@ -237,7 +237,7 @@ export default function about() {
         <div className="container grid grid-cols-1 gap-16 md:grid-cols-2 ">
 
             <div className="flex flex-col justify-center flex-1 gap-8 text-left lg:px-20">
-                <div className="flex flex-col justify-center gap-2">
+                <div className="flex flex-col justify-center gap-2 text-center">
                   <span className="label h4 text-gold">WHERE THE BITTERS ARE MADE</span>
                   <h2>The Apothecary</h2>
                   <p>Our homebase is a bustling 9,000 square foot building in Milwaukee where Bittercube Bitters are produced. The apothecary also houses the company offsices, and a storefront for bitters, tools, and non-alcoholic cocktail ingredients.</p>

@@ -39,7 +39,7 @@ function Drawer({ open, onClose, children }) {
                   <header className="sticky top-0 flex items-center justify-between h-24 px-4 sm:px-8 md:px-12">
                     <h2
                       id="cart-contents"
-                      className="text-lg font-bold whitespace-pre-wrap max-w-prose"
+                      className="mb-0 text-lg font-bold whitespace-pre-wrap max-w-prose"
                     >
                       Cart
                     </h2>
