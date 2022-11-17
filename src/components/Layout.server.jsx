@@ -18,32 +18,13 @@ export function Layout({ children }) {
   });
 
 
-  // const customSeo = {
-  //   description: 'custom title',
-  //   description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
-  // }
-
   return (
     <>
-    <Suspense>
-      <Seo
-        type="defaultSeo"
-        data={{
-          title: shop.name,
-          titleTemplate: `%s · ${shop.name}`,
-        }}
-      />
-      {/* <Head>
-        <meta name="title" content={customSeo.title} />
-        <meta name="description" content={customSeo.description} />
-      </Head> */}
-    </Suspense>
-
     <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
         <main role="main" id="mainContent" className="flex-grow bg-paper">
-          {/* <Suspense> */}
+          <Suspense>
             {children}
-          {/* </Suspense> */}
+          </Suspense>
         </main>
         <Footer />
       </div>

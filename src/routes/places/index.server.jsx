@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout.server"
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import ImageHero from "../../components/headers/ImageHero.server";
-import { Image } from "@shopify/hydrogen";
+import { Image, Seo } from "@shopify/hydrogen";
 import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.client";
 
 
@@ -32,8 +32,6 @@ const ThreeColumnFeaturedLinks = [
     'link': 'https://www.crowdcast.io/bittercube',
   },
 ]
-
-
 const alternatingContent = [
   {
     'title': 'The Bittercube Bar & Bazaar',
@@ -60,10 +58,16 @@ const alternatingContent = [
     'image': '/images/places-apothecary.jpg'
   },
 ]
+ const customSeo = {
+    name: 'Visit Today',
+  }
 
 export default function Places() {
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
        <ImageHero content={HeaderContent} />
       <div className="container max-w-2xl text-center">
         <h2>Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.</h2>
