@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import Carousel from 'better-react-carousel'
 import { Image } from "@shopify/hydrogen"
 import Card from "../../global/Card.client";
@@ -60,21 +61,64 @@ const breakPoints = [
 ]
 
 
-export default function RecomendedRecipes(){
+export default function RecomendedRecipes({recipes, activeRecipe}){
+  const [similarRecipes, setSimilarRecipes] = useState([])
+  const [recommended, setRecommended] = useState([])
+  useEffect(() => {
+    if(!recipes) return
+    const getSimilarRecipes = () => {
+      const length = activeRecipe.flavors.length
+      const index = Math.floor((Math.random() * length) + 0)
+      const selectedFlavor = activeRecipe.flavors[index]
+      const similar = recipes.filter(({ flavors }) => flavors.includes(selectedFlavor))
+
+      setSimilarRecipes(similar)
+    }
+    getSimilarRecipes()
+  },[])
+
+  useEffect(() => {
+    if (!similarRecipes.length) return
+    const getRecommendation = () => {
+      let recommendation = []
+
+      times(3)(() => {
+        const index = Math.floor((Math.random() * similarRecipes.length) + 0)
+        const suggestion = similarRecipes[index]
+        recommendation.push(suggestion)
+      })
+      setRecommended(recommendation)
+    }
+
+    getRecommendation()
+  },[similarRecipes])
+
+  const times = x => f => {
+    if (x > 0) {
+      f()
+      times(x - 1)(f)
+    }
+  }
+
+
+
   return(
     <section className="w-11/12 mx-auto">
        <Carousel
         responsiveLayout={breakPoints}
         cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
        >
-        {RecommendedProducts.map(item => {
-          const {label, manufacturer, price, description, image } = item
+        {recommended?.length > 0 && recommended.map(({slug, name}) => {
+
           return(
-            <Carousel.Item key={makeKey(label)}>
-              <Card />
-             </Carousel.Item>
+            <>
+            <h1 key={slug}>{name}</h1>
+              {/* <Carousel.Item key={makeKey(label)}>
+                <Card />
+              </Carousel.Item> */}
+            </>
           )
-          })}
+        })}
 
 
       </Carousel>

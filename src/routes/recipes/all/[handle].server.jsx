@@ -29,8 +29,6 @@ export default function Recipe(){
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
 
 
-
-
   return(
     <Layout>
       <Nav shop={shop} dark={false}/>
@@ -78,7 +76,7 @@ export default function Recipe(){
           Recommended
         </div>
       </div>
-      <RecomendedRecipes />
+      <RecomendedRecipes recipes={recipes} activeRecipe={activeRecipe}/>
       <SplitBgVertBlue />
     </Layout>
   )
