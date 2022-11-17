@@ -47,7 +47,7 @@ export default function moslers(){
           <Image src='/images/moslersvault-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
-          <span className="label">LOCATED ON MILWAUKEE’S WEST-SIDE</span>
+          <span className="label">5900 W NORTH AVE, MILWAUKEE, WI</span>
           <h2>Intimately Elevated Cocktails</h2>
           <p>Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault, built in 1949. With cream city brick walls, and a moss ceiling, the space is both intimate and warm. Named after the vault door manufacturer, the elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.</p>
           <p>Space is limited, and reservations are recommended. Walk-ins are welcome when space is available. </p>
@@ -66,13 +66,13 @@ export default function moslers(){
               <h3>Come for the good spirits</h3>
             </div>
             <div className="grid gap-3">
-              <p className="label">
-                LOCATED IN THE BASEMENT VAULT AT<br />5900 W NORTH AVE<br />MILWAUKEE, WI<br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKET</span>
+              {/* <p className="label">
+                LOCATED IN THE BASEMENT VAULT AT THE NORTH AVENUE MARKET
               </p>
+              <p className="label">5900 W NORTH AVE<br />MILWAUKEE, WI</p> */}
               <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
-            </div>
-            <div>
-              <a href="https://moslers-vault.resos.com/booking" className="m-0 ml-0 btn btn-action">Book a table</a>
+              <Link to="https://moslers-vault.resos.com/booking" target='_blank' className="m-0 ml-0 btn btn-action">Book a table</Link>
+              <a href="mailto:mailto:INFO@BITTERCUBE.COM" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
             </div>
           </div>
 
