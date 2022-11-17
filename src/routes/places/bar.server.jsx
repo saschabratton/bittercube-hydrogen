@@ -1,8 +1,7 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
-import { Image, Link } from "@shopify/hydrogen"
+import { Image, Link, Seo } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"
-import OtherVenues from "../../components/sections/places/OtherVenues.client"
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
 import SignUpForm from "../../components/global/SignUpForm.client"
 import ImageCarousel from "../../components/sections/ImageCarousel.client"
@@ -25,26 +24,33 @@ const TabContent = [
 
 const Images = [
   {
-    'name': 'alt',
+    'name': 'Four people sitting around a table with cocktails smiling and laughing',
     'url': '/images/bc-bar-01.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'Three people cheers cocktails with a lens flare',
     'url': '/images/bc-bar-02.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'Crafting a chocolate martini',
     'url': '/images/bc-bar-03.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'Three men out of focus, talking and drinking',
     'url': '/images/bc-bar-04.jpg'
   },
 ]
 
+const customSeo = {
+    name: 'Visit the Bittercube Bar & Bazaar',
+  }
+
 export default function moslers(){
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 gap-6 md:grid-cols-2">
         <div className="md:hidden">

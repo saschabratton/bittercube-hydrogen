@@ -32,8 +32,6 @@ const ThreeColumnFeaturedLinks = [
     'link': 'https://www.crowdcast.io/bittercube',
   },
 ]
-
-
 const alternatingContent = [
   {
     'title': 'The Bittercube Bar & Bazaar',
@@ -60,10 +58,8 @@ const alternatingContent = [
     'image': '/images/places-apothecary.jpg'
   },
 ]
-
  const customSeo = {
     name: 'Visit Today',
-    description: 'Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.'
   }
 
 export default function Places() {
@@ -71,8 +67,7 @@ export default function Places() {
     <Layout>
       <Seo type="page" data={{
           title: customSeo.name,
-          description: customSeo.description
-        }} />
+      }} />
        <ImageHero content={HeaderContent} />
       <div className="container max-w-2xl text-center">
         <h2>Join us for a cocktail, swing by to pick up Bittercube swag, or get info about a tour.</h2>

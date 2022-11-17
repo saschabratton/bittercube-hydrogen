@@ -7,12 +7,16 @@ import {
   CartProvider,
 } from "@shopify/hydrogen";
 import {Suspense} from 'react';
+import { DefaultSeo } from "./components/global/DefaultSeo.server";
 
 function App() {
   return (
     <Suspense fallback={null}>
       <ShopifyProvider>
         <CartProvider>
+          <Suspense>
+            <DefaultSeo />
+          </Suspense>
           <Router>
             <FileRoutes />
           </Router>

@@ -1,7 +1,6 @@
 import { Layout } from "../../components/Layout.server"
 import ImageHero from "../../components/headers/ImageHero.server"
-import { Image } from "@shopify/hydrogen"
-import { Link } from "@shopify/hydrogen"
+import { Image, Link, Seo } from "@shopify/hydrogen"
 import SignUpForm from "../../components/global/SignUpForm.client"
 import ImageCarousel from "../../components/sections/ImageCarousel.client"
 
@@ -13,35 +12,42 @@ const HeaderContent ={
 
 const Images = [
   {
-    'name': 'alt',
+    'name': 'Two men packing bitters into boxes for shipping',
     'url': '/images/apothecary-01.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'A woman pouring a large batch of bitters into a receptical',
     'url': '/images/apothecary-03.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'A woman pouring a large bag of spices into another container surounded by bins of spices',
     'url': '/images/apothecary-04.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'A shop display with bitters and cocktail books',
     'url': '/images/apothecary-bazaar-01.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'Cocktail accesories placed on a 3x3 shelf',
     'url': '/images/apothecary-bazaar-02.jpg'
   },
   {
-    'name': 'alt',
+    'name': 'A wide shot of the apothecary bazaar with people shopping',
     'url': '/images/apothecary-bazaar-03.jpg'
   },
 ]
+
+const customSeo = {
+    name: "The Bittercube Apothecary",
+  }
 
 export default function moslers(){
 
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 gap-6 md:grid-cols-2">
         <div className="md:hidden">
