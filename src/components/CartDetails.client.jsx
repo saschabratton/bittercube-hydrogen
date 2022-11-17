@@ -76,7 +76,7 @@ function CartCheckoutActions() {
         >
           Continue to Checkout
         </Link>
-        <CartShopPayButton className="btn btn-action bg-[#5a31f4] m-0 w-full text-center py-1" />
+        {/* <CartShopPayButton className="btn btn-action bg-[#5a31f4] m-0 w-full text-center py-1" /> */}
       </div>
     </>
   );

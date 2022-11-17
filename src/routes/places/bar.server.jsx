@@ -68,6 +68,7 @@ export default function moslers(){
           </p> */}
           <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
           <Link to="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="m-0 ml-0 btn btn-action">Order online now</Link>
+          <a href="mailto:mailto:INFO@BITTERCUBE.COM" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
           {/* <div className="text-ornament w-fit"></div>
           <p className="label ">
             <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />
