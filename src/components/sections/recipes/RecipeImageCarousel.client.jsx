@@ -1,6 +1,6 @@
 import Carousel from 'better-react-carousel'
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
-import { makeKey } from "../../utilities/helpers";
+import { makeKey } from "../../../utilities/helpers";
 import { Image } from "@shopify/hydrogen";
 
 const arrowLeft = () => (
@@ -25,13 +25,13 @@ const breakPoints = [
 ]
 
 
-export default function ImageCarousel({ content }){
+export default function RecipeImageCarousel({ content }){
   return(
       <Carousel responsiveLayout={breakPoints}
        cols={1} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
-        {content.map((image) => (
-          <Carousel.Item key={makeKey(image.name)}>
-            <Image src={image.url} width={366} height={455} alt={image.name} className="object-cover w-full aspect-4/5" />
+        {content.images?.map((image) => (
+          <Carousel.Item key={makeKey(content.name)}>
+            <Image src={image.url} width={366} height={455} alt={content.name} className="object-cover w-full aspect-4/5" />
           </Carousel.Item>
         ))}
       </Carousel>

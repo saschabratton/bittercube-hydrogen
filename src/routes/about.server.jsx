@@ -5,6 +5,7 @@ import SplitBgVert from "../components/sections/SplitBgVert.client"
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import { Link, Image } from "@shopify/hydrogen"
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
+import ImageCarousel from "../components/sections/ImageCarousel.client";
 
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
@@ -70,6 +71,28 @@ const ThreeColumnFeaturedLinks = [
 ]
 const OrnamentText = "ABOUT BITTERCUBE"
 
+const Images = [
+  {
+    'name': 'alt',
+    'url': '/images/about-01-notation.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-02.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-03.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-04.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-05.jpg'
+  },
+]
 
 export default function about() {
    return (
@@ -97,9 +120,11 @@ export default function about() {
         </div>
       </div> */}
 
-      <div className="container grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
-        {/* TODO: images as a carousel on mobile  */}
-        <div className="hidden gap-6 lg:flex lg:flex-col">
+      <div className="container grid w-11/12 gap-6 md:grid-cols-2">
+        <div className="md:hidden">
+          <ImageCarousel content={Images} />
+        </div>
+        <div className="hidden gap-6 md:flex md:flex-col">
           <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -108,7 +133,7 @@ export default function about() {
         </div>
 
 
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div className="absolute top-0 -right-4">
             <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={200} height={111}  role="presentation" />
           </div>
