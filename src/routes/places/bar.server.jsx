@@ -57,15 +57,17 @@ export default function moslers(){
           <Image src='/images/bc-bar-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
-          <span className="label">Located on Milwaukee’s West-side</span>
+          <span className="label">5900 W north ave, MILWAUKEE, WI</span>
           <h2>Carefully Crafted Cocktails</h2>
           <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
-          <p>Also housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits. <a href="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="inline" target="blank">Order online now</a>.</p>
+          <p>Also housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits.</p>
 
-          <p className="label">
-            Located at<br />5900 W north ave<br />MILWAUKEE, WI 53208
+          {/* <p className="label">
+            Located at<br />5900 W north ave<br />
             <br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKET</span>
-          </p>
+          </p> */}
+          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
+          <Link to="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="m-0 ml-0 btn btn-action">Order online now</Link>
           {/* <div className="text-ornament w-fit"></div>
           <p className="label ">
             <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />
