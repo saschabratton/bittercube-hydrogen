@@ -18,6 +18,15 @@ export default function ScrollingBanner() {
         <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
         <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
         <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
+        <Image src='/emblems/made-with-real-botanicals.svg' width={258} height={30} alt=" " role='presentation' />
       </motion.div>
       </div>
       );
