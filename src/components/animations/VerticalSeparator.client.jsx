@@ -2,40 +2,40 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function VerticalSeparator({content}) {
 
-ScrollTrigger.create({
-  trigger: "#vertTrigger",
-  start: "top 85%",
-  once: true,
-  toggleClass: {targets: ".path", className: "active"}
-});
-ScrollTrigger.create({
-  trigger: "#vertTrigger",
-  start: "top 85%",
-  once: true,
-  toggleClass: {targets: ".h-path-left", className: "active"}
-});
-ScrollTrigger.create({
-  trigger: "#vertTrigger",
-  start: "top 85%",
-  once: true,
-  toggleClass: {targets: ".h-path-right", className: "active"}
-});
-ScrollTrigger.create({
-  trigger: "#vertTrigger",
-  start: "top 85%",
-  once: true,
-  toggleClass: {targets: ".bg-reveal", className: "active"}
-});
-ScrollTrigger.create({
-  trigger: "#vertTrigger",
-  start: "top 85%",
-  once: true,
-  toggleClass: {targets: ".ornament-arrow", className: "active"}
-});
+// ScrollTrigger.create({
+//   trigger: "#vertTrigger",
+//   start: "top 85%",
+//   once: true,
+//   toggleClass: {targets: ".path", className: "active"}
+// });
+// ScrollTrigger.create({
+//   trigger: "#vertTrigger",
+//   start: "top 85%",
+//   once: true,
+//   toggleClass: {targets: ".h-path-left", className: "active"}
+// });
+// ScrollTrigger.create({
+//   trigger: "#vertTrigger",
+//   start: "top 85%",
+//   once: true,
+//   toggleClass: {targets: ".h-path-right", className: "active"}
+// });
+// ScrollTrigger.create({
+//   trigger: "#vertTrigger",
+//   start: "top 85%",
+//   once: true,
+//   toggleClass: {targets: ".bg-reveal", className: "active"}
+// });
+// ScrollTrigger.create({
+//   trigger: "#vertTrigger",
+//   start: "top 85%",
+//   once: true,
+//   toggleClass: {targets: ".ornament-arrow", className: "active"}
+// });
 
 
   return (

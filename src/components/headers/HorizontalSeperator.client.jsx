@@ -1,16 +1,16 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function HorizontalSeperator() {
 
-ScrollTrigger.create({
-  trigger: "#scrollTrigger",
-  start: "top 90%",
-  once: true,
-  toggleClass: {targets: ".hr", className: "grow-outward"}
-});
+// ScrollTrigger.create({
+//   trigger: "#scrollTrigger",
+//   start: "top 90%",
+//   once: true,
+//   toggleClass: {targets: ".hr", className: "grow-outward"}
+// });
 
 
   return(

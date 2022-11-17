@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useId} from 'react'
 import Carousel from 'better-react-carousel'
 import { Image } from "@shopify/hydrogen"
 import Card from "../../global/Card.client";
@@ -82,7 +82,7 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
     const getRecommendation = () => {
       let recommendation = []
 
-      times(3)(() => {
+      times(2)(() => {
         const index = Math.floor((Math.random() * similarRecipes.length) + 0)
         const suggestion = similarRecipes[index]
         recommendation.push(suggestion)
@@ -101,27 +101,32 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
   }
 
 
+  const testData = [{
+    'slug': 'some-slug',
+    'name': 'Some Slug',
+  }]
+
 
   return(
     <section className="w-11/12 mx-auto">
-       <Carousel
+      {/* {recommended?.length > 0 && */}
+       {/* <Carousel
         responsiveLayout={breakPoints}
         cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
-       >
-        {recommended?.length > 0 && recommended.map(({slug, name}) => {
-
+       > */}
+          {recommended.map(({slug, name}) => {
           return(
             <>
-            <h1 key={slug}>{name}</h1>
-              {/* <Carousel.Item key={makeKey(label)}>
-                <Card />
-              </Carousel.Item> */}
+              <Carousel.Item  key={slug}>
+                <h1>{name}: {slug}</h1>
+              </Carousel.Item >
             </>
           )
         })}
 
 
-      </Carousel>
+      {/* </Carousel> */}
+       {/* } */}
       </section>
   )
 }

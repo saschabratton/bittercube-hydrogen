@@ -76,7 +76,8 @@ export default function Recipe(){
           Recommended
         </div>
       </div>
-      <RecomendedRecipes recipes={recipes} activeRecipe={activeRecipe}/>
+      TODO: recommended recipes
+      {/* <RecomendedRecipes recipes={recipes} activeRecipe={activeRecipe}/> */}
       <SplitBgVertBlue />
     </Layout>
   )

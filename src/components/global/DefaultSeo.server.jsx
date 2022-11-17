@@ -18,6 +18,7 @@ export function DefaultSeo() {
         title: name,
         description: 'Bittercube slow crafts nine varieties of artisanal bitters in a weeks-long process. We are active in every stage of bitters creation, from conception to bottling.',
         titleTemplate: `%s · ${name}`,
+
       }}
     />
   );
