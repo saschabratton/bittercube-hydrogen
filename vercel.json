@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/view-source",
-      "destination": "https://github.com/vercel/vercel",
+      "destination": "https://ocupop.com",
+      "permanent": false
+    },
+    {
+      "source": "/bartenders/*",
+      "destination": "/recipes/#featured-bartender",
       "permanent": false
     }
   ]
