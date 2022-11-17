@@ -29,7 +29,7 @@ export default function CocktailBasics(){
         <TabPanel>
           <div className="relative pt-8">
             <div className="relative z-10">
-              <dl><dt></dt><dd>In general, both a dash (from Bittercube 1.7 oz or 5 oz bottles) or dropper (from Bittercube 1 oz bottles) are equivalent to slightly less than one ml of bitters. However, follow the instructions below for an accurate measurement.</dd></dl>
+              <dl><dt></dt><dd>When we use the term one dash or one dropper, we are referencing a measurement of just less than one ml of bitters. For an accurate measurement when using a dasher or dropper bottle, follow the instructions below.s</dd></dl>
               <div className="flex flex-col gap-4">
                 <Disclosure>
                   <div className="border-b-2 border-gold">
@@ -84,7 +84,7 @@ export default function CocktailBasics(){
                 <Disclosure>
                   <div className="border-b-2 border-gold">
                   <Disclosure.Button className="flex justify-between w-full pb-3 text-lg text-left h4">
-                    Dispensing bitters from a 5 oz bottle
+                    DISPENSING BITTERS FROM A 5 and 10 OZ BOTTLE
                     <HiChevronDown className="w-5 h-5 text-gold" />
                   </Disclosure.Button>
 

@@ -14,7 +14,7 @@ const HeaderContent ={
 
 const ThreeColumnFeaturedContent = {
   'headline': 'partnerships and Collaborations',
-  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.',
+  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters for RTD cocktails, and other packaged products. Check out a few of our collaborations!',
   'ctaLabel': 'Let\'s Collaborate',
   'ctaLink': '/contact',
   'background': 'forest',
@@ -183,14 +183,14 @@ export default function about() {
               </a>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
-              <h3>SANTA TERESA RUM</h3>
+              <h3>SANTA TERESA</h3>
               <p className="my-2">Bespoke bitters blend for bars & restaurants</p>
               <a href="https://bevvy.co/articles/taste-test-santa-teresa-1796-cantinero-coffee-bitters/18851" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
-              <h3>WOLLERSHEIM WINERY & DISTILLERY</h3>
+              <h3>WOLLERSHEIM</h3>
               <p className="my-2">Old Fashioned syrup featuring a custom blend of bitters</p>
               <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
@@ -199,7 +199,7 @@ export default function about() {
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>BURLAP & BARREL</h3>
               <p className="my-2">Collaborative single origin spice extracts</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
+              <a href="/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
