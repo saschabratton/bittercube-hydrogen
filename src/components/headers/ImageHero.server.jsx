@@ -34,7 +34,7 @@ const {
       </div>
       <div className="container relative px-2 max-w-[80%] md:max-w-[60%] lg:max-w-[50%]">
         <div className="py-28">
-            <h1 className="max-w-sm py-4 mx-auto text-6xl text-center text-white normal-case md:max-w-xl">{ text }</h1>
+            <h1 className="py-4 mx-auto text-6xl text-center text-white normal-case ">{ text }</h1>
           </div>
       </div>
     </div>
