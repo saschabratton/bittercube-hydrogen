@@ -1,8 +1,7 @@
 import { Layout } from "../../../components/Layout.server";
 import {  gql, useShopQuery, Link, Image, CacheLong, useRouteParams, fetchSync } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/recipes/TabSection.client";
-import CardCarousel from "../../../components/sections/CardCarousel.client";
-import Arrow from "../../../components/global/icons/Arrow.client"
+import RecomendedRecipes from "../../../components/sections/recipes/RecomendedRecipes.client";
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import Nav from "../../../components/headers/Nav.client";
@@ -28,6 +27,9 @@ export default function Recipe(){
   }).json()
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
+
+
+
 
   return(
     <Layout>
@@ -61,22 +63,6 @@ export default function Recipe(){
             }
           </div>
 
-          {/* {activeRecipe.bitters.length > 0 && activeRecipe.bitters.map(bitters => {
-              const { url } = bitters
-              return (
-                <Link to={`/shop${ url }`} className="ml-0 btn btn-action">Get the bitters<br />
-                </Link>
-              )
-            })
-          }
-
-          <div className="flex flex-col items-start justify-center gap-6 label">
-            How to craft
-            <div className="ml-8 rotate-90">
-              <Arrow />
-            </div>
-          </div> */}
-
           <div className="py-6">
             <HorizontalSeperator />
           </div>
@@ -92,7 +78,7 @@ export default function Recipe(){
           Recommended
         </div>
       </div>
-      <CardCarousel />
+      <RecomendedRecipes />
       <SplitBgVertBlue />
     </Layout>
   )
