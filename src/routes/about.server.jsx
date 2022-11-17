@@ -98,8 +98,6 @@ export default function about() {
       </div> */}
 
       <div className="container grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
-
-
         {/* TODO: images as a carousel on mobile  */}
         <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -110,7 +108,7 @@ export default function about() {
         </div>
 
 
-        <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
           <div className="absolute top-0 right-0">
             <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={250} height={111}  role="presentation" />
           </div>

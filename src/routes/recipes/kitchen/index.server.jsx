@@ -12,7 +12,7 @@ import HorizontalSeperator from "../../../components/headers/HorizontalSeperator
 const HeaderText = ("Bitters in the kitchen")
 const pageNav = [
   { label: 'seasonal', link: '/recipes'},
-  { label: 'cocktails', link: '/recipes/cocktails'},
+  { label: 'cocktails', link: '/recipes/all'},
   { label: 'syrups', link: '/recipes/syrups'},
   { label: 'in the kitchen', link: '/recipes/kitchen'},
 ]

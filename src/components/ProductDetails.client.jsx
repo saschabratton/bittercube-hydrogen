@@ -11,7 +11,7 @@ export default function ProductDetails({ product }) {
             <ProductGallery media={product.media.nodes} />
           </div>
         </div>
-        <div className="sticky top-0 grid gap-6 py-20 h-fit lg:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 h-fit md:px-10 xl:px-20">
           <div>
             <p className="mb-0 text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>

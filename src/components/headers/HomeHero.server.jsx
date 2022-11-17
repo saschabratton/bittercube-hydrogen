@@ -19,8 +19,17 @@ export default function HomeHero({ content }) {
 
      <div className="relative header-dark">
       <Nav shop={shop} dark={true}/>
-      <div className="absolute inset-0">
-        <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
+      <div className="absolute inset-0 overflow-hidden bg-dark">
+
+
+
+
+        {/* <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" /> */}
+        {/* TODO: host on vimeo */}
+        <div className="absolute w-full h-full bg-dark/80"></div>
+        <video src="/videos/old-fashionedstopaction.mp4" autoPlay="true" loop muted className="object-cover h-full xl:h-auto"></video>
+
+
       </div>
       <div className="container relative grid grid-cols-1 mx-auto text-center uppercase sm:grid-cols-7">
         <div className="hidden sm:flex sm:items-center sm:justify-center">
@@ -30,7 +39,7 @@ export default function HomeHero({ content }) {
 
         </div>
         <div className="sm:col-span-5">
-          <div className="relative py-60">
+          <div className="relative pb-48 pt-36">
             <h1 className="max-w-xl mx-auto text-white capitalize md:text-6xl">{ content }</h1>
             <Image src='/logos/logomark-reversed.svg' width="92" height="92" role="presentation" className="absolute -translate-x-1/2 left-1/2 bottom-20" alt="A cocktail made with Bittercube Bitters" />
           </div>

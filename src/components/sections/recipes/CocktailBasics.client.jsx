@@ -35,7 +35,7 @@ export default function CocktailBasics(){
                   <div className="border-b-2 border-gold">
                   <Disclosure.Button className="flex justify-between w-full pb-3 text-lg text-left h4">
                     Dispensing bitters from a 1 oz bottle
-                    <HiChevronDown classname="w-5 h-5 text-gold" />
+                    <HiChevronDown className="w-5 h-5 text-gold" />
                   </Disclosure.Button>
 
                   <Transition
@@ -59,7 +59,7 @@ export default function CocktailBasics(){
                   <div className="border-b-2 border-gold">
                   <Disclosure.Button className="flex justify-between w-full pb-3 text-lg text-left h4">
                     Dispensing bitters from a 1.7 oz bottle
-                    <HiChevronDown classname="w-5 h-5 text-gold" />
+                    <HiChevronDown className="w-5 h-5 text-gold" />
                   </Disclosure.Button>
 
                   <Transition
@@ -85,7 +85,7 @@ export default function CocktailBasics(){
                   <div className="border-b-2 border-gold">
                   <Disclosure.Button className="flex justify-between w-full pb-3 text-lg text-left h4">
                     Dispensing bitters from a 5 oz bottle
-                    <HiChevronDown classname="w-5 h-5 text-gold" />
+                    <HiChevronDown className="w-5 h-5 text-gold" />
                   </Disclosure.Button>
 
                   <Transition

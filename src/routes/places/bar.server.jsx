@@ -5,7 +5,7 @@ import TabSection from "../../components/sections/TabSection.client"
 import OtherVenues from "../../components/sections/places/OtherVenues.client"
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
 import SignUpForm from "../../components/global/SignUpForm.client"
-
+import ImageCarousel from "../../components/sections/ImageCarousel.client"
 
 const HeaderContent ={
   'text': 'Bittercube Bar & Bazaar',
@@ -23,47 +23,68 @@ const TabContent = [
   },
 ]
 
+const Images = [
+  // {
+  //   'name': 'alt',
+  //   'url': '/images/bc-bar-01.jpg'
+  // },
+  // {
+  //   'name': 'alt',
+  //   'url': '/images/bc-bar-02.jpg'
+  // },
+  // {
+  //   'name': 'alt',
+  //   'url': '/images/bc-bar-03.jpg'
+  // },
+  {
+    'name': 'alt',
+    'images': [{'url': '/images/bc-bar-04.jpg'}]
+  },
+]
+
 export default function moslers(){
   return(
     <Layout>
       <ImageHero content={HeaderContent} />
-      <div className="container grid w-11/12 gap-6 md:grid-cols-2">
+      <div className="container grid w-11/12 gap-6 lg:grid-cols-2">
+        <div className="md:hidden">
+          <ImageCarousel content={Images} />
+        </div>
         <div className="hidden gap-6 lg:flex lg:flex-col">
           <Image src='/images/bc-bar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
-        <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
           <span className="label">Located on Milwaukee’s West-side</span>
           <h2>Carefully Crafted Cocktails</h2>
+          <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
+          <p>Also housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits. <a href="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="inline" target="blank">Order online now</a>.</p>
+
           <p className="label">
             Located at<br />5900 W north ave<br />MILWAUKEE, WI 53208
             <br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKET</span>
           </p>
-          <div className="text-ornament w-fit"></div>
+          {/* <div className="text-ornament w-fit"></div>
           <p className="label ">
             <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />
             <a href="mailto:ANTHONY@BITTERCUBE.COM" target="_blank" className="text-gold hover:text-dark">ANTHONY@BITTERCUBE.COM</a>
-
           </p>
-          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
-          <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
-          <p>Also housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits. <a href="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="inline" target="blank">Order online now</a>.</p>
+          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p> */}
+
         </div>
       </div>
- <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto">
         <HorizontalSeperator />
       </div>
+      <div className="container grid max-w-lg grid-cols-1 gap-6 xl:grid-cols-2 xl:max-w-none">
+        <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
+          <h2>Check out the seasonal cocktail menus</h2>
+        </div>
 
-      <div className="container grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
-            <h2>Check out the seasonal cocktail menus</h2>
-          </div>
         <TabSection content={TabContent} />
       </div>
-
-
      <div className="py-12 section bg-dark">
         <div className="border-y-2 border-gold">
           <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2 max-screen-xl">
@@ -83,7 +104,6 @@ export default function moslers(){
           </div>
         </div>
       </div>
-
     </Layout>
   )
 }

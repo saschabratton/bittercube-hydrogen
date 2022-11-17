@@ -24,7 +24,7 @@ const ThreeColumnFeaturedContent = {
   'headline': 'use to craft unique cocktails',
   'description': 'Every recipe on this site was meticulously vetted. From updated classics, to seasonal libations, there are cocktails of all styles featured in the recipe library.',
   'ctaLabel': 'See all recipes',
-  'ctaLink': '/recipes/cocktails',
+  'ctaLink': '/recipes/all',
   'background': 'forest',
   'image': '/images/shop-product-cocktails.jpg',
   'navHeadline': 'Featured Recipes',

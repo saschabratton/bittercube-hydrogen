@@ -27,13 +27,14 @@ const breakPoints = [
 
 
 export default function ImageCarousel({ content }){
-
-
+{console.log(content.images)}
+// TODO: bar help
   return(
       <Carousel responsiveLayout={breakPoints}
        cols={1} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
         {content.images?.map((image) => (
-          <Carousel.Item key={makeKey(content.name)}>
+
+          <Carousel.Item key={makeKey(content.name)}>s
             <Image src={image.url} width={366} height={455} alt={content.name} className="object-cover w-full aspect-4/5" />
           </Carousel.Item>
         ))}
