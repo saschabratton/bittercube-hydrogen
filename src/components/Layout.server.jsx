@@ -18,10 +18,10 @@ export function Layout({ children }) {
   });
 
 
-  // const customSeo = {
-  //   description: 'custom title',
-  //   description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
-  // }
+  const customSeo = {
+    name: 'Bittercube',
+    description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
+  }
 
   return (
     <>
