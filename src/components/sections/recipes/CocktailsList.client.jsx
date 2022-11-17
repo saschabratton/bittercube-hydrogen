@@ -4,6 +4,7 @@ import { fetchSync } from '@shopify/hydrogen'
 import RecipeCard from "./RecipeCard.client"
 import { HiSearch } from "react-icons/hi"
 import { useEffect } from "react"
+import { HiX } from "react-icons/hi";
 
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
@@ -135,9 +136,10 @@ export default function CocktailsList(){
 
   return(
     <>
-      <div className="container flex justify-between pt-0 pb-8">
-        <div className="flex items-center gap-3">
+      <div className="container flex flex-col justify-between py-0 lg:flex-row">
+        <div className="grid items-center grid-cols-2 gap-3 lg:flex">
           <span className="label">Filter By:</span>
+          <button className="p-[0.64rem] btn btn-action lg:order-last w-full lg:w-fit items-center justify-center flex gap-2 py-2 opacity-50 hover:opacity-100" onClick={clearFilters}><span className="text-sm lg:hidden">Clear Filters</span> <HiX /></button>
           <Select
             instanceId={useId()}
             options={bittersOptions}
@@ -187,13 +189,14 @@ export default function CocktailsList(){
             })}
           />
 
+
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center w-full gap-2 p-1 my-4 rounded-md bg-paper-action/20 lg:w-[250px]">
           <input
             type="text"
             name="search"
             placeholder="search"
-            className="p-2 font-semibold tracking-widest text-right uppercase text-gold bg-paper"
+            className="w-full p-2 font-semibold tracking-widest text-right uppercase text-gold bg-paper-action/0"
             value={filterString}
             onChange={(e) => setFilterString(e.target.value)}
            />
@@ -201,9 +204,11 @@ export default function CocktailsList(){
         </div>
       </div>
       <hr />
-      <div><span className="label">Found {recipes.length} of {allRecipes.length} recipes.</span></div>
-      <div><span>Active filter: {activeFilter} </span> <button className="btn" onClick={clearFilters}>Clear Filters</button></div>
-      <div className="container grid grid-cols-3 gap-6">
+      <div className="container pt-2 pb-8 text-center">
+        <span className="text-sm label text-dark/30">Showing {recipes.length} of {allRecipes.length} {activeFilter} recipes.</span>
+      </div>
+
+      <div className="container grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {recipes &&
           recipes.map((recipe, i) => {
             return (

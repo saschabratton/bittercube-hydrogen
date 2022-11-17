@@ -2,7 +2,7 @@ import { Layout } from "../../../components/Layout.server";
 import PatternHero from "../../../components/headers/PatternHero.server";
 import SubNav from "../../../components/global/SubNav.server";
 import Card from "../../../components/global/Card.client";
-import { fetchSync, Image, Link } from "@shopify/hydrogen";
+import { fetchSync, Image, Link, Head } from "@shopify/hydrogen";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import RecipesNav from "../../../components/headers/RecipesNav.server";
 
@@ -12,7 +12,13 @@ const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
 
 const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
-export default function Cocktails(){
+ const customSeo = {
+    title: 'Making Syrups',
+    description: 'Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.'
+  }
+
+
+export default function Syrups(){
   const recipes = fetchSync(syrupsApi,{
     preload: false,
   }).json()
@@ -52,6 +58,10 @@ const syrupGroups = groupIt(recipes)
 
   return(
     <Layout>
+      <Head>
+        <meta name="title" content={customSeo.title} />
+        <meta name="description" content={customSeo.description} />
+      </Head>
       <PatternHero content={HeaderText} />
       <RecipesNav />
       <hr />

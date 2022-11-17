@@ -1,12 +1,15 @@
 @layer base {
    h1, .h1 {
-    @apply mb-3 text-5xl normal-case font-headline text-dark;
+    @apply mb-3 text-4xl normal-case font-headline text-dark;
+    @apply md:text-5xl;
   }
   h2, .h2{
-    @apply mb-3 text-5xl normal-case font-headline text-dark;
+    @apply mb-3 text-3xl normal-case font-headline text-dark;
+    @apply md:text-5xl;
   }
   h3, .h3{
-    @apply font-sans text-3xl font-normal uppercase text-dark;
+    @apply font-sans text-2xl font-normal uppercase text-dark;
+    @apply md:text-3xl;
   }
   h4, .h4{
     @apply font-sans text-xl font-normal tracking-widest uppercase text-dark;

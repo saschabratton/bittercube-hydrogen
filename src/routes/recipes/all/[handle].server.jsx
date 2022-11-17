@@ -33,7 +33,7 @@ export default function Recipe(){
     <Layout>
       <Nav shop={shop} dark={false}/>
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
-        <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/cocktails">All Recipes</Link>
+        <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/all">All Recipes</Link>
       </div>
 
       <div className="container grid w-11/12 gap-6 pt-0 lg:grid-cols-2">

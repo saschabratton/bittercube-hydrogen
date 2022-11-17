@@ -10,7 +10,7 @@ export default function Flavors(){
         <div className="flex flex-col justify-between gap-20">
           <div className="flex flex-col items-center mx-auto text-center">
             <h2 className="max-w-sm">Bitters & Flavor Extracts</h2>
-            <div className="py-6 w-[28rem]">
+            <div className="py-6 w-[16rem] md:w-[28rem]">
                 <HorizontalSeperator />
               </div>
             <p className="max-w-sm text-ornament">

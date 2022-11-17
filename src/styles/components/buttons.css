@@ -87,7 +87,8 @@
 }
 
     .select__control {
-      @apply w-fit min-w-[150px];
+      /* @apply w-fit min-w-[150px]; */
+      @apply w-full;
       @apply px-2 text-sm font-semibold tracking-widest uppercase !border-2 !rounded-md !border-gold !bg-white/0;
       .select__value-container{
         @apply p-0;

@@ -109,8 +109,8 @@ export default function about() {
 
 
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
-          <div className="absolute top-0 right-0">
-            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={250} height={111}  role="presentation" />
+          <div className="absolute top-0 -right-4">
+            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={200} height={111}  role="presentation" />
           </div>
           <span className="label">Founded in 2009</span>
           <h2>Two bartenders with a shared vision set out to produce the most distinctive lineup of bitters in the world.</h2>
@@ -132,7 +132,7 @@ export default function about() {
           <div className="flex flex-col justify-between gap-20">
             <div className="flex flex-col items-center mx-auto text-center">
               <h2 className="max-w-sm">Partnerships and Collaborations</h2>
-              <div className="py-6 w-[28rem]">
+              <div className="py-6 w-[16rem] md:w-[28rem]">
                   <HorizontalSeperator />
                 </div>
               <p className="max-w-sm text-ornament">

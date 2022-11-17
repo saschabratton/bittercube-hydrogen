@@ -18,9 +18,10 @@ export function Layout({ children }) {
   });
 
 
-  const customSeo = {
-    description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
-  }
+  // const customSeo = {
+  //   description: 'custom title',
+  //   description: 'Bittercube Bitters are created in Milwaukee, Wisconsin, by hand with real ingredients.'
+  // }
 
   return (
     <>
@@ -32,9 +33,10 @@ export function Layout({ children }) {
           titleTemplate: `%s · ${shop.name}`,
         }}
       />
-      <Head>
+      {/* <Head>
+        <meta name="title" content={customSeo.title} />
         <meta name="description" content={customSeo.description} />
-      </Head>
+      </Head> */}
     </Suspense>
 
     <div className="relative flex flex-col min-h-screen antialiased bg-neutral-50">
