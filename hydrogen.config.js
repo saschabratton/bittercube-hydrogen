@@ -6,4 +6,5 @@ export default defineConfig({
     storefrontToken: '6798b103a3a251b7e12bacebe00bd5a8',
     storefrontApiVersion: '2022-10',
   },
+  showQueryTiming: true
 });
