@@ -6,7 +6,7 @@
       "permanent": false
     },
     {
-      "source": "/bartenders/(?*.*)",
+      "source": "/bartenders/(?s:.*?)",
       "destination": "/recipes/#featured-bartender",
       "permanent": false
     }
