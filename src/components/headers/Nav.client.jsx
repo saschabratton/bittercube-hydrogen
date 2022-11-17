@@ -117,7 +117,7 @@ export default function Nav({ shop, dark }) {
                 <button
                 onClick={openDrawer}
                 className="relative flex items-center justify-center gap-2"
-                >s
+                >
                   <span className="uppercase transition duration-300 racking-widest nav-link text-dark hover:text-gold">Cart</span>
                   <BsFillCartFill className='text-dark' />
                   <CartBadge dark={dark} />

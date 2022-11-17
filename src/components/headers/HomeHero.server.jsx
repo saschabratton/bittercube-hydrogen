@@ -27,7 +27,7 @@ export default function HomeHero({ content }) {
         {/* <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" /> */}
         {/* TODO: host on vimeo */}
         <div className="absolute w-full h-full bg-dark/80"></div>
-        <video src="/videos/old-fashionedstopaction.mp4" autoPlay="true" loop muted className="object-cover h-full xl:h-auto"></video>
+        <video src="/videos/old-fashionedstopaction.mp4" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"></video>
 
 
       </div>

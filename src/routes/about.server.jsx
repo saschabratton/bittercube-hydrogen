@@ -1,10 +1,9 @@
 import { Layout } from "../components/Layout.server"
 import ImageHero from "../components/headers/ImageHero.server"
-import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
-import SplitBgVert from "../components/sections/SplitBgVert.client"
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import { Link, Image } from "@shopify/hydrogen"
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
+import ImageCarousel from "../components/sections/ImageCarousel.client";
 
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
@@ -13,7 +12,7 @@ const HeaderContent ={
 
 const ThreeColumnFeaturedContent = {
   'headline': 'partnerships and Collaborations',
-  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.',
+  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters for RTD cocktails, and other packaged products. Check out a few of our collaborations!',
   'ctaLabel': 'Let\'s Collaborate',
   'ctaLink': '/contact',
   'background': 'forest',
@@ -70,6 +69,28 @@ const ThreeColumnFeaturedLinks = [
 ]
 const OrnamentText = "ABOUT BITTERCUBE"
 
+const Images = [
+  {
+    'name': 'alt',
+    'url': '/images/about-01-notation.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-02.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-03.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-04.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/about-05.jpg'
+  },
+]
 
 export default function about() {
    return (
@@ -97,9 +118,11 @@ export default function about() {
         </div>
       </div> */}
 
-      <div className="container grid w-11/12 grid-cols-1 gap-6 lg:grid-cols-2">
-        {/* TODO: images as a carousel on mobile  */}
-        <div className="hidden gap-6 lg:flex lg:flex-col">
+      <div className="container grid w-11/12 gap-6 md:grid-cols-2">
+        <div className="md:hidden">
+          <ImageCarousel content={Images} />
+        </div>
+        <div className="hidden gap-6 md:flex md:flex-col">
           <Image src='/images/about-01-notation.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
           <Image src='/images/about-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/about-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full aspect-4/5" />
@@ -108,9 +131,9 @@ export default function about() {
         </div>
 
 
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div className="absolute top-0 -right-4">
-            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={200} height={111}  role="presentation" />
+            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt=" " width={200} height={111}  role="presentation" />
           </div>
           <span className="label">Founded in 2009</span>
           <h2>Two bartenders with a shared vision set out to produce the most distinctive lineup of bitters in the world.</h2>
@@ -158,14 +181,14 @@ export default function about() {
               </a>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
-              <h3>SANTA TERESA RUM</h3>
+              <h3>SANTA TERESA</h3>
               <p className="my-2">Bespoke bitters blend for bars & restaurants</p>
               <a href="https://bevvy.co/articles/taste-test-santa-teresa-1796-cantinero-coffee-bitters/18851" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
-              <h3>WOLLERSHEIM WINERY & DISTILLERY</h3>
+              <h3>WOLLERSHEIM</h3>
               <p className="my-2">Old Fashioned syrup featuring a custom blend of bitters</p>
               <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
@@ -174,7 +197,7 @@ export default function about() {
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>BURLAP & BARREL</h3>
               <p className="my-2">Collaborative single origin spice extracts</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
+              <a href="/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
               </a>
             </div>

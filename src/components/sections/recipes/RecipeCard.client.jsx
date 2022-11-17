@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Link, Image } from "@shopify/hydrogen"
+import { makeKey } from "../../../utilities/helpers"
 
 export default function RecipeCard({ recipe }){
   const { slug, name, description, spirit, images, bitters } = recipe
@@ -30,7 +31,7 @@ export default function RecipeCard({ recipe }){
               {bitters.length > 0 && bitters.map(bitters => {
                   const { name, index } = bitters
                   return (
-                    <span>{ (index ? ', ' : '') + name } Bitters</span>
+                    <span key={index}>{ (index ? ', ' : '') + name } Bitters</span>
                   )
                 })
               }

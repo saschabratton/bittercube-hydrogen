@@ -1,8 +1,6 @@
 import { Layout } from "../../components/Layout.server";
 import { Suspense } from "react";
 import PatternHero from "../../components/headers/PatternHero.server";
-import SubNav from "../../components/global/SubNav.server";
-import SplitBgVert from "../../components/sections/SplitBgVert.client";
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
@@ -48,19 +46,18 @@ export default function Home() {
       <div className="container">
         <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">
           <div>
-            <h2 className="max-w-md text-5xl capitalize h1">Explore the Bittercube lineup</h2>
-            <Link to="/shop/bitters" className="flex items-center gap-2 label group w-fit">Shop All Products
+            <h2 className="max-w-md text-5xl capitalize h1">Shop the Full Bittercube Store</h2>
+            <Link to="/shop/bitters" className="flex items-center gap-2 label group w-fit">Explore All Products
               <div className="btn-arrow"></div>
             </Link>
           </div>
           <div className="flex justify-end text-center">
-            {/* <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span> */}
-            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt="" width={250} height={111}  role="presentation" />
+            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={250} height={111}  role="presentation" />
           </div>
         </div>
         <div className="relative">
           <div className="center-absolute top-1/3">
-            <Image src='/emblems/currated-cocktails.svg' width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/currated-cocktails.svg' width={101} height={111} alt=" " role="presentation" />
           </div>
           <AlternatingTextImage content={alternatingContent} />
         </div>

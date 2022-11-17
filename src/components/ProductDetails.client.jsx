@@ -5,13 +5,13 @@ import parse from 'html-react-parser';
 export default function ProductDetails({ product }) {
   return (
     <ProductOptionsProvider data={product}>
-      <div className="container grid w-11/12 gap-6 pt-0 lg:grid-cols-2">
-        <div className="hidden lg:grid lg:gap-6">
+      <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2">
+        <div className="hidden gap-6 md:flex md:flex-col">
           <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <ProductGallery media={product.media.nodes} />
           </div>
         </div>
-        <div className="sticky top-0 grid gap-6 px-4 py-20 h-fit md:px-10 xl:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
             <p className="mb-0 text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>

@@ -3,7 +3,7 @@ import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
 import { Link } from "@shopify/hydrogen"
 import SignUpForm from "../../components/global/SignUpForm.client"
-
+import ImageCarousel from "../../components/sections/ImageCarousel.client"
 
 
 const HeaderContent ={
@@ -11,22 +11,51 @@ const HeaderContent ={
   'image': '/images/apothecary-hero.jpg',
 }
 
+const Images = [
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-01.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-03.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-04.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-bazaar-01.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-bazaar-02.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/apothecary-bazaar-03.jpg'
+  },
+]
 
 export default function moslers(){
 
   return(
     <Layout>
       <ImageHero content={HeaderContent} />
-      <div className="container grid grid-cols-2 gap-6 ">
-        <div className="flex flex-col gap-6">
-        <Image src='/images/apothecary-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-        <Image src='/images/apothecary-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-        <Image src='/images/apothecary-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-        <Image src='/images/apothecary-bazaar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-        <Image src='/images/apothecary-bazaar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
-        <Image src='/images/apothecary-bazaar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+      <div className="container grid w-11/12 gap-6 md:grid-cols-2">
+        <div className="md:hidden">
+          <ImageCarousel content={Images} />
         </div>
-        <div className="sticky top-0 grid gap-3 py-20 h-fit lg:px-20">
+        <div className="hidden gap-6 md:flex md:flex-col">
+          <Image src='/images/apothecary-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+          <Image src='/images/apothecary-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+          <Image src='/images/apothecary-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+          <Image src='/images/apothecary-bazaar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+          <Image src='/images/apothecary-bazaar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+          <Image src='/images/apothecary-bazaar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
+        </div>
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <span className="label">BITTERCUBE HEADQUARTERS</span>
           <h2>Made in Milwaukee</h2>
           <p>The Bittercube Apothecary is a bustling, 9,000 square foot building in Milwaukee, and is the lifeblood of our operation. The majority of the building is dedicated to the manufacturing of our slow-crafted bitters.</p>

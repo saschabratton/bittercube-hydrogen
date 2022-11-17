@@ -24,21 +24,21 @@ const TabContent = [
 ]
 
 const Images = [
-  // {
-  //   'name': 'alt',
-  //   'url': '/images/bc-bar-01.jpg'
-  // },
-  // {
-  //   'name': 'alt',
-  //   'url': '/images/bc-bar-02.jpg'
-  // },
-  // {
-  //   'name': 'alt',
-  //   'url': '/images/bc-bar-03.jpg'
-  // },
   {
     'name': 'alt',
-    'images': [{'url': '/images/bc-bar-04.jpg'}]
+    'url': '/images/bc-bar-01.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/bc-bar-02.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/bc-bar-03.jpg'
+  },
+  {
+    'name': 'alt',
+    'url': '/images/bc-bar-04.jpg'
   },
 ]
 
@@ -46,17 +46,17 @@ export default function moslers(){
   return(
     <Layout>
       <ImageHero content={HeaderContent} />
-      <div className="container grid w-11/12 gap-6 lg:grid-cols-2">
+      <div className="container grid w-11/12 gap-6 md:grid-cols-2">
         <div className="md:hidden">
           <ImageCarousel content={Images} />
         </div>
-        <div className="hidden gap-6 lg:flex lg:flex-col">
+        <div className="hidden gap-6 md:flex md:flex-col">
           <Image src='/images/bc-bar-01.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <span className="label">Located on Milwaukee’s West-side</span>
           <h2>Carefully Crafted Cocktails</h2>
           <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
