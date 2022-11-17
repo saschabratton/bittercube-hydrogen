@@ -2,11 +2,10 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-export default function VerticalSeparator({content}) {
 gsap.registerPlugin(ScrollTrigger);
 
+export default function VerticalSeparator({content}) {
 
-// TODO: convert to timeline
 ScrollTrigger.create({
   trigger: "#vertTrigger",
   start: "top 85%",
