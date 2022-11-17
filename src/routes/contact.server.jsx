@@ -1,6 +1,5 @@
 import { Layout } from "../components/Layout.server"
 import PatternHero from "../components/headers/PatternHero.server"
-import AlternatingTextImage from "../components/sections/AlternatingTextImage.client";
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 
 import { Image, Link } from "@shopify/hydrogen";
@@ -41,7 +40,7 @@ export default function Contact() {
         </div>
         <div className="flex flex-col gap-10 md:gap-20">
           <Image src='images/contact.jpg' className="object-cover mx-auto aspect-4/5" alt="A cocktail made with Bittercube Bitters" width={360} height={455} />
-          <Image src="/images/handwritten/contact-weanswer.svg" alt="" className="mx-auto" width={200} height={96}  role="presentation" />
+          <Image src="/images/handwritten/contact-weanswer.svg" alt=" " className="mx-auto" width={200} height={96}  role="presentation" />
         </div>
       </div>
       <hr />

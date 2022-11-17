@@ -1,8 +1,6 @@
 import { Layout } from "../../components/Layout.server";
 import { Suspense } from "react";
 import PatternHero from "../../components/headers/PatternHero.server";
-import SubNav from "../../components/global/SubNav.server";
-import SplitBgVert from "../../components/sections/SplitBgVert.client";
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
@@ -54,13 +52,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex justify-end text-center">
-            {/* <span className="text-4xl font-decorative text-gold">Made With<br />Real Botanicals</span> */}
-            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt="" width={250} height={111}  role="presentation" />
+            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={250} height={111}  role="presentation" />
           </div>
         </div>
         <div className="relative">
           <div className="center-absolute top-1/3">
-            <Image src='/emblems/currated-cocktails.svg' width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/currated-cocktails.svg' width={101} height={111} alt=" " role="presentation" />
           </div>
           <AlternatingTextImage content={alternatingContent} />
         </div>

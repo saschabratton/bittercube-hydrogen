@@ -39,7 +39,7 @@ export default function RecipeCarousel() {
     <div className="container relative flex py-0 mx-auto my-20 border-2 border-gold md:grid md:grid-cols-8 md:px-0">
       <VerticalSeparator />
       <div className="absolute -top-10 right-10">
-        <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="" role="presentation" />
+        <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt=" " role="presentation" />
       </div>
       <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">Recipe Collection</div>
       <div className="flex items-center justify-center col-span-1 text-center border-r-2 label border-gold">

@@ -1,9 +1,7 @@
 import { Layout } from "../../components/Layout.server"
-// import ImageHero from "../../components/headers/ImageHero.server"
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import ImageHero from "../../components/headers/ImageHero.server";
-import { Link, Image } from "@shopify/hydrogen";
-import RecipeColleciton from "../../components/sections/places/RecipeCollection.client";
+import { Image } from "@shopify/hydrogen";
 import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.client";
 
 
@@ -72,7 +70,7 @@ export default function Places() {
       </div>
       <div className="container relative">
         <div className="absolute left-0 md:top-5 -top-8">
-          <Image src="/images/handwritten/places-makingdrinks.svg" alt="" className="mx-auto" width={200} height={96}  role="presentation" />
+          <Image src="/images/handwritten/places-makingdrinks.svg" alt=" " className="mx-auto" width={200} height={96}  role="presentation" />
         </div>
         <AlternatingTextImage content={alternatingContent} />
       </div>

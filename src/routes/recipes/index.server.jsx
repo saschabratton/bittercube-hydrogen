@@ -33,7 +33,7 @@ export default function index() {
       <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">
         <div className="flex items-center justify-center col-span-2">
           <div className="">
-            <Image src='/emblems/signatures-classics.svg' width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/signatures-classics.svg' width={101} height={111} alt=" " role="presentation" />
           </div>
         </div>
         <h2 className="col-span-3 mt-5 mb-0 capitalize">Featured Cocktails</h2>

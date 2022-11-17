@@ -21,7 +21,7 @@ export default function RecipeColleciton() {
 
         <div className="relative flex flex-col items-center justify-center order-first col-span-1 gap-6 p-16 pb-0 text-center lg:py-32 lg:pb-32 md:border-l-2 md:col-span-4 lg:px-28 border-gold md:order-2 lg:order-last">
           <div className="absolute top-10 right-5">
-            <Image src='/emblems/bazaar.svg' width={101} height={111} alt="" role="presentation" />
+            <Image src='/emblems/bazaar.svg' width={101} height={111} alt=" " role="presentation" />
           </div>
           <h2>shop the local milwaukee bazaar</h2>
           <p>

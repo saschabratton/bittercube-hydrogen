@@ -1,7 +1,5 @@
 import { Layout } from "../components/Layout.server"
 import ImageHero from "../components/headers/ImageHero.server"
-import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
-import SplitBgVert from "../components/sections/SplitBgVert.client"
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import { Link, Image } from "@shopify/hydrogen"
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
@@ -135,7 +133,7 @@ export default function about() {
 
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div className="absolute top-0 -right-4">
-            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt="" width={200} height={111}  role="presentation" />
+            <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt=" " width={200} height={111}  role="presentation" />
           </div>
           <span className="label">Founded in 2009</span>
           <h2>Two bartenders with a shared vision set out to produce the most distinctive lineup of bitters in the world.</h2>
