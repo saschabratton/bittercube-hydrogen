@@ -37,8 +37,9 @@ export default function CartDetails({ onClose }) {
       </section>
       <section
         aria-labelledby="summary-heading"
-        className="p-4 border-t md:px-12"
+        className="p-4 border-t-2 md:px-12 border-gold"
       >
+        <GiftMessage />
         <h2 id="summary-heading" className="sr-only">
           Order summary
         </h2>
@@ -47,6 +48,17 @@ export default function CartDetails({ onClose }) {
       </section>
     </form>
   );
+}
+
+export function GiftMessage(){
+  return(
+    <div className="py-8 mb-6 border-b-2 border-gold">
+      <p className="text-sm text-center label">Is this a gift?<br />Enter a personalized message for the recipient.</p>
+      <textarea className="w-full p-4 rounded-lg h-36">
+
+      </textarea>
+    </div>
+  )
 }
 
 export function CartEmpty({ onClose }) {
