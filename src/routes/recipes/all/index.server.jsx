@@ -21,7 +21,7 @@ const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 export default function Cocktails(){
 
   const recipes = fetchSync(recipesApi,{
-    preload: false,
+    preload: false
   }).json()
 
 

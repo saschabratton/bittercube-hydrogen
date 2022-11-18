@@ -20,7 +20,7 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 
 export default function Syrups(){
   const recipes = fetchSync(syrupsApi,{
-    preload: false,
+    preload: false
   }).json()
 
 

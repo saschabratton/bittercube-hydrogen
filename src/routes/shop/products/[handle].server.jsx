@@ -55,7 +55,7 @@ export default function Product({ params }) {
     } = useShopQuery({
       query: SHOP_QUERY,
       cache: CacheNone(),
-      preload: true,
+      preload: false
     });
 
   useServerAnalytics({

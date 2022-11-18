@@ -16,14 +16,14 @@ export default function Recipe(){
     } = useShopQuery({
       query: SHOP_QUERY,
       cache: CacheNone(),
-      preload: true,
+      preload: false
   });
 
   // TODO: 404 redirect for non routes
   const {handle} = useRouteParams();
 
   const recipes = fetchSync(recipesApi,{
-    preload: false,
+    preload: false
   }).json()
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
