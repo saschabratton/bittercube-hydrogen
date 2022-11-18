@@ -35,9 +35,9 @@ export default function Collections() {
       <PatternHero content={collection.title} />
       <CollectionsNav />
       <hr />
-      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {collection.products.nodes.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} collection={collection} />
         ))}
       </div>
       <SplitBgVertBlue />
@@ -63,7 +63,7 @@ const QUERY = gql`
         height
         altText
       }
-      products(first: 20) {
+      products(first: 30) {
         nodes {
           id
           title

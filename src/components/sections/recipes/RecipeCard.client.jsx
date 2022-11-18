@@ -28,10 +28,11 @@ export default function RecipeCard({ recipe }){
 
           <div className="overflow-x-scroll capitalize label">
             <p className="mb-0 whitespace-nowrap text-gold">
-              {bitters.length > 0 && bitters.map(bitters => {
-                  const { name, index } = bitters
+              {bitters.length > 0 && bitters.map((bitters, index) => {
+                  const { name } = bitters
                   return (
-                    <span key={index}>{ (index ? ', ' : '') + name } Bitters</span>
+                    // <span key={index}>{ (index === 0 ? ', ' : '') + name } Bitters</span>
+                    <span key={index}>{index != 0 ? ', ' : ''}{' '}{name} Bitters</span>
                   )
                 })
               }

@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
             data={product.variants.nodes[0].image}
             width={460} height={555}
             widths={srcSet}
-            alt="Alt Tag"
+            alt={product.title}
           />
         </div>
 

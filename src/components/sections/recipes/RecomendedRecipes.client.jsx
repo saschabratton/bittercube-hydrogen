@@ -4,61 +4,8 @@ import { Image } from "@shopify/hydrogen"
 import Card from "../../global/Card.client";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import { makeKey } from "../../../utilities/helpers";
+import RecipeCard from "./RecipeCard.client";
 
-const RecommendedProducts = [
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-  {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
-]
-
-const arrowLeft = () => (
-  <span type="prev" className="absolute z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none -left-4 top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
-    <HiArrowLeft className="w-5 h-5 transform -rotate-45 text-paper" />
-  </span>
-)
-const arrowRight = () => (
-  <span type="prev" className="absolute z-10 flex items-center justify-center w-10 h-10 transition duration-300 transform rotate-45 -translate-y-1/2 rounded-none -right-4 top-1/2 bg-dark ring-offset-2 ring-1 ring-gold hover:bg-gold ring-offset-paper">
-  <HiArrowRight className="w-5 h-5 transform -rotate-45 text-paper" />
-  </span>
-)
-
-const breakPoints = [
-  {
-    breakpoint: 767,
-    cols: 1,
-    rows: 1,
-    gap: 10,
-    loop: true,
-    hideArrow: false
-  },
-  {
-    breakpoint: 868,
-    cols: 2,
-    rows: 1,
-    gap: 0,
-    loop: true,
-
-  },
-  {
-    breakpoint: 1200,
-    cols: 3,
-    rows: 1,
-    gap: 10,
-    loop: true
-  },
-  {
-    breakpoint: 1650,
-    cols: 4,
-    rows: 1,
-    gap: 26,
-    loop: true
-  },
-]
 
 
 export default function RecomendedRecipes({recipes, activeRecipe}){
@@ -82,7 +29,7 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
     const getRecommendation = () => {
       let recommendation = []
 
-      times(2)(() => {
+      times(4)(() => {
         const index = Math.floor((Math.random() * similarRecipes.length) + 0)
         const suggestion = similarRecipes[index]
         recommendation.push(suggestion)
@@ -101,32 +48,26 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
   }
 
 
-  const testData = [{
-    'slug': 'some-slug',
-    'name': 'Some Slug',
-  }]
-
-
   return(
-    <section className="w-11/12 mx-auto">
-      {/* {recommended?.length > 0 && */}
-       {/* <Carousel
-        responsiveLayout={breakPoints}
-        cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
-       > */}
-          {recommended.map(({slug, name}) => {
+    <section className="container grid grid-cols-2 gap-6 md:grid-cols-4">
+      {/* {recommended?.length > 0 &&
+          recommended.map(({slug, name}) => {
           return(
             <>
-              <Carousel.Item  key={slug}>
-                <h1>{name}: {slug}</h1>
-              </Carousel.Item >
+              <div className="card">
+                  <h1>{name}: {slug}</h1>
+              </div>
             </>
           )
-        })}
+        })} */}
 
-
-      {/* </Carousel> */}
-       {/* } */}
-      </section>
+        {recommended?.length > 0 &&
+          recommended.map((recipe, i) => {
+            return (
+               <RecipeCard key={`${recipe.slug}_${i}`} recipe={recipe} />
+            )
+          })
+        }
+    </section>
   )
 }
