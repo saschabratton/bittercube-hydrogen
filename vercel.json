@@ -1,14 +1,45 @@
 {
   "redirects": [
     {
-      "source": "/view-source",
-      "destination": "https://ocupop.com",
+      "source": "/bartenders/(.*)",
+      "destination": "/recipes/#featured-bartender",
+      "permanent": true
+    },
+    {
+      "source": "/event/(.*)",
+      "destination": "/places#classes",
       "permanent": false
     },
     {
-      "source": "/bartenders/(.*)",
-      "destination": "/recipes/#featured-bartender",
+      "source": "/recipes/syrup/(.*)",
+      "destination": "/recipes/syrups",
+      "permanent": false
+    },
+    {
+      "source": "/bitters-in-baking/",
+      "destination": "/recipes/kitchen",
+      "permanent": false
+    },
+    {
+      "source": "/droppers-vs-dash/",
+      "destination": "/recipes#learn-how-to-craft",
+      "permanent": false
+    },
+    {
+      "source": "/find-us/",
+      "destination": "/contact",
+      "permanent": false
+    },
+    {
+      "source": "/visit/take-a-tour",
+      "destination": "/places",
+      "permanent": false
+    },
+    {
+      "source": "/visit/",
+      "destination": "/places",
       "permanent": false
     }
+
   ]
 }
