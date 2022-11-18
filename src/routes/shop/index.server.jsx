@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { Link, Image, Seo } from "@shopify/hydrogen"
-import { Layout, PatternHero, CollectionsMenu } from '@server'
-import { HorizontalSeperator, CardCarousel, WholesaleBitters, AlternatingTextImage, SplitBgVertBlue } from "@client"
+import { Layout, PatternHero, CollectionsMenu, BittersBundles } from '@server'
+import { HorizontalSeperator, CardCarousel, WholesaleBitters, AlternatingTextImage, SplitBgVertBlue, } from "@client"
 // ----------------------------------------------------------------------
 
 
@@ -63,13 +63,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="relative w-11/12 pt-0 mx-auto">
+      <div className="relative w-11/12 pt-0 mx-auto">
         <HorizontalSeperator />
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Bitters Bundles
       </div>
       <BittersBundles />
-      </div> */}
+      </div>
 
       <SplitBgVertBlue />
       <WholesaleBitters />

@@ -11,7 +11,7 @@ import {
   Seo
 } from "@shopify/hydrogen"
 import { Layout, NotFound, SimilarProducts } from '@server'
-import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails  } from "@client"
+import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails, ProductRecipes  } from "@client"
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -67,7 +67,9 @@ export default function Product({ params }) {
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
       <ProductDetails product={product} />
-      <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+      {/* <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
+
+      <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
 
       <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />

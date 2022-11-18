@@ -13,3 +13,6 @@ export { default as RecipesMenu } from './menus/RecipesMenu.server'
 
 // Cards
 export { default as ProductCard } from './ProductCard.server'
+
+// Lists
+export { default as BittersBundles } from './BittersBundles.server'

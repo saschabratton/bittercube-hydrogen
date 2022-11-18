@@ -41,7 +41,7 @@ export default function PrimaryMenu({ dark }) {
       <Drawer open={isOpen} onClose={closeDrawer}>
         <div className="grid">
           <Drawer.Title>
-            <h2 className="sr-only">Cart Drawer</h2>
+            <span className="sr-only">Cart Drawer</span>
           </Drawer.Title>
           <CartDetails onClose={closeDrawer} />
         </div>
