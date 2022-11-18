@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {
   useCart,
   useCartLine,
@@ -9,11 +10,13 @@ import {
   Image,
   Link,
   Money,
+  useNavigate
 } from "@shopify/hydrogen"
+
 // ----------------------------------------------------------------------
 
 export default function CartDetails({ onClose }) {
-  const { lines } = useCart();
+  const { lines } = useCart()
 
   if (lines.length === 0) {
     return <CartEmpty onClose={onClose} />;
@@ -39,7 +42,6 @@ export default function CartDetails({ onClose }) {
         aria-labelledby="summary-heading"
         className="p-4 border-t-2 md:px-12 border-gold"
       >
-        <GiftMessage />
         <h2 id="summary-heading" className="sr-only">
           Order summary
         </h2>
@@ -51,10 +53,18 @@ export default function CartDetails({ onClose }) {
 }
 
 export function GiftMessage(){
+  const { id, note, noteUpdate } = useCart()
   return(
     <div className="py-8 mb-6 border-b-2 border-gold">
       <p className="text-sm text-center label">Is this a gift?<br />Enter a personalized message for the recipient.</p>
-      <textarea className="w-full p-4 rounded-lg h-36">
+      <textarea
+        name='note'
+        value={note}
+        onChange={({ target: { value } }) => {
+          console.log(value)
+          // noteUpdate({id, note: value})
+        }}
+        className="w-full p-4 rounded-lg h-36">
 
       </textarea>
     </div>
@@ -78,12 +88,29 @@ export function CartEmpty({ onClose }) {
 }
 
 function CartCheckoutActions() {
-  const { checkoutUrl } = useCart();
+  const { checkoutUrl, noteUpdate } = useCart()
+  const [message, setMessage] = useState()
+  const handleCheckout = () => {
+    noteUpdate({ id, note: message })
+    // navigate(checkoutUrl, { replace: true })
+  }
   return (
     <>
+      <div>
+        <p className="text-sm text-center label">Is this a gift?<br />Enter a personalized message for the recipient.</p>
+        <textarea
+          name='note'
+          value={message}
+          onChange={({ target: { value } }) => {
+            setMessage(value)
+          }}
+          className="w-full p-4 rounded-lg h-36">
+        </textarea>
+      </div>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-8">
         <Link
           to={checkoutUrl}
+          onClick={handleCheckout}
           width="full"
           className="w-full m-0 text-center btn btn-action"
         >
@@ -96,7 +123,8 @@ function CartCheckoutActions() {
 }
 
 function OrderSummary() {
-  const { cost } = useCart();
+  const { cost, note } = useCart()
+
   return (
     <>
       <dl className="space-y-2">
