@@ -1,4 +1,4 @@
-import { CacheNone, gql, Seo, useShopQuery} from '@shopify/hydrogen';
+import { CacheLong, gql, Seo, useShopQuery} from '@shopify/hydrogen'
 
 export function DefaultSeo() {
   const {
@@ -7,7 +7,7 @@ export function DefaultSeo() {
     },
   } = useShopQuery({
     query: SHOP_QUERY,
-    cache: CacheNone(),
+    cache: CacheLong(),
     preload: false
   });
 

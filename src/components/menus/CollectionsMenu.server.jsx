@@ -1,4 +1,4 @@
-import { useUrl, Link, gql, useShopQuery, CacheShort } from "@shopify/hydrogen"
+import { useUrl, Link, gql, useShopQuery, CacheLong } from "@shopify/hydrogen"
 // ----------------------------------------------------------------------
 export default function CollectionsMenu() {
   const { pathname } = useUrl()
@@ -6,7 +6,7 @@ export default function CollectionsMenu() {
     data: { collections },
   } = useShopQuery({
     query: QUERY,
-    cache: CacheShort(),
+    cache: CacheLong(),
   })
 
   return (

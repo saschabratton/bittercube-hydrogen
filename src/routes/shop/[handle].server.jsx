@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { gql, useShopQuery, Seo, useRouteParams, useServerAnalytics, ShopifyAnalyticsConstants, CacheShort } from "@shopify/hydrogen"
+import { gql, useShopQuery, Seo, useRouteParams, useServerAnalytics, ShopifyAnalyticsConstants, CacheLong } from "@shopify/hydrogen"
 import { NotFound, Layout, PatternHero, CollectionsMenu } from '@server'
 
 import ProductCard from "../../components/ProductCard.server"
@@ -17,7 +17,7 @@ export default function Collections() {
     variables: {
       handle,
     },
-    cache: CacheShort()
+    cache: CacheLong()
   })
   if(!collection) {
     return <NotFound />

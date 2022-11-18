@@ -1,3 +1,4 @@
+// TODO: Examine the query and specifically the structure of the fragments
 import { Suspense } from "react"
 import {
   gql,
@@ -6,9 +7,10 @@ import {
   useRouteParams,
   ShopifyAnalyticsConstants,
   Link,
+  CacheLong,
   Seo
 } from "@shopify/hydrogen"
-import { Layout } from '@server'
+import { Layout, NotFound } from '@server'
 import { HorizontalSeperator, PrimaryMenu, CardCarousel } from "@client"
 
 import Arrow from "../../../components/global/icons/Arrow.client";
@@ -48,7 +50,12 @@ export default function Product({ params }) {
     variables: {
       handle,
     },
+    cache: CacheLong()
   })
+
+  if (!product) {
+    return <NotFound />
+  }
 
   useServerAnalytics({
     shopify: {
@@ -82,7 +89,7 @@ export default function Product({ params }) {
       <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>
-  );
+  )
 }
 
 

@@ -1,7 +1,8 @@
+// TODO: Examine how this is being used to help limit api requests
 import {Suspense, useMemo} from 'react';
-import {gql, useShopQuery, useLocalization} from '@shopify/hydrogen';
-import { PRODUCT_CARD_FRAGMENT } from "../../../lib/fragments";
-import ProductCard from "../../ProductCard.server";
+import { gql, useShopQuery, useLocalization, CacheLong } from '@shopify/hydrogen'
+import { PRODUCT_CARD_FRAGMENT } from "../../../lib/fragments"
+import ProductCard from "../../ProductCard.server"
 
 export default function SimilarProducts({ data }) {
 
@@ -98,6 +99,7 @@ function TopProducts({count}) {
     variables: {
       count,
     },
+    cache: CacheLong()
   });
 
   // return <ProductCards products={products.nodes} />;
