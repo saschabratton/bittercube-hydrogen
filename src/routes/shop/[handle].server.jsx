@@ -1,10 +1,7 @@
 import { Suspense } from "react"
 import { gql, useShopQuery, Seo, useRouteParams, useServerAnalytics, ShopifyAnalyticsConstants, CacheLong } from "@shopify/hydrogen"
-import { NotFound, Layout, PatternHero, CollectionsMenu } from '@server'
-
-import ProductCard from "../../components/ProductCard.server"
-import WholesaleBitters from "../../components/sections/WholesaleBitters"
-import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client"
+import { NotFound, Layout, PatternHero, CollectionsMenu, ProductCard } from '@server'
+import { WholesaleBitters, SplitBgVertBlue } from '@client'
 // ----------------------------------------------------------------------
 
 export default function Collections() {

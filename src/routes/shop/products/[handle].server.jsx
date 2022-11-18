@@ -10,15 +10,8 @@ import {
   CacheLong,
   Seo
 } from "@shopify/hydrogen"
-import { Layout, NotFound } from '@server'
-import { HorizontalSeperator, PrimaryMenu, CardCarousel } from "@client"
-
-import Arrow from "../../../components/global/icons/Arrow.client";
-import ProductDetails from "../../../components/ProductDetails.client";
-import WholesaleBitters from "../../../components/sections/WholesaleBitters"
-import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client"
-import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client"
-import SimilarProducts from "../../../components/sections/shop/SimilarProducts.server"
+import { Layout, NotFound, SimilarProducts } from '@server'
+import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails  } from "@client"
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -72,8 +65,6 @@ export default function Product({ params }) {
       <PrimaryMenu dark={false} />
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
-        {/* <Arrow />
-        <span className="text-lg label">{product.title}</span> */}
       </div>
       <ProductDetails product={product} />
       <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />

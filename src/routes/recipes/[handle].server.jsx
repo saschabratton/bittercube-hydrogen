@@ -1,11 +1,7 @@
 import { Link, Image, useRouteParams, fetchSync, Seo } from "@shopify/hydrogen"
-import { NotFound, Layout } from '@server'
-import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes } from "@client"
 import { makeKey } from "@utils"
-
-import TabSection from "../../components/sections/recipes/TabSection.client";
-import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
-import RecipeImageCarousel from "../../components/sections/recipes/RecipeImageCarousel.client";
+import { NotFound, Layout } from '@server'
+import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection } from "@client"
 // ----------------------------------------------------------------------
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'

@@ -1,13 +1,10 @@
 import { fetchSync, Seo } from '@shopify/hydrogen'
 import { Layout, PatternHero, RecipesMenu } from '@server'
-import { HorizontalSeperator } from "@client"
-
-import SignUp from "../../../components/sections/SignUp.client"
-import CocktailsList from "../../../components/sections/recipes/CocktailsList.client"
+import { HorizontalSeperator, SignUp, CocktailsList } from "@client"
 // ----------------------------------------------------------------------
 
 const SignUpContent = {
-  'contentHtml': '<h2>Quick Diddy Prefooter Kicker</h2><p>Donec dictum, purus quis tincidunt molestie, nulla nibh ornare diam, eu vestibulum velit erat eget diam. Interdum et malesuada fames ac ante ipsum primis.</p>',
+  'contentHtml': '',
   'ctaLabel': '',
   'ctaLink': '',
 }
@@ -25,7 +22,6 @@ const customSeo = {
     name: 'All Bittercube recipes • Bittercube',
   }
 
-
   return(
     <Layout>
       <Seo type="page" data={{
@@ -33,10 +29,7 @@ const customSeo = {
       }} />
       <PatternHero content={"All Recipes"} />
       <RecipesMenu />
-
       <CocktailsList />
-
-
       <div className="w-11/12 pt-12 mx-auto">
         <HorizontalSeperator />
       </div>

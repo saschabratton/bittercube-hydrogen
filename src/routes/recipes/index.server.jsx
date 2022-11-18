@@ -1,12 +1,7 @@
 import { Suspense } from 'react'
 import { Image, fetchSync, CacheShort, Seo } from "@shopify/hydrogen"
 import { Layout, RecipesMenu, ImageHero } from '@server'
-import { HorizontalSeperator, RecipeCarousel } from "@client"
-
-import SignUp from "../../components/sections/SignUp.client";
-import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";
-import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
-import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
+import { HorizontalSeperator, RecipeCarousel, SignUp, FeaturedBartenders, LearnToCraft, InTheKitchen } from "@client"
 // ----------------------------------------------------------------------
 
 

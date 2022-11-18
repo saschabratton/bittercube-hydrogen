@@ -2,7 +2,7 @@ import { Layout } from '@server'
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import ImageHero from "../../components/hero/ImageHero.server";
 import { Image, Seo } from "@shopify/hydrogen";
-import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.client";
+import { ThreeColumnFeature } from "@client";
 // ----------------------------------------------------------------------
 
 const HeaderContent ={

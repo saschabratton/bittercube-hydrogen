@@ -1,8 +1,7 @@
 import { Link, Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { ImageHero, Layout } from '@server'
-import { HorizontalSeperator } from "@client"
+import { HorizontalSeperator, VerticalSeparator } from "@client"
 
-import VerticalSeparator from "../components/animations/VerticalSeparator.client"
 import ImageCarousel from "../components/sections/ImageCarousel.client"
 // ----------------------------------------------------------------------
 const HeaderContent ={
@@ -10,63 +9,6 @@ const HeaderContent ={
   'image': '/images/about-hero.jpg',
 }
 
-const ThreeColumnFeaturedContent = {
-  'headline': 'partnerships and Collaborations',
-  'description': 'We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters for RTD cocktails, and other packaged products. Check out a few of our collaborations!',
-  'ctaLabel': 'Let\'s Collaborate',
-  'ctaLink': '/contact',
-  'background': 'forest',
-  'image': '/images/about-collaborations.jpg',
-  'navHeadline': 'RECENT PARTNERS',
-  'padding': '0',
-  'border': '0'
-}
-const SplitBgContent = {
-  'topLabel': 'WHERE THE BITTERS ARE MADE',
-  'topHeadline': 'The Apothecary',
-  'topDescription': 'Our homebase is a bustling 9,000 square foot building in Milwaukee where Bittercube Bitters are produced. The apothecary also houses the company offsices, and a storefront for bitters, tools, and non-alcoholic cocktail ingredients.',
-  'bottomCtaLabel': 'The Apothecary',
-  'bottomCtaLink': '/places/apothecary',
-  'bottomLabel': '',
-  'bottomHeadline': '',
-  'featuredImage': '',
-  'background': 'forest',
-  'padding': '0',
-  'bottomHtml': '<h5>Offices</h5><h5>MANUFACTURING</h5><h5>BITTERS STOREFRONT</h5><h5>RESEARCH & DEVELOPMENT</h5>',
-}
-
-
-// TODO: left align these
-const ThreeColumnFeaturedLinks = [
-  {
-    'linkLabel': 'Heirloom',
-    'link': 'https://heirloomliqueurs.com/',
-  },
-  {
-    'linkLabel': 'Discocube',
-    'link': 'https://www.discocubes.com/',
-  },
-  {
-    'linkLabel': 'SANTA TERESA RUM',
-    'link': '#',
-  },
-  {
-    'linkLabel': 'BURLAP & BARREL',
-    'link': '#',
-  },
-  {
-    'linkLabel': 'LIVEWIRE',
-    'link': '#',
-  },
-  {
-    'linkLabel': 'TAPPED MAPLE SYRUP',
-    'link': '#',
-  },
-  {
-    'linkLabel': 'BITTERS BLENDS',
-    'link': '#',
-  },
-]
 const OrnamentText = "ABOUT BITTERCUBE"
 
 const Images = [

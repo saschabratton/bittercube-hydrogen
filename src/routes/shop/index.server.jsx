@@ -1,12 +1,7 @@
 import { Suspense } from "react"
 import { Link, Image, Seo } from "@shopify/hydrogen"
 import { Layout, PatternHero, CollectionsMenu } from '@server'
-import { HorizontalSeperator, CardCarousel } from "@client"
-
-import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
-import WholesaleBitters from "../../components/sections/WholesaleBitters";
-import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
-import BittersBundles from "../../components/BittersBundles.server";
+import { HorizontalSeperator, CardCarousel, WholesaleBitters, AlternatingTextImage, SplitBgVertBlue } from "@client"
 // ----------------------------------------------------------------------
 
 

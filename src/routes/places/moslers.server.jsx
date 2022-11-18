@@ -1,11 +1,9 @@
 import { Image } from "@shopify/hydrogen"
 import { Link, Seo } from "@shopify/hydrogen"
 import { Layout, ImageHero } from '@server'
-import { HorizontalSeperator } from "@client"
+import { HorizontalSeperator, SignUpForm, ImageCarousel  } from "@client"
 
 import TabSection from "../../components/sections/TabSection.client"
-import SignUpForm from "../../components/global/SignUpForm.client"
-import ImageCarousel from "../../components/sections/ImageCarousel.client"
 // ----------------------------------------------------------------------
 const HeaderContent ={
   'text': "Mosler's Vault",

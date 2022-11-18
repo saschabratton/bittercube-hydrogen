@@ -1,11 +1,7 @@
 import { Link, Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { Layout, HomeHero } from '@server'
+import { BittersCarousel, ScrollingBanner, VerticalSeparator, SignUp, ThreeColumnFeature } from '@client'
 
-import ScrollingBanner from "../components/ScrollingBanner.client";
-import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
-import BittersCarousel from "../components/home/BittersCarousel.client";
-import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-import SignUp from "../components/sections/SignUp.client";
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -39,10 +35,9 @@ const SignUpContent = {
   'ctaLabel': '',
   'ctaLink': '',
 }
-
 const customSeo = {
     name: 'Bittercube • Making drinks come true since 2009',
-  }
+}
 
 export default function Home({response}) {
   response.cache(CacheLong())

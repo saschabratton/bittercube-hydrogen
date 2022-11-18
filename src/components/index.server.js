@@ -1,5 +1,6 @@
 export { default as Layout } from './Layout.server'
 export { default as NotFound } from './NotFound.server'
+export { default as SimilarProducts } from './sections/shop/SimilarProducts.server'
 
 // Hero
 export { default as HomeHero } from './hero/HomeHero.server'
@@ -10,3 +11,5 @@ export { default as PatternHero } from './hero/PatternHero.server'
 export { default as CollectionsMenu } from './menus/CollectionsMenu.server'
 export { default as RecipesMenu } from './menus/RecipesMenu.server'
 
+// Cards
+export { default as ProductCard } from './ProductCard.server'

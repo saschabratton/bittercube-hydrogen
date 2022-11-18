@@ -1,21 +1,11 @@
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import {
-  HorizontalSeperator,
-  // CardCarousel
+  HorizontalSeperator, BakingCarousel, Spices, Flavors, SignUp
 } from "@client"
 import { Seo } from "@shopify/hydrogen";
-import SignUp from "../../../components/sections/SignUp.client";
-import Flavors from "../../../components/sections/kitchen/Flavors.client";
-import Spices from "../../../components/sections/kitchen/Spices.client";
-import BakingCarousel from "../../../components/sections/kitchen/BakingCarousel.client";
 // ----------------------------------------------------------------------
 
-const pageNav = [
-  { label: 'seasonal', link: '/recipes'},
-  { label: 'cocktails', link: '/recipes/all'},
-  { label: 'syrups', link: '/recipes/syrups'},
-  { label: 'in the kitchen', link: '/recipes/kitchen'},
-]
+
 const SignUpContent = {
   'contentHtml': '<h2>share your recipes with us on instagram</h2>',
   'ctaLabel': 'Instagram',

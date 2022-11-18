@@ -4,9 +4,8 @@ import { HorizontalSeperator } from '@client'
 // ----------------------------------------------------------------------
 
 const customSeo = {
-    name: 'We respond to every email • Bittercube',
+    name: 'We respond to every email we recieve • Bittercube',
   }
-
 
 export default function Contact({response}) {
   response.cache(CacheLong())
