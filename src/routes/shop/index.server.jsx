@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout.server";
+import { Layout } from '@components/all.server'
 import { Suspense } from "react";
 import PatternHero from "../../components/headers/PatternHero.server";
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";

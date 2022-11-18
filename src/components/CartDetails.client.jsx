@@ -117,6 +117,7 @@ export function CartLineItem() {
       <div className="flex-shrink-0">
         <Image
           data={merchandise.image}
+          alt={merchandise.product.handle}
           className="object-cover object-center w-24 h-24 rounded md:w-28 md:h-28"
         />
       </div>

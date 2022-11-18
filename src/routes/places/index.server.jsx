@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout.server"
+import { Layout } from '@components/all.server'
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import ImageHero from "../../components/headers/ImageHero.server";
 import { Image, Seo } from "@shopify/hydrogen";

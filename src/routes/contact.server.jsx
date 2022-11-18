@@ -1,4 +1,4 @@
-import { Layout } from "../components/Layout.server"
+import { Layout } from '@components/all.server'
 import PatternHero from "../components/headers/PatternHero.server"
 import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
 

@@ -1,15 +1,15 @@
-import { gql, useShopQuery, Seo, useRouteParams } from "@shopify/hydrogen";
-import { Suspense } from "react";
-import PatternHero from "../../components/headers/PatternHero.server";
-import { Layout } from "../../components/Layout.server";
-import ProductCard from "../../components/ProductCard.server";
-import CollectionsNav from "../../components/headers/CollectionsNav.server";
-import WholesaleBitters from "../../components/sections/WholesaleBitters";
-import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
+import { Suspense } from "react"
+import { gql, useShopQuery, Seo, useRouteParams } from "@shopify/hydrogen"
+import PatternHero from "../../components/headers/PatternHero.server"
+import { NotFound, Layout } from '@components/all.server'
+import ProductCard from "../../components/ProductCard.server"
+import CollectionsNav from "../../components/headers/CollectionsNav.server"
+import WholesaleBitters from "../../components/sections/WholesaleBitters"
+import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client"
 
 
 export default function Collections() {
-  const { handle } = useRouteParams();
+  const { handle } = useRouteParams()
 
   const {
     data: { collection },
@@ -19,6 +19,12 @@ export default function Collections() {
       handle,
     },
   })
+  if(!collection) {
+    return <NotFound />
+  }
+  // if (!collection) {
+  //   return <p>Not Found</p>
+  // }
 
   // useServerAnalytics({
   //   shopify: {

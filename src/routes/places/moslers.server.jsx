@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout.server"
+import { Layout } from '@components/all.server'
 import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
 import TabSection from "../../components/sections/TabSection.client"

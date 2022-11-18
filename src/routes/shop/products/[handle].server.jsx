@@ -9,7 +9,7 @@ import {
   CacheNone,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
-import { Layout } from "../../../components/Layout.server";
+import { Layout } from '@components/all.server'
 import Arrow from "../../../components/global/icons/Arrow.client";
 import Nav from "../../../components/headers/Nav.client";
 import ProductDetails from "../../../components/ProductDetails.client";

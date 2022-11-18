@@ -1,4 +1,4 @@
-import { Layout } from "../../../components/Layout.server";
+import { Layout } from '@components/all.server'
 import { gql, useShopQuery, Link, Image, CacheNone, useRouteParams, fetchSync } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/recipes/TabSection.client";
 import RecomendedRecipes from "../../../components/sections/recipes/RecomendedRecipes.client";

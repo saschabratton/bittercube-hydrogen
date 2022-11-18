@@ -1,5 +1,4 @@
-import { Suspense } from "react";
-import { Layout, Seo } from "../components/Layout.server";
+import { Layout } from '@components/all.server'
 import { Link, Image } from "@shopify/hydrogen";
 import HomeHero from "../components/headers/HomeHero.server";
 import ScrollingBanner from "../components/ScrollingBanner.client";

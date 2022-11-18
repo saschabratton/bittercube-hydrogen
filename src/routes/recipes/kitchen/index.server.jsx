@@ -1,5 +1,5 @@
 import PatternHero from "../../../components/headers/PatternHero.server";
-import { Layout } from "../../../components/Layout.server";
+import { Layout } from '@components/all.server'
 import SubNav from "../../../components/global/SubNav.server";
 import SignUp from "../../../components/sections/SignUp.client";
 import Flavors from "../../../components/sections/kitchen/Flavors.client";

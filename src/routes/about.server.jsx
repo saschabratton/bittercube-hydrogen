@@ -1,4 +1,4 @@
-import { Layout } from "../components/Layout.server"
+import { Layout } from '@components/all.server'
 import ImageHero from "../components/headers/ImageHero.server"
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import { Link, Image } from "@shopify/hydrogen"

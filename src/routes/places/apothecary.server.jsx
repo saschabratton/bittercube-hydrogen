@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout.server"
+import { Layout } from '@components/all.server'
 import ImageHero from "../../components/headers/ImageHero.server"
 import { Image, Link, Seo } from "@shopify/hydrogen"
 import SignUpForm from "../../components/global/SignUpForm.client"

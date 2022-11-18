@@ -1,4 +1,4 @@
-import { Layout } from "../../components/Layout.server"
+import { Layout } from '@components/all.server'
 import ImageHero from "../../components/headers/ImageHero.server"
 import SubNav from "../../components/global/SubNav.server"
 import RecipeCarousel from "../../components/sections/RecipeCarousel.client"

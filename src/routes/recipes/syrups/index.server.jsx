@@ -1,4 +1,4 @@
-import { Layout } from "../../../components/Layout.server";
+import { Layout } from '@components/all.server'
 import PatternHero from "../../../components/headers/PatternHero.server";
 import SubNav from "../../../components/global/SubNav.server";
 import Card from "../../../components/global/Card.client";

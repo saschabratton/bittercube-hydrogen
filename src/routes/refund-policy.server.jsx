@@ -1,5 +1,4 @@
-import { Layout } from "../components/Layout.server"
-import Arrow from '../components/animations/Arrow.client'
+import { Layout } from '@components/all.server'
 import PatternHero from "../components/headers/PatternHero.server"
 
 const HeaderText = ("Refund Policy")

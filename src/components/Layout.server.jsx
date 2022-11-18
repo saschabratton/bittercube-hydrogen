@@ -3,7 +3,7 @@ import { useShopQuery, CacheNone, gql, useUrl } from "@shopify/hydrogen"
 import Footer from "./global/Footer.client"
 
 
-export function Layout({ children }) {
+export default function Layout({ children }) {
   const { pathname } = useUrl()
   const isHome = pathname === "/"
 
