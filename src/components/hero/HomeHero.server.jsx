@@ -10,7 +10,12 @@ export default function HomeHero({ content }) {
       <div className="absolute inset-0 overflow-hidden bg-dark">
         {/* <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" /> */}
         <div className="absolute w-full h-full bg-dark/80"></div>
-        <video src="/videos/old-fashionedstopaction.mp4" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"/>
+
+
+        <video src="https://player.vimeo.com/progressive_redirect/playback/772504510/rendition/720p/file.mp4?loc=external&signature=c0e4dded82202d2cf5f7bd4e2c658e7842c63092e5c3a2765821155c58363c6f" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"/>
+
+
+
       </div>
       <div className="container relative grid grid-cols-1 mx-auto text-center uppercase sm:grid-cols-7">
         <div className="hidden sm:flex sm:items-center sm:justify-center">
