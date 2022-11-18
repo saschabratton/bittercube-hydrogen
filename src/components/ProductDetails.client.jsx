@@ -20,7 +20,7 @@ export default function ProductDetails({ product }) {
         </div>
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
-            <p className="mb-0 text-base label">{product.vendor}</p>
+            <p className="text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>
             <ProductForm product={product} />
             <div className="pt-6 prose text-dark text-md">
