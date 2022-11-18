@@ -1,4 +1,4 @@
-import { fetchSync, Image, Link, Head } from "@shopify/hydrogen"
+import { fetchSync, Image, Link, Head, Seo } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator } from "@client"
@@ -37,13 +37,16 @@ export default function Syrups(){
   }
   const syrupGroups = groupIt(recipes)
 
+  const customSeo = {
+    name: 'Syrup Recipes • Bittercube',
+  }
+
 
   return(
     <Layout>
-      <Head>
-        <meta name="title" content={customSeo.title} />
-        <meta name="description" content={customSeo.description} />
-      </Head>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PatternHero content={"Syrups"} />
       <RecipesMenu />
       <hr />

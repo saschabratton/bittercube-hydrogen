@@ -1,12 +1,20 @@
-import { Image, CacheLong } from "@shopify/hydrogen"
+import { Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { Layout, PatternHero } from '@server'
 import { HorizontalSeperator } from '@client'
 // ----------------------------------------------------------------------
+
+const customSeo = {
+    name: 'We respond to every email • Bittercube',
+  }
+
 
 export default function Contact({response}) {
   response.cache(CacheLong())
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PatternHero content={"Contact Us"} />
       <div className="container grid grid-cols-1 gap-6 text-center md:grid-cols-2">
         <div>

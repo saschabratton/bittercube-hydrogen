@@ -58,7 +58,7 @@ const alternatingContent = [
   },
 ]
  const customSeo = {
-    name: 'Visit Today',
+    name: 'Visit Today • Bittercube',
   }
 
 export default function Places() {

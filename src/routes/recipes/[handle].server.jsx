@@ -1,4 +1,4 @@
-import { Link, Image, useRouteParams, fetchSync } from "@shopify/hydrogen"
+import { Link, Image, useRouteParams, fetchSync, Seo } from "@shopify/hydrogen"
 import { NotFound, Layout } from '@server'
 import { PrimaryMenu, HorizontalSeperator } from "@client"
 import { makeKey } from "@utils"
@@ -24,8 +24,16 @@ export default function Recipe(){
     return <NotFound />
   }
 
+
+  const customSeo = {
+    name: 'How to craft • Bittercube',
+  }
+
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PrimaryMenu dark={false}/>
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/all">All Recipes</Link>

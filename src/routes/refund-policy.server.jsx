@@ -1,10 +1,19 @@
 import { Layout, PatternHero } from '@server'
+import { Seo } from "@shopify/hydrogen"
 // ----------------------------------------------------------------------
+
+const customSeo = {
+    name: 'Refund Policy • Bittercube',
+  }
+
 
 export default function RefundPolicy() {
 
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+        }} />
       <PatternHero content={"Refund Policy"} />
       <section>
         <div className="container flex flex-col max-w-6xl gap-6">
