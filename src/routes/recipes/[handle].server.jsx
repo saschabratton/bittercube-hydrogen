@@ -1,10 +1,9 @@
 import { Link, Image, useRouteParams, fetchSync, Seo } from "@shopify/hydrogen"
 import { NotFound, Layout } from '@server'
-import { PrimaryMenu, HorizontalSeperator } from "@client"
+import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes } from "@client"
 import { makeKey } from "@utils"
 
 import TabSection from "../../components/sections/recipes/TabSection.client";
-import RecomendedRecipes from "../../components/sections/recipes/RecomendedRecipes.client";
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import RecipeImageCarousel from "../../components/sections/recipes/RecipeImageCarousel.client";
 // ----------------------------------------------------------------------
@@ -48,11 +47,10 @@ export default function Recipe(){
             <Image src={image.url} width={366} height={455} alt={activeRecipe.name} className="object-cover w-full aspect-4/5" />
           ))}
         </div>
-        {/* <div className="sticky top-0 grid gap-6 md:p-10 xl:py-20 h-fit xl:px-20"> */}
+
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
             <p className="mb-0 text-base label">cocktail style:<br />
-              {/* {activeRecipe.flavors.filter((index) => (index < 2)) */}
               {activeRecipe.flavors.slice(0, 2)
               .map((flavor, index) => (
                   <span key={makeKey(flavor)}>{index != 0 ? ', ' : ''}{flavor}</span>

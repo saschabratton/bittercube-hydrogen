@@ -92,8 +92,8 @@ const Images = [
   },
 ]
 const customSeo = {
-    name: 'About Bittercube • Bittercube',
-  }
+  name: 'About Bittercube • Bittercube',
+}
 
 
 export default function AboutPage({response}) {

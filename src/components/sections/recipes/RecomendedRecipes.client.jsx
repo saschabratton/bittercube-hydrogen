@@ -11,7 +11,7 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
       const length = activeRecipe.flavors.length
       const index = Math.floor((Math.random() * length) + 0)
       const selectedFlavor = activeRecipe.flavors[index]
-      const similar = recipes.filter(({ flavors }) => flavors.includes(selectedFlavor))
+      const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
 
       setSimilarRecipes(similar)
     }

@@ -11,3 +11,6 @@ export { default as CardCarousel } from './carousels/CardCarousel.client'
 // Cards
 export { default as RecipeCard } from './cards/RecipeCard.client'
 export { default as FeaturedRecipeCard } from './cards/FeaturedRecipeCard.client'
+
+// Lists
+export { default as RecomendedRecipes } from './sections/recipes/RecomendedRecipes.client'
