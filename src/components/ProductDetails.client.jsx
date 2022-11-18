@@ -3,11 +3,12 @@ import {
   MediaFile,
   useProductOptions,
   ProductPrice,
-  BuyNowButton,
+  // BuyNowButton,
   AddToCartButton
 } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
-import { HorizontalSeperator } from "@client"
+// import { HorizontalSeperator } from "@client"
+// import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------
 
 export default function ProductDetails({ product }) {
@@ -46,10 +47,9 @@ function ProductForm({ product }) {
   // const isOutOfStock = !selectedVariant?.availableForSale || false;
   return (
     <form className="grid gap-10">
-      <div className="">
         {
-          <div className="grid grid-cols-2 gap-4 my-20">
-            <div>
+          <div className="grid grid-cols-2 my-20 gap-x-4 gap-y-8">
+            <div className="col-span-2">
               {options.map(({ name, values }) => {
                 if (values.length === 1) {
                   return null;
@@ -57,33 +57,32 @@ function ProductForm({ product }) {
                 return (
                   <div
                     key={name}
-                    className="grid grid-cols-2 gap-2 "
+                    className="grid grid-cols-3"
                   >
-                    <legend className="col-span-3 px-3 text-dark">
+                    <legend className="col-span-3 px-3 text-lg text-dark">
                       {name}
                     </legend>
                     <OptionRadio name={name} values={values} />
                   </div>
                 );
               })}
-              <ProductPrice
-                className="text-lg font-semibold text-gray-900"
-                variantId={selectedVariant.id}
-                data={product}
-              />
+
             </div>
-            <div className="flex items-end justify-end">
+            <div className="flex items-center justify-between col-span-2 pt-8 border-t-2 border-gold">
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-5 btn-arrow btn-arrow-gold"></div>
+                <ProductPrice
+                  className="text-lg font-semibold text-dark"
+                  variantId={selectedVariant.id}
+                  data={product}
+                />
+              </div>
               <PurchaseMarkup />
+              {/* <CartLineItem /> */}
             </div>
 
           </div>
         }
-
-      </div>
-
-      {/* <div className="grid items-stretch gap-4">
-        <PurchaseMarkup />
-      </div> */}
     </form>
   );
 }
@@ -101,7 +100,7 @@ function PurchaseMarkup() {
         accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
       >
-        <span className="mb-0 btn btn-action">
+        <span className="my-0 btn btn-action">
           {isOutOfStock ? "Sold out" : "Add to cart"}
         </span>
       </AddToCartButton>
@@ -130,7 +129,7 @@ function OptionRadio({ values, name }) {
         const id = `option-${name}-${value}`;
 
         return (
-          <label key={id} htmlFor={id}>
+          <label key={id} htmlFor={id} className="flex gap-2">
             <input
               className="sr-only"
               type="radio"
@@ -141,7 +140,7 @@ function OptionRadio({ values, name }) {
               onChange={() => setSelectedOption(name, value)}
             />
             <div
-              className={`leading-none cursor-pointer transition-all duration-200  border-2 rounded-md p-3 flex flex-1 h-full ${
+              className={`text-center leading-none cursor-pointer transition-all duration-200  border-2 rounded-md p-3 flex  h-full ${
                 checked ? "border-gold/100 text-gold" : "border-gold/0"
               }`}
             >

@@ -11,13 +11,13 @@ export default function RecipesMenu() {
   const { pathname } = useUrl()
 
   return (
-    <nav className="container flex justify-between py-8">
-      <ul className="flex gap-8">
+    <nav className="container py-8 md:flex md:justify-between">
+      <ul className="grid grid-cols-2 gap-8 md:flex">
         {menu.map(item => {
           const {label, link, active, i} = item
           return (
             <li key={i}>
-              <Link to={ link } className={`text-sm font-bold tracking-widest uppercase text-dark subnav-item ${pathname === (link) ? 'active' : ''}`}>
+              <Link to={ link } className={`text-sm font-bold tracking-widest uppercase text-dark subnav-item flex justify-center ${pathname === (link) ? 'active' : ''}`}>
               { label }
               </Link>
             </li>

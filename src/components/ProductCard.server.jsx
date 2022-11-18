@@ -41,12 +41,12 @@ export default function ProductCard({ product }) {
         </div>
         <hr />
         <div className="flex items-center justify-between w-full gap-2 mx-auto label group">
-          <p className="mb-0 font-bold tracking-widest uppercase">{product.title}</p>
+          <p className="mb-0 text-base font-bold leading-tight tracking-widest uppercase">{product.title}</p>
           <div className="btn-arrow"></div>
         </div>
         <div className="overflow-x-hidden transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">
 
-            {product.tags.map((tag) => {
+            {product.tags && product.tags.map((tag) => {
             return (
               <span key={tag.slug} className="text-dark/80 whitespace-nowrap">
                 {tag}, &nbsp;

@@ -13,10 +13,11 @@ import { HorizontalSeperator, PrimaryMenu } from "@client"
 
 import Arrow from "../../../components/global/icons/Arrow.client";
 import ProductDetails from "../../../components/ProductDetails.client";
-import WholesaleBitters from "../../../components/sections/WholesaleBitters";
-import CardCarousel from "../../../components/sections/CardCarousel.client";
-import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client";
-import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
+import WholesaleBitters from "../../../components/sections/WholesaleBitters"
+import CardCarousel from "../../../components/sections/CardCarousel.client"
+import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client"
+import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client"
+import SimilarProducts from "../../../components/sections/shop/SimilarProducts.server"
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -63,23 +64,22 @@ export default function Product({ params }) {
         <Seo type="product" data={product} />
       </Suspense>
       <PrimaryMenu dark={false} />
-      <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
+      <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
-        <Arrow />
-        <span className="text-lg label">{product.title}</span>
+        {/* <Arrow />
+        <span className="text-lg label">{product.title}</span> */}
       </div>
       <ProductDetails product={product} />
       <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
 
       <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />
-        <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold ">
+        <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold">
           RECOMMENDED
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
-
-      <CardCarousel />
+      <SimilarProducts data={product.id} />
       <SplitBgVertBlue />
       <WholesaleBitters />
     </Layout>

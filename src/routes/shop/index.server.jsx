@@ -1,13 +1,13 @@
 import { Suspense } from "react"
 import { Link, Image } from "@shopify/hydrogen"
 import { Layout, PatternHero, CollectionsMenu } from '@server'
-
+import { HorizontalSeperator } from "@client"
 
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
-import CardCarousel from "../../components/sections/CardCarousel.client";
-import HorizontalSeperator from "../../components/animations/HorizontalSeperator.client";
+import CardCarousel from "../../components/sections/CardCarousel.client"
+import BittersBundles from "../../components/BittersBundles.server";
 // ----------------------------------------------------------------------
 
 const alternatingContent = [
@@ -50,7 +50,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex justify-end text-center">
-            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={250} height={111}  role="presentation" />
+            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={200} height={111}  role="presentation" />
           </div>
         </div>
         <div className="relative">
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Bitters Bundles
       </div>
-
+      <BittersBundles />
       </div>
       <CardCarousel />
 
