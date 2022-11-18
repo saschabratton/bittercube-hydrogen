@@ -1,9 +1,7 @@
-import { Link, Image } from "@shopify/hydrogen";
-import HorizontalSeperator from "../headers/HorizontalSeperator.client";
-import parse from 'html-react-parser';
-import { makeKey } from '../../utilities/helpers'
-
-
+import { Link, Image } from "@shopify/hydrogen"
+import { HorizontalSeperator } from "@client"
+import { makeKey } from '@utils'
+// ----------------------------------------------------------------------
 
 export default function AlternatingTextImage({ content }){
   return(

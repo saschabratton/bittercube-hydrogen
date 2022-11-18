@@ -1,26 +1,18 @@
-import { Layout } from '@components/all.server'
-import { gql, useShopQuery, Link, Image, CacheNone, useRouteParams, fetchSync } from "@shopify/hydrogen"
+import { Link, Image, useRouteParams, fetchSync } from "@shopify/hydrogen"
+import { NotFound, Layout } from '@server'
+import { PrimaryMenu, HorizontalSeperator } from "@client"
+import { makeKey } from "@utils"
+
 import TabSection from "../../../components/sections/recipes/TabSection.client";
 import RecomendedRecipes from "../../../components/sections/recipes/RecomendedRecipes.client";
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
-import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
-import Nav from "../../../components/headers/Nav.client";
 import RecipeImageCarousel from "../../../components/sections/recipes/RecipeImageCarousel.client";
-import { makeKey } from "../../../utilities/helpers";
+// ----------------------------------------------------------------------
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
 export default function Recipe(){
-  const {
-    data: { shop },
-    } = useShopQuery({
-      query: SHOP_QUERY,
-      cache: CacheNone(),
-      preload: false
-  });
-
-  // TODO: 404 redirect for non routes
-  const {handle} = useRouteParams();
+  const { handle } = useRouteParams()
 
   const recipes = fetchSync(recipesApi,{
     preload: false
@@ -28,10 +20,13 @@ export default function Recipe(){
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
 
+  if (!activeRecipe) {
+    return <NotFound />
+  }
 
   return(
     <Layout>
-      <Nav shop={shop} dark={false}/>
+      <PrimaryMenu dark={false}/>
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/all">All Recipes</Link>
       </div>
@@ -80,13 +75,3 @@ export default function Recipe(){
     </Layout>
   )
 }
-
-
-const SHOP_QUERY = gql`
-  query ShopInfo {
-    shop {
-      name
-      description
-    }
-  }
-`

@@ -1,12 +1,12 @@
-import { Layout } from '@components/all.server'
-import ImageHero from "../../components/headers/ImageHero.server"
 import { Image } from "@shopify/hydrogen"
-import TabSection from "../../components/sections/TabSection.client"
 import { Link, Seo } from "@shopify/hydrogen"
-import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
+import { Layout, ImageHero } from '@server'
+import { HorizontalSeperator } from "@client"
+
+import TabSection from "../../components/sections/TabSection.client"
 import SignUpForm from "../../components/global/SignUpForm.client"
 import ImageCarousel from "../../components/sections/ImageCarousel.client"
-
+// ----------------------------------------------------------------------
 const HeaderContent ={
   'text': "Mosler's Vault",
   'image': '/images/moslersvault-01.jpg',
@@ -36,7 +36,7 @@ const customSeo = {
     name: "Visit Mosler's Vault",
   }
 
-export default function moslers(){
+export default function MoslersPage(){
 
   return(
     <Layout>
@@ -127,8 +127,3 @@ export default function moslers(){
     </Layout>
   )
 }
-
-
-
-
-

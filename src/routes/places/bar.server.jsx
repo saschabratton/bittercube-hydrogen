@@ -1,11 +1,11 @@
-import { Layout } from '@components/all.server'
-import ImageHero from "../../components/headers/ImageHero.server"
 import { Image, Link, Seo } from "@shopify/hydrogen"
+import { Layout, ImageHero } from '@server'
+import { HorizontalSeperator } from "@client"
+
 import TabSection from "../../components/sections/TabSection.client"
-import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client"
 import SignUpForm from "../../components/global/SignUpForm.client"
 import ImageCarousel from "../../components/sections/ImageCarousel.client"
-
+// ----------------------------------------------------------------------
 const HeaderContent ={
   'text': 'Bittercube Bar & Bazaar',
   'image': '/images/bc-bar-hero.jpg',
@@ -116,8 +116,3 @@ export default function moslers(){
     </Layout>
   )
 }
-
-
-
-
-

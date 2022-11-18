@@ -1,16 +1,13 @@
-import { Layout } from '@components/all.server'
-import PatternHero from "../components/headers/PatternHero.server"
-import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
+import { Image, CacheLong } from "@shopify/hydrogen"
+import { Layout, PatternHero } from '@server'
+import { HorizontalSeperator } from '@client'
+// ----------------------------------------------------------------------
 
-import { Image, Link } from "@shopify/hydrogen";
-
-const HeaderText = ("Contact Us")
-
-
-export default function Contact() {
+export default function Contact({response}) {
+  response.cache(CacheLong())
   return (
     <Layout>
-      <PatternHero content={HeaderText} />
+      <PatternHero content={"Contact Us"} />
       <div className="container grid grid-cols-1 gap-6 text-center md:grid-cols-2">
         <div>
           <h2>Drop Us a line</h2>

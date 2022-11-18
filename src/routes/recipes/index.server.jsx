@@ -1,15 +1,13 @@
-import { Layout } from '@components/all.server'
-import ImageHero from "../../components/headers/ImageHero.server"
-import SubNav from "../../components/global/SubNav.server"
+import { Image } from "@shopify/hydrogen"
+import { Layout, RecipesMenu, ImageHero } from '@server'
+import { HorizontalSeperator } from "@client"
+
 import RecipeCarousel from "../../components/sections/RecipeCarousel.client"
 import SignUp from "../../components/sections/SignUp.client";
 import FeaturedBartenders from "../../components/sections/recipes/FeaturedBartender.client";
 import LearnToCraft from "../../components/sections/recipes/LearnToCraft.client";
 import InTheKitchen from "../../components/sections/recipes/InTheKitchen.client";
-import { Image } from "@shopify/hydrogen";
-import RecipesNav from "../../components/headers/RecipesNav.server";
-import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
-
+// ----------------------------------------------------------------------
 
 
 const HeaderContent ={
@@ -28,7 +26,7 @@ export default function index() {
   return (
     <Layout>
       <ImageHero content={HeaderContent} />
-      <RecipesNav />
+      <RecipesMenu />
       <hr />
       <div className="container max-w-5xl pb-0 text-center pt-44 md:grid md:grid-cols-7">
         <div className="flex items-center justify-center col-span-2">

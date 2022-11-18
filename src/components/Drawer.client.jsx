@@ -1,6 +1,6 @@
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
-
+import { Dialog, Transition } from "@headlessui/react"
+import { Fragment, useState } from "react"
+// ----------------------------------------------------------------------
 /**
  * A Drawer component that opens on user click.
  * @param open - Boolean state. If `true`, then the drawer opens.
@@ -65,7 +65,7 @@ function Drawer({ open, onClose, children }) {
 /* Use for associating arialabelledby with the title*/
 Drawer.Title = Dialog.Title;
 
-export { Drawer };
+export { Drawer }
 
 export function useDrawer(openDefault = false) {
   const [isOpen, setIsOpen] = useState(openDefault);

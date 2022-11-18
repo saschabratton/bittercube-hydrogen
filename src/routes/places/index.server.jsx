@@ -1,9 +1,9 @@
-import { Layout } from '@components/all.server'
+import { Layout } from '@server'
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
-import ImageHero from "../../components/headers/ImageHero.server";
+import ImageHero from "../../components/hero/ImageHero.server";
 import { Image, Seo } from "@shopify/hydrogen";
 import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.client";
-
+// ----------------------------------------------------------------------
 
 const HeaderContent ={
   'text': 'Made in Milwaukee. Imbibed globally',

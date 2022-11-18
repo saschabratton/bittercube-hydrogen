@@ -1,34 +1,16 @@
-import { useShopQuery, CacheNone, gql, Image } from "@shopify/hydrogen"
-import Nav from "./Nav.client"
-
-
+import { Image } from "@shopify/hydrogen"
+import { PrimaryMenu } from "@client"
+// ----------------------------------------------------------------------
 export default function HomeHero({ content }) {
-
-
-  const {
-    data: { shop },
-  } = useShopQuery({
-    query: SHOP_QUERY,
-    cache: CacheNone(),
-    preload: false
-  });
 
   return (
     <>
-
      <div className="relative header-dark">
-      <Nav shop={shop} dark={true}/>
+      <PrimaryMenu dark={true}/>
       <div className="absolute inset-0 overflow-hidden bg-dark">
-
-
-
-
         {/* <Image src='images/bittercube-cocktail.jpg' width="1920" height="796" className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" /> */}
-        {/* TODO: host on vimeo */}
         <div className="absolute w-full h-full bg-dark/80"></div>
-        <video src="/videos/old-fashionedstopaction.mp4" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"></video>
-
-
+        <video src="/videos/old-fashionedstopaction.mp4" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"/>
       </div>
       <div className="container relative grid grid-cols-1 mx-auto text-center uppercase sm:grid-cols-7">
         <div className="hidden sm:flex sm:items-center sm:justify-center">
@@ -52,14 +34,5 @@ export default function HomeHero({ content }) {
       </div>
     </div>
     </>
-  );
+  )
 }
-
-const SHOP_QUERY = gql`
-  query ShopInfo {
-    shop {
-      name
-      description
-    }
-  }
-`;

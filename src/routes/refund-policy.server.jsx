@@ -1,13 +1,11 @@
-import { Layout } from '@components/all.server'
-import PatternHero from "../components/headers/PatternHero.server"
-
-const HeaderText = ("Refund Policy")
+import { Layout, PatternHero } from '@server'
+// ----------------------------------------------------------------------
 
 export default function RefundPolicy() {
 
   return (
     <Layout>
-      <PatternHero content={HeaderText} />
+      <PatternHero content={"Refund Policy"} />
       <section>
         <div className="container flex flex-col max-w-6xl gap-6">
           <p className="mx-auto text-center h2">Thank you for your purchase. We hope you are happy with your purchase. However, if you are not satisfied with your purchase, you may return it to us for a full refund or an exchange</p>

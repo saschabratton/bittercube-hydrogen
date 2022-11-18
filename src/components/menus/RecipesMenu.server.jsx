@@ -1,20 +1,19 @@
-import { useUrl, Link, gql} from "@shopify/hydrogen";
-
-
-const pageNav = [
+import { useUrl, Link } from "@shopify/hydrogen"
+// ----------------------------------------------------------------------
+const menu = [
   { label: 'featured', link: '/recipes', active: 'featured'},
   { label: 'all recipes', link: '/recipes/all', active: 'all'},
   { label: 'syrups', link: '/recipes/syrups', active: 'syrup'},
   { label: 'in the kitchen', link: '/recipes/kitchen', active: 'kitchen'},
 ]
 
-export default function RecipesNav() {
-  const { pathname } = useUrl();
+export default function RecipesMenu() {
+  const { pathname } = useUrl()
 
   return (
     <nav className="container flex justify-between py-8">
       <ul className="flex gap-8">
-        {pageNav.map(item => {
+        {menu.map(item => {
           const {label, link, active, i} = item
           return (
             <li key={i}>
@@ -26,23 +25,6 @@ export default function RecipesNav() {
         })}
       </ul>
     </nav>
-  );
+  )
 }
 
-const QUERY = gql`
-  query CollectionsNav {
-    collections(first: 10, query: "collection_type:smart", sortKey: UPDATED_AT) {
-      nodes {
-        id
-        title
-        handle
-        image {
-          altText
-          width
-          height
-          url
-        }
-      }
-    }
-  }
-`;

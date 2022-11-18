@@ -1,14 +1,13 @@
-import { Layout } from '@components/all.server'
-import { Link, Image } from "@shopify/hydrogen";
-import HomeHero from "../components/headers/HomeHero.server";
+import { Link, Image, CacheLong } from "@shopify/hydrogen"
+import { Layout, HomeHero } from '@server'
+
 import ScrollingBanner from "../components/ScrollingBanner.client";
 import ThreeColumnFeature from "../components/sections/ThreeColumnFeature.client";
 import BittersCarousel from "../components/home/BittersCarousel.client";
 import VerticalSeparator from "../components/animations/VerticalSeparator.client";
 import SignUp from "../components/sections/SignUp.client";
+// ----------------------------------------------------------------------
 
-
-const HeaderText = ("Making drinks come true since 2009")
 const ThreeColumnFeaturedContent = {
   'headline': 'Interested in visiting a Bittercube Venue?',
   'description': 'Bittercube operates a cocktail shop, two bars, and a bitters manufacturing facility in Milwaukee, Wisconsin.',
@@ -40,45 +39,38 @@ const SignUpContent = {
   'ctaLabel': '',
   'ctaLink': '',
 }
-const OrnamentText = "Shop"
 
-
-export default function Home() {
+export default function Home({response}) {
+  response.cache(CacheLong())
   return (
     <Layout>
-      {/* <Seo type="homepage" data={{title: 'Making drinks come true since 2009'}} /> */}
-      <HomeHero content={HeaderText} />
+      <HomeHero content={"Making drinks come true since 2009"} />
       <ScrollingBanner />
-        {/* <Suspense>
-          <FeaturedCollections />
-        </Suspense> */}
-        <div className="relative w-11/12 mx-auto">
-          <div className="container relative z-10 grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
-            <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
-              <p className="text-3xl uppercase">Slow-crafted<br />ARTISANAL - unique<span className="sr-only">Established 2009</span></p>
-              <Image src='/images/established2009.svg' width={225} height={50} alt="2009" role="presentation" />
-            </div>
-            <div className="flex flex-col items-center justify-center text-center md:p-16">
-              <p className="md:max-w-lg">We create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research. Elevate your next cocktail with Bittercube.</p>
-              <Link to="/about" className="items-center hidden gap-2 mx-auto md:flex btn label group w-fit">About Us
-              <div className="btn-arrow"></div>
-              </Link>
-            </div>
+      <div className="relative w-11/12 mx-auto">
+        <div className="container relative z-10 grid grid-cols-1 gap-6 py-16 md:grid-cols-2">
+          <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
+            <p className="text-3xl uppercase">Slow-crafted<br />ARTISANAL - unique<span className="sr-only">Established 2009</span></p>
+            <Image src='/images/established2009.svg' width={225} height={50} alt="2009" role="presentation" />
           </div>
-          <VerticalSeparator content={OrnamentText} />
+          <div className="flex flex-col items-center justify-center text-center md:p-16">
+            <p className="md:max-w-lg">We create innovative, densely flavored bitters through thoughtful sourcing, meticulous production, and ongoing research. Elevate your next cocktail with Bittercube.</p>
+            <Link to="/about" className="items-center hidden gap-2 mx-auto md:flex btn label group w-fit">About Us
+            <div className="btn-arrow"></div>
+            </Link>
+          </div>
         </div>
+        <VerticalSeparator content={"Shop"} />
+      </div>
+      <div className="container pb-0 text-center max-w-screen-2xl">
+        <h2 className="max-w-4xl mx-auto">Visit the shop to learn more about the bitters, browse cocktail kits, and check out brand collaborations.</h2>
+        <Link to="/shop/bitters" className="btn btn-action">Shop Bitters</Link>
+      </div>
+      <div className="pt-0 pb-20 mx-auto md:w-11/12">
+        <BittersCarousel />
+      </div>
 
-
-        <div className="container pb-0 text-center max-w-screen-2xl">
-          <h2 className="max-w-4xl mx-auto">Visit the shop to learn more about the bitters, browse cocktail kits, and check out brand collaborations.</h2>
-          <Link to="/shop/bitters" className="btn btn-action">Shop Bitters</Link>
-        </div>
-        <div className="pt-0 pb-20 mx-auto md:w-11/12">
-          <BittersCarousel />
-        </div>
-
-        <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
-        <SignUp content={SignUpContent}/>
+      <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
+      <SignUp content={SignUpContent}/>
     </Layout>
-  );
+  )
 }

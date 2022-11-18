@@ -1,6 +1,5 @@
-import Arrow from '../components/animations/Arrow.client'
 import RecomendedRecipes from "../components/sections/recipes/RecomendedRecipes.client"
-
+// ----------------------------------------------------------------------
 
 const recipes = [
   {

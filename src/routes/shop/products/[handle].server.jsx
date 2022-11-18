@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import {
   gql,
   useShopQuery,
@@ -5,20 +6,18 @@ import {
   useRouteParams,
   ShopifyAnalyticsConstants,
   Link,
-  Seo,
-  CacheNone,
-} from "@shopify/hydrogen";
-import { Suspense } from "react";
-import { Layout } from '@components/all.server'
+  Seo
+} from "@shopify/hydrogen"
+import { Layout } from '@server'
+import { HorizontalSeperator, PrimaryMenu } from "@client"
+
 import Arrow from "../../../components/global/icons/Arrow.client";
-import Nav from "../../../components/headers/Nav.client";
 import ProductDetails from "../../../components/ProductDetails.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters";
 import CardCarousel from "../../../components/sections/CardCarousel.client";
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client";
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
-import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
-
+// ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
   'headline': 'use to craft unique cocktails',
@@ -40,7 +39,7 @@ const ThreeColumnFeaturedLinks = [
 
 
 export default function Product({ params }) {
-  const { handle } = useRouteParams();
+  const { handle } = useRouteParams()
 
   const {
     data: { product },
@@ -49,28 +48,21 @@ export default function Product({ params }) {
     variables: {
       handle,
     },
-  });
-    const {
-    data: { shop },
-    } = useShopQuery({
-      query: SHOP_QUERY,
-      cache: CacheNone(),
-      preload: false
-    });
+  })
 
   useServerAnalytics({
     shopify: {
       pageType: ShopifyAnalyticsConstants.pageType.product,
       resourceId: product.id,
     },
-  });
+  })
 
   return (
     <Layout>
       <Suspense>
         <Seo type="product" data={product} />
       </Suspense>
-      <Nav shop={shop} dark={false} />
+      <PrimaryMenu dark={false} />
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
         <Arrow />
@@ -176,14 +168,6 @@ const PRODUCT_QUERY = gql`
         description
         title
       }
-    }
-  }
-`
-const SHOP_QUERY = gql`
-  query ShopInfo {
-    shop {
-      name
-      description
     }
   }
 `

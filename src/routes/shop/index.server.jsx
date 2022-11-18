@@ -1,16 +1,14 @@
-import { Layout } from '@components/all.server'
-import { Suspense } from "react";
-import PatternHero from "../../components/headers/PatternHero.server";
+import { Suspense } from "react"
+import { Link, Image } from "@shopify/hydrogen"
+import { Layout, PatternHero, CollectionsMenu } from '@server'
+
+
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
 import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import CardCarousel from "../../components/sections/CardCarousel.client";
-import { Link, Image } from "@shopify/hydrogen";
-import CollectionsNav from "../../components/headers/CollectionsNav.server";
-import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
-
-const HeaderText = ("The most distinct lineup of bitters in the world")
-
+import HorizontalSeperator from "../../components/animations/HorizontalSeperator.client";
+// ----------------------------------------------------------------------
 
 const alternatingContent = [
   {
@@ -39,9 +37,9 @@ const alternatingContent = [
 export default function Home() {
   return (
     <Layout>
-      <PatternHero content={HeaderText} />
+      <PatternHero content={"The most distinct lineup of bitters in the world"} />
       <Suspense>
-        <CollectionsNav />
+        <CollectionsMenu />
       </Suspense>
       <div className="container">
         <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">

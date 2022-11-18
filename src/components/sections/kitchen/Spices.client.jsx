@@ -1,6 +1,6 @@
 import { Link, Image } from "@shopify/hydrogen"
-import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
-
+import { HorizontalSeperator } from "@client"
+// ----------------------------------------------------------------------
 
 export default function Spices(){
   return(

@@ -1,10 +1,10 @@
-import { Layout } from '@components/all.server'
-import ImageHero from "../components/headers/ImageHero.server"
-import VerticalSeparator from "../components/animations/VerticalSeparator.client";
-import { Link, Image } from "@shopify/hydrogen"
-import HorizontalSeperator from "../components/headers/HorizontalSeperator.client";
-import ImageCarousel from "../components/sections/ImageCarousel.client";
+import { Link, Image, CacheLong } from "@shopify/hydrogen"
+import { ImageHero, Layout } from '@server'
+import { HorizontalSeperator } from "@client"
 
+import VerticalSeparator from "../components/animations/VerticalSeparator.client"
+import ImageCarousel from "../components/sections/ImageCarousel.client"
+// ----------------------------------------------------------------------
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
   'image': '/images/about-hero.jpg',
@@ -92,8 +92,9 @@ const Images = [
   },
 ]
 
-export default function about() {
-   return (
+export default function AboutPage({response}) {
+  response.cache(CacheLong())
+  return (
     <Layout>
       <ImageHero content={HeaderContent} />
       <div className="relative w-11/12 mx-auto">
@@ -242,10 +243,10 @@ export default function about() {
 
 
 
-{/*
+  {/*
       <ThreeColumnFeature content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
       <div className="relative">
-         <div className="absolute lg:left-[77%] lg:top-[20%] z-10 bottom-28 right-16">
+          <div className="absolute lg:left-[77%] lg:top-[20%] z-10 bottom-28 right-16">
           <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt="x" role="presentation" />
         </div>
         {/* <SplitBgVert content={SplitBgContent} /> */}
@@ -279,5 +280,5 @@ export default function about() {
 
 
     </Layout>
-   )
+  )
 }

@@ -1,23 +1,16 @@
-import { Layout } from '@components/all.server'
-import PatternHero from "../../../components/headers/PatternHero.server";
-import SubNav from "../../../components/global/SubNav.server";
-import Card from "../../../components/global/Card.client";
-import { fetchSync, Image, Link, Head } from "@shopify/hydrogen";
-import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
-import RecipesNav from "../../../components/headers/RecipesNav.server";
-import parse from 'html-react-parser';
-import { makeKey } from "../../../utilities/helpers";
+import { fetchSync, Image, Link, Head } from "@shopify/hydrogen"
+import parse from 'html-react-parser'
+import { Layout, PatternHero, RecipesMenu } from '@server'
+import { HorizontalSeperator } from "@client"
+import { makeKey } from "@utils"
+// ----------------------------------------------------------------------
 
-const HeaderText = ("Syrups")
 const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
 
-
-const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-
- const customSeo = {
-    title: 'Making Syrups',
-    description: 'Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.'
-  }
+const customSeo = {
+  title: 'Making Syrups',
+  description: 'Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.'
+}
 
 
 export default function Syrups(){
@@ -42,7 +35,6 @@ export default function Syrups(){
     })
     return result
   }
-
   const syrupGroups = groupIt(recipes)
 
 
@@ -52,8 +44,8 @@ export default function Syrups(){
         <meta name="title" content={customSeo.title} />
         <meta name="description" content={customSeo.description} />
       </Head>
-      <PatternHero content={HeaderText} />
-      <RecipesNav />
+      <PatternHero content={"Syrups"} />
+      <RecipesMenu />
       <hr />
       <div className="container relative z-10 grid max-w-6xl grid-cols-1 gap-6 py-16 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
@@ -88,6 +80,7 @@ export default function Syrups(){
 
       <div className="w-11/12 p-8 mx-auto border-2 border-gold">
         <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
+
           {recipes?.length > 0 && recipes.map ((recipe) => {
             return(
               <div className="text-center" id={recipe.slug}>
@@ -125,7 +118,8 @@ export default function Syrups(){
               </div>
               </div>
             )
-            })}
+          })}
+
         </div>
       </div>
     </Layout>

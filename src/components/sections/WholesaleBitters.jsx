@@ -1,10 +1,10 @@
-import { Link, Image } from "@shopify/hydrogen"
-
+import { Image } from "@shopify/hydrogen"
+// ----------------------------------------------------------------------
 export default function WholesaleBitters(){
   return(
     <section className="relative bg-paper">
       <div className="absolute inset-0">
-        <Image src='/images/wholesale-illustration.svg' width={1388} height={367}  alt="" role="presentation" className="object-contain w-full h-full" />
+        <Image src='/images/wholesale-illustration.svg' width={1388} height={367}  alt=" " role="presentation" className="object-contain w-full h-full" />
       </div>
       <div className="container relative text-center">
         <h2>Wholesale Bittercube</h2>

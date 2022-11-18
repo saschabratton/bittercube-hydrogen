@@ -1,12 +1,11 @@
 import { Suspense } from "react"
-import { gql, useShopQuery, Seo, useRouteParams } from "@shopify/hydrogen"
-import PatternHero from "../../components/headers/PatternHero.server"
-import { NotFound, Layout } from '@components/all.server'
+import { gql, useShopQuery, Seo, useRouteParams, useServerAnalytics, ShopifyAnalyticsConstants, CacheShort } from "@shopify/hydrogen"
+import { NotFound, Layout, PatternHero, CollectionsMenu } from '@server'
+
 import ProductCard from "../../components/ProductCard.server"
-import CollectionsNav from "../../components/headers/CollectionsNav.server"
 import WholesaleBitters from "../../components/sections/WholesaleBitters"
 import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client"
-
+// ----------------------------------------------------------------------
 
 export default function Collections() {
   const { handle } = useRouteParams()
@@ -18,20 +17,18 @@ export default function Collections() {
     variables: {
       handle,
     },
+    cache: CacheShort()
   })
   if(!collection) {
     return <NotFound />
   }
-  // if (!collection) {
-  //   return <p>Not Found</p>
-  // }
 
-  // useServerAnalytics({
-  //   shopify: {
-  //     pageType:ShopifyAnalyticsConstants.pageType.collection,
-  //     resourceId: collection.id,
-  //   },
-  // })
+  useServerAnalytics({
+    shopify: {
+      pageType:ShopifyAnalyticsConstants.pageType.collection,
+      resourceId: collection.id,
+    },
+  })
 
   return (
     <Layout>
@@ -39,7 +36,7 @@ export default function Collections() {
         <Seo type="collection" data={collection} />
       </Suspense>
       <PatternHero content={collection.title} />
-      <CollectionsNav />
+      <CollectionsMenu />
       <hr />
       <div className="container grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {collection.products.nodes.map((product) => (

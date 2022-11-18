@@ -1,9 +1,9 @@
-import { Layout } from '@components/all.server'
-import ImageHero from "../../components/headers/ImageHero.server"
+import { Layout } from '@server'
+import ImageHero from "../../components/hero/ImageHero.server"
 import { Image, Link, Seo } from "@shopify/hydrogen"
 import SignUpForm from "../../components/global/SignUpForm.client"
 import ImageCarousel from "../../components/sections/ImageCarousel.client"
-
+// ----------------------------------------------------------------------
 
 const HeaderContent ={
   'text': 'The Apothecary',

@@ -9,9 +9,10 @@ import {
   Image,
   Link,
   Money,
-} from "@shopify/hydrogen";
+} from "@shopify/hydrogen"
+// ----------------------------------------------------------------------
 
-export function CartDetails({ onClose }) {
+export default function CartDetails({ onClose }) {
   const { lines } = useCart();
 
   if (lines.length === 0) {

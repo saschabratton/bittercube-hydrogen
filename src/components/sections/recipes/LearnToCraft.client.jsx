@@ -1,9 +1,9 @@
-import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
 import { Image } from "@shopify/hydrogen"
-import VerticalSeparator from "../../animations/VerticalSeparator.client";
-import TabSection from "../TabSection.client";
-import CocktailBasics from "./CocktailBasics.client";
+import { HorizontalSeperator } from "@client"
 
+// import TabSection from "../TabSection.client"
+import CocktailBasics from "./CocktailBasics.client";
+// ----------------------------------------------------------------------
 
 
 const TabContent = [

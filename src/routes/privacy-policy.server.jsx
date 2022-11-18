@@ -1,13 +1,12 @@
-import { Layout } from '@components/all.server'
-import PatternHero from "../components/headers/PatternHero.server"
+import { Layout, PatternHero } from '@server'
+// ----------------------------------------------------------------------
 
-const HeaderText = ("Privacy Policy")
 
 export default function PrivacyPolicy() {
 
   return (
     <Layout>
-      <PatternHero content={HeaderText} />
+      <PatternHero content={"Privacy Policy"} />
       <section>
         <div className="container flex flex-col max-w-5xl gap-6">
           <h2 className="mx-auto">Bittercube's Privacy Policy</h2>
@@ -84,9 +83,6 @@ export default function PrivacyPolicy() {
                 [Re: Privacy Compliance Officer]
                 4828 W Lisbon Ave, Milwaukee, WI 53210
                 </p>
-
-
-
 
               </div>
           </div>

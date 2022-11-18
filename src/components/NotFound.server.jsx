@@ -1,5 +1,5 @@
-import { Layout } from '@components/all.server'
-
+import { Layout } from '@server'
+// ----------------------------------------------------------------------
 export default function NotFound({ response }) {
   if (response) {
     // response.status = 404

@@ -1,5 +1,6 @@
 import { Link, Image } from "@shopify/hydrogen"
-import HorizontalSeperator from "../../headers/HorizontalSeperator.client"
+import { HorizontalSeperator } from "@client"
+// ----------------------------------------------------------------------
 
 export default function Flavors(){
   return(
@@ -72,9 +73,6 @@ export default function Flavors(){
             <Link to="/shop/products/chipotle-cacao" className="label">Chipotle Cacao Bitters
             </Link>
           </div>
-
-
-
           <div className="col-span-1 md:col-span-2"></div>
         </div>
     </div>

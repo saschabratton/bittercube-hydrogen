@@ -7,7 +7,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components')
+      '@server': resolve(__dirname, 'src/components/index.server.js'),
+      '@client': resolve(__dirname, 'src/components/index.client.js'),
+      '@utils': resolve(__dirname, 'src/utilities')
     }
   },
 })

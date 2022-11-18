@@ -1,15 +1,15 @@
-import PatternHero from "../../../components/headers/PatternHero.server";
-import { Layout } from '@components/all.server'
-import SubNav from "../../../components/global/SubNav.server";
+import { Layout, PatternHero, RecipesMenu } from '@server'
+import {
+  HorizontalSeperator,
+  // CardCarousel
+} from "@client"
+
 import SignUp from "../../../components/sections/SignUp.client";
 import Flavors from "../../../components/sections/kitchen/Flavors.client";
 import Spices from "../../../components/sections/kitchen/Spices.client";
-import CardCarousel from "../../../components/sections/CardCarousel.client";
 import BakingCarousel from "../../../components/sections/kitchen/BakingCarousel.client";
-import RecipesNav from "../../../components/headers/RecipesNav.server";
-import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
+// ----------------------------------------------------------------------
 
-const HeaderText = ("Bitters in the kitchen")
 const pageNav = [
   { label: 'seasonal', link: '/recipes'},
   { label: 'cocktails', link: '/recipes/all'},
@@ -26,8 +26,8 @@ const SignUpContent = {
 export default function Kitchen(){
   return(
     <Layout>
-      <PatternHero content={HeaderText} />
-      <RecipesNav />
+      <PatternHero content={"Bitters in the kitchen"} />
+      <RecipesMenu />
       <hr />
       <Flavors />
       <div className="relative bg-dark">

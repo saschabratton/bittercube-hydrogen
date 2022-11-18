@@ -1,6 +1,14 @@
-import { ProductOptionsProvider, MediaFile, useProductOptions, ProductPrice, BuyNowButton, AddToCartButton} from "@shopify/hydrogen";
-import HorizontalSeperator from "./headers/HorizontalSeperator.client";
-import parse from 'html-react-parser';
+import {
+  ProductOptionsProvider,
+  MediaFile,
+  useProductOptions,
+  ProductPrice,
+  BuyNowButton,
+  AddToCartButton
+} from "@shopify/hydrogen"
+import parse from 'html-react-parser'
+import { HorizontalSeperator } from "@client"
+// ----------------------------------------------------------------------
 
 export default function ProductDetails({ product }) {
   return (

@@ -1,10 +1,8 @@
 import Carousel from 'better-react-carousel'
-import { Image } from "@shopify/hydrogen"
 import Card from "../global/Card.client"
-import Arrow from "../global/icons/Arrow.client"
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
-import { makeKey } from "../../utilities/helpers";
-
+import { makeKey } from "@utils"
+// ----------------------------------------------------------------------
 
 const RecommendedProducts = [
   {'label': 'Fancy Cocktail stir stick', 'manufacturer': 'William Sonoma','price': '15.99', 'description': 'Stainless steel, lorem ipsum', 'image': 'src/assets/bittercube-cocktail.jpg'},
