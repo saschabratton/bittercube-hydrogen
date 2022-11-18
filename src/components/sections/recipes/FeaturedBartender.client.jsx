@@ -16,7 +16,7 @@ export default function FeaturedBartenders(){
               <h4 className="mt-6 label">SIGNATURE RECIPE</h4>
               <p>This spirit forward sipper is the perfect after-dinner drink.</p>
 
-              <Link to="/recipes/all/bogart" className="flex justify-between pt-4 border-t-2 w-fit lg:w-60 label group border-gold">Go to recipe
+              <Link to="/recipes/bogart" className="flex justify-between pt-4 border-t-2 w-fit lg:w-60 label group border-gold">Go to recipe
                 <div className="btn-arrow btn-arrow-gold"></div>
               </Link>
 

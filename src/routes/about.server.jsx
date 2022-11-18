@@ -1,4 +1,4 @@
-import { Link, Image, CacheLong } from "@shopify/hydrogen"
+import { Link, Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { ImageHero, Layout } from '@server'
 import { HorizontalSeperator } from "@client"
 
@@ -91,11 +91,18 @@ const Images = [
     'url': '/images/about-05.jpg'
   },
 ]
+const customSeo = {
+    name: 'About Bittercube • Bittercube',
+  }
+
 
 export default function AboutPage({response}) {
   response.cache(CacheLong())
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <ImageHero content={HeaderContent} />
       <div className="relative w-11/12 mx-auto">
         <div className="container relative mt-20">

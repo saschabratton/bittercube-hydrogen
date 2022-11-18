@@ -3,7 +3,7 @@ import {
   HorizontalSeperator,
   // CardCarousel
 } from "@client"
-
+import { Seo } from "@shopify/hydrogen";
 import SignUp from "../../../components/sections/SignUp.client";
 import Flavors from "../../../components/sections/kitchen/Flavors.client";
 import Spices from "../../../components/sections/kitchen/Spices.client";
@@ -22,10 +22,17 @@ const SignUpContent = {
   'ctaLink': 'https://www.instagram.com/bittercube/',
 }
 
+const customSeo = {
+    name: 'Bitters as ingredients • Bittercube',
+  }
+
 
 export default function Kitchen(){
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PatternHero content={"Bitters in the kitchen"} />
       <RecipesMenu />
       <hr />
@@ -41,8 +48,6 @@ export default function Kitchen(){
           <h2 className="mb-6">Bitters as Added Flavor</h2>
           <p>Another way to use cocktail bitters in baking is to riff on classics like a bartender might do when mixing cocktails. Simply add bitters to a tried and true recipe to accentuate, enhance, or contrast existing flavors. When using 1-2 tsp of bitters, you should not have to adjust the recipe in any way. Below are some ideas for adding bitters to your favorite baked goods.</p>
         </div>
-        {/* TODO: baking recipe carousel  */}
-        {/* <CardCarousel /> */}
         <BakingCarousel />
       </div>
       <Spices />

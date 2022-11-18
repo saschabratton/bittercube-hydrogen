@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Link, Image } from "@shopify/hydrogen"
+import { Link, Image, Seo } from "@shopify/hydrogen"
 import { Layout, PatternHero, CollectionsMenu } from '@server'
 import { HorizontalSeperator, CardCarousel } from "@client"
 
@@ -8,6 +8,11 @@ import WholesaleBitters from "../../components/sections/WholesaleBitters";
 import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
 import BittersBundles from "../../components/BittersBundles.server";
 // ----------------------------------------------------------------------
+
+
+const customSeo = {
+    name: 'Shop • Bittercube',
+  }
 
 const alternatingContent = [
   {
@@ -36,6 +41,9 @@ const alternatingContent = [
 export default function Home() {
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+        }} />
       <PatternHero content={"The most distinct lineup of bitters in the world"} />
       <Suspense>
         <CollectionsMenu />

@@ -33,7 +33,7 @@ const Images = [
 ]
 
 const customSeo = {
-    name: "Visit Mosler's Vault",
+    name: "Visit Mosler's Vault • Bittercube",
   }
 
 export default function MoslersPage(){

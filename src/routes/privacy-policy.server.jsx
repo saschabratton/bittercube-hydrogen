@@ -1,11 +1,18 @@
 import { Layout, PatternHero } from '@server'
+import { Seo } from "@shopify/hydrogen"
 // ----------------------------------------------------------------------
 
+const customSeo = {
+    name: 'Privacy Policy • Bittercube',
+  }
 
 export default function PrivacyPolicy() {
 
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+        }} />
       <PatternHero content={"Privacy Policy"} />
       <section>
         <div className="container flex flex-col max-w-5xl gap-6">

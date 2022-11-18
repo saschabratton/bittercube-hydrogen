@@ -38,7 +38,7 @@ const Images = [
 ]
 
 const customSeo = {
-    name: "The Bittercube Apothecary",
+    name: "The Bittercube Apothecary • Bittercube",
   }
 
 export default function moslers(){

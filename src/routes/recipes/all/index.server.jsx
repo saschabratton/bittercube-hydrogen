@@ -1,4 +1,4 @@
-import { fetchSync } from '@shopify/hydrogen'
+import { fetchSync, Seo } from '@shopify/hydrogen'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator } from "@client"
 
@@ -21,9 +21,16 @@ export default function Cocktails(){
     preload: false
   }).json()
 
+const customSeo = {
+    name: 'All Bittercube recipes • Bittercube',
+  }
+
 
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PatternHero content={"All Recipes"} />
       <RecipesMenu />
 

@@ -1,4 +1,4 @@
-import { Link, Image, CacheLong } from "@shopify/hydrogen"
+import { Link, Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { Layout, HomeHero } from '@server'
 
 import ScrollingBanner from "../components/ScrollingBanner.client";
@@ -40,10 +40,17 @@ const SignUpContent = {
   'ctaLink': '',
 }
 
+const customSeo = {
+    name: 'Bittercube • Making drinks come true since 2009',
+  }
+
 export default function Home({response}) {
   response.cache(CacheLong())
   return (
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+        }} />
       <HomeHero content={"Making drinks come true since 2009"} />
       <ScrollingBanner />
       <div className="relative w-11/12 mx-auto">

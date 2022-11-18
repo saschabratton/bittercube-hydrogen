@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Image, fetchSync, CacheShort } from "@shopify/hydrogen"
+import { Image, fetchSync, CacheShort, Seo } from "@shopify/hydrogen"
 import { Layout, RecipesMenu, ImageHero } from '@server'
 import { HorizontalSeperator, RecipeCarousel } from "@client"
 
@@ -30,9 +30,16 @@ export default function Recipes() {
 
   const featuredRecipes = recipes.filter(recipe => recipe.featured == true)
 
+  const customSeo = {
+    name: 'The Bittercube Recipe Library  • Bittercube',
+  }
+
   return (
     <Suspense>
       <Layout>
+        <Seo type="page" data={{
+          title: customSeo.name,
+        }} />
         <ImageHero content={HeaderContent} />
         <RecipesMenu />
         <hr />

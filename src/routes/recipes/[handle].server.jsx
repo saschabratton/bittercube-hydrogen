@@ -1,4 +1,4 @@
-import { Link, Image, useRouteParams, fetchSync } from "@shopify/hydrogen"
+import { Link, Image, useRouteParams, fetchSync, Seo } from "@shopify/hydrogen"
 import { NotFound, Layout } from '@server'
 import { PrimaryMenu, HorizontalSeperator } from "@client"
 import { makeKey } from "@utils"
@@ -24,8 +24,16 @@ export default function Recipe(){
     return <NotFound />
   }
 
+
+  const customSeo = {
+    name: 'How to craft • Bittercube',
+  }
+
   return(
     <Layout>
+      <Seo type="page" data={{
+          title: customSeo.name,
+      }} />
       <PrimaryMenu dark={false}/>
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/all">All Recipes</Link>
@@ -44,9 +52,10 @@ export default function Recipe(){
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
             <p className="mb-0 text-base label">cocktail style:<br />
-              {activeRecipe.flavors.filter((index) => (index < 2))
+              {/* {activeRecipe.flavors.filter((index) => (index < 2)) */}
+              {activeRecipe.flavors.slice(0, 2)
               .map((flavor, index) => (
-                  <span key={makeKey(flavor)}>{flavor}</span>
+                  <span key={makeKey(flavor)}>{index != 0 ? ', ' : ''}{flavor}</span>
               ))}
             </p>
             <h1>{activeRecipe.name}</h1>
