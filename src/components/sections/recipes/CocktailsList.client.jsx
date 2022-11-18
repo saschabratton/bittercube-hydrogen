@@ -1,11 +1,10 @@
-import { useState, useId } from "react"
-import Select from 'react-select'
+import { useState, useId, useEffect } from "react"
 import { fetchSync } from '@shopify/hydrogen'
-import RecipeCard from "./RecipeCard.client"
 import { HiSearch } from "react-icons/hi"
-import { useEffect } from "react"
-import { HiX } from "react-icons/hi";
-
+import { HiX } from "react-icons/hi"
+import Select from 'react-select'
+import { RecipeCard } from "@client"
+// ----------------------------------------------------------------------
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 

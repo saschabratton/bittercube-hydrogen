@@ -120,17 +120,16 @@ const breakPoints = [
 
 export default function BittersCarousel(){
   return(
-      <Carousel
+    <Carousel
       responsiveLayout={breakPoints}
-       cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}
-       >
-        {featuredBitters.map(bitters => {
-          return(
-            <Carousel.Item key={makeKey(bitters.name)}>
-              <BittersCard bitters={bitters}/>
-            </Carousel.Item>
-          )
-          })}
-      </Carousel>
+      cols={5} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
+      {featuredBitters.map(bitters => {
+        return(
+          <Carousel.Item key={makeKey(bitters.name)}>
+            <BittersCard bitters={bitters}/>
+          </Carousel.Item>
+        )
+        })}
+    </Carousel>
   )
 }

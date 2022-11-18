@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
 import { Link, Image } from "@shopify/hydrogen"
-import { makeKey } from "../../../utilities/helpers"
+import { useInView } from 'react-intersection-observer'
+// ----------------------------------------------------------------------
 
 export default function RecipeCard({ recipe }){
   const { slug, name, description, spirit, images, bitters } = recipe
@@ -20,8 +19,6 @@ export default function RecipeCard({ recipe }){
                 <Image src={ images[0].url } width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" />
             :
               <><div className="w-full bg-dark h-96"></div></>
-
-
             }
           </div>
         </div>

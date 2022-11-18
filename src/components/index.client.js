@@ -4,5 +4,10 @@ export { default as VerticalSeparator } from './animations/VerticalSeparator.cli
 export { Drawer, useDrawer } from './Drawer.client'
 export { default as CartDetails } from './CartDetails.client'
 
-// Sections
-export { default as CardCarousel } from './sections/CardCarousel.client'
+// Carousels
+export { default as RecipeCarousel } from './carousels/RecipeCarousel.client'
+export { default as CardCarousel } from './carousels/CardCarousel.client'
+
+// Cards
+export { default as RecipeCard } from './cards/RecipeCard.client'
+export { default as FeaturedRecipeCard } from './cards/FeaturedRecipeCard.client'

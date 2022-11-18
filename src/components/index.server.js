@@ -9,3 +9,4 @@ export { default as PatternHero } from './hero/PatternHero.server'
 // Menus
 export { default as CollectionsMenu } from './menus/CollectionsMenu.server'
 export { default as RecipesMenu } from './menus/RecipesMenu.server'
+

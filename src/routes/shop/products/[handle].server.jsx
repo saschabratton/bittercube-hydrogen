@@ -9,12 +9,11 @@ import {
   Seo
 } from "@shopify/hydrogen"
 import { Layout } from '@server'
-import { HorizontalSeperator, PrimaryMenu } from "@client"
+import { HorizontalSeperator, PrimaryMenu, CardCarousel } from "@client"
 
 import Arrow from "../../../components/global/icons/Arrow.client";
 import ProductDetails from "../../../components/ProductDetails.client";
 import WholesaleBitters from "../../../components/sections/WholesaleBitters"
-import CardCarousel from "../../../components/sections/CardCarousel.client"
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client"
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client"
 import SimilarProducts from "../../../components/sections/shop/SimilarProducts.server"

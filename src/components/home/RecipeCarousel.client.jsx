@@ -1,3 +1,4 @@
+// TODO: Please Confirm that we can blow this away.
 import { Image, Link } from "@shopify/hydrogen"
 import Carousel from 'better-react-carousel'
 import VerticalSeparator from "../animations/VerticalSeparator.client";
@@ -37,6 +38,7 @@ export default function RecipeCarousel() {
   return(
 
     <div className="container relative flex py-0 mx-auto my-20 border-2 border-gold md:grid md:grid-cols-8 md:px-0">
+      <h1>HOME</h1>
       <VerticalSeparator />
       <div className="absolute -top-10 right-10">
         <Image src='/emblems/botanicals-emblem.svg' width={101} height={111} alt=" " role="presentation" />
@@ -73,7 +75,7 @@ export default function RecipeCarousel() {
                 </Carousel.Item>
               )
               })}
-            </Carousel>
+          </Carousel>
       </div>
     </div>
   )

@@ -1,12 +1,6 @@
-import {useState, useEffect, useId} from 'react'
-import Carousel from 'better-react-carousel'
-import { Image } from "@shopify/hydrogen"
-import Card from "../../global/Card.client";
-import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
-import { makeKey } from "../../../utilities/helpers";
-import RecipeCard from "./RecipeCard.client";
-
-
+import { useState, useEffect } from 'react'
+import { RecipeCard } from "@client";
+// ----------------------------------------------------------------------
 
 export default function RecomendedRecipes({recipes, activeRecipe}){
   const [similarRecipes, setSimilarRecipes] = useState([])
@@ -50,21 +44,10 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
 
   return(
     <section className="container grid grid-cols-2 gap-6 md:grid-cols-4">
-      {/* {recommended?.length > 0 &&
-          recommended.map(({slug, name}) => {
-          return(
-            <>
-              <div className="card">
-                  <h1>{name}: {slug}</h1>
-              </div>
-            </>
-          )
-        })} */}
-
         {recommended?.length > 0 &&
           recommended.map((recipe, i) => {
             return (
-               <RecipeCard key={`${recipe.slug}_${i}`} recipe={recipe} />
+              <RecipeCard key={`${recipe.slug}_${i}`} recipe={recipe} />
             )
           })
         }
