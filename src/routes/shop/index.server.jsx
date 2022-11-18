@@ -53,7 +53,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex justify-end text-center">
-            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={250} height={111}  role="presentation" />
+            <Image src="/images/handwritten/shop-madewrealbotanicals.svg" alt=" " width={200} height={111}  role="presentation" />
           </div>
         </div>
         <div className="relative">
