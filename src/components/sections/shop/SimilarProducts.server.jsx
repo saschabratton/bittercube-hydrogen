@@ -41,7 +41,7 @@ export default function SimilarProducts({ data }) {
 function ProductCards({products}) {
   return (
     <>
-    <div className="container grid w-11/12 grid-cols-2 gap-6 lg:grid-cols-4">
+    <div className="container grid w-11/12 grid-cols-2 gap-6 py-0 lg:grid-cols-4">
       {products.slice(0,  4).map((product) => (
         // <ProductCard
         //   product={product}
