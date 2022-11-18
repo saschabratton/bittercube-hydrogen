@@ -12,7 +12,7 @@ export default function HomeHero({ content }) {
         <div className="absolute w-full h-full bg-dark/80"></div>
 
 
-        <video src="https://player.vimeo.com/progressive_redirect/playback/772504510/rendition/720p/file.mp4?loc=external&signature=c0e4dded82202d2cf5f7bd4e2c658e7842c63092e5c3a2765821155c58363c6f" autoPlay={true} loop muted className="object-cover h-full xl:h-auto"/>
+        <video src="https://player.vimeo.com/progressive_redirect/playback/772504510/rendition/720p/file.mp4?loc=external&signature=c0e4dded82202d2cf5f7bd4e2c658e7842c63092e5c3a2765821155c58363c6f" autoPlay={true} loop muted className="object-cover w-full h-full xl:h-auto"/>
 
 
 

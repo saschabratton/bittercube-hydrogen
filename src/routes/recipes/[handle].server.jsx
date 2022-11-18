@@ -50,7 +50,7 @@ export default function Recipe(){
 
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
-            <p className="mb-0 text-base label">cocktail style:<br />
+            <p className="text-base label">cocktail style:<br />
               {activeRecipe.flavors.slice(0, 2)
               .map((flavor, index) => (
                   <span key={makeKey(flavor)}>{index != 0 ? ', ' : ''}{flavor}</span>
