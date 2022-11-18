@@ -1,8 +1,5 @@
-
-// import logomark from '../assets/logomark-reversed.svg'
-import { useShopQuery, CacheLong, gql, Image } from "@shopify/hydrogen";
-import Navigation from "../global/Navigation.server";
-import Nav from "./Nav.client";
+import { useShopQuery, CacheNone, gql, Image } from "@shopify/hydrogen"
+import Nav from "./Nav.client"
 
 export default function PatternHero({ content }) {
 
@@ -10,7 +7,7 @@ export default function PatternHero({ content }) {
     data: { shop },
   } = useShopQuery({
     query: SHOP_QUERY,
-    cache: CacheLong(),
+    cache: CacheNone(),
     preload: true,
   });
 

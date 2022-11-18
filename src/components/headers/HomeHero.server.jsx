@@ -1,6 +1,5 @@
-import { useShopQuery, CacheLong, gql, Image } from "@shopify/hydrogen";
-import Navigation from "../global/Navigation.server";
-import Nav from "./Nav.client";
+import { useShopQuery, CacheNone, gql, Image } from "@shopify/hydrogen"
+import Nav from "./Nav.client"
 
 
 export default function HomeHero({ content }) {
@@ -10,7 +9,7 @@ export default function HomeHero({ content }) {
     data: { shop },
   } = useShopQuery({
     query: SHOP_QUERY,
-    cache: CacheLong(),
+    cache: CacheNone(),
     preload: true,
   });
 

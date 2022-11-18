@@ -1,5 +1,5 @@
 import { Layout } from "../../../components/Layout.server";
-import {  gql, useShopQuery, Link, Image, CacheLong, useRouteParams, fetchSync } from "@shopify/hydrogen"
+import { gql, useShopQuery, Link, Image, CacheNone, useRouteParams, fetchSync } from "@shopify/hydrogen"
 import TabSection from "../../../components/sections/recipes/TabSection.client";
 import RecomendedRecipes from "../../../components/sections/recipes/RecomendedRecipes.client";
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
@@ -15,7 +15,7 @@ export default function Recipe(){
     data: { shop },
     } = useShopQuery({
       query: SHOP_QUERY,
-      cache: CacheLong(),
+      cache: CacheNone(),
       preload: true,
   });
 

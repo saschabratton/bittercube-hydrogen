@@ -1,4 +1,4 @@
-import { useShopQuery, CacheLong, gql, useUrl, Link, Seo, Image } from "@shopify/hydrogen";
+import { Link, Image } from "@shopify/hydrogen"
 
 
 export default function Navigation(){

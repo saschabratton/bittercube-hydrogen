@@ -6,7 +6,7 @@ import {
   ShopifyAnalyticsConstants,
   Link,
   Seo,
-  CacheLong,
+  CacheNone,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
 import { Layout } from "../../../components/Layout.server";
@@ -54,7 +54,7 @@ export default function Product({ params }) {
     data: { shop },
     } = useShopQuery({
       query: SHOP_QUERY,
-      cache: CacheLong(),
+      cache: CacheNone(),
       preload: true,
     });
 
@@ -188,4 +188,4 @@ const SHOP_QUERY = gql`
       description
     }
   }
-`;
+`

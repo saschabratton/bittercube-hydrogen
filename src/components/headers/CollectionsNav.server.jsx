@@ -1,4 +1,4 @@
-import { useUrl, Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
+import { useUrl, Link, gql, useShopQuery, CacheNone } from "@shopify/hydrogen";
 
 export default function CollectionsNav() {
   const { pathname } = useUrl();
@@ -7,7 +7,7 @@ export default function CollectionsNav() {
     data: { collections },
   } = useShopQuery({
     query: QUERY,
-    cache: CacheLong(),
+    cache: CacheNone(),
   });
 
   return (

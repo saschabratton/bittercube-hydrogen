@@ -1,4 +1,4 @@
-import { useUrl, Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
+import { useUrl, Link, gql} from "@shopify/hydrogen";
 
 
 const pageNav = [
