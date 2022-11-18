@@ -97,9 +97,20 @@ function CartCheckoutActions() {
   return (
     <>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
+        <textarea
+          name='note'
+          value={message}
+          onChange={({ target: { value } }) => {
+            setMessage(value)
+            // noteUpdate({id, note: value})
+          }}
+          className="w-full p-4 rounded-lg h-28">
+
+        </textarea>
+
         <Link
           to={checkoutUrl}
-          onClick={handleCheckout}
+          // onClick={handleCheckout}
           width="full"
           className="w-full m-0 text-center btn btn-action"
         >
