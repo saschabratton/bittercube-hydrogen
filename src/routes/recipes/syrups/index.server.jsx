@@ -5,6 +5,8 @@ import Card from "../../../components/global/Card.client";
 import { fetchSync, Image, Link, Head } from "@shopify/hydrogen";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
 import RecipesNav from "../../../components/headers/RecipesNav.server";
+import parse from 'html-react-parser';
+import { makeKey } from "../../../utilities/helpers";
 
 const HeaderText = ("Syrups")
 const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
@@ -84,57 +86,46 @@ export default function Syrups(){
         </div>
       </div>
 
-
-
       <div className="w-11/12 p-8 mx-auto border-2 border-gold">
         <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
-          <div className="md:col-span-2">
-            <div className="flex items-center justify-center w-16 h-16 border-2 label border-gold">A</div>
-          </div>
-
-          {/* {Object.entries(syrupGroups)
-
-          } */}
-
-
           {recipes?.length > 0 && recipes.map ((recipe) => {
             return(
-              <div className="text-center">
+              <div className="text-center" id={recipe.slug}>
                 <h4 className="tracking-normal h2">{recipe.name}</h4>
                 <HorizontalSeperator />
                 <div className="flex flex-col gap-6 text-left text-ornament">
                 <dl>
                   <dt>Ingredients</dt>
-                  <dd>3 cups organic agave nectar</dd>
-                  <dd>2 cups water</dd>
+                  <table>
+                    <tbody>
+                    {recipe.ingredients.length > 0 && recipe.ingredients.map(({ name, quantity, link }) =>
+                      <tr key={makeKey(name)}>
+                        <td><dd>{quantity}</dd></td>
+                        <td><dd>
+                          {link &&
+                          <Link to={link} className="text-gold hover:text-gold/50">
+                            {name}
+                          </Link>
+                          }
+                          {!link &&
+                            <span>{name}</span>
+                          }
+                        </dd></td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
                 </dl>
                 <dl>
                   <dt>Instructions</dt>
-                  <dd>Combine ingredients and whisk together until fully amalgamated.</dd>
-                  <dd>Bottle and refrigerate for up to one month.</dd>
+                  <dd>
+                    {parse(recipe.instructions)}
+                  </dd>
                 </dl>
               </div>
               </div>
             )
             })}
-
-
-          <div className="wrappe">
-            {syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-                return(
-                  <>
-                    <h1>{key}</h1>
-                    {value?.length > 0 && value.map((recipe) => {
-                      return(
-                        <>
-                        <h2>{recipe.name}</h2>
-                        </>
-                      )
-                    })}
-                  </>
-                )
-            })}
-          </div>
         </div>
       </div>
     </Layout>

@@ -64,19 +64,17 @@ export default function Product({ params }) {
       resourceId: product.id,
     },
   });
-  // Implement an `Seo` component for the product. By specifying "type=product"
-  // you're overriding the `defaultSeo` type in the Layout component.
+
   return (
     <Layout>
       <Suspense>
         <Seo type="product" data={product} />
       </Suspense>
       <Nav shop={shop} dark={false} />
-      {/* TODO: Link up breadcrumbs for non bitters products */}
       <div className="container flex items-center w-11/12 gap-2 pb-6 mt-8">
-        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop">shop</Link>
+        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
         <Arrow />
-        <Link className="label" to="/shop/bitters">Bitters</Link>
+        <span className="text-lg label">{product.title}</span>
       </div>
       <ProductDetails product={product} />
       <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} />
@@ -138,7 +136,7 @@ const PRODUCT_QUERY = gql`
       title
       vendor
       descriptionHtml
-      media(first: 7) {
+      media(first: 50) {
         nodes {
           ...MediaFields
         }

@@ -47,7 +47,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">
           <div>
             <h2 className="max-w-md text-5xl capitalize h1">Shop the Full Bittercube Store</h2>
-            <Link to="/shop/bitters" className="flex items-center gap-2 label group w-fit">Explore All Products
+            <Link to="/shop/all" className="flex items-center gap-2 label group w-fit">Explore All Products
               <div className="btn-arrow"></div>
             </Link>
           </div>

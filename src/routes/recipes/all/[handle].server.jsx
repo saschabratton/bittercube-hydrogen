@@ -49,10 +49,9 @@ export default function Recipe(){
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
             <p className="mb-0 text-base label">cocktail style:<br />
-            {/* TODO: , after only first item  */}
-              {activeRecipe.flavors.filter((i, index) => (index < 2))
-              .map((flavor) => (
-                  <span key={makeKey(flavor)}>{flavor}, </span>
+              {activeRecipe.flavors.filter((index) => (index < 2))
+              .map((flavor, index) => (
+                  <span key={makeKey(flavor)}>{flavor}</span>
               ))}
             </p>
             <h1>{activeRecipe.name}</h1>
@@ -73,11 +72,10 @@ export default function Recipe(){
       <div className="relative w-11/12 pt-0 mx-auto">
         <HorizontalSeperator />
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
-          Recommended
+          Recommended Recipes
         </div>
       </div>
-      TODO: recommended recipes
-      {/* <RecomendedRecipes recipes={recipes} activeRecipe={activeRecipe}/> */}
+      <RecomendedRecipes recipes={recipes} activeRecipe={activeRecipe}/>
       <SplitBgVertBlue />
     </Layout>
   )

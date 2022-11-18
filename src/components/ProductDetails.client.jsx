@@ -58,11 +58,11 @@ function ProductForm({ product }) {
                   </div>
                 );
               })}
-              {/* <ProductPrice
+              <ProductPrice
                 className="text-lg font-semibold text-gray-900"
                 variantId={selectedVariant.id}
                 data={product}
-              /> */}
+              />
             </div>
             <div className="flex items-end justify-end">
               <PurchaseMarkup />
