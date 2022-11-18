@@ -93,7 +93,6 @@ export default function CocktailsList(){
     }
 
     if (filters.product) {
-      console.log("Filtering by product")
       filterRecipesByProduct(filters.product)
       return
     }
@@ -115,12 +114,9 @@ export default function CocktailsList(){
       return
     }
     const { label } = selected
-    console.log(label)
     const filteredRecipes = allRecipes.filter(({ bitters }) => {
-      console.log(bitters)
       return bitters.filter(({ name }) => label === name).length
     })
-    console.log("FILTERED",filteredRecipes)
     setRecipes(filteredRecipes)
   }
 

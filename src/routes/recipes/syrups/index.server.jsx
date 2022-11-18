@@ -41,20 +41,8 @@ export default function Syrups(){
     return result
   }
 
-const syrupGroups = groupIt(recipes)
+  const syrupGroups = groupIt(recipes)
 
-// console.log(syrupGroups)
-
-{syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-  // console.log(`${key}: ${value}`);
-  // console.log(value)
-})}
-
-
-
-// for (const [key, value] of Object.entries(syrupGroups)) {
-//   console.log(`${key}: ${value}`);
-// }
 
   return(
     <Layout>
