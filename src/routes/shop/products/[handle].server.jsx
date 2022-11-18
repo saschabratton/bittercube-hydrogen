@@ -18,6 +18,7 @@ import CardCarousel from "../../../components/sections/CardCarousel.client";
 import ThreeColumnFeature from "../../../components/sections/ThreeColumnFeature.client";
 import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
 import HorizontalSeperator from "../../../components/headers/HorizontalSeperator.client";
+import SimilarProducts from "../../../components/sections/shop/SimilarProducts.server";
 
 
 const ThreeColumnFeaturedContent = {
@@ -86,6 +87,10 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
+      <div className="container">
+        <SimilarProducts data={product.id} />
+      </div>
+
 
       <CardCarousel />
       <SplitBgVertBlue />

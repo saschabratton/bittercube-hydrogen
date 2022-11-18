@@ -8,9 +8,10 @@ import CardCarousel from "../../components/sections/CardCarousel.client";
 import { Link, Image } from "@shopify/hydrogen";
 import CollectionsNav from "../../components/headers/CollectionsNav.server";
 import HorizontalSeperator from "../../components/headers/HorizontalSeperator.client";
+import BittersBundles from "../../components/BittersBundles.server";
+
 
 const HeaderText = ("The most distinct lineup of bitters in the world")
-
 
 const alternatingContent = [
   {
@@ -68,7 +69,7 @@ export default function Home() {
         <div className="absolute top-0 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Bitters Bundles
       </div>
-
+      <BittersBundles />
       </div>
       <CardCarousel />
 

@@ -21,7 +21,7 @@ const {
         {image &&
           <Image src={image} width={1920} height={545} className="object-cover w-full h-full" alt="A cocktail made with Bittercube Bitters" />
         }
-        <div className="absolute inset-0 opacity-40 bg-dark mix-blend-multiply" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-50 bg-dark mix-blend-multiply" aria-hidden="true" />
       </div>
 
 
