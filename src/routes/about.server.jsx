@@ -148,9 +148,9 @@ export default function AboutPage({response}) {
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>BURLAP & BARREL</h3>
               <p className="my-2">Collaborative single origin spice extracts</p>
-              <a href="/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
+              <Link to="/shop/products/cardamom-seed-extract" className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>LIVEWIRE</h3>

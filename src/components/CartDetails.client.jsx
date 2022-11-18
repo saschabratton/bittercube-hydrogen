@@ -55,7 +55,7 @@ export default function CartDetails({ onClose }) {
 export function GiftMessage(){
   const { id, note, noteUpdate } = useCart()
   return(
-    <div className="py-8 mb-6 border-b-2 border-gold">
+    <div className="py-4 mb-6 border-b-2 border-gold">
       <p className="text-sm text-center label">Is this a gift?<br />Enter a personalized message for the recipient.</p>
       <textarea
         name='note'
@@ -64,7 +64,7 @@ export function GiftMessage(){
           console.log(value)
           // noteUpdate({id, note: value})
         }}
-        className="w-full p-4 rounded-lg h-36">
+        className="w-full p-4 rounded-lg h-28">
 
       </textarea>
     </div>
@@ -96,18 +96,7 @@ function CartCheckoutActions() {
   }
   return (
     <>
-      <div>
-        <p className="text-sm text-center label">Is this a gift?<br />Enter a personalized message for the recipient.</p>
-        <textarea
-          name='note'
-          value={message}
-          onChange={({ target: { value } }) => {
-            setMessage(value)
-          }}
-          className="w-full p-4 rounded-lg h-36">
-        </textarea>
-      </div>
-      <div className="flex flex-col items-center gap-4 py-6 md:mt-8">
+      <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
         <Link
           to={checkoutUrl}
           onClick={handleCheckout}
@@ -127,7 +116,7 @@ function OrderSummary() {
 
   return (
     <>
-      <dl className="space-y-2">
+      <dl className="mb-0">
         <div className="flex items-center justify-between">
           <dt>Subtotal</dt>
           <dd>

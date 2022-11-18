@@ -20,7 +20,7 @@ export default function ProductDetails({ product }) {
         </div>
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
-            <p className="mb-0 text-base label">{product.vendor}</p>
+            <p className="text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>
             <ProductForm product={product} />
             <div className="pt-6 prose text-dark text-md">
@@ -47,7 +47,7 @@ function ProductForm({ product }) {
   return (
     <form className="grid gap-10">
         {
-          <div className="flex flex-col justify-between py-8 my-8 md:flex-row gap-x-4 gap-y-8 border-y-2 border-gold">
+          <div className="flex flex-col justify-end py-8 my-8 xl:justify-between gap-x-4 gap-y-8 xl:flex-row border-y-2 border-gold">
             <div className="flex flex-col gap-2 md:flex-row">
               {options.map(({ name, values }) => {
                 if (values.length === 1) {
@@ -56,11 +56,11 @@ function ProductForm({ product }) {
                 return (
                   <div
                     key={name}
-                    className="grid grid-cols-2"
+                    className="flex items-center gap-2"
                   >
-                    <legend className="col-span-2 px-3 text-lg text-dark">
+                    {/* <legend className="col-span-2 px-3 text-lg text-dark">
                       {name}
-                    </legend>
+                    </legend> */}
                     <OptionRadio name={name} values={values} />
                   </div>
                 );
@@ -129,7 +129,7 @@ function OptionRadio({ values, name }) {
         const id = `option-${name}-${value}`;
 
         return (
-          <label key={id} htmlFor={id} className="flex gap-2">
+          <label key={id} htmlFor={id} className="flex flex-1 w-full gap-2">
             <input
               className="sr-only"
               type="radio"
@@ -140,7 +140,7 @@ function OptionRadio({ values, name }) {
               onChange={() => setSelectedOption(name, value)}
             />
             <div
-              className={`text-center leading-none cursor-pointer transition-all duration-200  border-2 rounded-md p-3 flex  h-full ${
+              className={`border-2 rounded-md flex items-center p-3 ${
                 checked ? "border-gold/100 text-gold" : "border-gold/0"
               }`}
             >

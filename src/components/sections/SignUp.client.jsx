@@ -8,9 +8,8 @@ export default function SignUp({ content }){
   return(
     <>
     <div className="container grid max-w-6xl grid-cols-1 gap-10 py-20 md:grid-cols-2">
-      <div className="max-w-md mx-auto text-center">
+      <div className="flex flex-col justify-center max-w-md mx-auto text-center">
         <div className="text-ornament"></div>
-        {/* {parse(contentHtml)} */}
         <h2>Gain access to limited-run products</h2>
         <p>Subscribers receive first access to limited products, and curated playlists for your next cocktail party.</p>
         {ctaLabel &&
