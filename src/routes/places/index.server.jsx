@@ -6,7 +6,7 @@ import ThreeColumnFeature from "../../components/sections/ThreeColumnFeature.cli
 // ----------------------------------------------------------------------
 
 const HeaderContent ={
-  'text': 'Made in Milwaukee. Imbibed globally',
+  'text': 'Made in Milwaukee. Dashed worldwide.',
   'image': '/images/places-hero.jpg',
 }
 const ThreeColumnFeaturedContent = {

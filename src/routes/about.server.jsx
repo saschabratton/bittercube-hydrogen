@@ -167,7 +167,8 @@ export default function AboutPage({response}) {
                   <HorizontalSeperator />
                 </div>
               <p className="max-w-sm text-ornament">
-                We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters.
+                We collaborate with other brands on various projects, including custom bitters blends, co-branded products, and more. We also sell bitters in bulk to companies in need of slow-crafted bitters for RTD cocktails, and other packaged products. Check out a few of our collaborations!
+
               </p>
             </div>
             <Image src='/images/about-collaborations.jpg' width={366} height={455} alt='A bottle of bitters and baking ingredients' className="object-cover w-full max-w-md mx-auto aspect-4/5 rounded-jumbo-sm" />
@@ -198,9 +199,9 @@ export default function AboutPage({response}) {
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>WOLLERSHEIM</h3>
               <p className="my-2">Old Fashioned syrup featuring a custom blend of bitters</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
+              <Link to="/shop/accessories" className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>BURLAP & BARREL</h3>
@@ -219,9 +220,9 @@ export default function AboutPage({response}) {
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>TAPPED MAPLE SYRUP</h3>
               <p className="my-2">Collaborative maple syrup featuring CBV botanicals</p>
-              <a href="https://www.santateresarum.com/" target='_blank' className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
+              <Link to="shop/products/tapped-cherry-bark-vanilla-bitters-infused-maple-syrup" className="flex justify-between gap-2 pt-0 text-base w-fit label group text-gold">Learn more
                 <div className="btn-arrow btn-arrow-gold"></div>
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col justify-start gap-1 text-left">
               <h3>BITTERS BLENDS</h3>
