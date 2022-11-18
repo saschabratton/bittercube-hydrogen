@@ -10,7 +10,7 @@ export default function RecipeCard({ recipe }){
   })
 
   return(
-    <Link to={`/recipes/all/${slug}`}>
+    <Link to={`/recipes/${slug}`}>
       <div className="grid gap-2 group">
         <div className="overflow-hidden image-frame group-hover:!rounded-jumbo-sm transition-all transform w-fit z-10 relative mx-auto duration-500">
           {/* <Image src={ images[0].url } width={460} height={555} className="object-cover mx-auto rounded-none aspect-4/5" alt="A cocktail made with Bittercube Bitters" /> */}

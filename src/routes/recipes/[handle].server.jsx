@@ -3,10 +3,10 @@ import { NotFound, Layout } from '@server'
 import { PrimaryMenu, HorizontalSeperator } from "@client"
 import { makeKey } from "@utils"
 
-import TabSection from "../../../components/sections/recipes/TabSection.client";
-import RecomendedRecipes from "../../../components/sections/recipes/RecomendedRecipes.client";
-import SplitBgVertBlue from "../../../components/sections/SplitBgVertBlue.client";
-import RecipeImageCarousel from "../../../components/sections/recipes/RecipeImageCarousel.client";
+import TabSection from "../../components/sections/recipes/TabSection.client";
+import RecomendedRecipes from "../../components/sections/recipes/RecomendedRecipes.client";
+import SplitBgVertBlue from "../../components/sections/SplitBgVertBlue.client";
+import RecipeImageCarousel from "../../components/sections/recipes/RecipeImageCarousel.client";
 // ----------------------------------------------------------------------
 
 const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
