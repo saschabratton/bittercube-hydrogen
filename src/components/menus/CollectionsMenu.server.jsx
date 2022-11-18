@@ -29,7 +29,7 @@ export default function CollectionsMenu() {
 
 const QUERY = gql`
   query Collections {
-    collections(first: 10, query: "collection_type:smart", sortKey: UPDATED_AT) {
+    collections(first: 10, query: "collection_type:smart", sortKey: ID) {
       nodes {
         id
         title
