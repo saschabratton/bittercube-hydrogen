@@ -1,4 +1,4 @@
-import { gql, useShopQuery, Seo, useServerAnalytics, useRouteParams, ShopifyAnalyticsConstants} from "@shopify/hydrogen";
+import { gql, useShopQuery, Seo, useRouteParams } from "@shopify/hydrogen";
 import { Suspense } from "react";
 import PatternHero from "../../components/headers/PatternHero.server";
 import { Layout } from "../../components/Layout.server";
@@ -20,12 +20,12 @@ export default function Collections() {
     },
   })
 
-  useServerAnalytics({
-    shopify: {
-      pageType:ShopifyAnalyticsConstants.pageType.collection,
-      resourceId: collection.id,
-    },
-  })
+  // useServerAnalytics({
+  //   shopify: {
+  //     pageType:ShopifyAnalyticsConstants.pageType.collection,
+  //     resourceId: collection.id,
+  //   },
+  // })
 
   return (
     <Layout>

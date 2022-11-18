@@ -10,7 +10,7 @@ export default function HomeHero({ content }) {
   } = useShopQuery({
     query: SHOP_QUERY,
     cache: CacheNone(),
-    preload: true,
+    preload: false
   });
 
   return (

@@ -22,7 +22,7 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 
 export default function Syrups(){
   const recipes = fetchSync(syrupsApi,{
-    preload: false,
+    preload: false
   }).json()
 
 
@@ -43,14 +43,7 @@ export default function Syrups(){
     return result
   }
 
-const syrupGroups = groupIt(recipes)
-
-
-{syrupGroups && Object.entries(syrupGroups).forEach(([key, value]) => {
-  // console.log(`${key}: ${value}`);
-  // console.log(value)
-})}
-
+  const syrupGroups = groupIt(recipes)
 
 
   return(

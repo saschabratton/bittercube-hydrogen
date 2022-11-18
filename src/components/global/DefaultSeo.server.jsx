@@ -8,7 +8,7 @@ export function DefaultSeo() {
   } = useShopQuery({
     query: SHOP_QUERY,
     cache: CacheNone(),
-    preload: '*',
+    preload: false
   });
 
   return (
