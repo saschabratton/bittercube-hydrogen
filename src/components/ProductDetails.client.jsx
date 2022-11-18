@@ -24,10 +24,13 @@ export default function ProductDetails({ product }) {
           <div>
             <p className="mb-0 text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>
-            <div className="pt-6 prose text-black border-t border-gray-200 text-md">
-              {parse(product.descriptionHtml)}
-            </div>
             <ProductForm product={product} />
+            <div className="pt-6 prose text-dark text-md">
+              <p>
+                {parse(product.descriptionHtml)}
+              </p>
+            </div>
+
 
             {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}
           </div>
@@ -48,7 +51,7 @@ function ProductForm({ product }) {
   return (
     <form className="grid gap-10">
         {
-          <div className="grid grid-cols-2 my-20 gap-x-4 gap-y-8">
+          <div className="grid grid-cols-2 my-8 gap-x-4 gap-y-8">
             <div className="col-span-2">
               {options.map(({ name, values }) => {
                 if (values.length === 1) {
