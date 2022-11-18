@@ -43,7 +43,7 @@ export default function MoslersPage(){
       }} />
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 gap-6 md:grid-cols-2">
-        <div className="w-11/12 overflow-hidden md:hidden">
+        <div className="overflow-hidden md:hidden">
           <ImageCarousel content={Images} />
         </div>
         <div className="hidden gap-6 md:flex md:flex-col">
