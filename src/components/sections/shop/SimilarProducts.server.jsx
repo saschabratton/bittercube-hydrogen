@@ -1,7 +1,7 @@
 import {Suspense, useMemo} from 'react';
 import {gql, useShopQuery, useLocalization} from '@shopify/hydrogen';
 import { PRODUCT_CARD_FRAGMENT } from "../../../lib/fragments";
-
+import ProductCard from "../../ProductCard.server";
 
 export default function SimilarProducts({ data }) {
 
@@ -18,7 +18,7 @@ export default function SimilarProducts({ data }) {
       return (
         // <div>String</div>
         // <Suspense>
-          <RecommendedProducts productId={data} count={4} />
+          <RecommendedProducts productId={data} count={1} />
         // </Suspense>
       );
     }
@@ -41,14 +41,17 @@ export default function SimilarProducts({ data }) {
 function ProductCards({products}) {
   return (
     <>
-      {products.map((product) => (
+    <div className="container grid w-11/12 grid-cols-2 gap-6 lg:grid-cols-4">
+      {products.slice(0,  4).map((product) => (
         // <ProductCard
         //   product={product}
         //   key={product.id}
         //   className={'snap-start w-80'}
         // />
-        <h2>{product.title}</h2>
+        // <h2>{product.title}</h2>
+        <ProductCard key={product.id} product={product} />
       ))}
+      </div>
     </>
   );
 }

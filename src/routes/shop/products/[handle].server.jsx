@@ -87,9 +87,7 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
-      <div className="container">
-        <SimilarProducts data={product.id} />
-      </div>
+      <SimilarProducts data={product.id} />
 
 
       <CardCarousel />
