@@ -15,12 +15,11 @@ const ThreeColumnFeaturedContent = {
   'ctaLabel': '',
   'ctaLink': '',
   'background': 'dark',
-  'image': '',
   'navHeadline': 'Online Cocktail classes',
   'padding': '12',
   'border': '2',
   'image': '/images/places-entertain-educate.jpg',
-  'imageAlt': ""
+  'imageAlt': ''
 }
 const ThreeColumnFeaturedLinks = [
   {

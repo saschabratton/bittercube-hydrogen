@@ -16,7 +16,6 @@ const ThreeColumnFeaturedContent = {
   'ctaLabel': 'See our Places',
   'ctaLink': '/places',
   'background': 'dark',
-  'image': '',
   'navHeadline': 'Visit our places',
   'padding': '12',
   'border': '2',
