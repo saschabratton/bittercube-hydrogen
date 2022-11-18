@@ -3,11 +3,9 @@ import {
   MediaFile,
   useProductOptions,
   ProductPrice,
-  // BuyNowButton,
   AddToCartButton
 } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
-// import { HorizontalSeperator } from "@client"
 // import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------
 
@@ -49,8 +47,8 @@ function ProductForm({ product }) {
   return (
     <form className="grid gap-10">
         {
-          <div className="flex justify-between py-8 my-8 gap-x-4 gap-y-8 border-y-2 border-gold">
-            <div className="flex gap-2">
+          <div className="flex flex-col justify-between py-8 my-8 md:flex-row gap-x-4 gap-y-8 border-y-2 border-gold">
+            <div className="flex flex-col gap-2 md:flex-row">
               {options.map(({ name, values }) => {
                 if (values.length === 1) {
                   return null;
@@ -67,7 +65,7 @@ function ProductForm({ product }) {
                   </div>
                 );
               })}
-              <div className="flex items-center gap-4 pt-6">
+              <div className="flex items-center gap-4">
                 <div className="w-5 h-3 btn-arrow btn-arrow-gold"></div>
                 <ProductPrice
                   className="text-lg font-semibold text-dark"
@@ -77,7 +75,7 @@ function ProductForm({ product }) {
               </div>
 
             </div>
-            <div className="flex items-center justify-between pt-6">
+            <div className="flex items-center justify-between">
 
               <PurchaseMarkup />
               {/* <CartLineItem /> */}
