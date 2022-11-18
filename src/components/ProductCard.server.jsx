@@ -46,10 +46,11 @@ export default function ProductCard({ product }) {
         </div>
         <div className="overflow-x-hidden transition duration-700 opacity-0 group-hover:opacity-100 group-hover:flex text-dark">
 
-            {product.tags && product.tags.map((tag) => {
+            {product.tags && product.tags.map((tag, index) => {
             return (
               <span key={tag.slug} className="text-dark/80 whitespace-nowrap">
-                {tag}, &nbsp;
+                {index != 0 ? ', ' : ''}
+                {tag}
               </span>
             );
           })}
