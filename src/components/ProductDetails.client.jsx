@@ -26,9 +26,7 @@ export default function ProductDetails({ product }) {
             <h1>{product.title}</h1>
             <ProductForm product={product} />
             <div className="pt-6 prose text-dark text-md">
-              <p>
-                {parse(product.descriptionHtml)}
-              </p>
+              {parse(product.descriptionHtml)}
             </div>
 
 
@@ -51,8 +49,8 @@ function ProductForm({ product }) {
   return (
     <form className="grid gap-10">
         {
-          <div className="grid grid-cols-2 my-8 gap-x-4 gap-y-8">
-            <div className="col-span-2">
+          <div className="flex justify-between py-8 my-8 gap-x-4 gap-y-8 border-y-2 border-gold">
+            <div className="flex gap-2">
               {options.map(({ name, values }) => {
                 if (values.length === 1) {
                   return null;
@@ -60,26 +58,27 @@ function ProductForm({ product }) {
                 return (
                   <div
                     key={name}
-                    className="grid grid-cols-3"
+                    className="grid grid-cols-2"
                   >
-                    <legend className="col-span-3 px-3 text-lg text-dark">
+                    <legend className="col-span-2 px-3 text-lg text-dark">
                       {name}
                     </legend>
                     <OptionRadio name={name} values={values} />
                   </div>
                 );
               })}
-
-            </div>
-            <div className="flex items-center justify-between col-span-2 pt-8 border-t-2 border-gold">
-              <div className="flex items-center gap-4">
-                <div className="w-8 h-5 btn-arrow btn-arrow-gold"></div>
+              <div className="flex items-center gap-4 pt-6">
+                <div className="w-5 h-3 btn-arrow btn-arrow-gold"></div>
                 <ProductPrice
                   className="text-lg font-semibold text-dark"
                   variantId={selectedVariant.id}
                   data={product}
                 />
               </div>
+
+            </div>
+            <div className="flex items-center justify-between pt-6">
+
               <PurchaseMarkup />
               {/* <CartLineItem /> */}
             </div>
