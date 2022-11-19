@@ -97,7 +97,7 @@ function CartCheckoutActions() {
   return (
     <>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
-        <textarea
+        {/* <textarea
           name='note'
           value={message}
           onChange={({ target: { value } }) => {
@@ -106,7 +106,7 @@ function CartCheckoutActions() {
           }}
           className="w-full p-4 rounded-lg h-28">
 
-        </textarea>
+        </textarea> */}
 
         <Link
           to={checkoutUrl}

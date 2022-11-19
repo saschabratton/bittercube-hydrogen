@@ -31,7 +31,7 @@ export default function ImageCarousel({ content }){
        cols={1} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
         {content.map((image) => (
           <Carousel.Item key={makeKey(image.name)}>
-            <Image src={image.url} width={366} height={455} alt={image.name} className="object-cover w-full aspect-4/5" />
+            <Image src={image.url} width={366} height={455} alt={image.name} className="object-cover mx-auto aspect-4/5" />
           </Carousel.Item>
         ))}
       </Carousel>
