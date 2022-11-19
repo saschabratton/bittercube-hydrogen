@@ -41,8 +41,13 @@
       "permanent": false
     },
     {
-      "source": "/collections/(.*)",
-      "destination": "/shop",
+      "source": "/collections/:path*",
+      "destination": "/shop/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/products/:path*",
+      "destination": "/shop/:path*",
       "permanent": false
     }
 
