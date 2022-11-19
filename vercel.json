@@ -42,7 +42,7 @@
     },
     {
       "source": "/collections/(.*)",
-      "destination": "/shop",
+      "destination": "/shop/$1",
       "permanent": false
     },
     {
