@@ -46,8 +46,8 @@
       "permanent": false
     },
     {
-      "source": "/products/:path)",
-      "destination": "/shop/:path",
+      "source": "/products/(.*)",
+      "destination": "/shop/products/$1",
       "permanent": false
     }
 
