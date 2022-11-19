@@ -39,6 +39,11 @@
       "source": "/visit/",
       "destination": "/places",
       "permanent": false
+    },
+    {
+      "source": "/collections/(.*)",
+      "destination": "/shop",
+      "permanent": false
     }
 
   ]
