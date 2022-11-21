@@ -1,7 +1,7 @@
 import { fetchSync, Image, Link, Head, Seo, CacheLong } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
-import { HorizontalSeperator } from "@client"
+import { HorizontalSeperator, SyrupInstructions } from "@client"
 import { makeKey } from "@utils"
 // ----------------------------------------------------------------------
 
@@ -109,8 +109,7 @@ export default function Syrups(){
                 <dl>
                   <dt>Instructions</dt>
                   <dd>
-                    {parse(recipe.instructions)}
-                    {/* {recipe.instructions} */}
+                    <SyrupInstructions instructions={recipe.instructions} />
                   </dd>
                 </dl>
               </div>
