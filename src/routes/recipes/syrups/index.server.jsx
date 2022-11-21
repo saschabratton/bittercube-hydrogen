@@ -44,7 +44,7 @@ export default function Syrups(){
       <PatternHero content={"Syrups"} />
       <RecipesMenu />
       <hr />
-      {/* <div className="container relative z-10 grid max-w-6xl grid-cols-1 gap-6 py-16 md:grid-cols-2">
+      <div className="container relative z-10 grid max-w-6xl grid-cols-1 gap-6 py-16 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
           <span className="label">FOR SWEETNESS AND BALANCE</span>
           <h2 className="h1">Making Syrup</h2>
@@ -73,7 +73,7 @@ export default function Syrups(){
             </dl>
           </div>
         </div>
-      </div> */}
+      </div>
 {/*
       <div className="w-11/12 p-8 mx-auto border-2 border-gold">
         <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
