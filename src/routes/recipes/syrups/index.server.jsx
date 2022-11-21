@@ -38,9 +38,9 @@ export default function Syrups(){
 
   return(
     <Layout>
-      {/* <Seo type="page" data={{
+      <Seo type="page" data={{
           title: customSeo.name,
-      }} /> */}
+      }} />
       {/* <PatternHero content={"Syrups"} /> */}
       {/* <RecipesMenu /> */}
       <hr />
