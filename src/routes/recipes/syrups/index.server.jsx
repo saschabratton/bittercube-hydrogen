@@ -41,8 +41,8 @@ export default function Syrups(){
       <Seo type="page" data={{
           title: customSeo.name,
       }} />
-      {/* <PatternHero content={"Syrups"} /> */}
-      {/* <RecipesMenu /> */}
+      <PatternHero content={"Syrups"} />
+      <RecipesMenu />
       <hr />
       {/* <div className="container relative z-10 grid max-w-6xl grid-cols-1 gap-6 py-16 md:grid-cols-2">
         <div className="flex flex-col items-center justify-center gap-6 text-center lg:p-28">
