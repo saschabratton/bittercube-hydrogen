@@ -7,12 +7,6 @@ import { makeKey } from "@utils"
 
 const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
 
-const customSeo = {
-  title: 'Making Syrups',
-  description: 'Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.'
-}
-
-
 export default function Syrups(){
   const recipes = fetchSync(syrupsApi, {
     cache: CacheLong(),
@@ -82,7 +76,7 @@ export default function Syrups(){
       </div>
 
       <div className="w-11/12 p-8 mx-auto border-2 border-gold">
-        <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
+        {/* <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
 
           {recipes?.length > 0 && recipes.map ((recipe) => {
             return(
@@ -123,7 +117,7 @@ export default function Syrups(){
             )
           })}
 
-        </div>
+        </div> */}
       </div>
     </Layout>
   )
