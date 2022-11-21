@@ -109,7 +109,7 @@ export default function Syrups(){
                 <dl>
                   <dt>Instructions</dt>
                   <dd>
-                    {parse(recipe.instructions)}
+                    {/* {parse(recipe.instructions)} */}
                   </dd>
                 </dl>
               </div>
