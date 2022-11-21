@@ -1,7 +1,7 @@
 import { fetchSync, Image, Link, Head, Seo, CacheLong } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
-import { HorizontalSeperator } from "@client"
+import { HorizontalSeperator, SyrupInstructions } from "@client"
 import { makeKey } from "@utils"
 // ----------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ export default function Syrups(){
                     <tbody>
                     {recipe.ingredients.length > 0 && recipe.ingredients.map(({ name, quantity, link }) =>
                       <tr key={makeKey(name)}>
-                        <td><dd>{quantity}</dd></td>
+                        <td><dd>{quantity || ' '}</dd></td>
                         <td><dd>
                           {link &&
                           <Link to={link} className="text-gold hover:text-gold/50">
@@ -109,7 +109,7 @@ export default function Syrups(){
                 <dl>
                   <dt>Instructions</dt>
                   <dd>
-                    {parse(recipe.instructions)}
+                    <SyrupInstructions instructions={recipe.instructions} />
                   </dd>
                 </dl>
               </div>

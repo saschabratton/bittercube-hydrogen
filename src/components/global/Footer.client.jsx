@@ -66,7 +66,7 @@ export default function Footer(){
           </div>
            <div className="flex flex-col order-last gap-4 mx-auto text-center md:col-span-4 lg:hidden">
             <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
-            <SignUpForm />
+            {/* <SignUpForm /> */}
           </div>
         </div>
 
