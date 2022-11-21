@@ -13,9 +13,9 @@ const customSeo = {
 }
 
 
-export default function Syrups({ response }){
-  response.cache(CacheLong())
-  const recipes = fetchSync(syrupsApi,{
+export default function Syrups(){
+  const recipes = fetchSync(syrupsApi, {
+    cache: CacheLong(),
     preload: false
   }).json()
 
