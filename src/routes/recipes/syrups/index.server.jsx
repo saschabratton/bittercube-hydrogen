@@ -90,7 +90,7 @@ export default function Syrups(){
                     <tbody>
                     {recipe.ingredients.length > 0 && recipe.ingredients.map(({ name, quantity, link }) =>
                       <tr key={makeKey(name)}>
-                        <td><dd>{quantity}</dd></td>
+                        <td><dd>{quantity || ' '}</dd></td>
                         <td><dd>
                           {link &&
                           <Link to={link} className="text-gold hover:text-gold/50">
