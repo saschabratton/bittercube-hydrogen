@@ -86,7 +86,7 @@ export default function Syrups(){
                 <div className="flex flex-col gap-6 text-left text-ornament">
                 <dl>
                   <dt>Ingredients</dt>
-                  <table>
+                  {/* <table>
                     <tbody>
                     {recipe.ingredients.length > 0 && recipe.ingredients.map(({ name, quantity, link }) =>
                       <tr key={makeKey(name)}>
@@ -104,7 +104,7 @@ export default function Syrups(){
                       </tr>
                     )}
                   </tbody>
-                </table>
+                </table> */}
                 </dl>
                 <dl>
                   <dt>Instructions</dt>
