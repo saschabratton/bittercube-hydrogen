@@ -1,4 +1,4 @@
-import { fetchSync, Image, Link, Head, Seo } from "@shopify/hydrogen"
+import { fetchSync, Image, Link, Head, Seo, CacheLong } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator } from "@client"
@@ -7,14 +7,9 @@ import { makeKey } from "@utils"
 
 const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
 
-const customSeo = {
-  title: 'Making Syrups',
-  description: 'Syrups are a foundational ingredient in cocktails. The possibilities are endless, use teas and other spices to flavor your syrups, or combine different sweeteners to create unique variations that can elevate your cocktails even further.'
-}
-
-
 export default function Syrups(){
-  const recipes = fetchSync(syrupsApi,{
+  const recipes = fetchSync(syrupsApi, {
+    cache: CacheLong(),
     preload: false
   }).json()
 
@@ -40,7 +35,6 @@ export default function Syrups(){
   const customSeo = {
     name: 'Syrup Recipes • Bittercube',
   }
-
 
   return(
     <Layout>

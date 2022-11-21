@@ -1,4 +1,4 @@
-import { fetchSync, Seo } from '@shopify/hydrogen'
+import { fetchSync, Seo, CacheLong } from '@shopify/hydrogen'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator, SignUp, CocktailsList } from "@client"
 // ----------------------------------------------------------------------
@@ -9,12 +9,13 @@ const SignUpContent = {
   'ctaLink': '',
 }
 
-const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
+const recipesApi = 'https://api.bittercube.com/api/recipes.json'
 
 
 export default function Cocktails(){
 
-  const recipes = fetchSync(recipesApi,{
+  const allRecipes = fetchSync(recipesApi,{
+    cache: CacheLong(),
     preload: false
   }).json()
 
@@ -29,7 +30,7 @@ const customSeo = {
       }} />
       <PatternHero content={"All Recipes"} />
       <RecipesMenu />
-      <CocktailsList />
+      <CocktailsList allRecipes={allRecipes} />
       <div className="w-11/12 pt-12 mx-auto">
         <HorizontalSeperator />
       </div>
