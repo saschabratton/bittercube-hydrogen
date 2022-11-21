@@ -1,12 +1,9 @@
 import { useState, useId, useEffect } from "react"
-import { fetchSync } from '@shopify/hydrogen'
 import { HiSearch } from "react-icons/hi"
 import { HiX } from "react-icons/hi"
 import Select from 'react-select'
 import { RecipeCard } from "@client"
 // ----------------------------------------------------------------------
-
-const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
 
 const bittersOptions = [
   { value: 'cherry-bark-vanilla', label: 'Cherry Bark Vanilla' },
@@ -57,12 +54,11 @@ const emptyFilters = {
   style: null,
 }
 
-export default function CocktailsList(){
+export default function CocktailsList({ allRecipes }){
   const [recipes, setRecipes] = useState([])
   const [activeFilter, setActiveFilter] = useState(null)
   const [filters, setFilters] = useState(emptyFilters)
   const [filterString, setFilterString] = useState('')
-  const allRecipes = fetchSync(recipesApi,{preload: false}).json()
 
   useEffect(() => {
     if (!allRecipes) return
@@ -96,6 +92,11 @@ export default function CocktailsList(){
       return
     }
 
+    if (filters.spirit) {
+      filterRecipesBySpirit(filters.spirit)
+      return
+    }
+
     filterRecipesByTag(activeFilters[0])
 
 
@@ -125,8 +126,18 @@ export default function CocktailsList(){
       return
     }
     const { label } = selected
-    const fiteredRecipes = allRecipes.filter(({ flavors }) => flavors.includes(label))
-    setRecipes(fiteredRecipes)
+    const filteredRecipes = allRecipes.filter(({ flavors }) => flavors.includes(label))
+    setRecipes(filteredRecipes)
+  }
+
+  const filterRecipesBySpirit = (selected) => {
+    if (!selected) {
+      setRecipes(allRecipes)
+      return
+    }
+    const { label } = selected
+    const filteredRecipes = allRecipes.filter(({ spirits }) => spirits?.includes(label))
+    setRecipes(filteredRecipes)
   }
 
   return(

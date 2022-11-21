@@ -1,4 +1,4 @@
-import { fetchSync, Image, Link, Head, Seo } from "@shopify/hydrogen"
+import { fetchSync, Image, Link, Head, Seo, CacheLong } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator } from "@client"
@@ -13,7 +13,8 @@ const customSeo = {
 }
 
 
-export default function Syrups(){
+export default function Syrups({ response }){
+  response.cache(CacheLong())
   const recipes = fetchSync(syrupsApi,{
     preload: false
   }).json()
@@ -40,7 +41,6 @@ export default function Syrups(){
   const customSeo = {
     name: 'Syrup Recipes • Bittercube',
   }
-
 
   return(
     <Layout>
