@@ -74,7 +74,7 @@ export default function Syrups(){
           </div>
         </div>
       </div>
-{/*
+
       <div className="w-11/12 p-8 mx-auto border-2 border-gold">
         <div className="container grid gap-6 md:gap-16 md:grid-cols-2">
 
@@ -118,7 +118,7 @@ export default function Syrups(){
           })}
 
         </div>
-      </div> */}
+      </div>
     </Layout>
   )
 }
