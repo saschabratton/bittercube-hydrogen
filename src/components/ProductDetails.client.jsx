@@ -6,6 +6,7 @@ import {
   AddToCartButton
 } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
+import { ImageCarousel } from "@client"
 // import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------
 
@@ -13,6 +14,10 @@ export default function ProductDetails({ product }) {
   return (
     <ProductOptionsProvider data={product}>
       <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2">
+        <div className="overflow-hidden md:hidden">
+          {/* <ImageCarousel content={product.media.nodes} /> */}
+          <MobileProductGallery media={product.media.nodes}/>
+        </div>
         <div className="hidden gap-6 md:flex md:flex-col">
           <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <ProductGallery media={product.media.nodes} />
@@ -154,6 +159,57 @@ function OptionRadio({ values, name }) {
 }
 
 function ProductGallery({ media }) {
+  if (!media.length) {
+    return null;
+  }
+
+  return (
+    <div
+      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto w-screen md:w-full lg:col-span-2`}
+    >
+      {media.map((med, i) => {
+        let extraProps = {};
+
+        if (med.mediaContentType === "MODEL_3D") {
+          extraProps = {
+            interactionPromptThreshold: "0",
+            ar: true,
+            loading: "eager",
+            disableZoom: true,
+          };
+        }
+
+        const data = {
+          ...med,
+          image: {
+            ...med.image,
+            altText: med.alt || "Product image",
+          },
+        };
+
+        return (
+          <div
+            className={"snap-center card-image bg-white md:w-full w-[80vw] shadow-sm rounded"}
+            key={med.id || med.image.id}
+          >
+            <MediaFile
+              tabIndex="0"
+              className={`w-full h-full object-cover`}
+              data={data}
+              options={{
+                crop: "center",
+              }}
+              {...extraProps}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+
+function MobileProductGallery({ media }) {
   if (!media.length) {
     return null;
   }

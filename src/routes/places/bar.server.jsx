@@ -47,7 +47,7 @@ export default function moslers(){
   return(
     <Layout>
       <Seo type="page" data={{
-          title: customSeo.name,
+        title: customSeo.name,
       }} />
       <ImageHero content={HeaderContent} />
       <div className="container grid w-11/12 gap-6 md:grid-cols-2">
