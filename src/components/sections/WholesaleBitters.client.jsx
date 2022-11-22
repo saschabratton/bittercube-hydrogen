@@ -2,7 +2,7 @@ import { Image } from "@shopify/hydrogen"
 // ----------------------------------------------------------------------
 export default function WholesaleBitters(){
   return(
-    <section className="relative bg-paper">
+    <section className="relative bg-paper" id="wholesale-bittercube">
       <div className="absolute inset-0">
         <Image src='/images/wholesale-illustration.svg' width={1388} height={367} alt=" " role="presentation" className="object-contain w-full h-full" />
       </div>
