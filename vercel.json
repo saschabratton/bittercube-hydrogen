@@ -8,48 +8,52 @@
     {
       "source": "/event/(.*)",
       "destination": "/places#classes",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/recipes/syrup/(.*)",
       "destination": "/recipes/syrups",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/bitters-in-baking/",
       "destination": "/recipes/kitchen",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/droppers-vs-dash/",
       "destination": "/recipes#learn-how-to-craft",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/find-us/",
       "destination": "/contact",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/visit/take-a-tour",
       "destination": "/places",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/visit/",
       "destination": "/places",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/collections/(.*)",
       "destination": "/shop/$1",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/products/(.*)",
       "destination": "/shop/products/$1",
-      "permanent": false
+      "permanent": true
+    },
+    {
+      "source": "/wholesale",
+      "destination": "/shop/#wholesale-bittercube",
+      "permanent": true
     }
-
   ]
 }
