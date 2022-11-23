@@ -28,10 +28,13 @@ export default function MetaPixel() {
       fbq('init', PIXEL_ID)
 
       function trackPageView(payload) {
-        fbq('track', 'PageView')
+        fbq('track', 'PageView', payload)
       }
       function trackAddToCart(payload) {
-        fbq('track', 'AddToCart')
+        fbq('track', 'AddToCart', payload)
+      }
+      function trackViewedProduct(payload) {
+        fbq('track', 'ViewProduct', payload)
       }
 
       // Listen for events from Hydrogen
@@ -43,6 +46,10 @@ export default function MetaPixel() {
       ClientAnalytics.subscribe(
         ClientAnalytics.eventNames.ADD_TO_CART,
         trackAddToCart
+      )
+      ClientAnalytics.subscribe(
+        ClientAnalytics.eventNames.VIEWED_PRODUCT,
+        trackViewedProduct
       )
 
       ClientAnalytics.hasSentFirstPageView() &&
