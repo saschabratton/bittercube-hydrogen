@@ -1,3 +1,6 @@
+// Layout
+export { default as Footer } from './global/Footer.client'
+
 export { default as PrimaryMenu } from './menus/PrimaryMenu.client'
 export { default as HorizontalSeperator } from './animations/HorizontalSeperator.client'
 export { Drawer, useDrawer } from './Drawer.client'
@@ -18,11 +21,11 @@ export { default as RecipeCard } from './cards/RecipeCard.client'
 export { default as FeaturedRecipeCard } from './cards/FeaturedRecipeCard.client'
 
 // Desgin Elements
-export { default as ScrollingBanner  } from './ScrollingBanner.client'
-export { default as VerticalSeparator  } from './animations/VerticalSeparator.client'
+export { default as ScrollingBanner } from './ScrollingBanner.client'
+export { default as VerticalSeparator } from './animations/VerticalSeparator.client'
 
 // Forms
-export { default as SignUpForm  } from './global/SignUpForm.client'
+export { default as SignUpForm } from './global/SignUpForm.client'
 
 // Layout Components
 export { default as ThreeColumnFeature } from './sections/ThreeColumnFeature.client'
@@ -43,3 +46,6 @@ export { default as Spices } from './sections/kitchen/Spices.client'
 export { default as Flavors } from './sections/kitchen/Flavors.client'
 export { default as SyrupInstructions } from './sections/kitchen/SyrupInstructions.client'
 export { default as ProductRecipes } from './sections/ProductRecipes.client'
+
+// Tracking & Analytics
+export { default as MetaPixel } from './MetaPixel.client'
