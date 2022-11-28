@@ -58,6 +58,7 @@ const serverDataLayer = useServerAnalytics({
   }
 
   useServerAnalytics({
+    content_ids: product.id,
     shopify: {
       pageType: ShopifyAnalyticsConstants.pageType.product,
       resourceId: product.id,
