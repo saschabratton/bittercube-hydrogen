@@ -12,6 +12,7 @@ import {
 } from "@shopify/hydrogen"
 import { Layout, NotFound, SimilarProducts } from '@server'
 import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails, ProductRecipes  } from "@client"
+import { ClientAnalytics, loadScript } from '@shopify/hydrogen'
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -32,12 +33,14 @@ const ThreeColumnFeaturedLinks = [
   },
 ]
 
+
+
+
+export default function Product({ params }) {
 const serverDataLayer = useServerAnalytics({
   publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
 });
 
-
-export default function Product({ params }) {
   const { handle } = useRouteParams()
 
   const {
