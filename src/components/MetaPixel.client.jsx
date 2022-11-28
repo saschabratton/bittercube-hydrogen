@@ -34,7 +34,7 @@ export default function MetaPixel() {
         fbq('track', 'AddToCart', payload)
       }
       function trackViewedProduct(payload) {
-        fbq('track', 'ViewProduct', payload)
+        fbq('track', 'ViewContent', payload)
       }
 
       // Listen for events from Hydrogen
