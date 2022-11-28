@@ -32,6 +32,10 @@ const ThreeColumnFeaturedLinks = [
   },
 ]
 
+const serverDataLayer = useServerAnalytics({
+  publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
+});
+
 
 export default function Product({ params }) {
   const { handle } = useRouteParams()
