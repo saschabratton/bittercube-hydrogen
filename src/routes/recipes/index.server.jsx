@@ -12,8 +12,6 @@ const HeaderContent ={
 
 const SignUpContent = {
   'contentHtml': '<h2>share your recipes with us on instagram</h2>',
-  'ctaLabel': 'Instagram',
-  'ctaLink': 'https://www.instagram.com/bittercube/',
 }
 
 

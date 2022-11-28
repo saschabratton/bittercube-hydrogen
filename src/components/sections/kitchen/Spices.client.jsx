@@ -69,14 +69,6 @@ export default function Spices(){
             <Link to="/shop/products/jamaican-2" className="label">Jamaican No. 2 Bitters
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-start gap-1 text-center">
-            <h3>Cinnamon</h3>
-            <span className="text-ornament"></span>
-            <Link to="/shop/products/jamaican-1" className="label">Jamaican No. 1 Bitters
-            </Link>
-            <Link to="/shop/products/jamaican-2" className="label">Jamaican No. 2 Bitters
-            </Link>
-          </div>
 
 
           <div className="flex items-center justify-center col-span-1 md:col-span-2">
