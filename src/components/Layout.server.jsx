@@ -11,8 +11,8 @@ export default function Layout({ children }) {
           {children}
         </Suspense>
       </main>
-      <div className="fixed bottom-0 left-0 z-10 flex justify-center w-full p-8 bg-dark">
-          <span className="text-gold label">BLACK FRIDAY - 25% OFF BITTERS AND KITS + FREE SHIPPING ON $45+ ORDERS</span>
+      <div className="fixed bottom-0 left-0 z-10 flex justify-center w-full p-8 text-center bg-dark">
+          <span className="text-gold label">CYBER MONDAY - 25% OFF BITTERS AND KITS + FREE SHIPPING ON $45+ ORDERS</span>
       </div>
       <Footer />
     </div>
