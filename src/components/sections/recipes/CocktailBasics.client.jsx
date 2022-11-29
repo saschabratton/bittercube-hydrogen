@@ -122,7 +122,7 @@ export default function CocktailBasics(){
         <TabPanel>
           <div className="relative pt-8">
             <div className="relative z-10">
-              <dl><dt>Experimentation Is Key</dt><dd>Try the classics, but don’t be afraid to experiment. Train your palate to recognize a well-balanced cocktail. Swap lemon and line, spirits, syrups, and-or bitters to create many cocktail variations.</dd></dl><dl><dt>BEYOND COCKTAILS</dt><dd>Bitters are concentrated complex flavors, and their use isn’t limited to cocktails. Use Orange Bitters in a wheat beer; try Cherry Bark Vanilla as a replacement for vanilla extract; put Jamaican No. 2 in a vinaigrette; add Jamaican No. 1 to gingerbread. The possibilities are endless!</dd></dl>
+              <dl><dt>Experimentation Is Key</dt><dd>Try the classics, but don’t be afraid to experiment. Train your palate to recognize a well-balanced cocktail. Swap lemon and lime, spirits, syrups, and-or bitters to create many cocktail variations.</dd></dl><dl><dt>BEYOND COCKTAILS</dt><dd>Bitters are concentrated complex flavors, and their use isn’t limited to cocktails. Use Orange Bitters in a wheat beer; try Cherry Bark Vanilla as a replacement for vanilla extract; put Jamaican No. 2 in a vinaigrette; add Jamaican No. 1 to gingerbread. The possibilities are endless!</dd></dl>
             </div>
           </div>
         </TabPanel>
