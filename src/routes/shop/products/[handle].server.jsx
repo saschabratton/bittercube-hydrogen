@@ -37,9 +37,7 @@ const ThreeColumnFeaturedLinks = [
 
 
 export default function Product({ params }) {
-const serverDataLayer = useServerAnalytics({
-  publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
-});
+
 
   const { handle } = useRouteParams()
 
@@ -57,16 +55,20 @@ const serverDataLayer = useServerAnalytics({
     return <NotFound />
   }
 
-  useServerAnalytics({
-    content_ids: product.id,
-    value: product.value,
-    currency: product.currency,
-    content_category: product.category,
-    shopify: {
-      pageType: ShopifyAnalyticsConstants.pageType.product,
-      resourceId: product.id,
-    },
-  })
+
+  const serverDataLayer = useServerAnalytics({
+  content_type: ShopifyAnalyticsConstants.pageType.product,
+  content_ids: product.id,
+  content_name: product.title,
+
+  value: product.variants.nodes[0].priceV2.amount,
+  currency: product.variants.nodes[0].priceV2.currencyCode,
+  content_category: product.productType,
+
+  publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
+});
+
+
 
   return (
     <Layout>
@@ -77,6 +79,7 @@ const serverDataLayer = useServerAnalytics({
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
+      {/* {JSON.stringify(product)} */}
       <ProductDetails product={product} />
       {/* <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
 
@@ -137,6 +140,7 @@ const PRODUCT_QUERY = gql`
       id
       title
       vendor
+      productType
       descriptionHtml
       media(first: 50) {
         nodes {
