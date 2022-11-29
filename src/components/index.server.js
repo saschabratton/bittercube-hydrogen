@@ -1,6 +1,7 @@
 export { default as Layout } from './Layout.server'
 export { default as NotFound } from './NotFound.server'
 export { default as SimilarProducts } from './sections/shop/SimilarProducts.server'
+export { default as Register } from './global/Register.server'
 
 // Hero
 export { default as HomeHero } from './hero/HomeHero.server'

@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import Footer from "./global/Footer.client"
+import { MetaPixel, Footer } from '@client'
 // ----------------------------------------------------------------------
 
 export default function Layout({ children }) {
@@ -15,6 +15,7 @@ export default function Layout({ children }) {
           <span className="text-gold label">FREE SHIPPING ON $45+ ORDERS</span>
       </div>
       <Footer />
+      <MetaPixel />
     </div>
   )
 }

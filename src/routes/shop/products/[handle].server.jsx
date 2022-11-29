@@ -12,6 +12,7 @@ import {
 } from "@shopify/hydrogen"
 import { Layout, NotFound, SimilarProducts } from '@server'
 import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails, ProductRecipes  } from "@client"
+import { ClientAnalytics, loadScript } from '@shopify/hydrogen'
 // ----------------------------------------------------------------------
 
 const ThreeColumnFeaturedContent = {
@@ -33,7 +34,11 @@ const ThreeColumnFeaturedLinks = [
 ]
 
 
+
+
 export default function Product({ params }) {
+
+
   const { handle } = useRouteParams()
 
   const {
@@ -50,12 +55,20 @@ export default function Product({ params }) {
     return <NotFound />
   }
 
-  useServerAnalytics({
-    shopify: {
-      pageType: ShopifyAnalyticsConstants.pageType.product,
-      resourceId: product.id,
-    },
-  })
+
+  const serverDataLayer = useServerAnalytics({
+  content_type: ShopifyAnalyticsConstants.pageType.product,
+  content_ids: product.id,
+  content_name: product.title,
+
+  value: product.variants.nodes[0].priceV2.amount,
+  currency: product.variants.nodes[0].priceV2.currencyCode,
+  content_category: product.productType,
+
+  publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
+});
+
+
 
   return (
     <Layout>
@@ -66,6 +79,7 @@ export default function Product({ params }) {
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
+      {/* {JSON.stringify(product)} */}
       <ProductDetails product={product} />
       {/* <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
 
@@ -126,6 +140,7 @@ const PRODUCT_QUERY = gql`
       id
       title
       vendor
+      productType
       descriptionHtml
       media(first: 50) {
         nodes {
