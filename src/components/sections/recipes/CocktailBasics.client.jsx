@@ -11,17 +11,17 @@ export default function CocktailBasics(){
       <div className="h-fit">
       <TabList>
           <Tab>
-            <span className="whitespace-nowrap">
+            <span>
               Dropper VS Dash
             </span>
           </Tab>
           <Tab>
-            <span className="whitespace-nowrap">
+            <span>
               Shaking & Stirring
             </span>
           </Tab>
           <Tab>
-            <span className="whitespace-nowrap">
+            <span >
               Experimentation
             </span>
           </Tab>

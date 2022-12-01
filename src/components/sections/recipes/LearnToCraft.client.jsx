@@ -26,7 +26,7 @@ export default function LearnToCraft() {
     <>
       <div className="relative w-11/12 mx-auto mt-20" id="learn-how-to-craft">
         <HorizontalSeperator />
-        <div className="absolute top-0 z-10 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
+        <div className="absolute top-0 z-10 px-6 py-2 text-sm tracking-widest text-center text-white uppercase -translate-x-1/2 left-1/2 bg-gold h-fit">
           Learn how to craft
         </div>
       </div>

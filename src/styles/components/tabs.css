@@ -1,9 +1,11 @@
 
 .react-tabs__tab-list{
-  @apply flex items-start gap-2 font-bold lg:gap-8;
+  @apply grid items-start grid-cols-1 gap-6 font-bold;
+  @apply md:flex lg:gap-8;
   .react-tabs__tab{
-    @apply relative text-sm tracking-widest uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
-    @apply p-2 overflow-hidden break-words cursor-pointer;
+    @apply relative p-3 text-base tracking-widest text-center uppercase text-gold border-y-2 border-b-gold border-t-gold/0;
+    @apply overflow-hidden break-words cursor-pointer lg:p-2;
+    @apply lg:text-sm;
 
     &.react-tabs__tab--selected{
       @apply text-dark border-y-dark;

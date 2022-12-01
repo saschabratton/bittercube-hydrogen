@@ -51,7 +51,6 @@ const breakPoints = [
 export default function RecipeCarousel({recipes}) {
 
   return (
-      <section>
         <Carousel responsiveLayout={breakPoints}
           cols={4} rows={1} gap={16} loop arrowLeft={arrowLeft} mobileBreakpoint={450} arrowRight={arrowRight} hideArrow={false}>
           {recipes.map((recipe) => {
@@ -62,6 +61,5 @@ export default function RecipeCarousel({recipes}) {
             )
           })}
         </Carousel>
-      </section>
   )
 }

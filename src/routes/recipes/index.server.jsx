@@ -44,8 +44,9 @@ export default function Recipes() {
           </div>
           <h2 className="col-span-3 mt-5 mb-0 capitalize">Featured Cocktails</h2>
         </div>
-
-        <RecipeCarousel recipes={featuredRecipes} />
+        <section className="container md:max-w-none">
+          <RecipeCarousel recipes={featuredRecipes} />
+        </section>
         <LearnToCraft />
         <FeaturedBartenders />
         <InTheKitchen />
