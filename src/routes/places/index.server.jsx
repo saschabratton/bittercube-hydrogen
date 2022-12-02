@@ -1,8 +1,6 @@
-import { Layout } from '@server'
-import AlternatingTextImage from "../../components/sections/AlternatingTextImage.client";
-import ImageHero from "../../components/hero/ImageHero.server";
+import { Layout, ImageHero } from '@server'
 import { Image, Seo } from "@shopify/hydrogen";
-import { ThreeColumnFeature } from "@client";
+import { ThreeColumnFeature, AlternatingTextImage } from "@client";
 // ----------------------------------------------------------------------
 
 const HeaderContent ={

@@ -1,8 +1,6 @@
 import { Link, Image, CacheLong, Seo } from "@shopify/hydrogen"
 import { ImageHero, Layout } from '@server'
-import { HorizontalSeperator, VerticalSeparator } from "@client"
-
-import ImageCarousel from "../components/sections/ImageCarousel.client"
+import { HorizontalSeperator, VerticalSeparator, ImageCarousel } from "@client"
 // ----------------------------------------------------------------------
 const HeaderContent ={
   'text': 'Creating exceptional bitters since 2009',
