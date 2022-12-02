@@ -49,3 +49,4 @@ export { default as ProductRecipes } from './sections/ProductRecipes.client'
 
 // Tracking & Analytics
 export { default as MetaPixel } from './MetaPixel.client'
+export { default as GoogleAnalytics } from './GoogleAnalytics.client'
