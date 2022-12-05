@@ -24,7 +24,7 @@ function App() {
         </CartProvider>
       </ShopifyProvider>
     </Suspense>
-    <GoogleAnalytics />
+    {/* <GoogleAnalytics /> */}
     </>
   );
 }

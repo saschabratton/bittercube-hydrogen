@@ -70,9 +70,9 @@ export default function moslers(){
             Located at<br />5900 W north ave<br />
             <br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKET</span>
           </p> */}
-          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
+          <p className="label">Follow us online<br />@BITTERCUBE.BAR.AND.BAZAAR</p>
           <Link to="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="m-0 ml-0 btn btn-action">Order online now</Link>
-          <a href="mailto:mailto:INFO@BITTERCUBE.COM" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
+          <a href="mailto:bar@bittercube.com" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
           {/* <div className="text-ornament w-fit"></div>
           <p className="label ">
             <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />

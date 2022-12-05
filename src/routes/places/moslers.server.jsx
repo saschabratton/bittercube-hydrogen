@@ -75,9 +75,9 @@ export default function MoslersPage(){
                 LOCATED IN THE BASEMENT VAULT AT THE NORTH AVENUE MARKET
               </p>
               <p className="label">5900 W NORTH AVE<br />MILWAUKEE, WI</p> */}
-              <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p>
+              <p className="label">Follow us online<br />@BITTERCUBE.BAR.AND.BAZAAR</p>
               <Link to="https://moslers-vault.resos.com/booking" target='_blank' className="m-0 ml-0 btn btn-action">Book a table</Link>
-              <a href="mailto:mailto:INFO@BITTERCUBE.COM" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
+              <a href="moslersvault@bittercube.com" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
             </div>
           </div>
 
