@@ -67,8 +67,7 @@ export default function Product({ params }) {
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
       <ProductDetails product={product} />
-      {/* <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
-
+      {/* 1 suspense waterfall */}
       <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
 
       <div className="relative w-11/12 mx-auto mt-12">
@@ -78,8 +77,9 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
-      <SimilarProducts data={product.id} />
-      <SplitBgVertBlue />
+      {/* 2 suspense waterfall */}
+      {/* <SimilarProducts data={product.id} /> */}
+      <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>
   )
