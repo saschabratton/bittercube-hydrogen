@@ -40,9 +40,9 @@ export default function Home() {
           title: customSeo.name,
         }} />
       <PatternHero content={"The most distinct lineup of bitters in the world"} />
-      <Suspense>
+      {/* <Suspense> */}
         <CollectionsMenu />
-      </Suspense>
+      {/* </Suspense> */}
       <div className="container">
         <div className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2">
           <div>

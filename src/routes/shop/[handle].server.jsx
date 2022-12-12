@@ -29,9 +29,9 @@ export default function Collections() {
 
   return (
     <Layout>
-      <Suspense>
+      {/* <Suspense> */}
         <Seo type="collection" data={collection} />
-      </Suspense>
+      {/* </Suspense> */}
       <PatternHero content={collection.title} />
       <CollectionsMenu />
       <hr />
