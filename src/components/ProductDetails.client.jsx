@@ -25,10 +25,11 @@ export default function ProductDetails({ product }) {
             <p className="text-base label">{vendor}</p>
             <h1>{title}</h1>
             <ProductForm product={product} />
-            <div className="pt-6 prose text-dark text-md">
+            <div className="pt-6 prose text-dark text-md"       dangerouslySetInnerHTML={{__html: descriptionHtml}}/>
               {/* {parse(product.descriptionHtml)} */}
-              {JSON.stringify(descriptionHtml)}
-            </div>
+              {/* {JSON.stringify(descriptionHtml)} */}
+
+            {/* </div> */}
 
 
             {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}
