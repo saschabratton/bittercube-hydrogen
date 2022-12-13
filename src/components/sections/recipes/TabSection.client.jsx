@@ -22,8 +22,9 @@ export default function TabSection({ activeRecipe }){
       </TabPanel>
       <TabPanel>
         <div className="relative pt-8">
-          {JSON.stringify(instructions)}
-          {/* {parse(instructions)} */}
+          {/* {JSON.stringify(instructions)} */}
+          {parse(instructions, {htmlparser2: {xmlMode: true}
+        })}
         </div>
       </TabPanel>
       {supplies &&
