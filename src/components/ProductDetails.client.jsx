@@ -23,9 +23,10 @@ export default function ProductDetails({ product }) {
             <p className="text-base label">{product.vendor}</p>
             <h1>{product.title}</h1>
             <ProductForm product={product} />
-            {/* <div className="pt-6 prose text-dark text-md">
-              {parse(product.descriptionHtml)}
-            </div> */}
+            <div className="pt-6 prose text-dark text-md">
+              {/* {parse(product.descriptionHtml)} */}
+              {JSON.stringify(descriptionHtml)}
+            </div>
 
 
             {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}

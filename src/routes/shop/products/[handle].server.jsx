@@ -68,7 +68,7 @@ export default function Product({ params }) {
       </div>
       <ProductDetails product={product} />
       {/* 1 suspense waterfall */}
-      {/* <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/> */}
+      <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
 
       <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />
@@ -78,7 +78,7 @@ export default function Product({ params }) {
         </div>
       </div>
       {/* 2 suspense waterfall */}
-      {/* <SimilarProducts data={product.id} /> */}
+      <SimilarProducts data={product.id} />
       <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>
