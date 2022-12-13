@@ -4,7 +4,8 @@ import { NotFound, Layout } from '@server'
 import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection } from "@client"
 // ----------------------------------------------------------------------
 
-const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
+// const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
+const recipesApi = () => !!window['https://api.bittercube.com/api/recipes.json']
 
 export default function Recipe(){
   const { handle } = useRouteParams()
