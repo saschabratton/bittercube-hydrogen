@@ -3,13 +3,15 @@ import { Link, Image, fetchSync } from "@shopify/hydrogen";
 import Arrow from '../animations/Arrow.client'
 import { makeKey } from "../../utilities/helpers";
 
-const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
+// if (typeof window !== 'undefined') {
+  const recipesApi = 'https://api.bittercube.com/api/recipes.json'
+// }
 
 
 export default function ProductRecipes({ content, links }) {
-  const recipes = fetchSync(recipesApi,{
-    preload: false
-  }).json()
+  const { headline, description, image, ctaLink, ctaLabel, navHeadline } = content
+
+  const recipes = fetchSync(recipesApi).json()
 
   const [suggestedRecipes, setSuggestedRecipes] = useState([])
 
@@ -36,11 +38,9 @@ export default function ProductRecipes({ content, links }) {
   }
 
 
-  const {headline, description, ctaLabel, ctaLink, image, background, navHeadline, padding, border} = content
-  const {linkLabel, link} = links
   return (
-    <section className={`py-12 bg-forest`}>
-      <div className={`border-y-2 border-gold`}>
+    <section className="py-12 bg-forest">
+      <div className="border-y-2 border-gold">
         <div className="container max-w-screen-xl !py-20 mx-auto grid grid-cols-1 md:grid-cols-6 lg:grid-cols-7 gap-16">
           <div className="flex flex-col gap-6 py-16 md:col-span-3 lg:order-2 lg:col-span-2">
             <h2 className="font-sans uppercase !text-gold">{headline}</h2>

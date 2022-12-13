@@ -72,17 +72,16 @@ export default function Product({ params }) {
 
   return (
     <Layout>
-      <Suspense>
+      {/* <Suspense> */}
         <Seo type="product" data={product} />
-      </Suspense>
+      {/* </Suspense> */}
       <PrimaryMenu dark={false} />
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
       {/* {JSON.stringify(product)} */}
       <ProductDetails product={product} />
-      {/* <ThreeColumnFeature  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks} /> */}
-
+      {/* TODO: 1 suspense waterfall */}
       <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
 
       <div className="relative w-11/12 mx-auto mt-12">
@@ -92,8 +91,9 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
+      {/* TODO: 2 suspense waterfall */}
       <SimilarProducts data={product.id} />
-      <SplitBgVertBlue />
+      <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>
   )

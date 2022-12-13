@@ -11,6 +11,8 @@ import { ImageCarousel } from "@client"
 // ----------------------------------------------------------------------
 
 export default function ProductDetails({ product }) {
+  const { media, vendor, title, descriptionHtml } = product
+
   return (
     <ProductOptionsProvider data={product}>
       <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2">
@@ -20,17 +22,19 @@ export default function ProductDetails({ product }) {
         </div>
         <div className="hidden gap-6 md:flex md:flex-col">
           <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
-            <ProductGallery media={product.media.nodes} />
+            <ProductGallery media={media.nodes} />
           </div>
         </div>
         <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
-            <p className="text-base label">{product.vendor}</p>
-            <h1>{product.title}</h1>
+            <p className="text-base label">{vendor}</p>
+            <h1>{title}</h1>
             <ProductForm product={product} />
-            <div className="pt-6 prose text-dark text-md">
-              {parse(product.descriptionHtml)}
-            </div>
+            <div className="pt-6 prose text-dark text-md"       dangerouslySetInnerHTML={{__html: descriptionHtml}}/>
+              {/* {parse(product.descriptionHtml)} */}
+              {/* {JSON.stringify(descriptionHtml)} */}
+
+            {/* </div> */}
 
 
             {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}
