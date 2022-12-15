@@ -23,10 +23,10 @@ export default function CartDetails({ onClose }) {
   }
 
   return (
-    <form className="grid grid-cols-1 grid-rows-[1fr_auto] h-[calc(100vh-6rem)]">
+    <form className="grid grid-cols-1 grid-rows-[1fr_auto] h-[calc(100vh-6rem)] pb-12">
       <section
         aria-labelledby="cart-contents"
-        className="px-4 pt-0 pb-4 overflow-auto transition md:px-12"
+        className="px-4 pt-0 pb-4 overflow-y-scroll transition md:px-12"
       >
         <ul className="grid gap-6 overflow-y-scroll md:gap-10">
           {lines.map((line) => {
@@ -73,7 +73,7 @@ export function GiftMessage(){
 
 export function CartEmpty({ onClose }) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen px-4 py-6 space-y-7 md:py-8 md:px-12">
+    <div className="flex flex-col items-center justify-center px-4 py-6 space-y-7 md:py-8 md:px-12">
       <h2 className="text-4xl font-bold whitespace-pre-wrap max-w-prose">
         Your cart is empty
       </h2>
