@@ -53,7 +53,6 @@ export default function PrimaryMenu({ dark }) {
               role="banner"
               className={`flex items-center justify-between w-full h-16 gap-4 p-6 antialiased leading-none transition md:p-8 lg:p-12 `}
             >
-
               <Link className="pl-8 mx-auto font-bold md:contents md:pl-0 md:mx-0" to="/">
                 <span className="sr-only">Bittercube</span>
                 {dark ?
@@ -62,8 +61,6 @@ export default function PrimaryMenu({ dark }) {
                   (<Image src='/logos/wordmark.svg' width={170} height={36} alt="Bittercube" id="navLogo" />)
                 }
               </Link>
-
-
               <div className="hidden md:gap-4 lg:gap-12 md:flex">
                 <a href="#mainContent" className="border-2 rounded focus:h-10 focus:w-40 border-gold/0 focus:border-gold/100">
                   <span className="sr-only">

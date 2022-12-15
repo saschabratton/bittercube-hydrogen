@@ -6,7 +6,7 @@ import {
   AddToCartButton
 } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
-import { ImageCarousel } from "@client"
+import { ImageCarousel, useDrawer, } from "@client"
 // import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------
 
@@ -30,19 +30,8 @@ export default function ProductDetails({ product }) {
             <p className="text-base label">{vendor}</p>
             <h1>{title}</h1>
             <ProductForm product={product} />
-            <div className="pt-6 prose text-dark text-md"       dangerouslySetInnerHTML={{__html: descriptionHtml}}/>
-              {/* {parse(product.descriptionHtml)} */}
-              {/* {JSON.stringify(descriptionHtml)} */}
-
-            {/* </div> */}
-
-
-            {/* <button href="#" className="btn btn-action" disabled>Add to cart</button> */}
+            <div className="pt-6 prose text-dark text-md" dangerouslySetInnerHTML={{__html: descriptionHtml}}/>
           </div>
-
-          {/* <HorizontalSeperator />
-          <h3>More Information</h3> */}
-          {/* <TabSection content={TabContent} /> */}
         </div>
       </div>
     </ProductOptionsProvider>
@@ -52,7 +41,7 @@ export default function ProductDetails({ product }) {
 function ProductForm({ product }) {
   const { options, selectedVariant } = useProductOptions();
 
-  // const isOutOfStock = !selectedVariant?.availableForSale || false;
+  const isOutOfStock = !selectedVariant?.availableForSale || false;
   return (
     <form className="grid gap-10">
         {
@@ -67,9 +56,6 @@ function ProductForm({ product }) {
                     key={name}
                     className="flex items-center gap-2"
                   >
-                    {/* <legend className="col-span-2 px-3 text-lg text-dark">
-                      {name}
-                    </legend> */}
                     <OptionRadio name={name} values={values} />
                   </div>
                 );
@@ -87,7 +73,7 @@ function ProductForm({ product }) {
             <div className="flex items-center justify-between">
 
               <PurchaseMarkup />
-              {/* <CartLineItem /> */}
+
             </div>
 
           </div>
@@ -99,8 +85,9 @@ function ProductForm({ product }) {
 function PurchaseMarkup() {
   const { selectedVariant } = useProductOptions();
   const isOutOfStock = !selectedVariant?.availableForSale || false;
-
+  const { isOpen, openDrawer, closeDrawer } = useDrawer()
   return (
+
     <>
       <AddToCartButton
         type="button"
@@ -108,22 +95,12 @@ function PurchaseMarkup() {
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
+         onClick={openDrawer}
       >
         <span className="my-0 btn btn-action">
           {isOutOfStock ? "Sold out" : "Add to cart"}
         </span>
       </AddToCartButton>
-      {/* {isOutOfStock ? (
-        <span className="px-6 py-3 leading-none text-center text-black border rounded-sm ">
-          Available in 2-3 weeks
-        </span>
-      ) : (
-        <BuyNowButton variantId={selectedVariant.id}>
-          <span className="inline-block w-full max-w-xl px-6 py-3 font-medium leading-none text-center border rounded-sm">
-            Buy it now
-          </span>
-        </BuyNowButton>
-      )} */}
     </>
   );
 }

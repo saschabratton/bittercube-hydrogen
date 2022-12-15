@@ -4,8 +4,8 @@ import { HorizontalSeperator, PrimaryMenu } from "@client"
 // ----------------------------------------------------------------------
 export default function NotFound({ response }) {
   if (response) {
-    // response.status = 404
-    // response.statusText = 'Not found'
+    response.status = 404
+    response.statusText = 'Not found'
   }
 
   return (

@@ -116,7 +116,6 @@ function CartCheckoutActions() {
         >
           <span className="hidden lg:inline">Continue to </span>Checkout
         </Link>
-        {/* <CartShopPayButton className="btn btn-action bg-[#5a31f4] m-0 w-full text-center py-1" /> */}
       </div>
     </>
   );
@@ -138,12 +137,6 @@ function OrderSummary() {
             )}
           </dd>
         </div>
-        {/* <div className="flex items-center justify-between">
-          <dt className="flex items-center">
-            <span>Shipping estimate</span>
-          </dt>
-          <dd className="text-green-600">Free and carbon neutral</dd>
-        </div> */}
       </dl>
     </>
   );
