@@ -76,8 +76,8 @@ export default function Product({ params }) {
         <Seo type="product" data={product} />
       {/* </Suspense> */}
       <PrimaryMenu dark={false} />
-      <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
-        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
+      <div className="container flex items-center justify-center w-11/12 gap-2 px-0 pb-3 mt-4 md:justify-start md:pb-6">
+        <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All Products</Link>
       </div>
       {/* {JSON.stringify(product)} */}
       <ProductDetails product={product} />

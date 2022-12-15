@@ -79,7 +79,7 @@ export default function AboutPage({response}) {
         </div>
 
 
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div className="absolute top-0 -right-4">
             <Image src="/images/handwritten/about-boldandbalancedbitters.svg" alt=" " width={200} height={111}  role="presentation" />
           </div>

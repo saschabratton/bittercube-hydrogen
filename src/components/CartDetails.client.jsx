@@ -23,12 +23,12 @@ export default function CartDetails({ onClose }) {
   }
 
   return (
-    <form className="grid grid-cols-1 grid-rows-[1fr_auto] h-[calc(100vh-6rem)] pb-12">
+    <form className="h-full pb-0 overflow-auto">
       <section
         aria-labelledby="cart-contents"
-        className="px-4 pt-0 pb-4 overflow-y-scroll transition md:px-12"
+        className="px-4 pt-0 pb-4 transition md:px-12"
       >
-        <ul className="grid gap-6 overflow-y-scroll md:gap-10">
+        <ul className="grid gap-6 md:gap-10">
           {lines.map((line) => {
             return (
               <CartLineProvider key={line.id} line={line}>
@@ -114,7 +114,7 @@ function CartCheckoutActions() {
           width="full"
           className="w-full m-0 text-center btn btn-action"
         >
-          Continue to Checkout
+          <span className="hidden lg:inline">Continue to </span>Checkout
         </Link>
         {/* <CartShopPayButton className="btn btn-action bg-[#5a31f4] m-0 w-full text-center py-1" /> */}
       </div>
@@ -154,7 +154,7 @@ export function CartLineItem() {
   const { id: lineId, quantity, merchandise } = useCartLine();
 
   return (
-    <li key={lineId} className="flex">
+    <li key={lineId} className="flex flex-col md:flex-row">
       <div className="flex-shrink-0">
         <Image
           data={merchandise.image}

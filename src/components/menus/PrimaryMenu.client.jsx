@@ -38,8 +38,8 @@ export default function PrimaryMenu({ dark }) {
   const { isOpen, openDrawer, closeDrawer } = useDrawer()
   return (
     <>
-      <Drawer open={isOpen} onClose={closeDrawer}>
-        <div className="grid">
+      <Drawer open={isOpen} onClose={closeDrawer} className="">
+        <div  >
           <Drawer.Title>
             <span className="sr-only">Cart Drawer</span>
           </Drawer.Title>
@@ -104,7 +104,7 @@ export default function PrimaryMenu({ dark }) {
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Disclosure.Panel className="relative z-50 flex flex-col items-center justify-center w-11/12 gap-12 py-16 mx-auto rounded-sm shadow-lg md:hidden bg-paper-action">
+              <Disclosure.Panel className="relative z-50 flex flex-col items-center justify-center w-11/12 gap-8 py-8 mx-auto rounded-sm shadow-lg md:hidden bg-paper-action">
 
 
                 {navItem && navItem.map((link) => (

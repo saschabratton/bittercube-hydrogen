@@ -10,7 +10,7 @@ import { Fragment, useState } from "react"
 function Drawer({ open, onClose, children }) {
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={onClose}>
+      <Dialog as="div" className="relative z-50 " onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -24,8 +24,8 @@ function Drawer({ open, onClose, children }) {
         </Transition.Child>
 
         <div className="fixed inset-0">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="fixed inset-y-0 right-0 flex max-w-full pl-10">
+          <div className="absolute inset-0">
+            <div className="fixed inset-y-0 right-0 flex max-w-full md:pl-10">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -35,8 +35,8 @@ function Drawer({ open, onClose, children }) {
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className="max-w-lg antialiased text-left align-middle transition-all transform shadow-xl bg-paper">
-                  <header className="sticky top-0 flex items-center justify-between h-24 px-4 sm:px-8 md:px-12">
+                <Dialog.Panel className="w-full overflow-y-scroll antialiased text-left align-middle transition-all transform shadow-xl md:max-w-lg bg-paper">
+                  <header className="sticky top-0 z-10 flex items-center justify-between h-24 px-4 sm:px-8 md:px-12 bg-paper">
                     <h2
                       id="cart-contents"
                       className="mb-0 text-lg font-bold whitespace-pre-wrap max-w-prose"

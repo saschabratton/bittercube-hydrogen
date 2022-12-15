@@ -60,7 +60,7 @@ export default function moslers(){
           <Image src='/images/bc-bar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/bc-bar-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <span className="label">5900 W north ave, MILWAUKEE, WI</span>
           <h2>Carefully Crafted Cocktails</h2>
           <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>

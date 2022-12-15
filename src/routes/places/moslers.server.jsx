@@ -51,7 +51,7 @@ export default function MoslersPage(){
           <Image src='/images/moslersvault-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/moslersvault-04.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <span className="label">5900 W NORTH AVE, MILWAUKEE, WI</span>
           <h2>Intimately Elevated Cocktails</h2>
           <p>Mosler’s Vault is a cocktail bar in the confines of the former United Federal Savings & Loan bank vault, built in 1949. With cream city brick walls, and a moss ceiling, the space is both intimate and warm. Named after the vault door manufacturer, the elevated cocktail experience showcases a regularly rotating menu of rare and unique ingredients.</p>

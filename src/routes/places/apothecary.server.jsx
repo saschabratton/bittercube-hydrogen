@@ -60,7 +60,7 @@ export default function moslers(){
           <Image src='/images/apothecary-bazaar-02.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
           <Image src='/images/apothecary-bazaar-03.jpg' width={366} height={455} alt='alt' className="object-cover w-full" />
         </div>
-        <div className="sticky top-0 grid gap-6 px-4 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
+        <div className="sticky top-0 grid gap-6 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <span className="label">BITTERCUBE HEADQUARTERS</span>
           <h2>Made in Milwaukee</h2>
           <p>The Bittercube Apothecary is a bustling, 9,000 square foot building in Milwaukee, and is the lifeblood of our operation. The majority of the building is dedicated to the manufacturing of our slow-crafted bitters.</p>
