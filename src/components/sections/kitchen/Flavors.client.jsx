@@ -70,7 +70,7 @@ export default function Flavors(){
           <div className="flex flex-col items-center justify-start gap-1 text-center">
             <h3>Coffee Extract</h3>
             <span className="text-ornament"></span>
-            <Link to="/shop/products/chipotle-cacao" className="label">Chipotle Cacao Bitters
+            <Link to="/shop/products/chipotlecacao" className="label">Chipotle Cacao Bitters
             </Link>
           </div>
           <div className="col-span-1 md:col-span-2"></div>

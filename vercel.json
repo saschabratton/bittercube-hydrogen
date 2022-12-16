@@ -51,6 +51,21 @@
       "permanent": true
     },
     {
+      "source": "/products/corazon",
+      "destination": "/shop/products/chipotlecacao",
+      "permanent": true
+    },
+    {
+      "source": "/shop/products/corazon",
+      "destination": "/shop/products/chipotlecacao",
+      "permanent": true
+    },
+    {
+      "source": "/recipes/syrup/watermelon-syrup",
+      "destination": "/recipes/syrups#watermelon-syrup",
+      "permanent": true
+    },
+    {
       "source": "/wholesale",
       "destination": "/shop/#wholesale-bittercube",
       "permanent": true
