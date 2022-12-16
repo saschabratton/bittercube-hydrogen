@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { Image, fetchSync, CacheShort, Seo } from "@shopify/hydrogen"
+import { Image, fetchSync, CacheShort, Seo, useQuery } from "@shopify/hydrogen"
 import { Layout, RecipesMenu, ImageHero } from '@server'
 import { HorizontalSeperator, RecipeCarousel, SignUp, FeaturedBartenders, LearnToCraft, InTheKitchen } from "@client"
 // ----------------------------------------------------------------------
@@ -16,10 +16,16 @@ const SignUpContent = {
 
 
 export default function Recipes() {
-  const recipes = fetchSync('https://api.bittercube.com/api/recipes.json', {
-    preload: false,
-    cache: CacheShort()
-  }).json()
+  const recipesApi = useQuery(['slug'], async () => {
+    const response = await fetch('https://api.bittercube.com/api/recipes.json', {
+      headers: {
+        accept: 'application/json',
+      },
+    });
+    return await response.json();
+  });
+
+  const recipes = recipesApi.data
 
   const featuredRecipes = recipes.filter(recipe => recipe.featured == true)
 

@@ -86,6 +86,7 @@ function PurchaseMarkup() {
   const { selectedVariant } = useProductOptions();
   const isOutOfStock = !selectedVariant?.availableForSale || false;
   const { isOpen, openDrawer, closeDrawer } = useDrawer()
+
   return (
 
     <>
@@ -95,7 +96,7 @@ function PurchaseMarkup() {
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
-         onClick={openDrawer}
+        onClick={() => openDrawer()}
       >
         <span className="my-0 btn btn-action">
           {isOutOfStock ? "Sold out" : "Add to cart"}

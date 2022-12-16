@@ -1,16 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, Image, fetchSync, } from "@shopify/hydrogen";
-import Arrow from '../animations/Arrow.client'
 import { makeKey } from "../../utilities/helpers";
 import { Suspense } from "react";
 
-// const recipesApi = 'https://api.bittercube.com/api/recipes.json'
-
-
 export default function ProductRecipes({ content, links, recipes }) {
   const { headline, description, image, ctaLink, ctaLabel, navHeadline } = content
-
-  // const recipes = fetchSync(recipesApi, {preload: false}).json()
 
   const [suggestedRecipes, setSuggestedRecipes] = useState([])
 

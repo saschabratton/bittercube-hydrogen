@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
-import { Link, Image, useRouteParams, fetchSync, Seo } from "@shopify/hydrogen"
+import { Link, Image, useRouteParams, fetchSync, Seo, useQuery } from "@shopify/hydrogen"
 import { makeKey } from "@utils"
 import { NotFound, Layout } from '@server'
 import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection } from "@client"
 // ----------------------------------------------------------------------
 
-// const recipesApi = 'https://lavish-turnip.cloudvent.net/api/recipes.json'
-// const recipesApi = () => !!window['https://api.bittercube.com/api/recipes.json']
-
-
-
-
-
-// if (typeof window !== 'undefined') {
-  const recipesApi = 'https://api.bittercube.com/api/recipes.json'
-// }
 
 export default function Recipe(){
   const { handle } = useRouteParams()
 
-  const recipes = fetchSync(recipesApi,{
-    preload: false
-  }).json()
+
+   const recipesApi = useQuery(['slug'], async () => {
+    const response = await fetch('https://api.bittercube.com/api/recipes.json', {
+      headers: {
+        accept: 'application/json',
+      },
+    });
+    return await response.json();
+  });
+
+  const recipes = recipesApi.data
 
   const activeRecipe = recipes.find(recipe => recipe.slug === handle)
 

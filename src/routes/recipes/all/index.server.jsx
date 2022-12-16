@@ -1,4 +1,4 @@
-import { fetchSync, Seo, CacheLong } from '@shopify/hydrogen'
+import { fetchSync, Seo, CacheLong, useQuery } from '@shopify/hydrogen'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator, SignUp, CocktailsList } from "@client"
 // ----------------------------------------------------------------------
@@ -9,17 +9,20 @@ const SignUpContent = {
   'ctaLink': '',
 }
 
-const recipesApi = 'https://api.bittercube.com/api/recipes.json'
-
-
 export default function Cocktails(){
 
-  const allRecipes = fetchSync(recipesApi,{
-    cache: CacheLong(),
-    preload: false
-  }).json()
+  const recipesApi = useQuery(['slug'], async () => {
+    const response = await fetch('https://api.bittercube.com/api/recipes.json', {
+      headers: {
+        accept: 'application/json',
+      },
+    });
+    return await response.json();
+  });
 
-const customSeo = {
+  const allRecipes = recipesApi.data
+
+  const customSeo = {
     name: 'All Bittercube recipes • Bittercube',
   }
 
