@@ -1,17 +1,22 @@
-import { fetchSync, Image, Link, Head, Seo, CacheLong } from "@shopify/hydrogen"
+import { fetchSync, Image, Link, Head, Seo, CacheLong, useQuery } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator, SyrupInstructions } from "@client"
 import { makeKey } from "@utils"
 // ----------------------------------------------------------------------
 
-const syrupsApi = 'https://lavish-turnip.cloudvent.net/api/syrups.json'
 
 export default function Syrups(){
-  const recipes = fetchSync(syrupsApi, {
-    cache: CacheLong(),
-    preload: false
-  }).json()
+   const syrupsApi = useQuery(['slug'], async () => {
+    const response = await fetch('https://api.bittercube.com/api/syrups.json', {
+      headers: {
+        accept: 'application/json',
+      },
+    });
+    return await response.json();
+  });
+
+  const recipes = syrupsApi.data
 
 
   const groupIt = (recipes) => {
