@@ -42,7 +42,7 @@ const styleOptions = [
   { value: 'creamy', label: 'Creamy' },
   { value: 'aromatic', label: 'Aromatic' },
   { value: 'low-abv', label: 'Low ABV option' },
-  { value: 'non-alcoholic', label: 'Non-Alcoholic' },
+  { value: 'non-alcoholic-option', label: 'Non-Alcoholic option' },
   { value: 'hot', label: 'Hot' },
   { value: 'kitchen', label: 'Kitchen' },
 ]
