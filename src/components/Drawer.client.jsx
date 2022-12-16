@@ -25,7 +25,7 @@ function Drawer({ open, onClose, children }) {
 
         <div className="fixed inset-0">
           <div className="absolute inset-0">
-            <div className="fixed inset-y-0 right-0 flex max-w-full md:pl-10">
+            <div className="fixed inset-y-0 right-0 flex max-w-full pl-2 md:pl-10">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
