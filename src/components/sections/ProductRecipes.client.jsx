@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Link, Image, fetchSync } from "@shopify/hydrogen";
+import { Link, Image, fetchSync, } from "@shopify/hydrogen";
 import Arrow from '../animations/Arrow.client'
 import { makeKey } from "../../utilities/helpers";
+import { Suspense } from "react";
 
-// if (typeof window !== 'undefined') {
-  const recipesApi = 'https://api.bittercube.com/api/recipes.json'
-// }
+// const recipesApi = 'https://api.bittercube.com/api/recipes.json'
 
 
-export default function ProductRecipes({ content, links }) {
+export default function ProductRecipes({ content, links, recipes }) {
   const { headline, description, image, ctaLink, ctaLabel, navHeadline } = content
 
-  const recipes = fetchSync(recipesApi).json()
+  // const recipes = fetchSync(recipesApi, {preload: false}).json()
 
   const [suggestedRecipes, setSuggestedRecipes] = useState([])
 
@@ -36,7 +35,6 @@ export default function ProductRecipes({ content, links }) {
       times(x - 1)(f)
     }
   }
-
 
   return (
     <section className="py-12 bg-forest">

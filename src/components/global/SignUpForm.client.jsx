@@ -61,7 +61,6 @@ export default function SignUpForm(){
               component={EmailInput}
               placeholder="___@___.___"
               label="Email"
-              // className=""
             />
             {/* <div className="mt-10 mb-3">
               <p>By signing up, I agree to the <Link to={'/policies/privacy-policy'} className="text-primary">Privacy Policy</Link> and <Link to={'/policies/terms-of-service'} className="text-primary">Terms of Service</Link></p>

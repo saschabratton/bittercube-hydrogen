@@ -8,7 +8,8 @@ import {
   ShopifyAnalyticsConstants,
   Link,
   CacheLong,
-  Seo
+  Seo,
+  useQuery,
 } from "@shopify/hydrogen"
 import { Layout, NotFound, SimilarProducts } from '@server'
 import { HorizontalSeperator, PrimaryMenu, CardCarousel, WholesaleBitters, ThreeColumnFeature,SplitBgVertBlue, ProductDetails, ProductRecipes  } from "@client"
@@ -57,19 +58,31 @@ export default function Product({ params }) {
     },
   })
 
+  const recipesApi = useQuery(['slug'], async () => {
+    const response = await fetch('https://api.bittercube.com/api/recipes.json', {
+      headers: {
+        accept: 'application/json',
+      },
+    });
+    return await response.json();
+  });
+
   return (
     <Layout>
-      {/* <Suspense> */}
+      <Suspense>
         <Seo type="product" data={product} />
-      {/* </Suspense> */}
+      </Suspense>
       <PrimaryMenu dark={false} />
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All</Link>
       </div>
-      <ProductDetails product={product} />
+      <Suspense fallback="Loading Product Details">
+        <ProductDetails product={product} />
+      </Suspense>
       {/* TODO: 1 suspense waterfall */}
-      <ProductRecipes content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
-
+      <Suspense fallback="Loading Recipes">
+        <ProductRecipes recipes={recipesApi.data} content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
+      </Suspense>
       <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />
         <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold">
