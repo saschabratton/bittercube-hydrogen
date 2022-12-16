@@ -6,7 +6,7 @@ import {
   AddToCartButton
 } from "@shopify/hydrogen"
 import parse from 'html-react-parser'
-import { ImageCarousel, useDrawer, } from "@client"
+import { ImageCarousel, useDrawer, Drawer, CartDetails } from "@client"
 // import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------
 
@@ -90,6 +90,14 @@ function PurchaseMarkup() {
   return (
 
     <>
+    <Drawer open={isOpen} onClose={closeDrawer} className="">
+        <div  >
+          <Drawer.Title>
+            <span className="sr-only">Cart Drawer</span>
+          </Drawer.Title>
+          <CartDetails onClose={closeDrawer} />
+        </div>
+      </Drawer>
       <AddToCartButton
         type="button"
         variantId={selectedVariant.id}
