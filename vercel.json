@@ -66,6 +66,16 @@
       "permanent": true
     },
     {
+      "source": "/collections/cocktail-kits",
+      "destination": "/shop/curated-kits",
+      "permanent": true
+    },
+    {
+      "source": "/shop/cocktail-kits",
+      "destination": "/shop/curated-kits",
+      "permanent": true
+    },
+    {
       "source": "/wholesale",
       "destination": "/shop/#wholesale-bittercube",
       "permanent": true
