@@ -72,6 +72,7 @@ export default function CocktailsList({ allRecipes }){
       return
     }
     setFilters(emptyFilters)
+
     const filtered = allRecipes.filter(({ name, flavors, spirits, ingredients }) => {
       let tags = []
       flavors?.forEach(element => {
@@ -86,17 +87,15 @@ export default function CocktailsList({ allRecipes }){
         }
       })
 
-      function checkTags (input) {
-        console.log('input:', input)
-        tags.find(element => {
+      function checkTags(input) {
+        return tags.find(element => {
           if (element.includes(input.toLowerCase())) {
             return true
           }
-          return false
         })
       }
-      console.log(checkTags(input))
-      const match = name.toLowerCase().includes(input)
+
+      const match = name.toLowerCase().includes(input) || checkTags(input)
 
       return match
     })
