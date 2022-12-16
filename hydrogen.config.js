@@ -18,7 +18,8 @@ export default defineConfig({
   /* A path to a custom page to render when the server encounters an unhandled exception */
   // serverErrorPage: '/src/Error.server.jsx',
   logger: {
-    showQueryTiming: true
+    showQueryTiming: true,
+    // showUnusedQueryProperties: true
   },
   session: CookieSessionStorage('__session', {
     path: '/',

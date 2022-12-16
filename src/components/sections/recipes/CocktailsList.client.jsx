@@ -72,8 +72,31 @@ export default function CocktailsList({ allRecipes }){
       return
     }
     setFilters(emptyFilters)
-    const filtered = allRecipes.filter(({ name }) => {
-      const match = name.toLowerCase().includes(input)
+
+    const filtered = allRecipes.filter(({ name, flavors, spirits, ingredients }) => {
+      let tags = []
+      flavors?.forEach(element => {
+        tags.push(element.toLowerCase())
+      })
+      spirits?.forEach(element => {
+        tags.push(element.toLowerCase())
+      })
+      ingredients?.forEach(({ name }) => {
+        if (name) {
+          tags.push(name.toLowerCase())
+        }
+      })
+
+      function checkTags(input) {
+        return tags.find(element => {
+          if (element.includes(input.toLowerCase())) {
+            return true
+          }
+        })
+      }
+
+      const match = name.toLowerCase().includes(input) || checkTags(input)
+
       return match
     })
     setRecipes(filtered)
