@@ -58,7 +58,7 @@ export default function ProductRecipes({ content, links, recipes }) {
               {suggestedRecipes && suggestedRecipes.map((recipe, i) => (
                 <dd key={makeKey(recipe.name)}>
                   <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
-                  <hr className="my-2 border text-gold" />
+                  <hr className="my-2 border-t-2 text-gold" />
                   <Link to={`/recipes/${recipe.slug}`} className="flex items-center justify-between w-full gap-2 mx-auto label group">{recipe.name} <div className="btn-arrow btn-arrow-gold"></div></Link>
                 </dd>
               ))}

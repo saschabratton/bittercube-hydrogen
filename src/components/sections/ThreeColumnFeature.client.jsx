@@ -29,7 +29,7 @@ export default function ThreeColumnFeature({ content, links }) {
 
                 <dd key={makeKey(link.linkLabel)}>
                   <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
-                  <hr className="my-2 border text-gold" />
+                  <hr className="my-2 border-t-2 text-gold" />
                   {/* TODO: use anchor tag or Link component based on internal link or not */}
                   {/* TODO: open in new tab if anchor link */}
                   <a href={link.link} className="flex items-center justify-between w-full gap-2 mx-auto label group">{link.linkLabel} <div className="btn-arrow btn-arrow-gold"></div></a>
