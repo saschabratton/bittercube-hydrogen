@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {useCookies} from 'react-cookie'
 import {
   useCart,
@@ -90,27 +90,29 @@ export function CartEmpty({ onClose }) {
 function CartCheckoutActions() {
   const navigate = useNavigate()
   const [cookies] = useCookies()
-  const { id, checkoutUrl, noteUpdate, note } = useCart()
-  const [message, setMessage] = useState()
+  const { checkoutUrl, noteUpdate, note } = useCart()
+  const [message, setMessage] = useState(note)
+
   const handleCheckout = async (url) => {
-    console.log("cartId", id)
-    await noteUpdate({ cartId: id, note: message })
-    console.log("Note", note)
+    try {
+      await noteUpdate(message)
+    } catch (error) {
+      console.log(error)
+    }
     navigate(url)
   }
   return (
     <>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
-        {/* <textarea
+        <textarea
           name='note'
           value={message}
           onChange={({ target: { value } }) => {
             setMessage(value)
           }}
-          className="w-full p-4 rounded-lg h-28"/> */}
+          className="w-full p-4 rounded-lg h-28"/>
 
         <button
-          // to={`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`}
           type="button"
           onClick={() => handleCheckout(`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`)}
           width="full"
