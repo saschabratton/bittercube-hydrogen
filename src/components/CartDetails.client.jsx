@@ -104,6 +104,7 @@ function CartCheckoutActions() {
   return (
     <>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
+        <p className="mb-0 text-sm text-center label">Add a personal gift Message?</p>
         <textarea
           name='note'
           value={message}
