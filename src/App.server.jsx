@@ -9,13 +9,13 @@ import {
 } from "@shopify/hydrogen"
 import { GoogleAnalytics } from '@client'
 import { Suspense } from 'react'
-import { parse } from 'query-string'
+import queryString from 'query-string'
 
 import { DefaultSeo } from "./components/global/DefaultSeo.server";
 import Error from './Error.server'
 
 function App({request, response, search}) {
-  const query = parse(search)
+  const query = queryString.parse(search)
   if (query.gclid) {
     let cookie = new Cookie('__gclid', {
       path: '/',
