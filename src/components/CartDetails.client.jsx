@@ -88,14 +88,15 @@ export function CartEmpty({ onClose }) {
 }
 
 function CartCheckoutActions() {
+  const navigate = useNavigate()
   const [cookies] = useCookies()
-  console.log(cookies['__gclid']?.id)
-
-  const { checkoutUrl, noteUpdate } = useCart()
+  const { id, checkoutUrl, noteUpdate, note } = useCart()
   const [message, setMessage] = useState()
-  const handleCheckout = () => {
-    noteUpdate({ id, note: message })
-    // navigate(checkoutUrl, { replace: true })
+  const handleCheckout = async (url) => {
+    console.log("cartId", id)
+    await noteUpdate({ cartId: id, note: message })
+    console.log("Note", note)
+    navigate(url)
   }
   return (
     <>
@@ -105,20 +106,18 @@ function CartCheckoutActions() {
           value={message}
           onChange={({ target: { value } }) => {
             setMessage(value)
-            // noteUpdate({id, note: value})
           }}
-          className="w-full p-4 rounded-lg h-28">
+          className="w-full p-4 rounded-lg h-28"/> */}
 
-        </textarea> */}
-
-        <Link
-          to={`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`}
-          // onClick={handleCheckout}
+        <button
+          // to={`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`}
+          type="button"
+          onClick={() => handleCheckout(`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`)}
           width="full"
           className="w-full m-0 text-center btn btn-action"
         >
           <span className="hidden lg:inline">Continue to </span>Checkout
-        </Link>
+        </button>
       </div>
     </>
   );
