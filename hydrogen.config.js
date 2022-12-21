@@ -21,11 +21,17 @@ export default defineConfig({
     showQueryTiming: true,
     // showUnusedQueryProperties: true
   },
+  /* The default session storage mechanism for Hydrogen. */
   session: CookieSessionStorage('__session', {
+    /* Tells the browser that the cookie should only be sent to the server if it's within the defined path.  */
     path: '/',
-    httpOnly: true,
+    /* Whether to secure the cookie so that client-side JavaScript can't read the cookie. */
+    httpOnly: false,
+    /* Whether to secure the cookie so that the browser only sends the cookie over HTTPS.  */
     secure: import.meta.env.PROD,
-    sameSite: 'Strict',
+    /* Declares that the cookie should be restricted to a first-party or same-site context.  */
+    sameSite: 'strict',
+    /* The number of seconds until the cookie expires. */
     maxAge: 60 * 60 * 24 * 30,
-  }),
+  })
 })

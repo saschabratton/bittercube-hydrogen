@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useCookies} from 'react-cookie'
 import {
   useCart,
   useCartLine,
@@ -17,7 +18,6 @@ import {
 
 export default function CartDetails({ onClose }) {
   const { lines } = useCart()
-
   if (lines.length === 0) {
     return <CartEmpty onClose={onClose} />;
   }
@@ -88,6 +88,9 @@ export function CartEmpty({ onClose }) {
 }
 
 function CartCheckoutActions() {
+  const [cookies] = useCookies()
+  console.log(cookies['__gclid']?.id)
+
   const { checkoutUrl, noteUpdate } = useCart()
   const [message, setMessage] = useState()
   const handleCheckout = () => {
@@ -109,7 +112,7 @@ function CartCheckoutActions() {
         </textarea> */}
 
         <Link
-          to={checkoutUrl}
+          to={`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`}
           // onClick={handleCheckout}
           width="full"
           className="w-full m-0 text-center btn btn-action"

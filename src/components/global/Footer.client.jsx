@@ -14,18 +14,6 @@ const navItems = [
 
 export default function Footer(){
 
-// let queryString = ''
-// if (typeof window !== 'undefined') {
-//     queryString = window.location.search
-//     const urlParams = new URLSearchParams(queryString)
-//     console.log('hello', urlParams.get('foo'))
-
-//     const links = Array.from(document.getElementsByTagName("a"))
-//     links.map(link => {
-//       const linkRef = link.href
-//       link.href = `${linkRef}?${queryString}`
-//     })
-// }
 
 
   return(
