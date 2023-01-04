@@ -1,6 +1,6 @@
 import {useNavigate, Link} from '@shopify/hydrogen/client'
 import * as Yup from 'yup'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field, } from 'formik'
 import EmailInput from "../fields/EmailInput"
 
 export default function SignUpForm(){
@@ -16,7 +16,7 @@ export default function SignUpForm(){
   }
 
   const handleSubmit = async ({ values, resetForm }) => {
-    const {email, password, firstName, lastName} = values
+    const {email} = values
     try {
       const res = await fetch(`/account/register`, {
         method: 'POST',
@@ -24,7 +24,7 @@ export default function SignUpForm(){
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({email, password, firstName, lastName}),
+        body: JSON.stringify({email}),
       })
       if (res.status === 200) {
         navigate('/account')
@@ -43,8 +43,8 @@ export default function SignUpForm(){
 
   return(
     <>
-      <div id="rj-subscribe"></div>
-      {/* <Formik
+      {/* <div id="rj-subscribe"></div> */}
+      <Formik
         enableReinitialize
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -62,19 +62,20 @@ export default function SignUpForm(){
               placeholder="___@___.___"
               label="Email"
             />
-            <div className="mt-10 mb-3">
-              <p>By signing up, I agree to the <Link to={'/policies/privacy-policy'} className="text-primary">Privacy Policy</Link> and <Link to={'/policies/terms-of-service'} className="text-primary">Terms of Service</Link></p>
-            </div>
+
             <button
               type="submit"
               disabled={dirty ? false : true}
               className="px-6 text-sm font-bold tracking-widest uppercase transition duration-300 border-2 border-l-0 text-dark border-gold rounded-r-md whitespace-nowrap hover:bg-paper-action">
               Sign-Up
             </button>
-            <FormikDebug />
+             {/* <div className="mt-10 mb-3">
+              <p>By signing up, I agree to the <Link to={'/policies/privacy-policy'} className="text-primary">Privacy Policy</Link> and <Link to={'/policies/terms-of-service'} className="text-primary">Terms of Service</Link></p>
+            </div> */}
+            {/* <FormikDebug /> */}
           </Form>
         )}
-      </Formik> */}
+      </Formik>
     </>
   )
 }
