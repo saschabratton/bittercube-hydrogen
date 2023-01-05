@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { MetaPixel, Footer } from '@client'
+import { MetaPixel, RjPixel, Footer } from '@client'
 // ----------------------------------------------------------------------
 
 
@@ -15,6 +15,7 @@ export default function Layout({ children }) {
       </div>
       <Footer />
       <MetaPixel />
+      <RjPixel />
     </div>
   )
 }
