@@ -43,8 +43,8 @@ export default function SignUpForm(){
 
   return(
     <>
-      {/* <div id="rj-subscribe"></div> */}
-      <Formik
+      <div id="rj-subscribe"></div>
+      {/* <Formik
         enableReinitialize
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -75,7 +75,7 @@ export default function SignUpForm(){
             {/* <FormikDebug /> */}
           </Form>
         )}
-      </Formik>
+      </Formik> */}
     </>
   )
 }
