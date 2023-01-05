@@ -1,51 +1,32 @@
 import { useEffect } from 'react'
-import { ClientAnalytics, loadScript } from '@shopify/hydrogen'
+import {ClientAnalytics} from '@shopify/hydrogen';
 
-const AccountID = '22960755'
-const Domain = 'bittercube.com'
-const URL = '//cdn.rejoiner.com/js/v4/rj2.lib.js'
 let init = false
 
 export default function RjPixel() {
   useEffect(() => {
+    ClientAnalytics.pushToPageAnalyticsData({
+        userLocale: navigator.language,
+    })
+
     if (!init) {
       init = true
-
-      if (window._rejoiner) return
-
-      loadScript(URL).catch(() => {});
-
-      rj('init', AccountID)
-
-      function trackPageView(payload) {
-        rj('track', 'PageView', payload)
-      }
-      function trackAddToCart(payload) {
-        rj('track', 'AddToCart', payload)
-      }
-      function trackViewedProduct(payload) {
-        rj('track', 'ViewContent', payload)
-      }
-
-      console.log('events', trackPageView)
-
-      // Listen for events from Hydrogen
-      // https://shopify.dev/custom-storefronts/hydrogen/analytics#default-events
-      ClientAnalytics.subscribe(
-        ClientAnalytics.eventNames.PAGE_VIEW,
-        trackPageView
-      )
-      ClientAnalytics.subscribe(
-        ClientAnalytics.eventNames.ADD_TO_CART,
-        trackAddToCart
-      )
       ClientAnalytics.subscribe(
         ClientAnalytics.eventNames.VIEWED_PRODUCT,
-        trackViewedProduct
+        (payload) => {
+          console.log(payload);
+          var _rejoiner = _rejoiner || []
+          _rejoiner.push(["trackProductView", {
+            "product_id": payload.content_ids,
+            "name": payload.content_name,
+            "price": payload.value,
+            "product_url": payload.normalizedRscUrl,
+            // "image_url": payload.,
+            // "stock": payload.,
+            "category": payload.content_category,
+          }])
+        }
       )
-
-      ClientAnalytics.hasSentFirstPageView() &&
-        trackPageView(ClientAnalytics.getPageAnalyticsData())
     }
   })
 
