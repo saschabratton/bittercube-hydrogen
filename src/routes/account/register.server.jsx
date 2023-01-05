@@ -3,6 +3,12 @@ import {CacheNone, gql,} from '@shopify/hydrogen'
 // import {getApiErrorMessage} from '../../lib/utils'
 import { SignUpForm } from "@client"
 
+export function getApiErrorMessage(field, data, errors) {
+  if (errors?.length) return errors[0].message ?? errors[0];
+  if (data?.[field]?.customerUserErrors?.length)
+    return data[field].customerUserErrors[0].message;
+  return null;
+}
 
 export default function Register({response}) {
   response.cache(CacheNone());
@@ -30,16 +36,15 @@ export async function api(request, {queryShop}) {
     variables: {
       input: {
         email: jsonBody.email,
-        password: jsonBody.password,
-        firstName: jsonBody.firstName,
-        lastName: jsonBody.lastName,
+        password: '12345',
+        "acceptsMarketing": true
       },
     },
     // @ts-expect-error `queryShop.cache` is not yet supported but soon will be.
     cache: CacheNone(),
   });
 
-  // const errorMessage = getApiErrorMessage('customerCreate', data, errors);
+  const errorMessage = getApiErrorMessage('customerCreate', data, errors);
 
   if (
     !errorMessage &&

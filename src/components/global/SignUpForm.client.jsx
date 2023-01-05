@@ -43,8 +43,8 @@ export default function SignUpForm(){
 
   return(
     <>
-      <div id="rj-subscribe"></div>
-      {/* <Formik
+      {/* <div id="rj-subscribe"></div> */}
+      <Formik
         enableReinitialize
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -69,13 +69,12 @@ export default function SignUpForm(){
               className="px-6 text-sm font-bold tracking-widest uppercase transition duration-300 border-2 border-l-0 text-dark border-gold rounded-r-md whitespace-nowrap hover:bg-paper-action">
               Sign-Up
             </button>
-             <div className="mt-10 mb-3">
+             {/* <div className="mt-10 mb-3">
               <p>By signing up, I agree to the <Link to={'/policies/privacy-policy'} className="text-primary">Privacy Policy</Link> and <Link to={'/policies/terms-of-service'} className="text-primary">Terms of Service</Link></p>
-            </div>
-            <FormikDebug />
+            </div> */}
           </Form>
         )}
-      </Formik> */}
+      </Formik>
     </>
   )
 }
