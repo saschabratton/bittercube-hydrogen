@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { ClientAnalytics, loadScript } from '@shopify/hydrogen'
 
-// const PIXEL_ID = '235830367055964'
+const AccountID = '22960755'
+const Domain = 'bittercube.com'
+const URL = '//cdn.rejoiner.com/js/v4/rj2.lib.js'
 let init = false
 
 export default function RjPixel() {
@@ -11,31 +13,21 @@ export default function RjPixel() {
 
       if (window._rejoiner) return
 
-      const fbq = (window.fbq = (...args) => {
-        fbq.callMethod ? fbq.callMethod.apply(fbq, args) : fbq.queue.push(args)
-      })
+      loadScript(URL).catch(() => {});
 
-      if (!window._rejoiner) window._rejoiner = rj
-      fbq.push = fbq
-      fbq.loaded = !0
-      fbq.version = '2.0'
-      fbq.queue = []
-
-      // loadScript('https://connect.facebook.net/en_US/fbevents.js').catch(
-      //   () => { }
-      // )
-
-      fbq('init', PIXEL_ID)
+      rj('init', AccountID)
 
       function trackPageView(payload) {
-        fbq('track', 'PageView', payload)
+        rj('track', 'PageView', payload)
       }
       function trackAddToCart(payload) {
-        fbq('track', 'AddToCart', payload)
+        rj('track', 'AddToCart', payload)
       }
       function trackViewedProduct(payload) {
-        fbq('track', 'ViewContent', payload)
+        rj('track', 'ViewContent', payload)
       }
+
+      console.log('events', trackPageView)
 
       // Listen for events from Hydrogen
       // https://shopify.dev/custom-storefronts/hydrogen/analytics#default-events
