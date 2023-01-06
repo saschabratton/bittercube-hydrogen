@@ -1,3 +1,4 @@
+import {Suspense} from 'react';
 import { Link, Image } from "@shopify/hydrogen"
 import SignUpForm from "./SignUpForm.client"
 import { makeKey } from '../../utilities/helpers'
@@ -23,7 +24,10 @@ export default function Footer(){
             <Image src='/logos/wordmark.svg' height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
             <div className="flex-col hidden gap-4 lg:flex">
               <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
-              <SignUpForm />
+              <Suspense>
+
+                <SignUpForm />
+              </Suspense>
             </div>
           </div>
           <div className="w-7/12 mx-auto md:w-full md:col-span-3 lg:col-span-2 lg:pr-12">

@@ -2,6 +2,10 @@ import {useNavigate, Link} from '@shopify/hydrogen/client'
 import * as Yup from 'yup'
 import { Formik, Form, Field, } from 'formik'
 import EmailInput from "../fields/EmailInput"
+import { useNotifications } from './NotificationsContext.client'
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('Here is your toast.');
 
 export default function SignUpForm(){
   // const { showSuccess, showError } = useNotifications()
@@ -27,14 +31,19 @@ export default function SignUpForm(){
         body: JSON.stringify({email}),
       })
       if (res.status === 200) {
-        navigate('/account')
+        // navigate('/account')
+        // showSuccess("Please check your email for account verification")
+        toast.success('Please check your email for account verification');
+
       } else {
-        // TODO: Throw a toast message
         // resetForm()
         console.log(res.json())
-        showSuccess("Please check your email for account verification")
+        toast.error('This is an error!');
+        // notify()
+        // showSuccess("Please check your email for account verification")
         // return res.json()
       }
+
     } catch (error) {
       console.log(error.toString())
     }
@@ -44,6 +53,7 @@ export default function SignUpForm(){
   return(
     <>
       {/* <div id="rj-subscribe"></div> */}
+      <Toaster />
       <Formik
         enableReinitialize
         initialValues={initialValues}
@@ -69,9 +79,6 @@ export default function SignUpForm(){
               className="px-6 text-sm font-bold tracking-widest uppercase transition duration-300 border-2 border-l-0 text-dark border-gold rounded-r-md whitespace-nowrap hover:bg-paper-action">
               Sign-Up
             </button>
-             {/* <div className="mt-10 mb-3">
-              <p>By signing up, I agree to the <Link to={'/policies/privacy-policy'} className="text-primary">Privacy Policy</Link> and <Link to={'/policies/terms-of-service'} className="text-primary">Terms of Service</Link></p>
-            </div> */}
           </Form>
         )}
       </Formik>
