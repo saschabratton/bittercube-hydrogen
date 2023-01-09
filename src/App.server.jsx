@@ -32,9 +32,9 @@ function App({request, response, search}) {
     // <Suspense fallback={null}>
       <ShopifyProvider>
         <CartProvider>
-          <Suspense>
+          {/* <Suspense>
             <DefaultSeo />
-          </Suspense>
+          </Suspense> */}
           <Router>
             <FileRoutes />
             <Route path="*" page={<Error />} />

@@ -68,7 +68,7 @@ const featuredBitters = [
     'image': '/images/bitters/chipotle-cacao.png',
     'flavor': 'Spicy',
     'description': 'Chipotle Cacao Bitters are a rich amalgam of earth, heat, decadent, and savory. The spiciness extends the flavor of any shaken cocktail.',
-    'link': '#',
+    'link': '/shop/products/chipotlecacao',
   },
 ]
 

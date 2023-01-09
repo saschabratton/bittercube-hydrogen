@@ -44,13 +44,8 @@ function ProductCards({products}) {
     <>
     <div className="container grid w-11/12 grid-cols-2 gap-6 py-0 lg:grid-cols-4">
       {products.slice(0,  4).map((product) => (
-        // <ProductCard
-        //   product={product}
-        //   key={product.id}
-        //   className={'snap-start w-80'}
-        // />
-        // <h2>{product.title}</h2>
-        <ProductCard key={product.id} product={product} />
+        // <ProductCard key={product.id} product={product} />
+        <p>hi</p>
       ))}
       </div>
     </>
