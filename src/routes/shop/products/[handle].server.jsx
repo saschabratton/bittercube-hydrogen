@@ -68,28 +68,7 @@ export default function Product({ params }) {
   content_category: product.productType,
 
   publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
-});
-
-
-
-  // const recipesApi = useQuery(['slug', 'slug'], async () => {
-  //   const response = await fetch('https://api.bittercube.com/api/recipes.json', {
-  //     headers: {
-  //       accept: 'application/json',
-  //     },
-  //   });
-  //   return await response.json();
-  // });
-
-  // const recipesApi = fetchSync('https://api.bittercube.com/api/recipes.json', {
-  //   method: 'get',
-  //   preload: false,
-  //   cache: CacheNone(),
-  // }).json()
-  // console.log(recipesApi.data)
-
-
-
+})
 
   return (
     <Layout>
@@ -107,7 +86,9 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
-      {/* <SimilarProducts data={product.id} /> */}
+      <Suspense>
+        <SimilarProducts data={product.id} />
+      </Suspense>
       <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>

@@ -29,19 +29,19 @@ function App({request, response, search}) {
     response.headers.set('Set-Cookie', cookie.serialize())
   }
   return (
-    // <Suspense fallback={null}>
+    <Suspense>
       <ShopifyProvider>
         <CartProvider>
-          {/* <Suspense>
+          <Suspense>
             <DefaultSeo />
-          </Suspense> */}
+          </Suspense>
           <Router>
             <FileRoutes />
             <Route path="*" page={<Error />} />
           </Router>
         </CartProvider>
       </ShopifyProvider>
-    // </Suspense>
+    </Suspense>
   )
 }
 

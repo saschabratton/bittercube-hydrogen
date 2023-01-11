@@ -122,7 +122,6 @@ export default function CocktailsList({ allRecipes }){
 
     filterRecipesByTag(activeFilters[0])
 
-
   },[filters])
 
   const clearFilters = () => {
@@ -217,8 +216,6 @@ export default function CocktailsList({ allRecipes }){
               setFilters({ ...emptyFilters, style: selected })
             })}
           />
-
-
         </div>
         <div className="flex items-center w-full gap-2 p-1 my-4 rounded-md bg-paper-action/20 lg:w-[250px]">
           <input
@@ -233,6 +230,9 @@ export default function CocktailsList({ allRecipes }){
         </div>
       </div>
       <hr />
+      {/* <Suspense>
+        <RecipeApi />
+      </Suspense> */}
       <div className="container pt-2 pb-8 text-center">
         <span className="text-sm label text-dark/30">Showing {recipes.length} of {allRecipes.length} {activeFilter} recipes.</span>
       </div>
@@ -251,5 +251,45 @@ export default function CocktailsList({ allRecipes }){
       </div>
     </>
   )
+}
 
+
+function RecipeApi() {
+  const recipes = fetchSync('https://api.bittercube.com/api/recipes.json').json()
+  const [suggestedRecipes, setSuggestedRecipes] = useState([])
+
+  useEffect(() => {
+    if (!recipes.length) return
+    const getRecommendation = () => {
+      let recommendation = []
+
+      times(4)(() => {
+        const index = Math.floor((Math.random() * recipes.length) + 0)
+        const suggestion = recipes[index]
+        recommendation.push(suggestion)
+      })
+      setSuggestedRecipes(recommendation)
+    }
+
+    getRecommendation()
+    // console.log(getRecommendation)
+  },[])
+
+  const times = x => f => {
+    if (x > 0) {
+      f()
+      times(x - 1)(f)
+    }
+  }
+  return (
+    <>
+    {suggestedRecipes && suggestedRecipes.map((recipe, i) => (
+      <dd key={makeKey(recipe.name)}>
+        <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
+        <hr className="my-2 border-t-2 text-gold" />
+        <Link to={`/recipes/${recipe.slug}`} className="flex items-center justify-between w-full gap-2 mx-auto label group">{recipe.name} <div className="btn-arrow btn-arrow-gold"></div></Link>
+      </dd>
+    ))}
+    </>
+  )
 }

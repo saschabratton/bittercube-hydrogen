@@ -1,6 +1,6 @@
 // TODO: Examine how this is being used to help limit api requests
 import {Suspense, useMemo} from 'react';
-import { gql, useShopQuery, useLocalization, CacheLong } from '@shopify/hydrogen'
+import { gql, useShopQuery, useLocalization, CacheNone } from '@shopify/hydrogen'
 import { PRODUCT_CARD_FRAGMENT } from "../../../lib/fragments"
 import ProductCard from "../../ProductCard.server"
 
@@ -17,15 +17,14 @@ export default function SimilarProducts({ data }) {
     // To make sure we have enough products for the swimlane, we'll combine the results with our top selling products.
     if (typeof data === 'string') {
       return (
-        // <div>String</div>
-        // <Suspense>
+        <Suspense>
           <RecommendedProducts productId={data} count={1} />
-        // </Suspense>
+        </Suspense>
       );
     }
 
     // If no data is provided, we'll go and query the top products
-    // return <TopProducts count={count} />;
+    return <TopProducts count={count} />;
     return (<div>no data</div>);
   }, [data]);
 
@@ -44,8 +43,7 @@ function ProductCards({products}) {
     <>
     <div className="container grid w-11/12 grid-cols-2 gap-6 py-0 lg:grid-cols-4">
       {products.slice(0,  4).map((product) => (
-        // <ProductCard key={product.id} product={product} />
-        <p>hi</p>
+        <ProductCard key={product.id} product={product} />
       ))}
       </div>
     </>
@@ -66,6 +64,8 @@ function RecommendedProducts({productId, count}) {
       languageCode,
       countryCode,
     },
+    cache: CacheNone(),
+    preload: false,
   });
 
   const mergedProducts = products.recommended
@@ -77,13 +77,11 @@ function RecommendedProducts({productId, count}) {
 
   const originalProduct = mergedProducts
     .map((item) => item.id)
-    .indexOf(productId);
+    .indexOf(productId)
 
-  mergedProducts.splice(originalProduct, 1);
+  mergedProducts.splice(originalProduct, 1)
 
-  return <ProductCards products={mergedProducts} />;
-
-  ;
+  return <ProductCards products={mergedProducts} />
 }
 
 function TopProducts({count}) {
@@ -113,6 +111,21 @@ const RECOMMENDED_PRODUCTS_QUERY = gql`
       ...ProductCard
     }
     additional: products(first: $count, sortKey: BEST_SELLING) {
+      nodes {
+        ...ProductCard
+      }
+    }
+  }
+`;
+
+const TOP_PRODUCTS_QUERY = gql`
+  ${PRODUCT_CARD_FRAGMENT}
+  query topProducts(
+    $count: Int
+    $countryCode: CountryCode
+    $languageCode: LanguageCode
+  ) @inContext(country: $countryCode, language: $languageCode) {
+    products(first: $count, sortKey: BEST_SELLING) {
       nodes {
         ...ProductCard
       }

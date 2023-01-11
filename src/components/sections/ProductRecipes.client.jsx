@@ -4,14 +4,8 @@ import { makeKey } from "../../utilities/helpers";
 import { Suspense } from "react";
 
 
-
-
 export default function ProductRecipes({ content, links,  }) {
-
   const { headline, description, image, ctaLink, ctaLabel, navHeadline } = content
-
-
-
 
   return (
     <section className="py-12 bg-forest">
@@ -32,9 +26,9 @@ export default function ProductRecipes({ content, links,  }) {
           <div className="py-16 md:col-span-6 lg:order-1 lg:col-span-2">
             <dl className="grid gap-8">
               <dt className="h3 text-gold">{navHeadline}</dt>
-              {/* <Suspense fallback={<h1>Loading profile...</h1>}> */}
+              <Suspense>
                 <RecipeApi />
-              {/* </Suspense>s */}
+              </Suspense>
             </dl>
           </div>
         </div>
@@ -45,7 +39,6 @@ export default function ProductRecipes({ content, links,  }) {
 
 function RecipeApi() {
   const recipes = fetchSync('https://api.bittercube.com/api/recipes.json').json()
-
   const [suggestedRecipes, setSuggestedRecipes] = useState([])
 
   useEffect(() => {
