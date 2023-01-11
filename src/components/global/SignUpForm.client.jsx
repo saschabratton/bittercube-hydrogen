@@ -7,6 +7,8 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const notify = () => toast('Here is your toast.');
 
+
+
 export default function SignUpForm(){
   // const { showSuccess, showError } = useNotifications()
   const navigate = useNavigate()
@@ -33,12 +35,18 @@ export default function SignUpForm(){
       if (res.status === 200) {
         // navigate('/account')
         // showSuccess("Please check your email for account verification")
-        toast.success('Please check your email for account verification');
+        toast('Please check your email for account verification', {
+          position: 'bottom-center',
+          className: 'bg-paper-action border-2 border-gold text-center lg:min-w-[600px] uppercase font-bold tracking-wider text-gold',
+        })
 
       } else {
         // resetForm()
         console.log(res.json())
-        toast.error('This is an error!');
+        toast('There was an issue adding your email, please try again in a few minutes', {
+          position: 'bottom-center',
+          className: 'bg-paper-action border-2 border-success/50 text-center lg:min-w-[600px] uppercase font-bold tracking-wider text-success/80',
+        })
         // notify()
         // showSuccess("Please check your email for account verification")
         // return res.json()
