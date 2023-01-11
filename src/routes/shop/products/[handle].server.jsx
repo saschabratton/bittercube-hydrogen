@@ -93,18 +93,18 @@ export default function Product({ params }) {
         <ProductDetails product={product} />
       </Suspense>
       {/* TODO: 1 suspense waterfall */}
-      <Suspense fallback="Loading Recipes">
+      {/* <Suspense fallback="Loading Recipes">
         <ProductRecipes recipes={recipesApi.data} content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
-      </Suspense>
-      <div className="relative w-11/12 mx-auto mt-12">
+      </Suspense> */}
+      {/* <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />
         <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold">
           RECOMMENDED
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
-      </div>
+      </div> */}
       {/* TODO: 2 suspense waterfall */}
-      <SimilarProducts data={product.id} />
+      {/* <SimilarProducts data={product.id} /> */}
       <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>
