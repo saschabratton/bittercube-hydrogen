@@ -13,6 +13,8 @@ module.exports = {
       'forest': '#192719',
       'paper-action': '#DAD7C9',
       'transparent': '#ffffff/0',
+      'success': '#3DA34D',
+      'error': '#C02E2B',
     },
     extend: {
       fontFamily: {
