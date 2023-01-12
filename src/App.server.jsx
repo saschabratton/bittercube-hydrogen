@@ -29,7 +29,7 @@ function App({request, response, search}) {
     response.headers.set('Set-Cookie', cookie.serialize())
   }
   return (
-    <Suspense>
+    // <Suspense>
       <ShopifyProvider>
         <CartProvider>
           <Suspense>
@@ -41,7 +41,7 @@ function App({request, response, search}) {
           </Router>
         </CartProvider>
       </ShopifyProvider>
-    </Suspense>
+    // </Suspense>
   )
 }
 
