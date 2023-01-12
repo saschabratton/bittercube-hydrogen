@@ -13,7 +13,7 @@ export default function Layout({ children }) {
       <div className="fixed bottom-0 left-0 z-10 flex justify-center w-full p-4 text-center border-t-2 bg-dark border-gold">
           <span className="text-gold label">FREE SHIPPING ON $45+ ORDERS</span>
       </div>
-      {/* <Footer /> */}
+      <Footer />
       <MetaPixel />
     </div>
   )
