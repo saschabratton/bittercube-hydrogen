@@ -25,7 +25,6 @@ export default function Footer(){
             <div className="flex-col hidden gap-4 lg:flex">
               <p className="text-2xl label">Subscribe for Recipes, News & Events</p>
               <Suspense>
-
                 <SignUpForm />
               </Suspense>
             </div>

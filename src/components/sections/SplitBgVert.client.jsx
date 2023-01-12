@@ -1,6 +1,4 @@
-import { Link, Image } from "@shopify/hydrogen"
-import parse from 'html-react-parser';
-
+import { Image } from "@shopify/hydrogen"
 
 export default function SplitBgVert({ content }){
   const {topLabel, topHeadline, topDescription, topCtaLabel, topCtaLink, bottomLabel, bottomHeadline, bottomCtaLabel, bottomCtaLink,featuredImage, background, padding, bottomHtml} = content
@@ -22,7 +20,7 @@ export default function SplitBgVert({ content }){
                 <div  className="flex flex-col justify-center gap-2 h-44">
                   <span className="label h4 text-gold">{bottomLabel}</span>
                   <h3 className="text-3xl font-regular">{bottomHeadline}</h3>
-                  {parse(bottomHtml)}
+                  <div className="pt-6 prose text-dark text-md" dangerouslySetInnerHTML={{__html: bottomHtml}}/>
                 </div>
             </div>
             <div className="flex items-center justify-center py-12">

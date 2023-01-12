@@ -1,5 +1,4 @@
 import { fetchSync, Image, Link, Head, Seo, CacheLong, useQuery } from "@shopify/hydrogen"
-import parse from 'html-react-parser'
 import { Layout, PatternHero, RecipesMenu } from '@server'
 import { HorizontalSeperator, SyrupInstructions } from "@client"
 import { makeKey } from "@utils"
