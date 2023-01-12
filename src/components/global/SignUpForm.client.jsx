@@ -45,7 +45,7 @@ export default function SignUpForm(){
         console.log(res.json())
         toast('There was an issue adding your email, please try again in a few minutes', {
           position: 'bottom-center',
-          className: 'bg-paper-action border-2 border-success/50 text-center lg:min-w-[600px] uppercase font-bold tracking-wider text-success/80',
+          className: 'bg-paper-action border-2 border-error/50 text-center lg:min-w-[600px] uppercase font-bold tracking-wider text-error/80',
         })
         // notify()
         // showSuccess("Please check your email for account verification")
