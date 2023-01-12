@@ -7,7 +7,8 @@ import {
   useRouteParams,
   ShopifyAnalyticsConstants,
   Link,
-  CacheLong,
+  CacheNone,
+  fetchSync,
   Seo,
   useQuery,
 } from "@shopify/hydrogen"
@@ -49,7 +50,7 @@ export default function Product({ params }) {
     variables: {
       handle,
     },
-    cache: CacheLong()
+    cache: CacheNone()
   })
 
   if (!product) {
@@ -67,35 +68,17 @@ export default function Product({ params }) {
   content_category: product.productType,
 
   publishEventsOnNavigate: [ClientAnalytics.eventNames.VIEWED_PRODUCT],
-});
-
-
-
-  const recipesApi = useQuery(['slug'], async () => {
-    const response = await fetch('https://api.bittercube.com/api/recipes.json', {
-      headers: {
-        accept: 'application/json',
-      },
-    });
-    return await response.json();
-  });
+})
 
   return (
     <Layout>
-      <Suspense>
         <Seo type="product" data={product} />
-      </Suspense>
       <PrimaryMenu dark={false} />
       <div className="container flex items-center justify-center w-11/12 gap-2 px-0 pb-3 mt-4 md:justify-start md:pb-6">
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/shop/all">Shop All Products</Link>
       </div>
-      <Suspense fallback="Loading Product Details">
         <ProductDetails product={product} />
-      </Suspense>
-      {/* TODO: 1 suspense waterfall */}
-      <Suspense fallback="Loading Recipes">
-        <ProductRecipes recipes={recipesApi.data} content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
-      </Suspense>
+        <ProductRecipes  content={ThreeColumnFeaturedContent} links={ThreeColumnFeaturedLinks}/>
       <div className="relative w-11/12 mx-auto mt-12">
         <HorizontalSeperator />
         <div className="absolute top-0.5 px-6 py-2 text-sm tracking-widest text-white uppercase -translate-x-1/2 left-1/2 h-fit bg-gold">
@@ -103,8 +86,9 @@ export default function Product({ params }) {
           <div className="absolute top-0 left-0 z-10 w-full h-full bg-paper bg-reveal active"></div>
         </div>
       </div>
-      {/* TODO: 2 suspense waterfall */}
-      <SimilarProducts data={product.id} />
+      <Suspense>
+        <SimilarProducts data={product.id} />
+      </Suspense>
       <SplitBgVertBlue  />
       <WholesaleBitters />
     </Layout>
@@ -127,25 +111,6 @@ const PRODUCT_QUERY = gql`
         height
       }
     }
-    ... on Video {
-      id
-      sources {
-        mimeType
-        url
-      }
-    }
-    ... on Model3d {
-      id
-      sources {
-        mimeType
-        url
-      }
-    }
-    ... on ExternalVideo {
-      id
-      embedUrl
-      host
-    }
   }
   query Product($handle: String!) {
     product(handle: $handle) {
@@ -154,7 +119,7 @@ const PRODUCT_QUERY = gql`
       vendor
       productType
       descriptionHtml
-      media(first: 50) {
+      media(first: 5) {
         nodes {
           ...MediaFields
         }

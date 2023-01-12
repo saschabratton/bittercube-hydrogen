@@ -34,7 +34,6 @@ export default function Recipes() {
   }
 
   return (
-    // <Suspense>
       <Layout>
         <Seo type="page" data={{
           title: customSeo.name,
@@ -61,6 +60,5 @@ export default function Recipes() {
         </div>
         <SignUp content={SignUpContent}/>
       </Layout>
-    // </Suspense>
   )
 }

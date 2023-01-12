@@ -5,6 +5,7 @@ import { RecipeCard } from "@client";
 export default function RecomendedRecipes({recipes, activeRecipe}){
   const [similarRecipes, setSimilarRecipes] = useState([])
   const [recommended, setRecommended] = useState([])
+
   useEffect(() => {
     if(!recipes) return
     const getSimilarRecipes = () => {
