@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import {ClientAnalytics} from '@shopify/hydrogen';
+import { ClientAnalytics , loadScript } from '@shopify/hydrogen';
 
 let init = false
 
@@ -11,6 +11,23 @@ export default function RjPixel() {
 
     if (!init) {
       init = true
+
+      // if (window._rejoiner) return
+
+      // const _rejoiner = (window.fbq = (...args) => {
+      //   fbq.callMethod ? fbq.callMethod.apply(fbq, args) : fbq.queue.push(args)
+      // })
+
+      // if (!window._fbq) window._fbq = fbq
+      // fbq.push = fbq
+      // fbq.loaded = !0
+      // fbq.version = '2.0'
+      // fbq.queue = []
+
+      loadScript('cdn.rejoiner.com/js/v4/rj2.lib.js').catch(
+        () => { }
+      )
+
       ClientAnalytics.subscribe(
         ClientAnalytics.eventNames.VIEWED_PRODUCT,
         (payload) => {
