@@ -24,11 +24,16 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
     const getRecommendation = () => {
       let recommendation = []
 
+      // const shuffled = similarRecipes.sort(() => Math.random() * similarRecipes.length)
+      // let recommendation = shuffled.slice(0, 4)
+
       times(4)(() => {
         const index = Math.floor((Math.random() * similarRecipes.length) + 0)
         const suggestion = similarRecipes[index]
         recommendation.push(suggestion)
+        console.log('reccomended is', suggestion)
       })
+
       setRecommended(recommendation)
     }
 
@@ -45,6 +50,7 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
 
   return(
     <section className="container grid grid-cols-2 gap-6 md:grid-cols-4">
+
         {recommended?.length > 0 &&
           recommended.map((recipe, i) => {
             return (
