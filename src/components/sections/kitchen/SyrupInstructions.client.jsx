@@ -1,9 +1,8 @@
-import parse from 'html-react-parser'
 
 export default function SyrupInstructions({ instructions }){
   return(
     <>
-      {parse(instructions)}
+      <div className="pt-6 prose text-dark text-md" dangerouslySetInnerHTML={{__html: instructions}}/>
     </>
   )
 }

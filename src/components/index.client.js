@@ -8,6 +8,7 @@ export { default as CartDetails } from './CartDetails.client'
 export { default as SignUp } from './sections/SignUp.client'
 export { default as ProductDetails } from './ProductDetails.client'
 
+
 // Carousels
 export { default as RecipeCarousel } from './carousels/RecipeCarousel.client'
 export { default as CardCarousel } from './carousels/CardCarousel.client'

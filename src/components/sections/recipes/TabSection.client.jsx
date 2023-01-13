@@ -1,4 +1,3 @@
-import parse from 'html-react-parser';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import RecipeIngredients from "./RecipeIngredients.client";
 

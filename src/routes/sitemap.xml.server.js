@@ -33,7 +33,6 @@ function shopSitemap(data, baseUrl) {
 
       const finalObject = {
         url,
-        lastMod: product.updatedAt,
         changeFreq: 'daily',
       };
 
@@ -60,7 +59,6 @@ function shopSitemap(data, baseUrl) {
       const url = `${baseUrl}/collections/${collection.handle}`;
       return {
         url,
-        lastMod: collection.updatedAt,
         changeFreq: 'daily',
       };
     });
@@ -72,7 +70,6 @@ function shopSitemap(data, baseUrl) {
 
       return {
         url,
-        lastMod: page.updatedAt,
         changeFreq: 'weekly',
       };
     });
@@ -95,7 +92,7 @@ function shopSitemap(data, baseUrl) {
   const recipeData = () => {
     fetch('https://api.bittercube.com/api/recipes.json')
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    // .then((data) => console.log(data))
 
     // .map((data) => {
     //   const url = `${baseUrl}/recipes/${data.slug}`
@@ -108,11 +105,24 @@ function shopSitemap(data, baseUrl) {
     // console.log('recipes:', recipeData)
   }
 
-  // recipeData()
 
 
+  // const test = Object.fromEntries(Object.entries(recipeData)
+  //   .map(([url, slug]) => {
+  //     [url, slug]
+  //     // const url = `${baseUrl}/recipes/${slug}`
 
-  const urlsDatas = [...productsData, ...collectionsData, ...customPages, ];
+  //     // return {
+  //     //   url,
+  //     //   changeFreq: 'weekly',
+  //     // }
+  //   })
+  // )
+
+  // console.log('this is the test', test)
+
+
+  const urlsDatas = [...productsData, ...collectionsData, ...pagesData, ...customPages, ];
 
 
   return `
@@ -126,14 +136,12 @@ function shopSitemap(data, baseUrl) {
 
 function renderUrlTag({
   url,
-  lastMod,
   changeFreq,
   image,
 }) {
   return `
     <url>
       <loc>${url}</loc>
-      <lastmod>${lastMod}</lastmod>
       <changefreq>${changeFreq}</changefreq>
       ${image
       ? `

@@ -1,34 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link, Image, fetchSync, } from "@shopify/hydrogen";
+import { Link, Image, fetchSync } from "@shopify/hydrogen";
 import { makeKey } from "../../utilities/helpers";
 import { Suspense } from "react";
 
-export default function ProductRecipes({ content, links, recipes }) {
+
+export default function ProductRecipes({ content, links,  }) {
   const { headline, description, image, ctaLink, ctaLabel, navHeadline } = content
-
-  const [suggestedRecipes, setSuggestedRecipes] = useState([])
-
-  useEffect(() => {
-    if (!recipes.length) return
-    const getRecommendation = () => {
-      let recommendation = []
-
-      times(4)(() => {
-        const index = Math.floor((Math.random() * recipes.length) + 0)
-        const suggestion = recipes[index]
-        recommendation.push(suggestion)
-      })
-      setSuggestedRecipes(recommendation)
-    }
-    getRecommendation()
-  },[])
-
-  const times = x => f => {
-    if (x > 0) {
-      f()
-      times(x - 1)(f)
-    }
-  }
 
   return (
     <section className="py-12 bg-forest">
@@ -49,17 +26,53 @@ export default function ProductRecipes({ content, links, recipes }) {
           <div className="py-16 md:col-span-6 lg:order-1 lg:col-span-2">
             <dl className="grid gap-8">
               <dt className="h3 text-gold">{navHeadline}</dt>
-              {suggestedRecipes && suggestedRecipes.map((recipe, i) => (
-                <dd key={makeKey(recipe.name)}>
-                  <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
-                  <hr className="my-2 border-t-2 text-gold" />
-                  <Link to={`/recipes/${recipe.slug}`} className="flex items-center justify-between w-full gap-2 mx-auto label group">{recipe.name} <div className="btn-arrow btn-arrow-gold"></div></Link>
-                </dd>
-              ))}
+              <Suspense>
+                <RecipeApi />
+              </Suspense>
             </dl>
           </div>
         </div>
       </div>
     </section>
   );
+}
+
+function RecipeApi() {
+  const recipes = fetchSync('https://api.bittercube.com/api/recipes.json').json()
+  const [suggestedRecipes, setSuggestedRecipes] = useState([])
+
+  useEffect(() => {
+    if (!recipes.length) return
+    const getRecommendation = () => {
+      let recommendation = []
+
+      times(4)(() => {
+        const index = Math.floor((Math.random() * recipes.length) + 0)
+        const suggestion = recipes[index]
+        recommendation.push(suggestion)
+      })
+      setSuggestedRecipes(recommendation)
+    }
+
+    getRecommendation()
+    // console.log(getRecommendation)
+  },[])
+
+  const times = x => f => {
+    if (x > 0) {
+      f()
+      times(x - 1)(f)
+    }
+  }
+  return (
+    <>
+    {suggestedRecipes && suggestedRecipes.map((recipe, i) => (
+      <dd key={makeKey(recipe.name)}>
+        <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
+        <hr className="my-2 border-t-2 text-gold" />
+        <Link to={`/recipes/${recipe.slug}`} className="flex items-center justify-between w-full gap-2 mx-auto label group">{recipe.name} <div className="btn-arrow btn-arrow-gold"></div></Link>
+      </dd>
+    ))}
+    </>
+  )
 }

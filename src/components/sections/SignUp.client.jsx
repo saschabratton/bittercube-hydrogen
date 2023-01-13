@@ -1,6 +1,5 @@
 import { Link, Image } from '@shopify/hydrogen';
 import SignUpForm from "../../components/global/SignUpForm.client";
-import parse from 'html-react-parser';
 
 
 export default function SignUp({ content }){

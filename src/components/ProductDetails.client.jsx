@@ -5,7 +5,6 @@ import {
   ProductPrice,
   AddToCartButton
 } from "@shopify/hydrogen"
-import parse from 'html-react-parser'
 import { ImageCarousel, useDrawer, Drawer, CartDetails } from "@client"
 // import { CartLineItem } from "./CartDetails.client"
 // ----------------------------------------------------------------------

@@ -1,16 +1,13 @@
-import parse from 'html-react-parser';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Image } from "@shopify/hydrogen";
-import { makeKey } from "../../utilities/helpers";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { makeKey } from "../../utilities/helpers"
 
 export default function TabSection({ content }){
-  const { label, contentHtml } = content
   return(
     <Tabs>
       <div className="h-fit">
       <TabList>
         {content && content.map((content) => (
-          <Tab key={makeKey(content.label + '-tab')}>
+          <Tab key={makeKey(content.label)}>
             {content.label}
           </Tab>
         ))}
@@ -19,7 +16,7 @@ export default function TabSection({ content }){
         <TabPanel key={makeKey(content.label)}>
           <div className="relative pt-8">
             <div className="relative z-10">
-              {parse(content.contentHtml)}
+              <div className="pt-6 prose text-dark text-md" dangerouslySetInnerHTML={{__html: content.contentHtml}}/>
             </div>
           </div>
         </TabPanel>

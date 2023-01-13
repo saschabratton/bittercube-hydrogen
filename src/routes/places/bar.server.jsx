@@ -65,21 +65,9 @@ export default function moslers(){
           <h2>Carefully Crafted Cocktails</h2>
           <p>The Bittercube Bar features a seasonal cocktail menu with fresh and unique ingredients. The cocktails were designed to pair with each of the food vendors across the market. Beyond cocktails, enjoy Midwest beers, an eclectic collection of wines, and a plethora of non-alcoholic cocktail options. </p>
           <p>Also housed at the bar is the Bittercube Bazaar, a unique liquor store featuring Bittercube Bitters, Heirloom Liqueurs, carry-out cocktails for home consumption, and a curated list of our favorite spirits.</p>
-
-          {/* <p className="label">
-            Located at<br />5900 W north ave<br />
-            <br /><span className="inline-block mt-6">AT THE NORTH AVENUE MARKET</span>
-          </p> */}
           <p className="label">Follow us online<br />@BITTERCUBE.BAR.AND.BAZAAR</p>
           <Link to="https://www.toasttab.com/north-avenue-market-5900-west-north-avenue/v3" className="m-0 ml-0 btn btn-action">Order online now</Link>
           <a href="mailto:bar@bittercube.com" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
-          {/* <div className="text-ornament w-fit"></div>
-          <p className="label ">
-            <a href="tel:4142931231" target="_blank" className="text-gold hover:text-dark">414.293.1231</a><br />
-            <a href="mailto:ANTHONY@BITTERCUBE.COM" target="_blank" className="text-gold hover:text-dark">ANTHONY@BITTERCUBE.COM</a>
-          </p>
-          <p className="label">Follow us online<br />@BITTERCUBEBAZAAR</p> */}
-
         </div>
       </div>
       <div className="w-11/12 mx-auto">
@@ -89,7 +77,6 @@ export default function moslers(){
         <div className="flex flex-col items-center justify-center max-w-md gap-6 mx-auto text-center">
           <h2>Check out the seasonal cocktail menus</h2>
         </div>
-
         <TabSection content={TabContent} />
       </div>
      <div className="py-12 section bg-dark">

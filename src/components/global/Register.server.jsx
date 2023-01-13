@@ -17,9 +17,7 @@ export async function api(request, {queryShop}) {
 
   if (
     !jsonBody.email ||
-    jsonBody.email === '' ||
-    !jsonBody.password ||
-    jsonBody.password === ''
+    jsonBody.email === ''
   ) {
     return new Response(
       JSON.stringify({error: 'Email and password are required'}),
@@ -32,9 +30,6 @@ export async function api(request, {queryShop}) {
     variables: {
       input: {
         email: jsonBody.email,
-        password: jsonBody.password,
-        firstName: jsonBody.firstName,
-        lastName: jsonBody.lastName,
       },
     },
     // @ts-expect-error `queryShop.cache` is not yet supported but soon will be.
