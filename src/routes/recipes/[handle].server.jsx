@@ -32,6 +32,8 @@ export default function Recipe(){
     name: 'How to craft • Bittercube',
   }
 
+ 
+
   return(
     <Layout>
       <Seo type="page" data={{
@@ -73,9 +75,11 @@ export default function Recipe(){
           <h3>Make the cocktail</h3>
           <div>
             <TabSection activeRecipe={activeRecipe}/>
-            {/* <button onClick={window.print()} className="btn btn-action">
+            {(typeof window !== 'undefined') &&
+            <button onClick={window.print()} className="btn btn-action">
               Print Recipe
-            </button> */}
+            </button>
+            }
           </div>
         </div>
       </div>
