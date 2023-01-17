@@ -18,7 +18,7 @@ export default function ProductRecipes({ content, links,  }) {
               <Link to={ctaLink} className="mx-0 mb-0 btn btn-action">{ctaLabel}</Link>
             }
           </div>
-          <div className="md:col-span-3 lg:col-span-3 lg:order-3">
+          <div className="md:col-span-3 lg:col-span-3 lg:order-3 print-hidden">
             {image &&
               <Image src={image} width={460} height={555} className="object-cover mx-auto aspect-4/5 rounded-jumbo" alt={headline} />
             }

@@ -17,6 +17,9 @@ module.exports = {
       'error': '#C02E2B',
     },
     extend: {
+      screens: {
+        'print': { 'raw': 'print' },
+      },
       fontFamily: {
         headline: ['beaufort-pro', 'serif'],
         decorative: ['Charmonman', 'cursive'],

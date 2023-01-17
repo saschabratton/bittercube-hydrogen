@@ -11,7 +11,7 @@ export default function RecipesMenu() {
   const { pathname } = useUrl()
 
   return (
-    <nav className="container py-8 md:flex md:justify-between">
+    <nav className="container py-8 md:flex md:justify-between print:hidden print:opacity-10">
       <ul className="grid grid-cols-2 gap-8 md:flex">
         {menu.map(item => {
           const {label, link, active, i} = item

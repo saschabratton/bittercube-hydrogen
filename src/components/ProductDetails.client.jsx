@@ -15,11 +15,11 @@ export default function ProductDetails({ product }) {
   return (
     <ProductOptionsProvider data={product}>
       <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2">
-        <div className="overflow-hidden md:hidden">
+        <div className="overflow-hidden md:hidden print:hidden">
           {/* <ImageCarousel content={product.media.nodes} /> */}
           <MobileProductGallery media={product.media.nodes}/>
         </div>
-        <div className="hidden gap-6 md:flex md:flex-col">
+        <div className="hidden gap-6 md:flex md:flex-col print:hidden">
           <div className="md:col-span-2 snap-center card-image aspect-square md:w-full w-[80vw] shadow rounded">
             <ProductGallery media={media.nodes} />
           </div>
@@ -154,7 +154,7 @@ function ProductGallery({ media }) {
 
   return (
     <div
-      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto w-screen md:w-full lg:col-span-2`}
+      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto w-screen md:w-full lg:col-span-2 print:hidden`}
     >
       {media.map((med, i) => {
         let extraProps = {};
@@ -205,7 +205,7 @@ function MobileProductGallery({ media }) {
 
   return (
     <div
-      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto w-screen md:w-full lg:col-span-2`}
+      className={`grid gap-4 overflow-x-scroll grid-flow-col md:grid-flow-row  md:p-0 md:overflow-x-auto w-screen md:w-full lg:col-span-2 print:hidden`}
     >
       {media.map((med, i) => {
         let extraProps = {};

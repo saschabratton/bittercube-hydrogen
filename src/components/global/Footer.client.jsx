@@ -18,7 +18,7 @@ export default function Footer(){
 
 
   return(
-    <footer className="bg-paper">
+    <footer className="bg-paper print:hidden">
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-6 lg:grid-cols-9 max-w-screen-2xl">
           <div className="flex flex-col items-center justify-between md:col-span-1 lg:col-span-4 lg:items-start">
             <Image src='/logos/wordmark.svg' height={56} width={297} alt="Bittercube" className="w-11/12 lg:w-80"/>
