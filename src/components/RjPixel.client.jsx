@@ -16,7 +16,8 @@ export default function RjPixel() {
         ClientAnalytics.eventNames.VIEWED_PRODUCT,
         (payload) => {
           console.log(window._rejoiner);
-          var _rejoiner = _rejoiner || []
+          window._rejoiner = window._rejoiner || []
+          var _rejoiner = window._rejoiner
           _rejoiner.push(["trackProductView", {
             "product_id": payload.content_ids,
             "name": payload.content_name,
