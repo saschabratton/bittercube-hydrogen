@@ -15,7 +15,7 @@ export default function PrintButton() {
   return (
     <button
       onClick={print}
-      className="btn btn-action">
+      className="mx-0 mt-8 btn btn-action print:hidden">
         Print Recipe
     </button>
   )
