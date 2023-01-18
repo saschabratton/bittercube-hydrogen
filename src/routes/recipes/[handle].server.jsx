@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react"
 import { Link, Image, useRouteParams, fetchSync, Seo, useQuery } from "@shopify/hydrogen"
 import { makeKey } from "@utils"
 import { NotFound, Layout } from '@server'
-import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection } from "@client"
+import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection, PrintButton } from "@client"
 // ----------------------------------------------------------------------
 
 
 export default function Recipe(){
   const { handle } = useRouteParams()
-
 
    const recipesApi = useQuery(['slug'], async () => {
     const response = await fetch('https://api.bittercube.com/api/recipes.json', {
@@ -31,7 +30,6 @@ export default function Recipe(){
   const customSeo = {
     name: 'How to craft • Bittercube',
   }
-
  
 
   return(
@@ -75,11 +73,7 @@ export default function Recipe(){
           <h3>Make the cocktail</h3>
           <div>
             <TabSection activeRecipe={activeRecipe}/>
-            {(typeof window !== 'undefined') &&
-            <button onClick={window.print()} className="btn btn-action">
-              Print Recipe
-            </button>
-            }
+            <PrintButton />
           </div>
         </div>
       </div>

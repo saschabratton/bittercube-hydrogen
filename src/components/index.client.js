@@ -7,6 +7,7 @@ export { Drawer, useDrawer } from './Drawer.client'
 export { default as CartDetails } from './CartDetails.client'
 export { default as SignUp } from './sections/SignUp.client'
 export { default as ProductDetails } from './ProductDetails.client'
+export { default as PrintButton } from './PrintButton.client'
 
 
 // Carousels

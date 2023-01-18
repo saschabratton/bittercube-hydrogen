@@ -22,16 +22,18 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
   useEffect(() => {
     if (!similarRecipes.length) return
     const getRecommendation = () => {
-      let recommendation = []
+
 
       // const shuffled = similarRecipes.sort(() => Math.random() * similarRecipes.length)
       // let recommendation = shuffled.slice(0, 4)
 
+      // console.log('reccomended is', similarRecipes)
+
+      let recommendation = []
       times(4)(() => {
         const index = Math.floor((Math.random() * similarRecipes.length) + 0)
         const suggestion = similarRecipes[index]
         recommendation.push(suggestion)
-        console.log('reccomended is', suggestion)
       })
 
       setRecommended(recommendation)
