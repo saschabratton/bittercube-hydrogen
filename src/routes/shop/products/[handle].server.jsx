@@ -52,6 +52,10 @@ export default function Product({ params }) {
     return <NotFound />
   }
 
+  useServerAnalytics({
+    productId: product.variants.nodes[0].sku,
+    imageUrl: product.media.nodes[0].image.url,
+  });
 
   const serverDataLayer = useServerAnalytics({
   content_type: ShopifyAnalyticsConstants.pageType.product,

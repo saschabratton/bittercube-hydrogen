@@ -12,18 +12,23 @@ export default function RjPixel() {
     if (!init) {
       init = true
 
+
       ClientAnalytics.subscribe(
         ClientAnalytics.eventNames.VIEWED_PRODUCT,
         (payload) => {
-          console.log(window._rejoiner);
+
+          console.log('console:', payload)
+          const priceInCents = payload.value * 100
+
           window._rejoiner = window._rejoiner || []
           var _rejoiner = window._rejoiner
           _rejoiner.push(["trackProductView", {
-            "product_id": payload.content_ids,
+            "product_id": payload.productId,
             "name": payload.content_name,
-            "price": payload.value,
+            "price": priceInCents,
             "product_url": payload.normalizedRscUrl,
             "category": payload.content_category,
+            "image_url": payload.imageUrl
           }])
         }
       )
