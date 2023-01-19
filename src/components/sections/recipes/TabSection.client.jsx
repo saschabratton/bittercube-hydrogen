@@ -43,7 +43,11 @@ export default function TabSection({ activeRecipe }){
       <div>
         <RecipeIngredients activeRecipe={ activeRecipe } />
       </div>
-       <div className="relative pt-8" dangerouslySetInnerHTML={{__html: instructions}}></div>
+      <div>
+        <span className="label text-dark">How to craft</span>
+        <div dangerouslySetInnerHTML={{__html: instructions}}></div>
+      </div>
+
     </div>
     </>
   )

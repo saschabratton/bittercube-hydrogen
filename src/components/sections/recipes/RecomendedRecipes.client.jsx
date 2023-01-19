@@ -14,6 +14,10 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
       const selectedFlavor = activeRecipe.flavors[index]
       const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
 
+
+
+
+
       setSimilarRecipes(similar)
     }
     getSimilarRecipes()
@@ -24,10 +28,12 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
     const getRecommendation = () => {
 
 
+
       // const shuffled = similarRecipes.sort(() => Math.random() * similarRecipes.length)
       // let recommendation = shuffled.slice(0, 4)
 
-      // console.log('reccomended is', similarRecipes)
+      // console.log('similar recipes:', shuffled)
+
 
       let recommendation = []
       times(4)(() => {
@@ -35,6 +41,7 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
         const suggestion = similarRecipes[index]
         recommendation.push(suggestion)
       })
+
 
       setRecommended(recommendation)
     }
