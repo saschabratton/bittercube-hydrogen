@@ -77,7 +77,7 @@ export default function MoslersPage(){
               <p className="label">5900 W NORTH AVE<br />MILWAUKEE, WI</p> */}
               <p className="label">Follow us online<br />@BITTERCUBE.BAR.AND.BAZAAR</p>
               <Link to="https://moslers-vault.resos.com/booking" target='_blank' className="m-0 ml-0 btn btn-action">Book a table</Link>
-              <a href="moslersvault@bittercube.com" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
+              <a href="mailto:moslersvault@bittercube.com" target='_blank' className="m-0 ml-0 btn btn-action">Private Events</a>
             </div>
           </div>
 
