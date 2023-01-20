@@ -48,6 +48,8 @@ export { default as Spices } from './sections/kitchen/Spices.client'
 export { default as Flavors } from './sections/kitchen/Flavors.client'
 export { default as SyrupInstructions } from './sections/kitchen/SyrupInstructions.client'
 export { default as ProductRecipes } from './sections/ProductRecipes.client'
+export { default as RecipeIngredients } from './sections/recipes/RecipeIngredients.client'
+export { default as PrintRecipe } from './PrintRecipe.client'
 
 // Tracking & Analytics
 export { default as MetaPixel } from './MetaPixel.client'

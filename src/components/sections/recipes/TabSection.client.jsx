@@ -38,17 +38,7 @@ export default function TabSection({ activeRecipe }){
         </div>
       </Tabs>
     </div>
-    <div className="hidden print:grid print:grid-cols-2 print:gap-6 ">
 
-      <div>
-        <RecipeIngredients activeRecipe={ activeRecipe } />
-      </div>
-      <div>
-        <span className="label text-dark">How to craft</span>
-        <div dangerouslySetInnerHTML={{__html: instructions}}></div>
-      </div>
-
-    </div>
     </>
   )
 }

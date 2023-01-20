@@ -26,5 +26,17 @@
   ::placeholder {
     @apply opacity-100 !text-gold;
   }
-
+/* @media print {
+    @page {
+        size: letter;
+        margin: 0;
+    }
+    body,
+    html {
+        min-width: 1500px;
+        height: 1000px;
+        margin: 0;
+        border: red solid 10px;
+    }
+} */
 }

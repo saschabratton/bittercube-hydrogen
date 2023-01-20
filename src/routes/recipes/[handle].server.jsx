@@ -2,7 +2,7 @@ import { useState, useEffect, Suspense } from "react"
 import { Link, Image, useRouteParams, fetchSync, Seo, useQuery } from "@shopify/hydrogen"
 import { makeKey } from "@utils"
 import { NotFound, Layout } from '@server'
-import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection, PrintButton } from "@client"
+import { PrimaryMenu, HorizontalSeperator, RecomendedRecipes, SplitBgVertBlue, RecipeImageCarousel, TabSection, PrintButton, PrintRecipe } from "@client"
 // ----------------------------------------------------------------------
 
 
@@ -42,8 +42,9 @@ export default function Recipe(){
         <Link className="transition duration-700 label text-dark hover:text-gold" to="/recipes/all">All Recipes</Link>
       </div>
 
-      <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2 ">
-        <div className="print:hidden">
+      <PrintRecipe activeRecipe={activeRecipe} />
+
+      <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2 print:hidden">
           <div className="md:hidden">
             <RecipeImageCarousel content={activeRecipe} />
           </div>
@@ -52,7 +53,6 @@ export default function Recipe(){
               <Image src={image.url} width={366} height={455} alt={activeRecipe.name} className="object-cover w-full aspect-4/5" />
             ))}
           </div>
-        </div>
         <div className="sticky top-0 grid gap-6 py-20 md:px-4 lg:px-10 h-fit xl:px-20">
           <div>
             <p className="text-base label">cocktail style:<br />
@@ -67,7 +67,7 @@ export default function Recipe(){
             }
           </div>
 
-          <div className="py-6 print:hidden">
+          <div className="py-6">
             <HorizontalSeperator />
           </div>
           <h3>Make the cocktail</h3>
