@@ -7,9 +7,9 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
   const [recommended, setRecommended] = useState([])
 
 
-  const activeFlavors = activeRecipe.flavors
-  const [flavorsList, setFlavorsList] = useState(() => activeFlavors.map(flavor => flavor))
-
+  // const activeFlavors = activeRecipe.flavors
+  // const [flavorsList, setFlavorsList] = useState(() => activeFlavors.map(flavor => flavor))
+  // console.log('flavors:', flavorsList)
 
 
   useEffect(() => {
@@ -17,22 +17,15 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
     const getSimilarRecipes = () => {
       // const length = activeRecipe.flavors.length
       // const index = Math.floor((Math.random() * length) + 0)
-      // const selectedFlavor = activeRecipe.flavors[index]
-      // const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
+      const selectedFlavor = activeRecipe.flavors[0]
+      const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
 
-
-
-        console.log('flavors:', flavorsList)
-
-      // filter every includes
       // const similar = recipes.filter(recipes.every(({ flavors = [] } ) => flavorsList.includes(flavors)))
 
-
-      console.log('all recipes:', recipes)
+      // console.log('selected flavor:', selectedFlavor)
       // console.log('similar recipes:', similar)
 
-
-      // setSimilarRecipes(similarList)
+      setSimilarRecipes(similar)
     }
     getSimilarRecipes()
   },[])
@@ -45,16 +38,33 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
 
       // const shuffled = similarRecipes.sort(() => Math.random() * similarRecipes.length)
 
-      const shuffled = similarRecipes => {
-        for (let i = similarRecipes.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = similarRecipes[i];
-          similarRecipes[i] = similarRecipes[j];
-          similarRecipes[j] = temp;
-        }
-      }
+      // const shuffled = similarRecipes => {
+      //   for (let i = similarRecipes.length - 1; i > 0; i--) {
+      //     const j = Math.floor(Math.random() * (i + 1));
+      //     const temp = similarRecipes[i];
+      //     similarRecipes[i] = similarRecipes[j];
+      //     similarRecipes[j] = temp;
+      //   }
+      // }
 
-      let recommendation = shuffled.slice(0, 4)
+      function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+          // Pick a remaining element.
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+      }
+      shuffle(similarRecipes)
+
+      // console.log('shuffled:', similarRecipes)
+
+      let recommendation = similarRecipes.slice(0, 4)
 
 
 
