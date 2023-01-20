@@ -44,7 +44,7 @@ export default function Recipe(){
 
       <div className="container grid w-11/12 gap-6 pt-0 md:grid-cols-2 ">
         <div className="print:hidden">
-          <div className="md:hidden">
+          <div className="max-w-full overflow-hidden md:hidden">
             <RecipeImageCarousel content={activeRecipe} />
           </div>
           <div className="hidden gap-6 md:flex md:flex-col">

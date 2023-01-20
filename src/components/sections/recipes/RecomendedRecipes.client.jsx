@@ -6,19 +6,33 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
   const [similarRecipes, setSimilarRecipes] = useState([])
   const [recommended, setRecommended] = useState([])
 
+
+  const activeFlavors = activeRecipe.flavors
+  const [flavorsList, setFlavorsList] = useState(() => activeFlavors.map(flavor => flavor))
+
+
+
   useEffect(() => {
     if(!recipes) return
     const getSimilarRecipes = () => {
-      const length = activeRecipe.flavors.length
-      const index = Math.floor((Math.random() * length) + 0)
-      const selectedFlavor = activeRecipe.flavors[index]
-      const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
+      // const length = activeRecipe.flavors.length
+      // const index = Math.floor((Math.random() * length) + 0)
+      // const selectedFlavor = activeRecipe.flavors[index]
+      // const similar = recipes.filter(({ flavors = [] }) => flavors.includes(selectedFlavor))
 
 
 
+        console.log('flavors:', flavorsList)
+
+      // filter every includes
+      // const similar = recipes.filter(recipes.every(({ flavors = [] } ) => flavorsList.includes(flavors)))
 
 
-      setSimilarRecipes(similar)
+      console.log('all recipes:', recipes)
+      // console.log('similar recipes:', similar)
+
+
+      // setSimilarRecipes(similarList)
     }
     getSimilarRecipes()
   },[])
@@ -30,17 +44,27 @@ export default function RecomendedRecipes({recipes, activeRecipe}){
 
 
       // const shuffled = similarRecipes.sort(() => Math.random() * similarRecipes.length)
-      // let recommendation = shuffled.slice(0, 4)
 
-      // console.log('similar recipes:', shuffled)
+      const shuffled = similarRecipes => {
+        for (let i = similarRecipes.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temp = similarRecipes[i];
+          similarRecipes[i] = similarRecipes[j];
+          similarRecipes[j] = temp;
+        }
+      }
+
+      let recommendation = shuffled.slice(0, 4)
 
 
-      let recommendation = []
-      times(4)(() => {
-        const index = Math.floor((Math.random() * similarRecipes.length) + 0)
-        const suggestion = similarRecipes[index]
-        recommendation.push(suggestion)
-      })
+
+
+      // let recommendation = []
+      // times(4)(() => {
+      //   const index = Math.floor((Math.random() * similarRecipes.length) + 0)
+      //   const suggestion = similarRecipes[index]
+      //   recommendation.push(suggestion)
+      // })
 
 
       setRecommended(recommendation)

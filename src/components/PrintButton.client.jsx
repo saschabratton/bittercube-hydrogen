@@ -13,7 +13,7 @@ export default function PrintButton() {
 
   return (
     <button
-      onClick={print}
+      // onClick={print}
       // onClick={() => window ? window.print : console.log('PRINT')}
       className="mx-0 mt-8 btn btn-action print:hidden">
         Print Recipe
