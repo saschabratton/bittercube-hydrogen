@@ -30,7 +30,6 @@ export default function Recipe(){
   const customSeo = {
     name: 'How to craft • Bittercube',
   }
- 
 
   return(
     <Layout>
