@@ -5,7 +5,7 @@ import { Image } from "@shopify/hydrogen";
 
 export default function PrintRecipe({ activeRecipe }) {
   return (
-    <div className="flex-col justify-center hidden w-full gap-8 print:flex">
+    <div className="hidden print:flex-col print:justify-center print:w-full print:gap-8 print:flex print-recipe">
       <Image src='/logos/wordmark.svg' width={170} height={36} alt="Bittercube" className="py-3 mx-auto" />
         <div className="mx-auto"  style={{width: 550}}>
           <p className="text-base label">cocktail style:<br />
