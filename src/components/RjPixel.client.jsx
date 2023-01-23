@@ -36,8 +36,6 @@ export default function RjPixel() {
         ClientAnalytics.eventNames.ADD_TO_CART,
         (payload) => {
 
-          // console.log('console:', payload)
-
           const priceInCents = payload.value * 100
           const productDescription = payload.description.replace(/<\/?[^>]+(>|$)/g, "")
 
@@ -51,6 +49,21 @@ export default function RjPixel() {
             "category": payload.content_category,
             "product_url": payload.normalizedRscUrl,
             "image_url": payload.imageUrl,
+          }])
+        }
+      )
+      ClientAnalytics.subscribe(
+        ClientAnalytics.eventNames.REMOVE_FROM_CART,
+        (payload) => {
+
+          const priceInCents = payload.cart.cost.totalAmount.amount * 100
+
+          window._rejoiner = window._rejoiner || []
+          var _rejoiner = window._rejoiner
+          _rejoiner.push(["setCartItem", {
+            "cart_value": priceInCents,
+            "cart_item_count": payload.cart.totalQuantity,
+            "promo": payload.discountCodes[0],
           }])
         }
       )
