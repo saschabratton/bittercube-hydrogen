@@ -55,6 +55,7 @@ export default function Product({ params }) {
   useServerAnalytics({
     productId: product.variants.nodes[0].sku,
     imageUrl: product.media.nodes[0].image.url,
+    description: product.descriptionHtml,
   });
 
   const serverDataLayer = useServerAnalytics({

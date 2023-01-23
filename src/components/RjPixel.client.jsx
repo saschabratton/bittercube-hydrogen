@@ -16,8 +16,8 @@ export default function RjPixel() {
       ClientAnalytics.subscribe(
         ClientAnalytics.eventNames.VIEWED_PRODUCT,
         (payload) => {
+          // console.log('console:', payload.descriptionHtml)
 
-          console.log('console:', payload)
           const priceInCents = payload.value * 100
 
           window._rejoiner = window._rejoiner || []
@@ -29,6 +29,28 @@ export default function RjPixel() {
             "product_url": payload.normalizedRscUrl,
             "category": payload.content_category,
             "image_url": payload.imageUrl
+          }])
+        }
+      )
+      ClientAnalytics.subscribe(
+        ClientAnalytics.eventNames.ADD_TO_CART,
+        (payload) => {
+
+          // console.log('console:', payload)
+
+          const priceInCents = payload.value * 100
+          const productDescription = payload.description.replace(/<\/?[^>]+(>|$)/g, "")
+
+          window._rejoiner = window._rejoiner || []
+          var _rejoiner = window._rejoiner
+          _rejoiner.push(["setCartItem", {
+            "product_id": payload.productId,
+            "name": payload.content_name,
+            "price": priceInCents,
+            "description": productDescription,
+            "category": payload.content_category,
+            "product_url": payload.normalizedRscUrl,
+            "image_url": payload.imageUrl,
           }])
         }
       )
