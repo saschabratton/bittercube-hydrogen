@@ -37,6 +37,7 @@ export default function RjPixel() {
         (payload) => {
 
           const priceInCents = payload.value * 100
+          const qtyInCents = payload.cart.cost.subtotalAmount.amount * 100
           const productDescription = payload.description.replace(/<\/?[^>]+(>|$)/g, "")
 
           window._rejoiner = window._rejoiner || []
@@ -47,13 +48,16 @@ export default function RjPixel() {
             "price": priceInCents,
             "description": productDescription,
             "category": payload.content_category,
+            "item_qty": payload.cart.totalQuantity,
+            "qty_price": qtyInCents,
             "product_url": payload.normalizedRscUrl,
             "image_url": payload.imageUrl,
+            // "expiration_date": ,
           }])
         }
       )
       ClientAnalytics.subscribe(
-        ClientAnalytics.eventNames.REMOVE_FROM_CART,
+        ClientAnalytics.eventNames.UPDATE_CART,
         (payload) => {
 
           const priceInCents = payload.cart.cost.totalAmount.amount * 100
@@ -63,7 +67,9 @@ export default function RjPixel() {
           _rejoiner.push(["setCartItem", {
             "cart_value": priceInCents,
             "cart_item_count": payload.cart.totalQuantity,
-            "promo": payload.discountCodes[0],
+            "promo": payload.discountCodes,
+            // "return_url": ,
+            // "order_number": ,
           }])
         }
       )
