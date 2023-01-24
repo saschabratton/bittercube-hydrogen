@@ -102,14 +102,18 @@ function CartCheckoutActions() {
   const { checkoutUrl, noteUpdate, note } = useCart()
   const [message, setMessage] = useState(note)
 
-  const handleCheckout = async (url) => {
-    try {
-      await noteUpdate(message)
-    } catch (error) {
-      console.log(error)
-    }
-    navigate(url)
+  const handleCheckout = async () => {
+  try {
+    await noteUpdate(message)
+  } catch (error) {
+    console.log(error)
   }
+  if (cookies['__gclid']?.id) {
+    navigate(`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`)
+  } else {
+    navigate(checkoutUrl)
+  }
+}
   return (
     <>
       <div className="flex flex-col items-center gap-4 py-6 md:mt-2">
@@ -124,7 +128,7 @@ function CartCheckoutActions() {
 
         <button
           type="button"
-          onClick={() => handleCheckout(`${checkoutUrl}/?gclid=${cookies['__gclid']?.id}`)}
+          onClick = {() => handleCheckout()}
           width="full"
           className="w-full m-0 text-center btn btn-action"
         >
