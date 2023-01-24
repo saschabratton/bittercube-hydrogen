@@ -37,7 +37,7 @@ export default function RjPixel() {
         (payload) => {
 
           const priceInCents = payload.value * 100
-          const qtyInCents = payload.cart.cost.subtotalAmount.amount * 100
+          const qtyInCents = payload.cart.cost.totalAmount.amount * 100
           const productDescription = payload.description.replace(/<\/?[^>]+(>|$)/g, "")
 
           window._rejoiner = window._rejoiner || []
