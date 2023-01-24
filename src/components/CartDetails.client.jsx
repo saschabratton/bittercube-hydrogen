@@ -16,11 +16,20 @@ import {
 
 // ----------------------------------------------------------------------
 
+
+
+
 export default function CartDetails({ onClose }) {
   const { lines } = useCart()
   if (lines.length === 0) {
     return <CartEmpty onClose={onClose} />;
   }
+
+  // useEffect(() => {
+  //   ClientAnalytics.pushToPageAnalyticsData({
+  //     lines: lines,
+  //   });
+  // });
 
   return (
     <form className="h-full pb-0 overflow-auto">
@@ -61,8 +70,8 @@ export function GiftMessage(){
         name='note'
         value={note}
         onChange={({ target: { value } }) => {
-          console.log(value)
-          // noteUpdate({id, note: value})
+          // console.log(value)
+          noteUpdate({id, note: value})
         }}
         className="w-full p-4 rounded-lg h-28">
 
@@ -185,7 +194,7 @@ export function CartLineItem() {
                 linesRemove={linesRemove}
               />
             </div>
-            {/* <button
+            <button
               type="button"
               onClick={() => linesRemove(lineId)}
               className="h-[40px] w-[40px] border border-gold rounded flex justify-center items-center"
@@ -203,7 +212,7 @@ export function CartLineItem() {
                 />
                 <path d="M12.5 2.5H8.97C8.93489 1.90332 8.72636 1.32986 8.37 0.85C7.94 0.32 7.3 0 6.5 0C5.7 0 5.06 0.32 4.63 0.85C4.27312 1.32958 4.06454 1.9032 4.03 2.5H0.5C0.367392 2.5 0.240215 2.55268 0.146447 2.64645C0.0526784 2.74021 0 2.86739 0 3C0 3.13261 0.0526784 3.25979 0.146447 3.35355C0.240215 3.44732 0.367392 3.5 0.5 3.5H1.75V13.5C1.75 13.78 1.97 14 2.25 14H10.75C10.8826 14 11.0098 13.9473 11.1036 13.8536C11.1973 13.7598 11.25 13.6326 11.25 13.5V3.5H12.5C12.6326 3.5 12.7598 3.44732 12.8536 3.35355C12.9473 3.25979 13 3.13261 13 3C13 2.86739 12.9473 2.74021 12.8536 2.64645C12.7598 2.55268 12.6326 2.5 12.5 2.5ZM5.41 1.48C5.64 1.19 5.99 1 6.5 1C7.01 1 7.35 1.19 7.59 1.48C7.79 1.72 7.89 2.08 7.95 2.5H5.05C5.1 2.08 5.22 1.72 5.41 1.48ZM10.25 13H2.75V3.5H10.25V13Z" />
               </svg>
-            </button> */}
+            </button>
           </div>
         </div>
         <span>

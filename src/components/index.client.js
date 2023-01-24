@@ -53,4 +53,5 @@ export { default as PrintRecipe } from './PrintRecipe.client'
 
 // Tracking & Analytics
 export { default as MetaPixel } from './MetaPixel.client'
+export { default as RjPixel } from './RjPixel.client'
 export { default as GoogleAnalytics } from './GoogleAnalytics.client'
