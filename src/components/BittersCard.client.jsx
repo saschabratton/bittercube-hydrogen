@@ -8,7 +8,7 @@ export default function BittersCard({ bitters }){
       <div className="flex flex-col justify-between gap-2 text-center">
         <div>
           <Image src={image} width={460} height={555} className="w-full" alt="Bitters" />
-          <span className="text-xl text-gold font-decorative">{ flavor }</span>
+          <Image src={`/images/flavors/${flavor}.svg`} className="h-8 mx-auto" width={200} height={35} alt={flavor}/>
           <h3 className="text-2xl">{ name }</h3>
           <p className="text-ornament">{ description }</p>
         </div>

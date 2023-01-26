@@ -31,7 +31,7 @@ const featuredBitters = [
   {
     'name': 'Trinity',
     'image': '/images/bitters/trinity.png',
-    'flavor': 'All Purpose',
+    'flavor': 'all-purpose',
     'description': 'Use this all-purpose blend for recipes that call for Orange or Aromatic Bitters. These bitters will become your go to cocktail enhancer.',
     'link': '/shop/products/trinity',
   },
