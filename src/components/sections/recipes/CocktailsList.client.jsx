@@ -46,8 +46,14 @@ const styleOptions = [
   { value: 'hot', label: 'Hot' },
   { value: 'kitchen', label: 'Kitchen' },
 ]
+const productOptions = [
+  { value: 'cocktail-cedars', label: 'Bittercube Cocktail Cedar (optional)' },
+  { value: 'disco-inferno-liquid-heat', label: 'Disco Inferno (optional)' },
+  { value: 'cardamom-seed-extract', label: 'Cardamom Extract (optional)' },
+]
 
 const emptyFilters = {
+  bitters: null,
   product: null,
   season: null,
   spirit: null,
@@ -73,7 +79,7 @@ export default function CocktailsList({ allRecipes }){
     }
     setFilters(emptyFilters)
 
-    const filtered = allRecipes.filter(({ name, flavors, spirits, ingredients }) => {
+    const filtered = allRecipes.filter(({ name, flavors, spirits, ingredients, bitters }) => {
       let tags = []
       flavors?.forEach(element => {
         tags.push(element.toLowerCase())
@@ -82,6 +88,11 @@ export default function CocktailsList({ allRecipes }){
         tags.push(element.toLowerCase())
       })
       ingredients?.forEach(({ name }) => {
+        if (name) {
+          tags.push(name.toLowerCase())
+        }
+      })
+      bitters?.forEach(({ name }) => {
         if (name) {
           tags.push(name.toLowerCase())
         }
@@ -110,6 +121,11 @@ export default function CocktailsList({ allRecipes }){
       return
     }
 
+    if (filters.bitters) {
+      filterRecipesByBitters(filters.bitters)
+      return
+    }
+
     if (filters.product) {
       filterRecipesByProduct(filters.product)
       return
@@ -122,11 +138,24 @@ export default function CocktailsList({ allRecipes }){
 
     filterRecipesByTag(activeFilters[0])
 
+
   },[filters])
 
   const clearFilters = () => {
     setFilters(emptyFilters)
     setRecipes(allRecipes)
+  }
+
+const filterRecipesByBitters = (selected) => {
+    if (!selected){
+      setRecipes(allRecipes)
+      return
+    }
+    const { label } = selected
+    const filteredRecipes = allRecipes.filter(({ bitters }) => {
+      return bitters.filter(({ name }) => label === name).length
+    })
+    setRecipes(filteredRecipes)
   }
 
   const filterRecipesByProduct = (selected) => {
@@ -136,8 +165,8 @@ export default function CocktailsList({ allRecipes }){
       return
     }
     const { label } = selected
-    const filteredRecipes = allRecipes.filter(({ bitters }) => {
-      return bitters.filter(({ name }) => label === name).length
+    const filteredRecipes = allRecipes.filter(({ ingredients }) => {
+      return ingredients.filter(({ name }) => label === name).length
     })
     setRecipes(filteredRecipes)
   }
@@ -164,14 +193,37 @@ export default function CocktailsList({ allRecipes }){
 
   return(
     <>
-      <div className="container flex flex-col justify-between py-0 lg:flex-row">
-        <div className="grid items-center grid-cols-2 gap-3 lg:flex">
-          <span className="label">Filter By:</span>
-          <button className="p-[0.64rem] btn btn-action lg:order-last w-full lg:w-fit items-center justify-center flex gap-2 py-2 opacity-50 hover:opacity-100" onClick={clearFilters}><span className="text-sm lg:hidden">Clear Filters</span> <HiX /></button>
+      <div className="container flex flex-col items-center justify-between py-0 xl:flex-row">
+        <div className="flex items-center w-full gap-2 p-1 my-4 rounded-md bg-paper-action/20 xl:w-[300px]">
+          <HiSearch className="w-5 h-5 text-dark" />
+          <input
+            type="text"
+            name="search"
+            placeholder="Search Recipes"
+            className="w-full p-2 font-semibold tracking-widest uppercase text-gold bg-paper-action/0"
+            value={filterString}
+            onChange={(e) => setFilterString(e.target.value)}
+           />
+        </div>
+        <div className="grid items-center grid-cols-2 gap-3 pb-4 lg:flex xl:pb-0">
+          <span className="col-span-2 label">Filter By:</span>
+          <button className="flex items-center justify-center order-last w-full gap-2 py-2 my-0 opacity-50 btn btn-action lg:w-fit hover:opacity-100" onClick={clearFilters}><span className="text-sm lg:hidden">Clear Filters</span> <HiX /></button>
           <Select
             instanceId={useId()}
             options={bittersOptions}
             placeholder={'Bitters'}
+            classNamePrefix="select"
+            isClearable={true}
+            value={filters.bitters}
+            onChange={((selected) => {
+              setActiveFilter('bitters')
+              setFilters({...emptyFilters, bitters: selected})
+            })}
+          />
+          <Select
+            instanceId={useId()}
+            options={productOptions}
+            placeholder={'Other Products'}
             classNamePrefix="select"
             isClearable={true}
             value={filters.product}
@@ -216,23 +268,12 @@ export default function CocktailsList({ allRecipes }){
               setFilters({ ...emptyFilters, style: selected })
             })}
           />
+
+
         </div>
-        <div className="flex items-center w-full gap-2 p-1 my-4 rounded-md bg-paper-action/20 lg:w-[250px]">
-          <input
-            type="text"
-            name="search"
-            placeholder="search"
-            className="w-full p-2 font-semibold tracking-widest text-right uppercase text-gold bg-paper-action/0"
-            value={filterString}
-            onChange={(e) => setFilterString(e.target.value)}
-           />
-          <HiSearch className="w-5 h-5 text-dark" />
-        </div>
+
       </div>
       <hr />
-      {/* <Suspense>
-        <RecipeApi />
-      </Suspense> */}
       <div className="container pt-2 pb-8 text-center">
         <span className="text-sm label text-dark/30">Showing {recipes.length} of {allRecipes.length} {activeFilter} recipes.</span>
       </div>
@@ -251,45 +292,5 @@ export default function CocktailsList({ allRecipes }){
       </div>
     </>
   )
-}
 
-
-function RecipeApi() {
-  const recipes = fetchSync('https://api.bittercube.com/api/recipes.json').json()
-  const [suggestedRecipes, setSuggestedRecipes] = useState([])
-
-  useEffect(() => {
-    if (!recipes.length) return
-    const getRecommendation = () => {
-      let recommendation = []
-
-      times(4)(() => {
-        const index = Math.floor((Math.random() * recipes.length) + 0)
-        const suggestion = recipes[index]
-        recommendation.push(suggestion)
-      })
-      setSuggestedRecipes(recommendation)
-    }
-
-    getRecommendation()
-    // console.log(getRecommendation)
-  },[])
-
-  const times = x => f => {
-    if (x > 0) {
-      f()
-      times(x - 1)(f)
-    }
-  }
-  return (
-    <>
-    {suggestedRecipes && suggestedRecipes.map((recipe, i) => (
-      <dd key={makeKey(recipe.name)}>
-        <span className="font-bold tracking-wide text-gold">0{i + 1}</span>
-        <hr className="my-2 border-t-2 text-gold" />
-        <Link to={`/recipes/${recipe.slug}`} className="flex items-center justify-between w-full gap-2 mx-auto label group">{recipe.name} <div className="btn-arrow btn-arrow-gold"></div></Link>
-      </dd>
-    ))}
-    </>
-  )
 }
