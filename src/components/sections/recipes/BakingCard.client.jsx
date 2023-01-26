@@ -9,7 +9,8 @@ export default function BakingCard({ bitters }){
         <div className="flex flex-col gap-2">
         <Image src={image} width={460} height={555} className="w-full" alt="Bitters" />
         <div>
-          <span className="text-xl text-gold font-decorative">{ flavor }</span>
+          {/* <span className="text-xl text-gold font-decorative">{ flavor }</span> */}
+          <Image src={`/images/flavors/${flavor}.svg`} className="h-8 mx-auto" width={200} height={35} alt={flavor}/>
           <h3 className="text-2xl">{ name }</h3>
           <p className="text-sm text-ornament">{ description }</p>
         </div>
