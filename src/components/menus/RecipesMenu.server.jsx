@@ -23,6 +23,7 @@ export default function RecipesMenu() {
             </li>
           )
         })}
+        <a href="#featured-bartender" className="flex justify-center text-sm font-bold tracking-widest uppercase text-dark subnav-item">Featured Bartender</a>
       </ul>
     </nav>
   )

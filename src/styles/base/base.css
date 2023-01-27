@@ -1,6 +1,6 @@
 @layer base {
   html {
-    @apply selection:bg-paper-action/70 selection:text-gold;
+    @apply selection:bg-paper-action/70 selection:text-gold scroll-smooth;
   }
   section{
     @apply py-20;

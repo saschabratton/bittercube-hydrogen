@@ -41,7 +41,7 @@ export default function Recipes() {
         <ImageHero content={HeaderContent} />
         <RecipesMenu />
         <hr />
-        <div className="container max-w-5xl pt-12 pb-0 text-center md:pt-28 xl:pt-44 md:grid md:grid-cols-7">
+        <div className="container max-w-5xl pt-12 pb-0 text-center md:pt-28 md:grid md:grid-cols-7">
           <div className="flex items-center justify-center col-span-2">
             <div className="">
               <Image src='/emblems/signatures-classics.svg' width={101} height={111} alt=" " role="presentation" />
