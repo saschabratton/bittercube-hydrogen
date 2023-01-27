@@ -5,6 +5,7 @@ const menu = [
   { label: 'all recipes', link: '/recipes/all', active: 'all'},
   { label: 'syrups', link: '/recipes/syrups', active: 'syrup'},
   { label: 'in the kitchen', link: '/recipes/kitchen', active: 'kitchen'},
+  { label: 'Featured Bartender', link: '/recipes#featured-bartender', active: 'bartender'},
 ]
 
 export default function RecipesMenu() {
@@ -23,7 +24,6 @@ export default function RecipesMenu() {
             </li>
           )
         })}
-        <a href="#featured-bartender" className="flex justify-center text-sm font-bold tracking-widest uppercase text-dark subnav-item">Featured Bartender</a>
       </ul>
     </nav>
   )
