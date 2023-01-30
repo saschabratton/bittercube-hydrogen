@@ -5,7 +5,8 @@ const menu = [
   { label: 'all recipes', link: '/recipes/all', active: 'all'},
   { label: 'syrups', link: '/recipes/syrups', active: 'syrup'},
   { label: 'in the kitchen', link: '/recipes/kitchen', active: 'kitchen'},
-  { label: 'Featured Bartender', link: '/recipes#featured-bartender', active: 'bartender'},
+  { label: 'How to craft', link: '/recipes#learn-how-to-craft', active: 'how-to-crafte'},
+    { label: 'Featured Bartender', link: '/recipes#featured-bartender', active: 'bartender'},
 ]
 
 export default function RecipesMenu() {
