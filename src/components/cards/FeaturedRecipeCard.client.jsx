@@ -4,7 +4,7 @@ export default function FeaturedRecipeCard({ recipe }){
   const { slug, name, images, descripiton, flavors } = recipe
 
   const flavor = flavors[0].replace(/\s+/g, '-').toLowerCase();
-  console.log('flavor is', flavor)
+  // console.log('flavor is', flavor)
 
   return(
     <Link to={`/recipes/${slug}`}>
