@@ -1,20 +1,15 @@
 import { Link, Image, fetchSync } from "@shopify/hydrogen"
 
 
-
-// TODO: pull in data from bartender api
-
 export default function FeaturedBartenders(){
   const person = fetchSync('https://api.bittercube.com/api/bartenders.json').json()
   const featuredPerson = person.filter(person => person.featured == true)
-  console.log(featuredPerson)
-
 
   return(
     <>
     {featuredPerson.map((person) => {
       return (
-     <section className="py-12 bg-dark" id="featured-bartender">
+     <section className="py-12 bg-dark" id="featured-bartender" key={person.name}>
         <div className="border-y-2 border-gold">
           <div className="container grid max-w-5xl col-span-1 gap-6 lg:grid-cols-7 lg:gap-16">
             <div className="flex flex-col justify-center col-span-1 gap-4 lg:col-span-4">
