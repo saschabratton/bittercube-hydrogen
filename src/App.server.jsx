@@ -1,5 +1,6 @@
 import renderHydrogen from '@shopify/hydrogen/entry-server'
 import {
+  gql,
   Router,
   FileRoutes,
   ShopifyProvider,
@@ -30,7 +31,7 @@ function App({request, response, search}) {
   }
   return (
     <ShopifyProvider>
-      <CartProvider>
+      <CartProvider cartFragment={CART_FRAGMENT}>
         <Suspense>
           <DefaultSeo />
         </Suspense>
@@ -42,5 +43,118 @@ function App({request, response, search}) {
     </ShopifyProvider>
   )
 }
+
+const CART_FRAGMENT = gql`
+fragment CartFragment on Cart {
+  id
+  checkoutUrl
+  totalQuantity
+  buyerIdentity {
+    countryCode
+    customer {
+      id
+      email
+      firstName
+      lastName
+      displayName
+    }
+    email
+    phone
+  }
+  lines(first: $numCartLines) {
+    edges {
+      node {
+        id
+        quantity
+        attributes {
+          key
+          value
+        }
+        cost {
+          totalAmount {
+            amount
+            currencyCode
+          }
+          compareAtAmountPerQuantity {
+            amount
+            currencyCode
+          }
+        }
+        merchandise {
+          ... on ProductVariant {
+            id
+            availableForSale
+            compareAtPriceV2 {
+              ...MoneyFragment
+            }
+            priceV2 {
+              ...MoneyFragment
+            }
+            requiresShipping
+            title
+            image {
+              ...ImageFragment
+            }
+            product {
+              id
+              handle
+              title
+              vendor
+              productType
+              description
+              onlineStoreUrl
+              collections(first: 99) {
+                edges {
+                  node {
+                    title
+                  }
+                }
+              }
+            }
+            selectedOptions {
+              name
+              value
+            }
+            sku
+          }
+        }
+      }
+    }
+  }
+  cost {
+    subtotalAmount {
+      ...MoneyFragment
+    }
+    totalAmount {
+      ...MoneyFragment
+    }
+    totalDutyAmount {
+      ...MoneyFragment
+    }
+    totalTaxAmount {
+      ...MoneyFragment
+    }
+  }
+  note
+  attributes {
+    key
+    value
+  }
+  discountCodes {
+    code
+  }
+}
+fragment MoneyFragment on MoneyV2 {
+  currencyCode
+  amount
+}
+fragment ImageFragment on Image {
+  id
+  url
+  altText
+  width
+  height
+}
+`
 
 export default renderHydrogen(App);
