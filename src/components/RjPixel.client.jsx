@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react'
+import { useEffect } from 'react'
 import { ClientAnalytics, loadScript } from '@shopify/hydrogen'
 
 const {
